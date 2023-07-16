@@ -1,0 +1,28 @@
+{
+  "name": "rn_vite",
+  "version": "1.0.0",
+  "description": "react with vite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "preview": "vite preview"
+  },
+  "author": "henry <liboming88@yeah.net> (https://www.bluebird89.com/)",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.37.0",
+    "jsdom": "^21.1.1",
+    "typescript": "^5.0.3",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^0.29.8"
+  },
+  "dependencies": {
+    "vite": "^4.2.1"
+  }
+}

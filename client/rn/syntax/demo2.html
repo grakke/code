@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="./src/react.development.js"></script>
+    <script src="./src/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="./src/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+
+    <script type="text/babel">
+        var names = ['Alice', 'Emily', 'Kate'];
+        // JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析
+        ReactDOM.render(
+            <div>
+                {
+                    names.map(function (name) {
+                        return <div>Hello, {name}!</div>
+                    })
+                }
+            </div>,
+            document.getElementById('example')
+        );
+
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
+
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
+</body>
+
+</html>

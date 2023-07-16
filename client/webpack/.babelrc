@@ -1,0 +1,19 @@
+{
+  "presets": [
+    // "es2015",
+    "@babel/react",
+    "@babel/env"
+  ],
+  "plugins": [
+    "import",
+    "transform-runtime",
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "production": {},
+    "development": {
+      "plugins": []
+    }
+  },
+  "comments": false
+}

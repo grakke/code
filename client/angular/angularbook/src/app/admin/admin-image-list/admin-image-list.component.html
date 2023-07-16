@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="col-md-12">
+        <div>
+            <a [routerLink]="['/admin/']" class="btn btn-light"> Back</a>
+            <a [routerLink]="['/admin/images/create']" class="btn btn-success"> New Image</a>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let image of images | async">
+                        <td><img class="img-fluid" src="{{image.thumbnail}}" /></td>
+                        <td>{{image.title}} </td>
+                        <td>
+                            <a [routerLink]="['/images/edit']" class="btn btn-info"> Edit</a>
+                            <a [routerLink]="['/images/delete']" class="btn btn-danger"> Delete</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

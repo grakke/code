@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<title>Chat Client</title>
+<input id="input" style="width: 100%;">
+</body>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var nick = prompt("Enter your nickname");
+        var input = document.getElementById("input");
+        input.focus();
+
+        var wsUrl = "ws://localhost:9502";
+        var socket = new WebSocket(wsUrl);
+
+        socket.onopen = function (event) {
+            socket.send('Hello World');
+            console.log("Connection open ...");
+        }
+
+        // 接收到服务端推送时执行
+        socket.onmessage = function (event) {
+            var msg = event.data;
+            var node = document.createTextNode(msg);
+            var div = document.createElement("div");
+            div.appendChild(node);
+            document.body.insertBefore(div, input);
+            input.scrollIntoView();
+            console.log("Reserver message:" + event.data);
+        };
+
+        // 连接关闭时触发
+        socket.onclose = function (event) {
+            console.log("Connection closed ...");
+        }
+        socket.onerror = function (evt) {
+            console.log("error:" + evt.data);
+        }
+
+        input.onchange = function () {
+            var msg = nick + ": " + input.value;
+            // 将输入框变更信息通过 send 方法发送到服务器
+            socket.send(msg);
+            input.value = "";
+        };
+    }
+</script>
+</html>

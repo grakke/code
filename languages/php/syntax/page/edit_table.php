@@ -1,0 +1,91 @@
+<?php
+mysql_connect('localhost', 'root', 'root');
+mysql_query('set names utf8');
+mysql_query('use php3');
+$sql = 'select goods_id,goods_name,goods_desc,shop_price from goods';
+$res = mysql_query($sql);
+$data = array();
+while ($row = mysql_fetch_assoc($res)) {
+    $data[] = $row;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+    /*
+    @ parameter:span element,DOM tree
+    */
+    function tableEdit(o, id, field) {
+        var text = $(o).html();//the least element
+        $(o).html('');
+        if ($(o).find('input').length > 0) {
+            return false;
+        }
+
+        var tdObj = $(o).parent();
+        var inputObj = $("<input type='text' />").css('border-width', '0').width(tdObj.width()).css('background', tdObj.css('background-color')).val(text).appendTo($(o));//$("<input type='text' />") ???
+
+        inputObj.trigger('focus').trigger('select');//
+        inputObj.click(function () {
+            return false;
+        });
+
+        inputObj.blur(function () {
+            var zhi = $(this).val();
+            $.ajax({
+                type: 'get',
+                data: {id: id, field: field, zhi: zhi},
+                url: 'edit.php',
+                success: function (meg) {
+                    if (msg > 0) {
+                        $(o).html(zhi);
+                    }
+                }
+            });
+        });
+    }
+
+    $(function () {
+        $('tbody tr:even').css('background', 'red');
+    });
+</script>
+<style type='text/css'>
+    table {
+        width: 400px;
+        border-collapse: collapse;
+    }
+
+    td {
+        width: 100px;
+        height: 20px;
+        border: 1px solid green;
+    }
+</style>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Describtion</td>
+        <td>Price</td>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($data as $v) { ?>
+        <tr>
+            <td><?php echo $v['goods_id'] ?></td>
+            <td><span><?php echo $v['goods_name'] ?></span></td>
+            <td><span><?php echo $v['goods_desc'] ?></span></td>
+            <td><span><?php echo $v['shop_price'] ?></span></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
+</body>
+</html>
