@@ -74,7 +74,7 @@ number = int(input("Please type in a number:"))
 print(f"{number} times 5 is {5 * number}")
 ```
 
-## part 2
+### part 2
 
 - Programming terminology
   - familiar with some essential terminology in programming
@@ -225,10 +225,10 @@ while True:
   - what is meant by string indexing
     - negative indexing
       - The last character in a string is at index -1, the second to last character is at index -2, and so forth.
-      - You can think of input_string[-1] as shorthand for input_string[len(input_string) - 1]
+      - You can think of `input_string[-1]` as shorthand for `input_string[len(input_string) - 1]`
       - 范围 -1~ -len(str)
   - how to look for substrings within a string
-    - Half open intervals [a:b] a is included in the interval, but the character at the end index b is left out
+    - Half open intervals `[a:b]` a is included in the interval, but the character at the end index b is left out
     - 遍历时边界条件 因为尾标不包括，界定范围
     - **写 while 先写框架**
     - The operator in returns a Boolean value, so it will only tell us if a substring exists in a string
@@ -340,7 +340,7 @@ while i <= num:
   - Strings and lists have a lot in common, especially in the way they behave with different operators. The main difference is that strings are immutable.
   - string variables holding A string can be replaced by another string.
 
-```py
+```python
 my_list = [7, 2, 2, 5, 2]
 
 my_list[1] = 3
@@ -402,7 +402,7 @@ print("XYZ".isupper()) # True
     - the assignment b = a copies the reference
     - Copying a list
       - iteration and append points to a different list
-      - my_list_copy = my_list[:]
+      - `my_list_copy = my_list[:]`
     - Editing a list given as an argument
       - `my_list[:] = [100, 99, 98, 97]`
     - a change made through any one of the references affects also the other references, as their target is the same.
