@@ -29,3 +29,4 @@ Docker/mysql/test_db/
 **/bin
 **/vendor
 logs
+static

@@ -11,7 +11,7 @@ name, score, comment = [], [], []
 
 def danye_crawl(page):
     url = 'https://movie.douban.com/subject/6390825/comments?start=%s&limit=20&sort=new_score&status=P&percent_type=' % (
-            page * 20)
+        page * 20)
 
     response = etree.HTML(requests.get(url).content.decode('utf-8'))
 
@@ -34,5 +34,5 @@ for i in tqdm(range(11)):
     time.sleep(random.uniform(6, 9))
 
 res = pd.DataFrame({'name': name, 'score': score, 'comment': comment}, columns=[
-    'name', 'score', 'comment'])
-res.to_csv("static/豆瓣.csv")
+                   'name', 'score', 'comment'])
+res.to_csv("../../static/豆瓣.csv")
