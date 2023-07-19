@@ -10,11 +10,11 @@
   "author": "Henry <liboming88@yeah.net> (https://www.bluebird89.com/)",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.12.8"
+    "@babel/cli": "^7.22.9"
   },
   "dependencies": {
-    "@babel/core": "^7.12.9",
+    "@babel/core": "^7.22.9",
     "@babel/polyfill": "^7.12.1",
-    "@babel/runtime": "^7.12.5"
+    "@babel/runtime": "^7.22.6"
   }
 }
