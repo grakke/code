@@ -435,6 +435,10 @@ print("XYZ".isupper()) # True
       - Tuples are enclosed in parentheses (), while lists are enclosed in square brackets []
       - Tuples are immutable, while the contents of a list may change
     - Tuples are ideal for when there is a set collection of values which are in some way connected
+    - immutable,can be used as keys in a dictionary.
+    - The parentheses are not strictly necessary when defining tuples.easily return multiple values using tuples.
+    - The method my_dictionary.items() returns each key-value pair as a tuple, where the first item is the key and the second item is the value.
+    - common use case for tuples is swapping the values of two variables
   - create tuples from various types of values
   - the difference between a tuple and a list
   - name some typical use cases for tuples
@@ -465,7 +469,89 @@ my_list[1:3] = [10, 20]
 numbers[:] = new_list
 ```
 
+### Part 6
+
+- Reading files
+  - how to read the contents of files with Python
+    - read line is str, need to convert data type `parts = map(int, parts)`
+  - what a text file and a CSV file are
+    - format use , spilt different str, file end with csv
+  - process the contents of a CSV file in your programs
+  - Reading the same file multiple times
+    - the file can only be processed once. Once the last line is read, the file handle rests at the end of the file, and the data in the file can no longer be accessed.
+    - want to access the contents in the second for loop, we will have to open the file a second time
+    - usually best to read the file just once, and store its contents in an appropriate format for further processing
+  - Removing unnecessary lines, spaces and line breaks .strip()
+  - Combining data from different files
+    - dic 变更不同 key
+- Writing files
+  - how to create files with Python code
+    - Appending data to an existing file
+    - Clearing file contents and deleting files
+      - `with open("file_to_be_cleared.txt", "w") as my_file:`
+      - `open('file_to_be_cleared.txt', 'w').close()`
+      - `os.remove("unnecessary_file.csv")`
+  - write text based data to a file
+  - how to create a CSV file
+- Handling errors
+  - Input validation how to handle invalid input
+  - what are exceptions in programming
+    - Errors that occur while the program is already running are called exceptions. It is possible to prepare for exceptions, and handle them so that the execution continues despite them occurring.
+    - Exception handling in Python is accomplished with try and except statements. The idea is that if something within a try block causes an exception, Python checks if there is a corresponding except block. If such a block exists, it is executed and the program themn continues as if nothing happened.
+    - Typical errors
+      - ValueError
+      - TypeError
+      - IndexError
+      - ZeroDivisionError
+  - be familiar with the most common exception types in Python
+  - be able to handle exceptions in your own programs
+    - Raising exceptions
+- Local and global variables
+  - what is meant by a local variable
+    - Variables defined within a Python function are local variables, only available within the function. This applies to both function parameters, and other variables defined within the function definition. A variable which is local to a function does not exist outside the function.
+  - how the scope of a variable affects how it is used
+    - Variables defined within the main function are global variables,The value stored in a global variable can be accessed from any other function in the program
+    - A global variable cannot be changed directly from within another function.
+  - what the Python keyword global means
+    - If we wish to specify that we mean to change the global variable within a function, we will need the Python keyword global
+    - Global variables are useful in situations where we need to have some common, "higher level" information available to all functions in the program.
+  - use local and global variables in the correct contexts
+
+### Part 7
+
+- [Modules](https://docs.python.org/3/library/)
+  - Selecting distinct sections from a module
+- Randomness
+  - randint(1, 6)
+  - shuffle(words)
+  - The features of the module random are based on an algorithm which produces random numbers based on a specific initialization value and some arithmetic operations. The initialization value is often called a seed value.
+  - If we have functions which rely on randomization, and we set seed value, the function will produce the same result each time it is executed. The result may be different with different Python versions, but in essence randomness is lost by setting a seed value.
+- Times and dates
+  - datetime.now()
+  - datetime(2021, 6, 26)
+  - timedelta(weeks=32, days=15)
+  - +/-
+  - .days|seconds
+  - .strftime("%d/%m/%Y %H:%M")
+- Data processing
+  - csv.reader(my_file, delimiter=";"):
+  - data = my_file.read() json.loads(data)
+  - my_request = urllib.request.urlopen("<https://helsinki.fi>")
+- Creating your own modules
+  - The functions defined in the file can be accessed by importing the file
+  - the file containing the Python module must be located either in the same directory with the program importing it, or in one of the default Python directories, or else the Python interpreter will not find it when the import statement is executed.
+  - Python has a built-in variable **name**, which contains the name of the program being executed. If the program is being executed on its own, the value of the variable is **main**. If the program has been imported, the value of the variable is the name of the imported module
+- More Python features
+
 ## the Advanced Course in Programming parts 8~14
+
+### Part 8
+
+- Objects and methods
+- Classes and objects
+- Defining classes
+- Defining methods
+- More examples of classes
 
 ## 思考
 
