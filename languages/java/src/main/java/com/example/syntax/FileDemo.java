@@ -7,8 +7,7 @@ class FileDemo {
 
         // f.createNewFile(); // 创建一个文件
         File f = new File("./io.txt");
-        // File类的两个常量
-        //路径分隔符(与系统有关的）<windows里面是 ; linux里面是 ： >
+        // File类的两个常量 路径分隔符(与系统有关的）<windows里面是 ; linux里面是 ： >
         System.out.println(File.pathSeparator);
         //与系统有关的路径名称分隔符<windows里面是 \ linux里面是/ >
         System.out.println(File.separator);

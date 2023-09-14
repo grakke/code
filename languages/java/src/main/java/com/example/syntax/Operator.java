@@ -58,5 +58,13 @@ public class Operator {
         System.out.println(isPainter);
         System.out.println(isDriver);
         // 优先级：赋值－》布尔－》比较－》计算
+
+
+        a = 100;
+        b = 200;
+        c = 600;
+        int max = a > b ? a : b;
+        max = max > c ? max : c;
+        System.out.println(max);
     }
 }

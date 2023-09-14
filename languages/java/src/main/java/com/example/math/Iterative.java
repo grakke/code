@@ -1,4 +1,5 @@
 package com.example.math;
+
 // 迭代法实现 二分
 public class Iterative {
 
@@ -9,7 +10,6 @@ public class Iterative {
      * @Description: 计算大于1的正整数之平方根
      */
     public static double getSqureRoot(int n, double deltaThreshold, int maxTry) {
-
         if (n <= 1) {
             return -1.0;
         }
@@ -31,14 +31,13 @@ public class Iterative {
         }
 
         return -2.0;
-
     }
 
 
     public static void main(String[] args) {
-
         int number = 10;
         double squareRoot = Iterative.getSqureRoot(number, 0.000001, 10000);
+
         if (squareRoot == -1.0) {
             System.out.println("请输入大于1的整数");
         } else if (squareRoot == -2.0) {
@@ -46,6 +45,5 @@ public class Iterative {
         } else {
             System.out.println(String.format("%d的平方根是%f", number, squareRoot));
         }
-
     }
 }

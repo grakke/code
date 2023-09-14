@@ -1,12 +1,12 @@
 package com.example.math;
 
-class Result {
-    public long wheatNum = 0;  // 当前格的麦粒数
-    public long wheatTotalNum = 0;  // 目前为止麦粒的总数
-}
 
 public class Induction {
 
+    static class Result {
+        public long wheatNum = 0;  // 当前格的麦粒数
+        public long wheatTotalNum = 0;  // 目前为止麦粒的总数
+    }
 
     /**
      * 迭代实现
@@ -15,7 +15,6 @@ public class Induction {
      * @return long-麦粒的总数
      * @Description: 算算舍罕王给了多少粒麦子
      */
-
     public static long getNumberOfWheat(int grid) {
 
         long sum = 0;      // 麦粒总数
@@ -30,7 +29,6 @@ public class Induction {
         }
 
         return sum;
-
     }
 
 
@@ -71,14 +69,13 @@ public class Induction {
 
         long start, end = 0;
         start = System.currentTimeMillis();
-        System.out.println(String.format("舍罕王给了这么多粒：%d", Induction.getNumberOfWheat(grid)));
+        System.out.printf("舍罕王给了这么多粒：%d%n", Induction.getNumberOfWheat(grid));
         end = System.currentTimeMillis();
-        System.out.println(String.format("耗时%d毫秒", (end - start)));
+        System.out.printf("耗时%d毫秒%n", (end - start));
 
         start = System.currentTimeMillis();
-        System.out.println(String.format("舍罕王给了这么多粒：%d", (long) (Math.pow(2, grid)) - 1));
+        System.out.printf("舍罕王给了这么多粒：%d%n", (long) (Math.pow(2, grid)) - 1);
         end = System.currentTimeMillis();
-        System.out.println(String.format("耗时%d毫秒", (end - start)));
-
+        System.out.printf("耗时%d毫秒%n", (end - start));
     }
 }

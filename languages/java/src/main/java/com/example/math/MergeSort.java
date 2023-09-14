@@ -28,9 +28,7 @@ public class MergeSort {
         right = merge_sort(right);
 
         // 合并排序后的两半
-        int[] merged = merge(left, right);
-
-        return merged;
+        return merge(left, right);
 
     }
 

@@ -9,7 +9,6 @@ public class Recursive {
 
     /**
      * @param totalReward-奖赏总金额，result-保存当前的解
-     * @return void
      * @Description: 使用函数的递归（嵌套）调用，找出所有可能的奖赏组合
      */
     public static void get(long totalReward, ArrayList<Long> result) {

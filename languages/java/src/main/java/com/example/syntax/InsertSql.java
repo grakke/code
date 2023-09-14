@@ -1,4 +1,4 @@
-// package syntax;
+ package com.example.syntax;
 //
 // import java.sql.Connection;
 // import java.sql.DriverManager;
@@ -7,7 +7,7 @@
 // import com.mysql.jdbc.PreparedStatement;
 //
 // // 88 秒插入 1000 万条数据
-// public class InsertTest {
+ public class InsertSql {
 //
 //      public static void main(String[] args) throws ClassNotFoundException, SQLException {
 //          final String url = "jdbc:mysql://127.0.0.1/teacher" ;
@@ -68,4 +68,4 @@
 //          System.out.println( "1000万条数据插入花费时间 : " + (end - begin) / 1000 + " s" );
 //          System.out.println( "插入完成" );
 //      }
-// }
+ }

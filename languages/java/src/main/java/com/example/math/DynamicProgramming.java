@@ -8,7 +8,6 @@ public class DynamicProgramming {
      * @return int-两者之间的编辑距离
      * @Description: 使用状态转移方程，计算两个字符串之间的编辑距离
      */
-
     public static int getStrDistance(String a, String b) {
 
         if (a == null || b == null) return -1;
@@ -56,7 +55,6 @@ public class DynamicProgramming {
      *
      * @param amount 用一维数组记录每一步总金额
      * @param values 用一维数组记录纸币面额
-     * @return
      */
     public static int getMinMoney(int[] amount, int[] values) {
         int[] t = new int[values.length];
@@ -83,5 +81,4 @@ public class DynamicProgramming {
         int[] values = new int[]{2, 3, 7};
         System.out.println(getMinMoney(c, values) + 1);
     }
-
 }

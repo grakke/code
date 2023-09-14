@@ -7,7 +7,6 @@ public class Combination {
 
     /**
      * @param teams-目前还剩多少队伍没有参与组合，result-保存当前已经组合的队伍
-     * @return void
      * @Description: 使用函数的递归（嵌套）调用，找出所有可能的队伍组合
      */
 
@@ -47,7 +46,6 @@ public class Combination {
      *
      * @param n
      * @param r
-     * @return
      */
     static int c(int n, int r) {
         if (r > n) {
@@ -70,7 +68,6 @@ public class Combination {
      * @param es
      * @param r
      * @param I  数组es开始取数位置
-     * @return
      */
     static int[][] C(int[] es, int r, int I) {
         int[][] rst = new int[c(es.length - I, r)][];

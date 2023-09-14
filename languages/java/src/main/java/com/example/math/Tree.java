@@ -14,7 +14,7 @@ public class Tree {
      * @Description: 前缀树的结点
      */
 
-    public class TreeNode {
+    public static class TreeNode {
 
         public char label;  // 结点的名称，在前缀树里是单个字母
         public HashMap<Character, TreeNode> sons = null; // 使用哈希映射存放子结点。哈希便于确认是否已经添加过某个字母对应的结点。
@@ -43,7 +43,7 @@ public class Tree {
 
             TreeNode node = stack.pop();  // 弹出栈顶的结点
 
-            if (node.sons.size() == 0) {
+            if (node.sons.isEmpty()) {
                 // 已经到达叶子结点了，输出
                 System.out.println(node.prefix + node.label);
             } else {

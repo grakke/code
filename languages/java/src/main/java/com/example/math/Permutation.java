@@ -27,14 +27,13 @@ public class Permutation {
 
     /**
      * @param horses-目前还剩多少马没有出战，result-保存当前已经出战的马匹及顺序
-     * @return void
      * @Description: 使用函数的递归（嵌套）调用，找出所有可能的马匹出战顺序
      */
 
     public static void permutate(ArrayList<String> horses, ArrayList<String> result) {
 
         // 所有马匹都已经出战，判断哪方获胜，输出结果
-        if (horses.size() == 0) {
+        if (horses.isEmpty()) {
             System.out.println(result);
             compare(result, q_horses);
             System.out.println();

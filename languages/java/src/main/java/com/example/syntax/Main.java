@@ -2,17 +2,30 @@ package com.example.syntax;
 
 import java.util.Scanner;
 
-public class GuessNumber {
+public class Main {
 
     public static void main(String[] args) {
+        System.out.println("Hello World!");
+
+        Weekday day = Weekday.SUN;
+        if (day == Weekday.SAT || day == Weekday.SUN) {
+            System.out.println("Work at home!");
+        } else {
+            System.out.println("Work at office!");
+        }
+
+        GuessNumber();
+    }
+
+    public static void GuessNumber() {
         Scanner in = new Scanner(System.in);
 
         int totalGameCount = 0;
         int totalCorrectCount = 0;
 
-        System.out.println("Please input Min munber:");
+        System.out.println("Please input Min Number:");
         int rangeStart = Integer.parseInt(in.nextLine());
-        System.out.println("Please input Max munber:");
+        System.out.println("Please input Max Number:");
         int rangEnd = Integer.parseInt(in.nextLine());
 
         System.out.println("Please input you chances number:");
@@ -43,4 +56,6 @@ public class GuessNumber {
         }
         System.out.println("Game is over");
     }
+
 }
+

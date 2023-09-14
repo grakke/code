@@ -6,9 +6,6 @@ public class PrimitiveDataType {
     public static void main(String[] args) {
 
         // primary data type  基本数据
-        // double > float > long >int>short>byte
-        // 自动类型转换：赋值或运算时发生
-        // sout　psvm
         byte byteVar = 127;
         System.out.println(byteVar);
         short shortVar = 30000;
@@ -16,6 +13,10 @@ public class PrimitiveDataType {
 
         int intVar = 3000000;
         System.out.println(intVar);
+
+        int n1 = Integer.parseInt("123"); // 123
+        int n2 = Integer.parseInt("ff", 16); // 按十六进制转换，255
+
 
         int i = 2147483647;
         int i2 = -2147483648;
@@ -41,6 +42,8 @@ public class PrimitiveDataType {
         boolean fCondition = false;
         System.out.println(condition);
         System.out.println(fCondition);
+        boolean b1 = Boolean.parseBoolean("true"); // true
+        boolean b2 = Boolean.parseBoolean("FALSE"); // false
 
         // 2个byte 转换int
         char charVar = 'a';
@@ -52,13 +55,15 @@ public class PrimitiveDataType {
         System.out.println(charVar + 10);
         System.out.println((char) 98);
 
-        // int a = 10;
-        // d++   = 25
-        //         ++d   = 27
-        //
-        // A = 0011 1100
-        // A << 2 // 240，即 1111 0000
-        // A >> 2 // 15 1111
-        // A>>>2 // 15即0000 1111
+        int num = '\u4564';
+
+        for (i = 0; i < 26; i++) {
+            System.out.println(num + ":\t" + (char) num++);
+        }
+
+        int  A = 0b00111100;
+        System.out.println(A << 2); // 240，即 1111 0000
+        System.out.println(A >> 2); // 15 1111
+        System.out.println(A>>>2); // 15 即 0000 1111
     }
 }

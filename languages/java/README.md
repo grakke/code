@@ -4,15 +4,24 @@
 
 - 环境搭建
 - 基本类型
+  - double > float > long >int>short>byte
+  - float类型，需要加上f后缀,float类型可最大表示3.4x1038，而double类型可最大表示1.79x10308
+  - 自动类型转换：赋值或运算时发生
 - 引用类型 reference
-    - 数组:相同类型变量集合(定长)
-        - 索引数组：变量名是第一个内存地址（指向），实际是一块地址连续内存
-        - 0 开始方便使用索引
-        - 多维数组是索引多维,第一维指向数组的起始地址
-        - 引用数组
     - 寻址：初始地址 + 偏移
-    - string
-    - 引用与对象，数据类型一致
+  - 引用与对象，数据类型一致
+    - String 内部是通过一个char[]数组表示的不可变对象
+      - 比较字符串内容是否相同必须使用equals()方法而不能用==
+      - 忽略大小写比较使用equalsIgnoreCase()方法
+      - contains()方法的参数是CharSequence而不是String，因为CharSequence是String实现的一个接口
+      - 通过new String(char[])创建新的String实例时，它并不会直接引用传入的char[]数组，而是会复制一份，所以，修改外部的char[]数组不会影响String实例内部的char[]数组，因为这是两个不同的数组。
+      - 转换编码 将String和byte[]转换，需要指定编码；转换为byte[]时，始终优先考虑UTF-8编码
+      - StringBuilder 一个可变对象，可以预分配缓冲区
+    - 数组:相同类型变量集合(定长)
+      - 索引数组：变量名是第一个内存地址（指向），实际是一块地址连续内存
+      - 0 开始方便使用索引
+      - 多维数组是索引多维,第一维指向数组的起始地址
+      - 引用数组
 - 编码
 - 运算符
 - 控制语句
@@ -28,14 +37,18 @@
 
 ## 面向对象
 
-* class object
-* 属性 private
-* 实例：堆
+* class
+  * 方法 类的一部分，不是对象
+    * 构造方法 不会被隐性继承
+    * 方法重载
+  - 隐藏 this 自引用
+  + Class
+* object
+  * 属性 private
+  * 实例：堆
 * 类属性引用
     + 自定义类
     + 当前类
-* package
-    + 全限定名唯一
 * 封装
     + 类内部方法操作内部数据
     + 缺省修饰符 protected：只能被当前包内类以及子类引用
@@ -46,7 +59,6 @@
     + 覆盖：方法 签名 返回值一样
     + super:必须第一行
     + 子类会默认调用弗父类无参构造方法，父类没有无参构造，子类必须生命构造调用父类有参构造
-
     - 组合:注入
 * 多态
     + 重载（overload）：方法名+参数 唯一，调用别的重载方法，多态在于参数。参数可以转换就行
@@ -55,11 +67,8 @@
         * 静态多态：跟引用类型有关，与实际对象无关，没有回溯，往链上方
     + 重写 override 动态多态
         + 父类应用可以指向子类对象,引用对象类型决定调用的方法，可以转换为父类类型
-    + 75
 - 方法不改变实参（引用）
 - 返回参数不受外边影响
-- 隐藏 this 自引用
-- 方法是类的一部分，不是对象
 - 静态变量：大写 下划线
     + 可以修改
 - 静态方法：不能直接 this 自引用
@@ -70,9 +79,6 @@
 - final
     + 属性必须被赋值且一次
     + 引用
-- Object
-    + String
-    + Class
 - 反射
     - invoke
 - 枚举
@@ -80,33 +86,37 @@
     + 允许静态方法 私有方法 带缺省实现的抽象方法
     + 接口继承- 抽象类
 - 静态内部类
-- 构造函数不会被继承
 - 调用 Clone()，被复制对象类必须实现 Cloneable 接口
     - 浅复制
     - super.clone()
+* package 包
+    + 全限定名唯一
+    + classpath是JVM用到的一个环境变量，用来指示JVM如何搜索class
+    + `java -classpath .;C:\work\project1\bin;C:\shared abc.xyz.Hello`
++ 模块 Module
 
-## 源码
+## 核心类
 
 * Math:工具类，禁止实例化，封装成静态方法
 * Scanner
 * BigInteger
 * String:char array->byte array
-    - immutable
-    - 数据 private
-    - charAt
-    - substring
-    - toCharArray
-    - split
-    - indexOf
-    - contains
-    - equals equalsIgnoreCase
-    - trim()
+  - immutable
+  - 数据 private
+  - charAt
+  - substring
+  - toCharArray
+  - split
+  - indexOf
+  - contains
+  - equals equalsIgnoreCase
+  - trim()
 * StringBuilder
-    - toString()
-    - reverse()
-    - append()
-    - delete()
-    - insert()
+  - toString()
+  - reverse()
+  - append()
+  - delete()
+  - insert()
 * main
 * System
     - currentTimeMillis()
@@ -235,11 +245,6 @@
 10公里,等待0分钟
 2公里,等待3分钟
 ```
-
-## 能力
-
-* 从需求中找出合理的对象设计，是软件开发者的一项必备能力。不过这事也没有那么难，只要专心听需求的描述、留意其中提到的“名词”，你就会找到对象的蛛丝马迹
-* 越小的愿望，就越是容易实现
 
 ## 设计模式
 
