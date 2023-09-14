@@ -4,7 +4,7 @@
 
 - 环境搭建
 - 基本类型
-- 引用类型(reference)
+- 引用类型 reference
     - 数组:相同类型变量集合(定长)
         - 索引数组：变量名是第一个内存地址（指向），实际是一块地址连续内存
         - 0 开始方便使用索引
@@ -66,7 +66,7 @@
     + 重载
       — 静态代码块
     + 使用到静态变量，必须在前面声明
-- instanceof
+- `instanceof`
 - final
     + 属性必须被赋值且一次
     + 引用
@@ -89,7 +89,7 @@
 
 * Math:工具类，禁止实例化，封装成静态方法
 * Scanner
-* BigInterger
+* BigInteger
 * String:char array->byte array
     - immutable
     - 数据 private
@@ -99,7 +99,7 @@
     - split
     - indexOf
     - contains
-    - equals equalsIngoreCase
+    - equals equalsIgnoreCase
     - trim()
 * StringBuilder
     - toString()
@@ -132,8 +132,8 @@
     - step into/out:压栈
 * javadoc
 * IDEA
-    * psvm
-    * sout
+    * `psvm`
+    * `sout`
 
 ## 练习
 
