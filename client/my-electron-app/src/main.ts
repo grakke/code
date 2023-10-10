@@ -1,9 +1,7 @@
 import { app, BrowserWindow } from 'electron';
 import * as path from 'path';
 let mainWindow: Electron.BrowserWindow;
-/**
- *
- */
+
 function createWindow(): void {
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -25,6 +23,7 @@ function createWindow(): void {
     mainWindow = null;
   });
 }
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
