@@ -1,6 +1,6 @@
 // Mixing jQuery and Node.js code in the same file? Yes please!
 
-$(function(){
+$(function () {
 
     // Display some statistics about this computer, using node's os module.
 
@@ -8,7 +8,7 @@ $(function(){
     var prettyBytes = require('pretty-bytes');
 
     $('.stats').append('Number of cpu cores: <span>' + os.cpus().length + '</span>');
-    $('.stats').append('Free memory: <span>' + prettyBytes(os.freemem())+ '</span>');
+    $('.stats').append('Free memory: <span>' + prettyBytes(os.freemem()) + '</span>');
 
     // Electron's UI library. We will need it for later.
 
@@ -22,16 +22,16 @@ $(function(){
     // The same-origin security policy doesn't apply to electron, so we can
     // send ajax request to other sites. Let's fetch Tutorialzine's rss feed:
 
-    $.get('http://feeds.feedburner.com/Tutorialzine', function(response){
+    $.get('http://feeds.feedburner.com/Tutorialzine', function (response) {
 
         var rss = $(response);
 
         // Find all articles in the RSS feed:
 
-        rss.find('item').each(function(){
+        rss.find('item').each(function () {
             var item = $(this);
-            
-            var content = item.find('encoded').html().split('</a></div>')[0]+'</a></div>';
+
+            var content = item.find('encoded').html().split('</a></div>')[0] + '</a></div>';
             var urlRegex = /(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/g;
 
             // Fetch the first image of the article.
@@ -64,7 +64,7 @@ $(function(){
         $('.flipster').on('click', 'a', function (e) {
 
             e.preventDefault();
-            
+
             // Open URL with default browser.
 
             shell.openExternal(e.target.href);

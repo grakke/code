@@ -14,7 +14,7 @@ function createWindow(): void {
     width: 800,
   });
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, '../html/index.html'));
+  mainWindow.loadFile(path.join(__dirname, '../index.html'));
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
   // Emitted when the window is closed.
