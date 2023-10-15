@@ -1,17 +1,17 @@
-# code
+# Code
 
 ## 基础
 
-- 算法
-- linux
-- 网络
+- Algorithms 算法
+- Linux
+- Networking 网络
 - Web
 
 ## 客户端
 
-- vue
-- react
-- flutter
+- Vue
+- React
+- Flutter
 
 ## 语言
 
@@ -29,16 +29,16 @@
 
 ### PHP
 
-## ai
+## AI
 
-### 机器学习
+### ML 机器学习
 
-### 深度学习
+### DL 深度学习
 
 ## 工具
 
 ## 技能
 
-### 重构
+### Refactor 重构
 
 ### DDD
