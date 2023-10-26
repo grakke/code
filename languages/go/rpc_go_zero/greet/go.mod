@@ -1,6 +1,8 @@
 module greet
 
-go 1.20
+go 1.21
+
+toolchain go1.21.1
 
 require (
 	github.com/tal-tech/go-zero v1.2.5

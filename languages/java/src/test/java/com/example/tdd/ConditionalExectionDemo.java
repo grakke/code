@@ -9,7 +9,7 @@
 // import java.lang.annotation.Target;
 //
 // @Disabled("depend env variable")
-// public class ConditionalExectionDemo {
+ public class ConditionalExectionDemo {
 //     @Test
 //     @EnabledOnOs(MAC)
 //     void onlyOnMacOs() {
@@ -129,4 +129,4 @@
 // // ...
 //     }
 //
-// }
+ }

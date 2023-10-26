@@ -1,6 +1,8 @@
 module kratos_demo
 
-go 1.17
+go 1.21
+
+toolchain go1.21.1
 
 require (
 	github.com/go-kratos/kratos/v2 v2.4.1
