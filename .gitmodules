@@ -1,0 +1,3 @@
+[submodule "basic/arch"]
+	path = basic/arch
+	url = git@github.com:qiniu/arch.git
