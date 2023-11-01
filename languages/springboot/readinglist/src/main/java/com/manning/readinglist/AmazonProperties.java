@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("amazon")
 public class AmazonProperties {
 
-	private String associateId;
+    private String associateId;
 
-	public void setAssociateId(String associateId) {
-		this.associateId = associateId;
-	}
+    public void setAssociateId(String associateId) {
+        this.associateId = associateId;
+    }
 
-	public String getAssociateId() {
-		return associateId;
-	}
+    public String getAssociateId() {
+        return associateId;
+    }
 
 }
