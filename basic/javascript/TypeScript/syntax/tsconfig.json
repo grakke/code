@@ -1,18 +1,16 @@
 {
+    // "files": [],
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es2019",
+        // "outFile": "",
+        "target": "es2021",
         "noImplicitAny": true, // 在表达式和声明上有隐含的'any'类型时报错, 最好之后改成true
         "sourceMap": true,
         "outDir": "./dist", // 输出目录
         "baseUrl": ".",
         "paths": {
-            "*": [
-                "node_modules/*"
-            ]
+            "*": ["node_modules/*"]
         }
     },
-    "include": [
-        "src/**/*"
-    ]
+    "include": ["src/**/*"]
 }

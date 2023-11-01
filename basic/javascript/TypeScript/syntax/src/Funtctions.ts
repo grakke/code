@@ -4,11 +4,13 @@ let myAdd: (baseValue: number, increment: number) => number = function (
 ): number {
   return x + y;
 };
+
 //optional
 function buildName(firstName: string, lastName?: string) {
   if (lastName) return firstName + " " + lastName;
   else return firstName;
 }
+
 // default
 function buildName1(firstName: string, lastName = "Smith") {
   return firstName + " " + lastName;
