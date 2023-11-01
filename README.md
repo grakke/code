@@ -27,8 +27,6 @@
 
 ### Rust
 
-### TypeScript
-
 ### PHP
 
 ## AI
