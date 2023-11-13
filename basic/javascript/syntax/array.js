@@ -12,12 +12,12 @@ arr[1] = 'b';
 arr[2] = 'c';
 
 arr = [{
-		a: 1
-	},
-	[1, 2, 3],
-	function () {
-		return true;
-	}
+    a: 1
+},
+[1, 2, 3],
+function () {
+    return true;
+}
 ];
 
 var arr = [1, 2, 3.14, 'Hello', null, true];
@@ -87,23 +87,23 @@ mycars[1] = "Volvo"
 mycars[2] = "BMW"
 
 for (x in mycars) {
-	document.write(mycars[x] + "<br />")
+    document.write(mycars[x] + "<br />")
 }
 
 var colors = ['red', 'green', 'blue'];
 colors.forEach(function (color) {
-	console.log(color);
+    console.log(color);
 });
 
-var a = [, , , ];
+var a = [, , ,];
 
 a.forEach(function (x, i) {
-	console.log(i + '. ' + x);
+    console.log(i + '. ' + x);
 })
 // 不产生任何输出
 
 for (var i in a) {
-	console.log(i);
+    console.log(i);
 }
 // 不产生任何输出
 
@@ -113,14 +113,14 @@ Object.keys(a)
 var a = [undefined, undefined, undefined];
 
 a.forEach(function (x, i) {
-	console.log(i + '. ' + x);
+    console.log(i + '. ' + x);
 });
 // 0. undefined
 // 1. undefined
 // 2. undefined
 
 for (var i in a) {
-	console.log(i);
+    console.log(i);
 }
 // 0
 // 1
@@ -132,7 +132,7 @@ Object.keys(a)
 // 类似数组的对象
 // arguments对象
 function args() {
-	return arguments
+    return arguments
 }
 var arrayLike = args('a', 'b');
 
@@ -145,30 +145,30 @@ var elts = document.getElementsByTagName('h3');
 elts.length // 3
 elts instanceof Array // false
 
-	// 字符串
-	'abc' [1] // 'b'
+// 字符串
+'abc'[1] // 'b'
 'abc'.length // 3
-	'abc'
-instanceof Array // false
+'abc'
+    instanceof Array // false
 
 // 将“类似数组的对象”变成真正的数组
 var arr = Array.prototype.slice.call(arrayLike);
 
 // 使用数组方法
 function print(value, index) {
-	console.log(index + ' : ' + value);
+    console.log(index + ' : ' + value);
 }
 
 Array.prototype.forEach.call(arrayLike, print);
 
 function logArgs() {
-	Array.prototype.forEach.call(arguments, function (elem, i) {
-		console.log(i + '. ' + elem);
-	});
+    Array.prototype.forEach.call(arguments, function (elem, i) {
+        console.log(i + '. ' + elem);
+    });
 }
 
 Array.prototype.forEach.call('abc', function (chr) {
-	console.log(chr);
+    console.log(chr);
 });
 
 
@@ -176,7 +176,7 @@ var list = [1, 2, 3, 4];
 var item;
 
 while (item = list.shift()) {
-	console.log(item);
+    console.log(item);
 }
 
 list // []
@@ -195,19 +195,19 @@ a.join() // "1,2,3,4"
 // ["hello", "world", "!"]
 
 [].concat({
-	a: 1
+    a: 1
 }, {
-	b: 2
+    b: 2
 })
 // [{ a: 1 }, { b: 2 }]
 
 [2].concat({
-	a: 1
+    a: 1
 })
 // [2, {a: 1}]
 
 var obj = {
-	a: 1
+    a: 1
 };
 var oldArray = [obj];
 
@@ -217,9 +217,9 @@ obj.a = 2;
 newArray[0].a // 2
 
 Array.prototype.slice.call({
-	0: 'a',
-	1: 'b',
-	length: 2
+    0: 'a',
+    1: 'b',
+    length: 2
 })
 // ['a', 'b']
 
@@ -227,22 +227,22 @@ Array.prototype.slice.call(document.querySelectorAll("div"));
 Array.prototype.slice.call(arguments);
 
 [10111, 1101, 111].sort(function (a, b) {
-	return a - b;
+    return a - b;
 })
 // [111, 1101, 10111]
 
 [{
-	name: "张三",
-	age: 30
+    name: "张三",
+    age: 30
 }, {
-	name: "李四",
-	age: 24
+    name: "李四",
+    age: 24
 }, {
-	name: "王五",
-	age: 28
-}].sort(function (o1, o2) {
-	return o1.age - o2.age;
-})
+        name: "王五",
+        age: 28
+    }].sort(function (o1, o2) {
+        return o1.age - o2.age;
+    })
 // [
 //   { name: "李四", age: 24 },
 //   { name: "王五", age: 28  },
@@ -250,19 +250,19 @@ Array.prototype.slice.call(arguments);
 // ]
 
 [1, 2, 3].map(function (elem, index, arr) {
-	return elem * index;
+    return elem * index;
 });
 // [0, 2, 6]
 
 var arr = ['a', 'b', 'c'];
 
 [1, 2].map(function (e) {
-	return this[e];
+    return this[e];
 }, arr)
 // ['b', 'c']
 
 function log(element, index, array) {
-	console.log('[' + index + '] = ' + element);
+    console.log('[' + index + '] = ' + element);
 }
 
 [2, 5, 9].forEach(log);
@@ -273,13 +273,13 @@ function log(element, index, array) {
 var out = [];
 
 [1, 2, 3].forEach(function (elem) {
-	this.push(elem * elem);
+    this.push(elem * elem);
 }, out);
 
 out // [1, 4, 9]
 
 var log = function (n) {
-	console.log(n + 1);
+    console.log(n + 1);
 };
 
 [1, undefined, 2].forEach(log)
@@ -297,20 +297,20 @@ var log = function (n) {
 // 3
 
 [1, 2, 3, 4, 5].filter(function (elem) {
-	return (elem > 3);
+    return (elem > 3);
 })
 // [4, 5]
 
 [1, 2, 3, 4, 5].filter(function (elem, index, arr) {
-	return index % 2 === 0;
+    return index % 2 === 0;
 });
 // [1, 3, 5]
 
 var obj = {
-	MAX: 3
+    MAX: 3
 };
 var myFilter = function (item) {
-	if (item > this.MAX) return true;
+    if (item > this.MAX) return true;
 };
 
 var arr = [2, 8, 3, 4, 1, 3, 2, 9];
@@ -318,43 +318,43 @@ arr.filter(myFilter, obj) // [8, 4, 9]
 
 var arr = [1, 2, 3, 4, 5];
 arr.some(function (elem, index, arr) {
-	return elem >= 3;
+    return elem >= 3;
 });
 // true
 
 var arr = [1, 2, 3, 4, 5];
 arr.every(function (elem, index, arr) {
-	return elem >= 3;
+    return elem >= 3;
 });
 // false
 
 [1, 2, 3, 4, 5].reduce(function (a, b) {
-	console.log(a, b);
-	return a + b;
+    console.log(a, b);
+    return a + b;
 })
 
 [1, 2, 3, 4, 5].reduce(function (a, b) {
-	return a + b;
+    return a + b;
 }, 10);
 // 25
 
 var users = [{
-		name: 'tom',
-		email: 'tom@example.com'
-	},
-	{
-		name: 'peter',
-		email: 'peter@example.com'
-	}
+    name: 'tom',
+    email: 'tom@example.com'
+},
+{
+    name: 'peter',
+    email: 'peter@example.com'
+}
 ];
 
 users
-	.map(function (user) {
-		return user.email;
-	})
-	.filter(function (email) {
-		return /^t/.test(email);
-	})
-	.forEach(function (email) {
-		console.log(email);
-	});
+    .map(function (user) {
+        return user.email;
+    })
+    .filter(function (email) {
+        return /^t/.test(email);
+    })
+    .forEach(function (email) {
+        console.log(email);
+    });

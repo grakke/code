@@ -31,26 +31,26 @@ var r = arr.filter(function (element, index, self) {
 arr.filter(function (element, index, self) {
     return self.indexOf(element) === index;
 
-var arr = [10, 20, 1, 2];
-arr.sort(function (x, y) {
-    if (x < y) {
-        return -1;
-    }
-    if (x > y) {
-        return 1;
-    }
-    return 0;
-}); // [1, 2, 10, 20]
+    var arr = [10, 20, 1, 2];
+    arr.sort(function (x, y) {
+        if (x < y) {
+            return -1;
+        }
+        if (x > y) {
+            return 1;
+        }
+        return 0;
+    }); // [1, 2, 10, 20]
 
-var arr = ['Google', 'apple', 'Microsoft'];
-arr.sort(function (s1, s2) {
-    x1 = s1.toUpperCase();
-    x2 = s2.toUpperCase();
-    if (x1 < x2) {
-        return -1;
-    }
-    if (x1 > x2) {
-        return 1;
-    }
-    return 0;
-}); // ['apple', 'Google', 'Microsoft']
+    var arr = ['Google', 'apple', 'Microsoft'];
+    arr.sort(function (s1, s2) {
+        x1 = s1.toUpperCase();
+        x2 = s2.toUpperCase();
+        if (x1 < x2) {
+            return -1;
+        }
+        if (x1 > x2) {
+            return 1;
+        }
+        return 0;
+    }); // ['apple', 'Google', 'Microsoft']

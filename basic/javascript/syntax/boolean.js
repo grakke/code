@@ -16,32 +16,32 @@ Boolean({}) // true
 Boolean([]) // true
 Boolean(new Boolean(false)) // true
 
-	!!undefined // false
-	!!null // false
-	!!0 // false
-	!!'' // false
-	!!NaN // false
+!!undefined // false
+!!null // false
+!!0 // false
+!!'' // false
+!!NaN // false
 
-	!!1 // true
-	!!'false' // true
-	!![] // true
-	!!{} // true
-	!! function () {} // true
-	!!/foo/ // true
+!!1 // true
+!!'false' // true
+!![] // true
+!!{} // true
+!! function () { } // true
+!!/foo/ // true
 
 
 if (Boolean(false)) {
-	console.log('true');
+    console.log('true');
 } // 无输出
 
 if (new Boolean(false)) {
-	console.log('true');
+    console.log('true');
 } // true
 
 if (Boolean(null)) {
-	console.log('true');
+    console.log('true');
 } // 无输出
 
 if (new Boolean(null)) {
-	console.log('true');
+    console.log('true');
 } // true

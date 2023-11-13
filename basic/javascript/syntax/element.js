@@ -13,4 +13,3 @@ document.documentElement.clientHeight
 
 // 网页总高度
 document.body.clientHeight
-

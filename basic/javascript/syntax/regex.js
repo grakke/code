@@ -2,15 +2,15 @@
 "\d\d\d"; //可以匹配'010'；
 "\w\w"; // 可以匹配'js'；
 "js." // 可以匹配'jsp'、'jss'、'js!'
-`\d{3}` //表示匹配3个数字，例如'010'；
-`\s` // 可以匹配一个空格（也包括Tab等空白符），所以\s+表示至少有一个空格，例如匹配' '，'\t\t'等；
-`\d{3,8}` // 表示3-8个数字，例如'1234567'。
-`[0-9a-zA-Z\_]` // 可以匹配一个数字、字母或者下划线；
-`[0-9a-zA-Z\_]+` // 可以匹配至少由一个数字、字母或者下划线组成的字符串，比如'a100'，'0_Z'，'js2015'等等；
-`[a-zA-Z\_\$][0-9a-zA-Z\_\$]*` // 可以匹配由字母或下划线、$开头，后接任意个由一个数字、字母或者下划线、$组成的字符串，也就是JavaScript允许的变量名；
-`[a-zA-Z\_\$][0-9a-zA-Z\_\$]{0, 19}` // 更精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）。
-`(J|j)ava(S|s)cript` // 可以匹配'JavaScript'、'Javascript'、'javaScript'或者'javascript'。
-`^js$`; // 就变成了整行匹配，就只能匹配'js'了
+    `\d{3}` //表示匹配3个数字，例如'010'；
+    `\s` // 可以匹配一个空格（也包括Tab等空白符），所以\s+表示至少有一个空格，例如匹配' '，'\t\t'等；
+    `\d{3,8}` // 表示3-8个数字，例如'1234567'。
+    `[0-9a-zA-Z\_]` // 可以匹配一个数字、字母或者下划线；
+    `[0-9a-zA-Z\_]+` // 可以匹配至少由一个数字、字母或者下划线组成的字符串，比如'a100'，'0_Z'，'js2015'等等；
+    `[a-zA-Z\_\$][0-9a-zA-Z\_\$]*` // 可以匹配由字母或下划线、$开头，后接任意个由一个数字、字母或者下划线、$组成的字符串，也就是JavaScript允许的变量名；
+    `[a-zA-Z\_\$][0-9a-zA-Z\_\$]{0, 19}` // 更精确地限制了变量的长度是1-20个字符（前面1个字符+后面最多19个字符）。
+    `(J|j)ava(S|s)cript` // 可以匹配'JavaScript'、'Javascript'、'javaScript'或者'javascript'。
+    `^js$`; // 就变成了整行匹配，就只能匹配'js'了
 
 var re = /^\d{3}\-\d{3,8}$/;
 var re = new RegExp("/^d{3}-d{3,8}$/");
@@ -107,9 +107,9 @@ var reg = /a/g;
 var str = 'abc_abc_abc'
 
 while (true) {
-	var match = reg.exec(str);
-	if (!match) break;
-	console.log('#' + match.index + ':' + match[0]);
+    var match = reg.exec(str);
+    if (!match) break;
+    console.log('#' + match.index + ':' + match[0]);
 }
 // #0:a
 // #4:a
@@ -118,83 +118,82 @@ while (true) {
 // test必须出现在开始位置
 /^test/.test('test123') // true
 
-	// test必须出现在结束位置
-	/
-	test$ / .test('new test') // true
+    // test必须出现在结束位置
+    / test$ /.test('new test') // true
 
-	// 从开始位置到结束位置只有test
-	/
+    // 从开始位置到结束位置只有test
+    /
 	^
-	test$ / .test('test') // true
-	/
+    test$ / .test('test') // true
+    /
 	^
-	test$ / .test('test test') // false
-(new RegExp('1\\+1')).test('1+1')
-	// true
+    test$ / .test('test test') // false
+        (new RegExp('1\\+1')).test('1+1')
+    // true
 
-	// \s 的例子
-	/
-	\s\ w * /.exec('hello world') / / [" world"]
+    // \s 的例子
+    /
+\s\ w * /.exec('hello world') / / [" world"]
 
-	// \b 的例子
-	/
-	\bworld / .test('hello world') // true
-	/
-	\bworld / .test('hello-world') // true
-	/
-	\bworld / .test('helloworld') // false
+    // \b 的例子
+    /
+\bworld / .test('hello world') // true
+    /
+\bworld / .test('hello-world') // true
+    /
+\bworld / .test('helloworld') // false
 
-	// \B 的例子
-	/
-	\Bworld / .test('hello-world') // false
-	/
-	\Bworld / .test('helloworld') // true
+    // \B 的例子
+    /
+\Bworld / .test('hello-world') // false
+    /
+\Bworld / .test('helloworld') // true
 
 // 遇到换行符（\n）就会停止匹配
 var html = "<b>Hello</b>\n<i>world!</i>";
 
 /.*/.exec(html)[0]
-	// "<b>Hello</b>"
+    // "<b>Hello</b>"
 
-	/
-	[\S\ s] * /.exec(html)[0]
-	// "<b>Hello</b>\n<i>world!</i>"
+    /
+    [\S\ s] * /.exec(html)[0]
+    // "<b>Hello</b>\n<i>world!</i>"
 
-	/
-	lo {
-		2
-	}
+    /
+    lo {
+    2
+}
 k / .test('look') // true
-	/
-	lo {
-		2,
-		5
-	}
+    /
+    lo {
+    2,
+        5
+}
 k / .test('looook') // true
 
-	// t 出现0次或1次
-	/
-	t ? est / .test('test') // true
-	/
-	t ? est / .test('est') // true
+    // t 出现0次或1次
+    /
+    t ? est / .test('test') // true
+        /
+        t ? est / .test('est') // true
 
-	// t 出现1次或多次
-	/
-	t + est / .test('test') // true
-	/
-	t + est / .test('ttest') // true
-	/
-	t + est / .test('est') // false
+        // t 出现1次或多次
+        /
+        t + est / .test('test') // true
+        /
+        t + est / .test('ttest') // true
+        /
+        t + est / .test('est') // false
 
-	// t 出现0次或多次
-	/
-	t * est / .test('test') // true
-	/
-	t * est / .test('ttest') // true
-	/
-	t * est / .test('tttest') // true
-	/
-	t * est / .test('est') // true
+        // t 出现0次或多次
+        /
+        t * est / .test('test') // true
+        /
+        t * est / .test('ttest') // true
+        /
+        t * est / .test('tttest') // true
+        /
+        t * est / .test('est') // true
 
 var s = 'aaa';
 s.match(/a+?/) // ["a"]
@@ -207,13 +206,10 @@ regex.test(str); // true
 regex.test(str); // false
 
 /world$/.test('hello world\n') // false
-	/
-	world$ / m.test('hello world\n') // true
-	/
-	^ b / m.test('a\nb') // true
+    / world$ / m.test('hello world\n') // true
+    /^ b / m.test('a\nb') // true
 
-	/
-	(fred) + /.test('fredfred') / / true
+    / (fred) + /.test('fredfred') / / true
 var m = 'abcabc'.match(/(.)b(.)/);
 m
 // ['abc', 'a', 'c']
@@ -225,17 +221,16 @@ m // ['abc', 'abc']
 var str = 'abcabc';
 var reg = /(.)b(.)/g;
 while (true) {
-	var result = reg.exec(str);
-	if (!result) break;
-	console.log(result);
+    var result = reg.exec(str);
+    if (!result) break;
+    console.log(result);
 }
 // ["abc", "a", "c"]
 // ["abc", "a", "c"]
 
 /(.)b(.)\1b\2/.test("abcabc")
-	// true
-	/
-	y((..)\ 2)\ 1 / .test('yabababab') // true
+    // true
+    / y((..) \ 2) \ 1 / .test('yabababab') // true
 
 var tagName = /<([^>]+)>[^<]*<\/\1>/;
 tagName.exec("<b>bold</b>")[1]
@@ -274,5 +269,5 @@ url.exec('http://google.com/');
 var m = 'abc'.match(/b(?=c)/);
 m // ["b"]
 
-/\d+(?!\.)/.exec('3.14')
+    /\d + (? !\.) /.exec('3.14')
 // ["14"]

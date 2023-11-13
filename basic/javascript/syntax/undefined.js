@@ -1,5 +1,5 @@
 function f(x) {
-	return x;
+    return x;
 }
 f() // undefined
 
@@ -7,7 +7,7 @@ Number(undefined) // NaN
 5 + undefined // NaN
 
 if (!undefined) {
-	console.log('undefined is false');
+    console.log('undefined is false');
 }
 // undefined is false
 
@@ -17,7 +17,7 @@ i // undefined
 
 // 调用函数时，应该提供的参数没有提供，该参数等于 undefined
 function f(x) {
-	return x;
+    return x;
 }
 f() // undefined
 
@@ -26,5 +26,5 @@ var o = new Object();
 o.p // undefined
 
 // 函数没有返回值时，默认返回 undefined
-function f() {}
+function f() { }
 f() // undefined

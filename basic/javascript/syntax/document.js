@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function (event) {
-	document.write('<p>Hello World!</p>');
+    document.write('<p>Hello World!</p>');
 });
 
 // 选中 data-foo-bar 属性等于 someval 的元素
@@ -58,5 +58,5 @@ var pars = [];
 var currentNode;
 
 while (currentNode = nodeIterator.nextNode()) {
-  pars.push(currentNode);
+    pars.push(currentNode);
 }

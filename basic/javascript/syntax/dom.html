@@ -35,8 +35,8 @@
     </div>
 
     <script>
-        var parent=document.getElementById("div1");
-        var child=document.getElementById("p1");
+        var parent = document.getElementById("div1");
+        var child = document.getElementById("p1");
         parent.removeChild(child);
         var test = document.getElementById('test');
         var trs = document.getElementById('test-table').getElementsByTagName('tr');
@@ -48,23 +48,23 @@
         var q1 = document.querySelector('#q1'); // 通过querySelector获取ID为q1的节点
         var ps = q1.querySelectorAll('div.highlighted > p'); // 通过querySelectorAll获取q1节点内的符合条件的所有节点
 
-        document.getElementById("test").innerHTML="New text!";
-        document.getElementById("image").src="landscape.jpg";
+        document.getElementById("test").innerHTML = "New text!";
+        document.getElementById("image").src = "landscape.jpg";
         p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ'; // <p>...</p>的内部结构已修改=
         p.innerText = '<script>alert("Hi")
     </script>
     ';// HTML被自动编码，无法设置一个
     <script>
-        节点 <p id="p-id">&lt;script&gt;alert("Hi")&lt;/script&gt;</p>
+        节点 < p id = "p-id" >& lt; script & gt; alert("Hi") & lt; /script&gt;</p >
 
-        p.style.color = '#ff0000';
+            p.style.color = '#ff0000';
         p.style.fontSize = '20px';
         p.style.paddingTop = '2em';
 
-        var para=document.createElement("p");
-        var node=document.createTextNode("这是新段落。");
+        var para = document.createElement("p");
+        var node = document.createTextNode("这是新段落。");
         para.appendChild(node);
-        var element=document.getElementById("div1");
+        var element = document.getElementById("div1");
         element.appendChild(para);
 
         var
@@ -95,5 +95,5 @@
         var parent = document.getElementById('parent');
         parent.removeChild(parent.children[0]);
         parent.removeChild(parent.children[1]); // <-- 浏览器报错
-    </script></some-HTML-element
->
+    </script>
+</some-HTML-element>

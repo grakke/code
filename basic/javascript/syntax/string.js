@@ -17,13 +17,13 @@ var message = `你好, ${name}, 你今年${age}岁了!`;
 'Did she say \'Hello\'?'
 "Did she say \"Hello\"?"
 
-(function () {
-	/*
-	line 1
-	line 2
-	line 3
-	*/
-}).toString().split('\n').slice(1, -1).join('\n')
+    (function () {
+        /*
+        line 1
+        line 2
+        line 3
+        */
+    }).toString().split('\n').slice(1, -1).join('\n')
 // "line 1
 // line 2
 // line 3"
@@ -65,11 +65,11 @@ atob('SGVsbG8gV29ybGQh') // "Hello World!"
 btoa('你好') // 报错
 
 function b64Encode(str) {
-	return btoa(encodeURIComponent(str));
+    return btoa(encodeURIComponent(str));
 }
 
 function b64Decode(str) {
-	return decodeURIComponent(atob(str));
+    return decodeURIComponent(atob(str));
 }
 
 b64Encode('你好') // "JUU0JUJEJUEwJUU1JUE1JUJE"
@@ -96,18 +96,18 @@ String(undefined) // "undefined"
 String(null) // "null"
 
 String({
-	a: 1
+    a: 1
 }) // "[object Object]"
 String([1, 2, 3]) // "1,2,3"
 
 '5' + 1 // '51'
-	'5' + true // "5true"
+'5' + true // "5true"
 '5' + false // "5false"
-	'5' + {} // "5[object Object]"
+'5' + {} // "5[object Object]"
 '5' + [] // "5"
-'5' + function () {} // "5function (){}"
+'5' + function () { } // "5function (){}"
 '5' + undefined // "5undefined"
-	'5' + null // "5null"
+'5' + null // "5null"
 
 var s1 = 'abc';
 var s2 = new String('abc');
@@ -116,7 +116,7 @@ typeof s1 // "string"
 typeof s2 // "object"
 
 s2.valueOf() // "abc"
-(new String('abc'))[1] // "b"
+    (new String('abc'))[1] // "b"
 
 String.fromCharCode() // ""
 String.fromCharCode(97) // "a"
@@ -176,7 +176,7 @@ str.replace(/^\s+|\s+$/g, '') // "#id div.class"
 // "a[a-b-c]c"
 
 '3 and 5'.replace(/[0-9]+/g, function (match) {
-	return 2 * match;
+    return 2 * match;
 })
 // "6 and 10"
 
@@ -184,25 +184,25 @@ var a = 'The quick brown fox jumped over the lazy dog.';
 var pattern = /quick|brown|lazy/ig;
 
 a.replace(pattern, function replacer(match) {
-	return match.toUpperCase();
+    return match.toUpperCase();
 });
 // The QUICK BROWN fox jumped over the LAZY dog.
 
 var prices = {
-	'p1': '$1.99',
-	'p2': '$9.99',
-	'p3': '$5.00'
+    'p1': '$1.99',
+    'p2': '$9.99',
+    'p3': '$5.00'
 };
 
 var template = '<span id="p1"></span>' +
-	'<span id="p2"></span>' +
-	'<span id="p3"></span>';
+    '<span id="p2"></span>' +
+    '<span id="p3"></span>';
 
 template.replace(
-	/(<span id=")(.*?)(">)(<\/span>)/g,
-	function (match, $1, $2, $3, $4) {
-		return $1 + $2 + $3 + prices[$2] + $4;
-	}
+    /(<span id=")(.*?)(">)(<\/span>)/g,
+    function (match, $1, $2, $3, $4) {
+        return $1 + $2 + $3 + prices[$2] + $4;
+    }
 );
 // "<span id="p1">$1.99</span><span id="p2">$9.99</span><span id="p3">$5.00</span>"
 

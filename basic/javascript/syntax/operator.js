@@ -14,16 +14,16 @@ false + 'a' // "falsea"
 1 / '2' // 0.5
 
 var obj = {
-	p: 1
+    p: 1
 };
 obj + 2 // "[object Object]2"
 
 var obj = new Date();
 obj.valueOf = function () {
-	return 1
+    return 1
 };
 obj.toString = function () {
-	return 'hello'
+    return 'hello'
 };
 
 obj + 2 // "hello2"
@@ -36,17 +36,17 @@ x++ // 1
 ++y // 2
 
 
-	+
-	true // 1
-	+
-	[] // 0
-	+
-	{} // NaN
+    +
+    true // 1
+    +
+    [] // 0
+    +
+    {} // NaN
 
 var x = 1; -
-x // -1
-	-
-	(-x) // 1
+    x // -1
+    -
+    (-x) // 1
 
 2 ** 4 // 16
 
@@ -59,24 +59,24 @@ var x = [2];
 x > '11' // true
 
 x.valueOf = function () {
-	return '1'
+    return '1'
 };
 x > '11' // false
 // 等同于 [2].valueOf() > '11'
 // 即 '1' > '11'
 
 [2] > [1] // true
-// 等同于 [2].valueOf().toString() > [1].valueOf().toString()
-// 即 '2' > '1'
+    // 等同于 [2].valueOf().toString() > [1].valueOf().toString()
+    // 即 '2' > '1'
 
-[2] > [11] // true
+    [2] > [11] // true
 // 等同于 [2].valueOf().toString() > [11].valueOf().toString()
 // 即 '2' > '11'
 
 {
-	x: 2
+    x: 2
 } >= {
-	x: 1
+    x: 1
 } // true
 // 等同于 { x: 2 }.valueOf().toString() >= { x: 1 }.valueOf().toString()
 // 即 '[object Object]' >= '[object Object]'
@@ -84,19 +84,19 @@ x > '11' // false
 1 === 0x1 // true
 
 NaN === NaN // false
-	+
-	0 === -0 // true
+    +
+    0 === -0 // true
 
-{} === {} // false
+{ } === {} // false
 [] === [] // false
-(function () {} === function () {}) // false
+        (function () { } === function () { }) // false
 
 undefined === undefined // true
 null === null // true
 
 1 !== '1' // true
-	// 等同于
-	!(1 === '1')
+// 等同于
+!(1 === '1')
 
 1 == true // true
 // 等同于 1 === Number(true)
@@ -111,44 +111,44 @@ null === null // true
 // 等同于 2 === Number(false)
 
 'true' == true // false
-	// 等同于 Number('true') === Number(true)
-	// 等同于 NaN === 1
+// 等同于 Number('true') === Number(true)
+// 等同于 NaN === 1
 
-	'' == 0 // true
+'' == 0 // true
 // 等同于 Number('') === 0
 // 等同于 0 === 0
 
 '' == false // true
-	// 等同于 Number('') === Number(false)
-	// 等同于 0 === 0
+// 等同于 Number('') === Number(false)
+// 等同于 0 === 0
 
-	'1' == true // true
+'1' == true // true
 // 等同于 Number('1') === Number(true)
 // 等同于 1 === 1
 
 '\n  123  \t' == 123 // true
-	// 因为字符串转为数字时，省略前置和后置的空格
+// 因为字符串转为数字时，省略前置和后置的空格
 
-	// 数组与数值的比较
-	[1] == 1 // true
+// 数组与数值的比较
+[1] == 1 // true
 
-// 数组与字符串的比较
-[1] == '1' // true
-[1, 2] == '1,2' // true
+    // 数组与字符串的比较
+    [1] == '1' // true
+    [1, 2] == '1,2' // true
 
-// 对象与布尔值的比较
-[1] == true // true
-	[2] == true // false
+    // 对象与布尔值的比较
+    [1] == true // true
+    [2] == true // false
 
 const obj = {
-	valueOf: function () {
-		console.log('执行 valueOf()');
-		return obj;
-	},
-	toString: function () {
-		console.log('执行 toString()');
-		return 'foo';
-	}
+    valueOf: function () {
+        console.log('执行 valueOf()');
+        return obj;
+    },
+    toString: function () {
+        console.log('执行 toString()');
+        return 'foo';
+    }
 };
 
 obj == 'foo'
@@ -172,7 +172,7 @@ null == undefined // true
 
 // 找到第一个false
 ' \t\r\n ' == 0 // true
-	't' && '' // ""
+'t' && '' // ""
 't' && 'f' // "f"
 't' && (1 + 2) // 3
 '' && 'f' // ""
@@ -184,7 +184,7 @@ x // 1
 
 // 短路用法
 if (i) {
-	doSomething();
+    doSomething();
 }
 // 等价于
 i && doSomething();
@@ -210,7 +210,7 @@ false || 0 || ''
 i = i | 0;
 // 将任意数值转为32位整数
 function toInt32(x) {
-	return x | 0;
+    return x | 0;
 }
 toInt32(1.001) // 1
 toInt32(1.999) // 1
@@ -220,9 +220,9 @@ toInt32(Math.pow(2, 32) + 1) // 1
 toInt32(Math.pow(2, 32) - 1) // -1
 
 2.9 | 0 // 2
--2.9 | 0 // -2
+    - 2.9 | 0 // -2
 
-~ 3 // -4
+~3 // -4
 
 //  互换运算
 var a = 10;
@@ -234,25 +234,25 @@ a // 99
 b // 10
 
 4 << 1
-// 8
+    // 8
 
--4 << 1
+    - 4 << 1
 // -8
 
-var color = {r: 186, g: 218, b: 85};
+var color = { r: 186, g: 218, b: 85 };
 
 // RGB to HEX
 // (1 << 24)的作用为保证结果是6位数
-var rgb2hex = function(r, g, b) {
-  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b)
-    .toString(16) // 先转成十六进制，然后返回字符串
-    .substr(1);   // 去除字符串的最高位，返回后面六个字符串
+var rgb2hex = function (r, g, b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b)
+        .toString(16) // 先转成十六进制，然后返回字符串
+        .substr(1);   // 去除字符串的最高位，返回后面六个字符串
 }
 
 rgb2hex(color.r, color.g, color.b)
-// "#bada55"
+    // "#bada55"
 
--1 >>> 0 // 4294967295
+    - 1 >>> 0 // 4294967295
 
 
 var x = 0;

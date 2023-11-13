@@ -1,6 +1,6 @@
 'use strict';
 function fun() {
-  return this;
+    return this;
 }
 
 fun() //undefined

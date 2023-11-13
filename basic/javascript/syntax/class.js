@@ -1,26 +1,28 @@
-function Car() {
-    this.fuel = 0;
-    this.distance = 0;
-    this.topSpeed = Math.random();
+class Car {
+    constructor() {
+        this.fuel = 0;
+        this.distance = 0;
+        this.topSpeed = Math.random();
+    }
+    static isFaster(left, right) {
+        return left.topSpeed > right.topSpeed;
+    }
+    move() {
+        if (this.fuel < 1) {
+            throw new RangeError("Fuel tank is depleted");
+        }
+        this.fuel--;
+        this.distance += 2;
+    }
+    addFuel() {
+        if (this.fuel >= 60) {
+            throw new RangeError("Fuel tank is full");
+        }
+        this.fuel++;
+    }
 }
 
-Car.prototype.move = function () {
-    if (this.fuel < 1) {
-        throw new RangeError("Fuel tank is depleted");
-    }
-    this.fuel--;
-    this.distance += 2;
-};
 
-Car.prototype.addFuel = function () {
-    if (this.fuel >= 60) {
-        throw new RangeError("Fuel tank is full");
-    }
-    this.fuel++;
-};
-Car.isFaster = function (left, right) {
-    return left.topSpeed > right.topSpeed;
-};
 
 // ES6
 class Car {

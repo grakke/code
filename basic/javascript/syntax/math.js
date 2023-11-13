@@ -10,8 +10,8 @@ Math.SQRT2 //  2 的平方根 1.4142135623730951
 
 // 静态方法
 function ToInteger(x) {
-	x = Number(x);
-	return x < 0 ? Math.ceil(x) : Math.floor(x);
+    x = Number(x);
+    return x < 0 ? Math.ceil(x) : Math.floor(x);
 }
 
 ToInteger(3.2) // 3
@@ -39,7 +39,7 @@ Math.exp(3) // 20.085536923187668
 Math.random() // 0.7151307314634323
 
 function getRandomArbitrary(min, max) {
-	return Math.random() * (max - min) + min;
+    return Math.random() * (max - min) + min;
 }
 
 getRandomArbitrary(1.5, 6.5)
@@ -47,15 +47,15 @@ getRandomArbitrary(1.5, 6.5)
 
 // 返回随机字符
 function random_str(length) {
-	var ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	ALPHABET += 'abcdefghijklmnopqrstuvwxyz';
-	ALPHABET += '0123456789-_';
-	var str = '';
-	for (var i = 0; i < length; ++i) {
-		var rand = Math.floor(Math.random() * ALPHABET.length);
-		str += ALPHABET.substring(rand, rand + 1);
-	}
-	return str;
+    var ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    ALPHABET += 'abcdefghijklmnopqrstuvwxyz';
+    ALPHABET += '0123456789-_';
+    var str = '';
+    for (var i = 0; i < length; ++i) {
+        var rand = Math.floor(Math.random() * ALPHABET.length);
+        str += ALPHABET.substring(rand, rand + 1);
+    }
+    return str;
 }
 
 random_str(6) // "NdQKOr"

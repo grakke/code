@@ -90,39 +90,39 @@ d.toLocaleTimeString('zh-CN') // "上午12:00:00"
 
 
 d.toLocaleDateString('en-US', {
-	weekday: 'long',
-	year: 'numeric',
-	month: 'long',
-	day: 'numeric'
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
 })
 // "Tuesday, January 1, 2013"
 
 d.toLocaleDateString('en-US', {
-	day: "2-digit",
-	month: "long",
-	year: "2-digit"
+    day: "2-digit",
+    month: "long",
+    year: "2-digit"
 });
 // "January 01, 13"
 
 d.toLocaleTimeString('en-US', {
-	timeZone: 'UTC',
-	timeZoneName: 'short'
+    timeZone: 'UTC',
+    timeZoneName: 'short'
 })
 // "4:00:00 PM UTC"
 
 d.toLocaleTimeString('en-US', {
-	timeZone: 'Asia/Shanghai',
-	timeZoneName: 'long'
+    timeZone: 'Asia/Shanghai',
+    timeZoneName: 'long'
 })
 // "12:00:00 AM China Standard Time"
 
 d.toLocaleTimeString('en-US', {
-	hour12: false
+    hour12: false
 })
 // "00:00:00"
 
 d.toLocaleTimeString('en-US', {
-	hour12: true
+    hour12: true
 })
 // "12:00:00 AM"
 

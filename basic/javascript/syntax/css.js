@@ -12,6 +12,6 @@ divStyle.height // 100px
 divStyle.width // 100px
 
 divStyle.cssText = 'background-color: red;'
-  + 'border: 1px solid black;'
-  + 'height: 100px;'
-  + 'width: 100px;';
+    + 'border: 1px solid black;'
+    + 'height: 100px;'
+    + 'width: 100px;';

@@ -5,7 +5,7 @@ function PrimaryStudent(props) {
 }
 
 // 空函数F:
-function F() {}
+function F() { }
 
 // 把F的原型指向Student.prototype:
 F.prototype = Student.prototype;
@@ -38,7 +38,7 @@ xiaoming instanceof PrimaryStudent; // true
 xiaoming instanceof Student; // true
 
 function inherits(Child, Parent) {
-    var F = function () {};
+    var F = function () { };
     F.prototype = Parent.prototype;
     Child.prototype = new F();
     Child.prototype.constructor = Child;

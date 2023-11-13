@@ -6,8 +6,8 @@ var number = 11 * 9;
 var color = 'red';
 console.log('%d %s balloons', number, color);
 console.log(
-	'%cThis text is styled!',
-	'color: red; background: yellow; font-size: 24px;'
+    '%cThis text is styled!',
+    'color: red; background: yellow; font-size: 24px;'
 )
 console.log(' %s + %s ', 1, 1, '= 2')
 
@@ -17,9 +17,9 @@ console.error('Something horrible happened…');
 
 
 console.time('Array initialize');
-var array= new Array(1000000);
+var array = new Array(1000000);
 for (var i = array.length - 1; i >= 0; i--) {
-  array[i] = new Object();
+    array[i] = new Object();
 };
 console.timeEnd('Array initialize');
 
@@ -42,41 +42,41 @@ console.groupEnd(); // 一级分组结束
 
 
 var languages = [{
-		name: "JavaScript",
-		fileExtension: ".js"
-	},
-	{
-		name: "TypeScript",
-		fileExtension: ".ts"
-	},
-	{
-		name: "CoffeeScript",
-		fileExtension: ".coffee"
-	}
+    name: "JavaScript",
+    fileExtension: ".js"
+},
+{
+    name: "TypeScript",
+    fileExtension: ".ts"
+},
+{
+    name: "CoffeeScript",
+    fileExtension: ".coffee"
+}
 ];
 console.table(languages);
 
 console.clear() // 清空控制台
 
 console.dir({
-	f1: 'foo',
-	f2: 'bar'
+    f1: 'foo',
+    f2: 'bar'
 })
 // Object
 //   f1: "foo"
 //   f2: "bar"
 //   __proto__: Object
 console.dir(obj, {
-	colors: true
+    colors: true
 })
 
 console.dirxml(document.body)
 
 ['log', 'info', 'warn', 'error'].forEach(function (method) {
-	console[method] = console[method].bind(
-		console,
-		new Date().toISOString()
-	);
+    console[method] = console[method].bind(
+        console,
+        new Date().toISOString()
+    );
 });
 
 console.log("出错了！");
@@ -84,8 +84,8 @@ console.log("出错了！");
 
 
 function greet(user) {
-	console.count(user);
-	return "hi " + user;
+    console.count(user);
+    return "hi " + user;
 }
 
 greet('bob')

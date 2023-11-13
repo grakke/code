@@ -18,6 +18,6 @@ window.sessionStorage.key(0) // "key"
 
 
 function onStorageChange(e) {
-	console.log(e.key);
+    console.log(e.key);
 }
 window.addEventListener('storage', onStorageChange);

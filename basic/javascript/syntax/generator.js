@@ -36,7 +36,7 @@ function* fib(max) {
         t = a + b;
         a = b;
         b = t;
-        n ++;
+        n++;
     }
     return a;
 }
@@ -64,7 +64,7 @@ var fib = {
         this.a = this.b;
         this.b = t;
         if (this.n < this.max) {
-            this.n ++;
+            this.n++;
             return r;
         } else {
             return undefined;

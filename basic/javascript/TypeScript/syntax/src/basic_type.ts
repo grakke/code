@@ -20,6 +20,11 @@ let sentence: string = `Hello, my name is ${fullName}.
 
 I'll be ${age + 1} years old next month.`;
 
+// 定义基本类型的值
+const lie: boolean = false;
+const pi: number = 3.14159;
+const tree_of_knowledge: string = "Yggdrasil";
+
 let sentence1: string =
   "Hello, my name is " +
   fullName +
@@ -71,3 +76,13 @@ declare function create(o: object | null): void;
 // OK
 create({ prop: 0 });
 create(null);
+
+
+let mystery: any = 4; // number
+mystery = "four"; // string -- no error
+
+
+let the_void: void = undefined;
+the_void = null;
+
+// the_void = "nothing"; // Error
