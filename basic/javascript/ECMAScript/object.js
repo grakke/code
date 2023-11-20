@@ -115,10 +115,50 @@ source1.b = 4;
 target.b;
 Object.assign([1, 2, 3], [4, 5]); // [4, 5, 3]
 
-const obj = {
+const obj3 = {
     foo: 123,
     get bar() {
         return "abc";
     },
 };
-Object.getOwnPropertyDescriptors(obj);
+Object.getOwnPropertyDescriptors(obj3);
+
+
+// 获取顶层对象
+// 方法一
+typeof window !== "undefined"
+    ? window
+    : typeof process === "object" &&
+        typeof require === "function" &&
+        typeof global === "object"
+        ? global
+        : this;
+
+// 方法二
+var getGlobal = function () {
+    if (typeof self !== "undefined") {
+        return self;
+    }
+    if (typeof window !== "undefined") {
+        return window;
+    }
+    if (typeof global !== "undefined") {
+        return global;
+    }
+    throw new Error("unable to locate global object");
+};
+
+const foo = Object.freeze({});
+
+// 常规模式时，下面一行不起作用；
+// 严格模式时，该行会报错
+foo.prop = 123;
+
+var constantize = (obj) => {
+    Object.freeze(obj);
+    Object.keys(obj).forEach( (key, i) => {
+      if ( typeof obj[key] === 'object' ) {
+        constantize( obj[key] );
+      }
+    });
+  };

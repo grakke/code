@@ -31,7 +31,7 @@ Number.isInteger("15"); // false
 Number.isInteger(3.0000000000000002);
 Number.isInteger(5e-325);
 
-// 常量Number.EPSILON。根据规格，它表示 1 与大于 1 的最小浮点数之间的差
+// 常量Number.EPSILON。根据规格表示 1 与大于 1 的最小浮点数之间的差
 Number.EPSILON === Math.pow(2, -52); // true
 Number.EPSILON; // 2.220446049250313e-16
 Number.EPSILON.toFixed(20); // "0.00000000000000022204"

@@ -1,7 +1,6 @@
 // 构造
 var regex = new RegExp("xyz", "i");
 var regex = new RegExp(/xyz/i);
-var regex = /xyz/i;
 // 第二个参数指定修饰符。而且，返回的正则表达式会忽略原有的正则表达式的修饰符，只使用新指定的修饰符
 new RegExp(/abc/gi, "i").flags;
 
@@ -10,18 +9,20 @@ console.log("xyzdsafgfsdgdfas".replace(regex, "123"));
 console.log("asdadxyzsdfasfdafsdf".search(regex));
 console.log("xyzssadfasdf".split("", 5));
 
-// 添加了u修饰符，含义为“Unicode 模式”，用来正确处理大于\uFFFF的 Unicode 字符。也就是说，会正确处理四个字节的 UTF-16 编码
+// 添加了u修饰符，含义为“Unicode 模式”，用来正确处理大于\uFFFF的 Unicode 字符。也就是会正确处理四个字节的 UTF-16 编码
 /^\uD83D/u.test("\uD83D\uDC2A"); // false
 var s = "𠮷";
 /^.$/.test(s); // false
 /^.$/u.test(s); // true
 
 // 大括号表示 Unicode 字符，这种表示法在正则表达式中必须加上u修饰符，才能识别当中的大括号，否则会被解读为量词
-/a{2}/u.test("aa"); // true
-/𠮷{2}/u.test("𠮷𠮷"); // true
-
-// \S是预定义模式，匹配所有非空白字符。只有加了u修饰符，它才能正确匹配码点大于0xFFFF的 Unicode 字符
-/^\S$/u.test("𠮷"); // true
+/a{2}/.test('aa'); // true
+/a{2}/u.test('aa'); // true
+/𠮷{2}/.test('𠮷𠮷'); // false
+/𠮷{2}/u.test('𠮷𠮷'); // true
+// \S是预定义模式，匹配所有非空白字符。只有加了u修饰符才能正确匹配码点大于0xFFFF的 Unicode 字符
+/^\S$/.test('𠮷'); // false
+/^\S$/u.test('𠮷'); // true
 
 function codePointLength(text) {
     var result = text.match(/[\s\S]/gu);
@@ -38,7 +39,7 @@ const r2 = /hello/u;
 r1.unicode; // false
 r2.unicode; // true
 
-// y修饰符，叫做“粘连”（sticky）修饰符 作用与g修饰符类似，也是全局匹配，后一次匹配都从上一次匹配成功的下一个位置开始。不同之处在于，g修饰符只要剩余位置中存在匹配就可，而y修饰符确保匹配必须从剩余的第一个位置开始
+// y修饰符，叫做“粘连”（sticky）修饰符
 var s = "aaa_aa_a";
 var r3 = /a+/g;
 var r4 = /a+/y;

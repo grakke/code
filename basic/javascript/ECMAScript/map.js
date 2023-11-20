@@ -43,3 +43,19 @@ const reporter = {
 map.forEach(function (value, key, map) {
     this.report(key, value);
 }, reporter);
+
+
+const map = new Map();
+map.set("first", "hello");
+map.set("second", "world");
+
+for (let [key, value] of map) {
+    console.log(key + " is " + value);
+}
+for (let [key] of map) {
+    // ...
+}
+
+for (let [, value] of map) {
+    // ...
+}

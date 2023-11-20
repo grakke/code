@@ -1,30 +1,42 @@
-// 为函数的参数指定默认值
+// 为函数参数指定默认值
 function Point(x = 0, y = 0) {
     this.x = x;
     this.y = y;
 }
 
 // 重新计算默认值表达式的值
-let x = 99;
-function foo(p = x + 1) {
-    console.log(p);
+{
+    let x = 99;
+    function foo(p = x + 1) {
+        console.log(p);
+    }
+    foo(); // 100
+    x = 100;
+    foo(); // 101
 }
-foo(); // 100
-x = 100;
-foo(); // 101
 
 function foo({ x, y = 5 }) {
     console.log(x, y);
 }
 foo({}); // undefined 5
 foo({ x: 1 }); // 1 5
+foo({ x: 1, y: 2 }) // 1 2
+foo() // TypeError: Cannot read property 'x' of undefined
 
-function fetch(url, { body = "", method = "GET", headers = {} }) {
-    console.log(method);
+// 参数默认对象
+{
+    function fetch(url, { body = "", method = "GET", headers = {} }) {
+        console.log(method);
+    }
+    fetch("http://example.com", {}); // GET
+    fetch("http://example.com"); // 报错
+
+    function fetch1(url, { body = '', method = 'GET', headers = {} } = {}) {
+        console.log(method);
+    }
+
+    fetch('http://example.com')// "GET"
 }
-fetch("http://example.com", {}); // GET
-fetch("http://example.com"); // 报错
-
 // 函数参数的默认值是空对象，但是设置了对象解构赋值的默认值
 function m1({ x = 0, y = 0 } = {}) {
     return [x, y];
@@ -82,7 +94,7 @@ const sortNumbers = (...numbers) => numbers.sort();
 // 函数内部可以设定为严格模式,只要函数参数使用了默认值、解构赋值、或者扩展运算符，那么函数内部就不能显式设定为严格模式，否则会报错
 
 // name 属性
-const bar = function baz() {};
+const bar = function baz() { };
 bar.name(
     // "baz"
     new Function()
@@ -252,7 +264,7 @@ function (x) {
 
 (x, y, ...rest) => {
     var i, sum = x + y;
-    for (i=0; i<rest.length; i++) {
+    for (i = 0; i < rest.length; i++) {
         sum += rest[i];
     }
     return sum;
@@ -286,7 +298,7 @@ var obj = {
     getAge: function (year) {
         var b = this.birth; // 1990
         var fn = (y) => y - this.birth; // this.birth仍是1990
-        return fn.call({birth:2000}, year);
+        return fn.call({ birth: 2000 }, year);
     }
 };
 obj.getAge(2015); // 25

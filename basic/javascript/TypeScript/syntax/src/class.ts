@@ -1,12 +1,9 @@
-type last_name = string;
-
-class Person {
-  constructor(
-    public first_name: string,
-    public last_name: last_name
-  ) { }
+class ListItem {
+  name: string
+  constructor(name: string) {
+    this.name = name
+  }
 }
-class ListItem {}
 
 class ListComponent {
   private _things: Array<ListItem>;
