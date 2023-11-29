@@ -30,3 +30,4 @@ Docker/mysql/test_db/
 **/vendor
 logs
 static
+basic/native/get_enddate_after_days_from_begindate

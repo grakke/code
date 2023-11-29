@@ -11,14 +11,17 @@ struct Car {
 
 #[derive(PartialEq, Debug)]
 // Declare enum for Car transmission type
-enum Transmission { Manual, SemiAuto, Automatic }
+enum Transmission {
+    Manual,
+    SemiAuto,
+    Automatic,
+}
 
 // Get the car quality by testing the value of the input argument
 // - miles (u32)
 // Create a tuple for the car quality with the age ("New" or "Used") and miles
 // Return a tuple with the arrow `->` syntax
-fn car_quality (miles: u32) -> (String, u32) {
-
+fn car_quality(miles: u32) -> (String, u32) {
     // Declare and initialize the return tuple value
     // For a new car, set the miles to 0
     // TO DO: Correct the quality declaration so we can change the values later
@@ -32,7 +35,7 @@ fn car_quality (miles: u32) -> (String, u32) {
     }
 
     // TO DO: Return the completed tuple
-    return
+    return;
 }
 
 fn main() {
@@ -49,7 +52,6 @@ fn main() {
     // TO DO: Initialize "roof" to the value when the car has a hard top
     let car = Car;
     let mut miles = 1000; // Start used cars with 1,000 miles
-    let mut roof;  // convertible = false | hard top = true
+    let mut roof; // convertible = false | hard top = true
     let engine = Transmission;
-
 }

@@ -1,8 +1,8 @@
 // Declare a variable
-let a_number;
+const a_number;
 
 // Declare a second variable and bind the value
-let a_word = "Ten";
+const a_word = "Ten";
 
 // Bind a value to the first variable
 a_number = 10;

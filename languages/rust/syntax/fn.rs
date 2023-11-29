@@ -1,98 +1,65 @@
-fn calculate_tax(income: i32) -> i32 {
-    income * 90 / 100;
+// fn calculate_tax(income: i32) -> i32 {
+//     income * 90 / 100;
+// }
+
+fn apply(value: i32, f: fn(i32) -> i32) -> i32 {
+    f(value)
 }
 
-fn is_divisible_by(dividend: u32, divisor: u32) -> bool {
-    if divisor == 0 {
-        println!("\nError! Division by zero is not allowed.");
-        // To prevent division by zero, halt execution and return to the caller
-        return false;
-    } else if dividend % divisor > 0 {
-        println!("\n{} % {} has a remainder of {}.", dividend, divisor, (dividend % divisor));
-    } else {
-        println!("\n{} % {} has no remainder.", dividend, divisor);
-    }
-
-    // Create the boolean value and return it to the function caller
-    dividend % divisor == 0
+fn square(value: i32) -> i32 {
+    value * value
 }
 
-fn is_zero(input: u8) -> bool {
-    if input == 0 {
-        return true;
-    }
-    false
+fn cube(value: i32) -> i32 {
+    value * value * value
 }
-fn read_file(path: &str) -> Option<&str> {
-    let contents = "hello";
-
-    if path != "" {
-        return Some(contents);
-    }
-
-  match file {
-    Some(contents) => println!("{}", contents),
-    None => println!("Empty!"),
-  }
-    return None;
+fn pi() -> f64 {
+    3.1415926
+}
+fn not_pi() {
+    3.1415926;
 }
 
 fn main() {
-    let income = 100;
-    let tax = calculate_tax(income);
-    println!("{}", tax);
+    println!("apply suqare:{}", apply(4, square));
+    println!("apply cube:{}", apply(4, cube));
 
-    is_divisible_by(12, 4);
-    is_divisible_by(13, 5);
-    is_divisible_by(14, 0);
+    let is_pi = pi();
+    let is_unit1 = not_pi();
+    let is_unit2 = {
+        pi();
+    };
+    println!(
+        "is_pi:{:?},is_unit1:{:?},is_unit2:{:?}",
+        is_pi, is_unit1, is_unit2
+    );
 
-    if is_zero(0) {
-        println!("The value is zero.");
-    }
-    let file = read_file("path/to/file");
+    // let income = 100;
+    // let tax = calculate_tax(income);
+    // println!("{}", tax);
 
-    if file.is_some() {
-        let contents = file.unwrap();
-        println!("{}", contents);
-    } else {
-        println!("Empty!");
-    }
+    // is_divisible_by(12, 4);
+    // is_divisible_by(13, 5);
+    // is_divisible_by(14, 0);
 
-    if is_divisible_by(12, 4) {
-        println!("12 is evenly divisible by 4.");
-    }
+    // let income = 100;
+    // let tax = calculate_tax(income);
+    // println!("{}", tax);
 
-    // 13 % 5 has a remainder of 2
-    if is_divisible_by(13, 5) {
-        println!("13 is evenly divisible by 5.");
-    }
+    // // closure Without arguments
+    // let greet = || println!("hello");
+    // greet(); // "hello"
 
-    // 14 % 0 is division by zero, print an error message
-    if is_divisible_by(14, 0) {
-        println!("14 is evenly divisible by 0.");
-    }
-      match file {
-    Some(contents) => println!("{}", contents),
-    None => println!("Empty!"),
-  }
+    // // With arguments:
+    // greet = |msg: &str| println!("{}", msg);
+    // greet("good morning!"); // "good morning!"
 
-    let income = 100;
-    let tax = calculate_tax(income);
-    println!("{}", tax);
+    let add = |a: i32, b: i32| -> i32 { a + b };
+    add(1, 2);
+    // 多行
+    let add = |a: i32, b: i32| -> i32 {
+        let sum = a + b;
+        return sum;
+    };
+    add(1, 2);
 }
-
-// closure Without arguments
-let greet = || println!("hello");
-greet(); // "hello"
-// With arguments:
-let greet = |msg: &str| println!("{}", msg);
-greet("good morning!"); // "good morning!"
-
-let add = |a: i32, b: i32| -> i32 { a + b };
-add(1, 2);
-// 多行
-let add = |a: i32, b: i32| -> i32 {
-    let sum = a + b;
-    return sum;
-};
-add(1, 2);
