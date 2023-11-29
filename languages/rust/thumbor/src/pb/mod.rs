@@ -88,6 +88,12 @@ impl Spec {
             data: Some(spec::Data::Watermark(Watermark { x, y })),
         }
     }
+
+    pub fn new_padding_bottom(x: u32) -> Self {
+        Self {
+            data: Some(spec::Data::PaddingBottom(PaddingBottom { x })),
+        }
+    }
 }
 
 #[cfg(test)]

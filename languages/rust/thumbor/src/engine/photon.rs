@@ -43,6 +43,7 @@ impl Engine for Photon {
                 Some(spec::Data::Flipv(ref v)) => self.transform(v),
                 Some(spec::Data::Resize(ref v)) => self.transform(v),
                 Some(spec::Data::Watermark(ref v)) => self.transform(v),
+                Some(spec::Data::PaddingBottom(ref v)) => self.transform(v),
                 // 对于目前不认识的 spec，不做任何处理
                 _ => {}
             }
@@ -109,6 +110,14 @@ impl SpecTransform<&Resize> for Photon {
 impl SpecTransform<&Watermark> for Photon {
     fn transform(&mut self, op: &Watermark) {
         multiple::watermark(&mut self.0, &WATERMARK, op.x, op.y);
+    }
+}
+
+impl SpecTransform<&PaddingBottom> for Photon {
+    fn transform(&mut self, op: &PaddingBottom) {
+        let rgba = Rgba::new(255_u8, 255_u8, 255_u8, 255_u8);
+        let img = transform::padding_bottom(&mut self.0, op.x, rgba);
+        self.0 = img;
     }
 }
 

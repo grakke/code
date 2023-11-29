@@ -1,3 +1,4 @@
+/// ImageSpec 是一个有序的数组，服务器按照 spec 的顺序处理
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct ImageSpec {
@@ -188,8 +189,14 @@ pub struct Watermark {
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
+pub struct PaddingBottom {
+    #[prost(uint32, tag = "1")]
+    pub x: u32,
+}
+#[allow(clippy::derive_partial_eq_without_eq)]
+#[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Spec {
-    #[prost(oneof = "spec::Data", tags = "1, 2, 3, 4, 5, 6, 7")]
+    #[prost(oneof = "spec::Data", tags = "1, 2, 3, 4, 5, 6, 7, 8")]
     pub data: ::core::option::Option<spec::Data>,
 }
 /// Nested message and enum types in `Spec`.
@@ -209,7 +216,11 @@ pub mod spec {
         Contrast(super::Contrast),
         #[prost(message, tag = "6")]
         Filter(super::Filter),
+        /// 处理水印
         #[prost(message, tag = "7")]
         Watermark(super::Watermark),
+        /// 填充图片
+        #[prost(message, tag = "8")]
+        PaddingBottom(super::PaddingBottom),
     }
 }

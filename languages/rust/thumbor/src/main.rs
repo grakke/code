@@ -1,14 +1,14 @@
 use anyhow::Result;
 use axum::{
     extract::{Extension, Path},
-    handler::get,
     http::{HeaderMap, HeaderValue, StatusCode},
+    routing::get,
     Router,
 };
 use bytes::Bytes;
 use image::ImageOutputFormat;
 use lru::LruCache;
-use percent_encoding::{percent_decode_str, percent_encode, NON_ALPHANUMERIC};
+use percent_encoding::{percent_decode_str, percent_encode};
 use serde::Deserialize;
 use std::{
     collections::hash_map::DefaultHasher,
@@ -45,9 +45,7 @@ async fn main() {
     // 初始化 tracing
     tracing_subscriber::fmt::init();
     let cache: Cache = Arc::new(Mutex::new(LruCache::new(1024)));
-    // 构建路由
     let app = Router::new()
-        // `GET /` 会执行
         .route("/image/:spec/:url", get(generate))
         .layer(
             ServiceBuilder::new()
@@ -90,7 +88,8 @@ async fn generate(
         .try_into()
         .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
     engine.apply(&spec.specs);
-    // TODO: 这里目前类型写死了，应该使用 content negotiation
+
+    // TODO: 目前类型写死了，应该使用 content negotiation
     let image = engine.generate(ImageOutputFormat::Jpeg(85));
 
     info!("Finished processing: image size {}", image.len());
@@ -124,14 +123,16 @@ async fn retrieve_image(url: &str, cache: Cache) -> Result<Bytes> {
     Ok(data)
 }
 
-// 调试辅助函数
 fn print_test_url(url: &str) {
     use std::borrow::Borrow;
     let spec1 = Spec::new_resize(500, 800, resize::SampleFilter::CatmullRom);
     let spec2 = Spec::new_watermark(20, 20);
     let spec3 = Spec::new_filter(filter::Filter::Marine);
-    let image_spec = ImageSpec::new(vec![spec1, spec2, spec3]);
+    let spec4 = Spec::new_filter(filter::Filter::Marine);
+    let image_spec = ImageSpec::new(vec![spec1, spec2, spec3, spec4]);
+
     let s: String = image_spec.borrow().into();
     let test_image = percent_encode(url.as_bytes(), NON_ALPHANUMERIC).to_string();
+
     println!("test url: http://localhost:3000/image/{}/{}", s, test_image);
 }

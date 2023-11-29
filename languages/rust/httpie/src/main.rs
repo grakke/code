@@ -1,10 +1,10 @@
 extern crate clap;
 use anyhow::{anyhow, Ok, Result};
 use clap::Parser;
-use reqwest::{header, Client, Response, Url};
-use std::{collections::HashMap, str::FromStr};
 use colored::Colorize;
 use mime::Mime;
+use reqwest::{header, Client, Response, Url};
+use std::{collections::HashMap, str::FromStr};
 use syntect::{
     easy::HighlightLines,
     highlighting::{Style, ThemeSet},
@@ -13,7 +13,7 @@ use syntect::{
 };
 
 // 定义 HTTPie 的 CLI 主入口，包含多个命令
-//cargo run -- post httpbin.org/post a=1 b=2
+//cargo run -- post https://httpbin.org/post a=1 b=2
 #[derive(Parser, Debug)]
 struct Opts {
     #[clap(subcommand)]
@@ -55,8 +55,7 @@ impl FromStr for KvPair {
         let mut split = s.split('=');
         let err = || anyhow!(format!("Failed to parse {}", s));
         Ok(Self {
-            // 从迭代器中取第一个结果作为 key，迭代器返回 Some(T)/None
-            // 我们将其转换成 Ok(T)/Err(E)，然后用 ? 处理错误
+            // 从迭代器中取第一个结果作为 key，迭代器返回 Some(T)/None, 将其转换成 Ok(T)/Err(E)，然后用 ? 处理错误
             k: (split.next().ok_or_else(err)?).to_string(),
             // 从迭代器中取第二个结果作为 value
             v: (split.next().ok_or_else(err)?).to_string(),
@@ -118,6 +117,19 @@ fn print_body(m: Option<Mime>, body: &str) {
     }
 }
 
+fn print_syntect(s: &str, ext: &str) {
+    // Load these once at the start of your program
+    let ps = SyntaxSet::load_defaults_newlines();
+    let ts = ThemeSet::load_defaults();
+    let syntax = ps.find_syntax_by_extension(ext).unwrap();
+    let mut h = HighlightLines::new(syntax, &ts.themes["base16-ocean.dark"]);
+    for line in LinesWithEndings::from(s) {
+        let ranges: Vec<(Style, &str)> = h.highlight(line, &ps);
+        let escaped = as_24_bit_terminal_escaped(&ranges[..], true);
+        print!("{}", escaped);
+    }
+}
+
 /// 打印整个响应
 async fn print_resp(resp: Response) -> Result<()> {
     print_status(&resp);
@@ -152,19 +164,6 @@ async fn main() -> Result<()> {
     };
 
     Ok(result)
-}
-
-fn print_syntect(s: &str, ext: &str) {
-    // Load these once at the start of your program
-    let ps = SyntaxSet::load_defaults_newlines();
-    let ts = ThemeSet::load_defaults();
-    let syntax = ps.find_syntax_by_extension(ext).unwrap();
-    let mut h = HighlightLines::new(syntax, &ts.themes["base16-ocean.dark"]);
-    for line in LinesWithEndings::from(s) {
-        let ranges: Vec<(Style, &str)> = h.highlight(line, &ps);
-        let escaped = as_24_bit_terminal_escaped(&ranges[..], true);
-        print!("{}", escaped);
-    }
 }
 
 // 仅在 cargo test 时才编译
