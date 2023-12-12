@@ -17,6 +17,7 @@ int main(int argc, char **argv)
         error(1, errno, "socket create failed");
     }
 
+    // 对 sun_path 设置一个本地文件路径。这里还做了一个 unlink 操作，以便把存在的文件删除掉，这样可以保持幂等性
     char *local_path = argv[1];
     unlink(local_path);
     bzero(&servaddr, sizeof(servaddr));

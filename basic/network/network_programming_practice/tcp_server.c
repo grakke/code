@@ -1,6 +1,7 @@
 
 #include "lib/common.h"
 
+// 每次读取 1K 数据，之后休眠 1 秒，用来模拟服务器端处理时延
 void read_data(int sockfd)
 {
     ssize_t n;
