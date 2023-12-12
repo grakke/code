@@ -1,9 +1,10 @@
 // boolean
 const isDone: boolean = false;
+let yes = true;
 
 // number
 const decimal: number = 6;
-const float: number = 3.14;
+const float_pi: number = 3.14159;
 const hex: number = 0xf00d;
 const binary: number = 0b1010;
 const octal: number = 0o744;
@@ -19,70 +20,19 @@ let age: number = 37;
 let sentence: string = `Hello, my name is ${fullName}.
 
 I'll be ${age + 1} years old next month.`;
-
-// 定义基本类型的值
-const lie: boolean = false;
-const pi: number = 3.14159;
-const tree_of_knowledge: string = "Yggdrasil";
-
-let sentence1: string =
-  "Hello, my name is " +
-  fullName +
-  ".\n\n" +
-  "I'll be " +
-  (age + 1) +
-  " years old next month.";
+console.log(sentence);
 
 const sym: symbol = Symbol();
-
-const obj1: object = { foo: 123 };
-const obj2: object = [1, 2, 3];
-const obj3: object = (n: number) => n + 1;
 
 let u: undefined = undefined;
 let n: null = null;
 
-// unknow
-let notSure: unknown = 4;
-notSure = "maybe a string instead";
-notSure = false;
-
-// any
-declare function getValue(key: string): any;
-const str: string = getValue("myString");
-
-function warnUser(): void {
-  console.log("This is my warning message");
+// enum
+enum ContractStatus {
+  Permanent = 1,
+  Temp,
+  Apprentice
 }
-
-// never
-// Function returning never must not have a reachable end point
-function error(message: string): never {
-  throw new Error(message);
-}
-
-// Inferred return type is never
-function fail() {
-  return error("Something failed");
-}
-
-// Function returning never must not have a reachable end point
-function infiniteLoop(): never {
-  while (true) { }
-}
-
-declare function create(o: object | null): void;
-
-// OK
-create({ prop: 0 });
-create(null);
-
-
-let mystery: any = 4; // number
-mystery = "four"; // string -- no error
-
-
-let the_void: void = undefined;
-the_void = null;
-
-// the_void = "nothing"; // Error
+let employeeStatus: ContractStatus = ContractStatus.Temp;
+console.log(employeeStatus);
+console.log(ContractStatus[2]);
