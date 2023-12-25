@@ -49,12 +49,12 @@ formatParameter($_POST, 'POST');
 function formatParameter(array $parameters, string $type = ''): void
 {
     if (!empty($parameters) && is_array($parameters)) {
-        $title = $type ? ucfirst($type)." Parameters:" : '';
-        echo '<h3 style="color: blueviolet;">'.$title.'</h3>';
+        $title = $type ? ucfirst($type) . " Parameters:" : '';
+        echo '<h3 style="color: blueviolet;">' . $title . '</h3>';
         echo '<table><tr><th>Key</th><th>Value</th></tr>';
         foreach ($parameters as $k => $v) {
 //            printf("    $k:$v".PHP_EOL, $k, $v);
-            echo '<tr><td>'.$k.'</td><td>'.$v.'</td></tr>';
+            echo '<tr><td>' . $k . '</td><td>' . $v . '</td></tr>';
         }
         echo '</table>';
     }
@@ -96,16 +96,15 @@ if ($image['size'] > 1 * 1024 * 1024) {
 }
 
 // 设置文件上传路径为 Web 根目录下的 images 子目录
-$uploaddir = __DIR__.'/../../assets/images/';
-$filepath = $uploaddir.$image['name'];
+$uploaddir = __DIR__ . '/../../assets/images/';
+$filepath = $uploaddir . $image['name'];
 
 // 移动上传文件到指定位置
 if (move_uploaded_file($image['tmp_name'], $filepath)) {
     // 上传成功，则在页面预览上传的图片
     echo '<font color="green">文件上传成功</font><hr>';
-    $webpath = '/assets/images/'.$image['name'];
-    echo '<img src="'.$webpath.'">';
+    $webpath = '/assets/images/' . $image['name'];
+    echo '<img src="' . $webpath . '">';
 } else {
     echo '<font color="red">文件上传失败，请重试!</font>';
 }
-?>

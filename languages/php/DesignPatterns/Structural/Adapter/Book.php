@@ -10,14 +10,14 @@ class Book implements PaperBookInterface
 	/**
 	 * {@inheritdoc}
 	 */
-	public function open()
-	{
+	public function open(): mixed
+    {
 	}
 
 	/**
 	 * {@inheritdoc}
 	 */
-	public function turnPage()
-	{
+	public function turnPage(): mixed
+    {
 	}
 }

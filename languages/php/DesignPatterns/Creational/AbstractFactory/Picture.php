@@ -2,29 +2,14 @@
 
 namespace DesignPatterns\Creational\AbstractFactory;
 
-/**
- * Picture类
- */
 abstract class Picture implements MediaInterface
 {
+    protected string $path;
+    protected string $name;
 
-    /**
-     * @var string
-     */
-    protected $path;
-
-    /**
-     * @var string
-     */
-    protected $name;
-
-    /**
-     * @param  string  $path
-     * @param  string  $name
-     */
-    public function __construct($path, $name = '')
+    public function __construct(string $path, string $name = '')
     {
-        $this->name = (string) $name;
-        $this->path = (string) $path;
+        $this->name = (string)$name;
+        $this->path = (string)$path;
     }
 }

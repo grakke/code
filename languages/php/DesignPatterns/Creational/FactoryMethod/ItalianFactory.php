@@ -3,17 +3,17 @@
 namespace DesignPatterns\Creational\FactoryMethod;
 
 /**
- * ItalianFactory是意大利的造车厂
+ * ItalianFactory 意大利的造车厂
  */
 class ItalianFactory extends FactoryMethod
 {
     /**
      * {@inheritdoc}
      */
-    protected function createVehicle($type)
+    protected function createVehicle($type): VehicleInterface
     {
         switch ($type) {
-            case parent::CHEAP:
+            case parent::SLOW:
                 return new Bicycle();
                 break;
             case parent::FAST:

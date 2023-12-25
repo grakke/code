@@ -16,18 +16,16 @@ class Person
         $this->visited = false;
     }
 
-    public function addFriend(Person $person)
+    public function addFriend(Person $person): void
     {
-        foreach ($this->friends as $friend) {
-            if ($friend == $person->name) {
-                return;
-            }
+        if (in_array($person->name, $this->friends)) {
+            return;
         }
 
         $this->friends[] = $person;
     }
 
-    public function displayNetworkByBFS()
+    public function displayNetworkByBFS(): void
     {
         $toReset = [$this];
         $queue = [$this];
@@ -35,7 +33,7 @@ class Person
 
         while ($queue) {
             $currentVertex = array_shift($queue);
-            echo $currentVertex->name.PHP_EOL;
+            echo $currentVertex->name . PHP_EOL;
 
             foreach ($currentVertex->friends as $friend) {
                 if (!$friend->visited) {
@@ -55,7 +53,7 @@ class Person
     /*
      * 深度遍历
      */
-    public function displayNetworkByDFS($depth)
+    public function displayNetworkByDFS($depth): void
     {
         $stack = [$this];
         $this->visited = true;

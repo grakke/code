@@ -10,7 +10,7 @@ printf("%s" . PHP_EOL, $foo);
 $bar = &$foo;
 $foo = 'Henry';
 echo $bar . PHP_EOL;
-# 通过指针赋值的变量，重新赋值，会跟原变量脱离
+
 $bar = "Sam";
 echo $foo . PHP_EOL;
 

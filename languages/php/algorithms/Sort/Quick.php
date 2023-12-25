@@ -38,7 +38,7 @@ class Quick extends AbstractSort
         return $nums;
     }
 
-    public static function quick_sort_c(&$nums, $p, $r)
+    public static function quick_sort_c(&$nums, $p, $r): void
     {
         if ($p >= $r) {
             return;
@@ -50,7 +50,7 @@ class Quick extends AbstractSort
     }
 
     // 寻找pivot
-    public static function partition(&$nums, $p, $r)
+    public static function partition(&$nums, $p, $r): int
     {
         $pivot = $nums[$r];
         $i = $p;
@@ -72,7 +72,7 @@ class Quick extends AbstractSort
         return $i;
     }
 
-    static function quickSort(array &$arr, int $p, int $r)
+    static function quickSort(array &$arr, int $p, int $r): void
     {
         if ($p < $r) {
             $q = self::partition1($arr, $p, $r);
@@ -81,7 +81,7 @@ class Quick extends AbstractSort
         }
     }
 
-    static function partition1(array &$arr, int $p, int $r)
+    static function partition1(array &$arr, int $p, int $r): int
     {
         $pivot = $arr[$p];
         $i = $p - 1;
@@ -90,11 +90,11 @@ class Quick extends AbstractSort
         while (true) {
             do {
                 $i++;
-            } while ($arr[$i] < $pivot && $arr[$i] != $pivot);
+            } while ($arr[$i] < $pivot);
 
             do {
                 $j--;
-            } while ($arr[$j] > $pivot && $arr[$j] != $pivot);
+            } while ($arr[$j] > $pivot);
 
             if ($i < $j) {
                 $temp = $arr[$i];

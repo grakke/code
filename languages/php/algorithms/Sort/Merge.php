@@ -2,8 +2,6 @@
 
 namespace Algorithms\Sort;
 
-use DesignPatterns\Structural\DependencyInjection\ArrayConfig;
-
 require '../../vendor/autoload.php';
 
 class Merge extends AbstractSort
@@ -44,7 +42,7 @@ class Merge extends AbstractSort
             return $arr;
         }
 
-        $mid = (int) $len / 2;
+        $mid = (int)$len / 2;
         $left = self::mergeSort(array_slice($arr, 0, $mid));
         $right = self::mergeSort(array_slice($arr, $mid));
 
@@ -142,6 +140,6 @@ class Merge extends AbstractSort
 
 $arr = [20, 45, 93, 67, 10, 97, 52, 88, 33, 92];
 
-echo implode(",", Merge::sort($arr)).PHP_EOL;
-echo implode(",", Merge::mergeSort($arr)).PHP_EOL;
-echo implode(",", Merge::merge_sort($arr)).PHP_EOL;
+echo implode(",", Merge::sort($arr)) . PHP_EOL;
+echo implode(",", Merge::mergeSort($arr)) . PHP_EOL;
+echo implode(",", Merge::merge_sort($arr)) . PHP_EOL;

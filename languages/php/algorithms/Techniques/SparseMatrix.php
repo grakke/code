@@ -19,6 +19,6 @@ function getSparseValue(array $array, int $i, int $j): int
     }
 }
 
-echo getSparseValue($sparseArray, 0, 2)."\n";
-echo getSparseValue($sparseArray, 7, 1)."\n";
-echo getSparseValue($sparseArray, 8, 8)."\n";
+echo getSparseValue($sparseArray, 0, 2) . "\n";
+echo getSparseValue($sparseArray, 7, 1) . "\n";
+echo getSparseValue($sparseArray, 8, 8) . "\n";

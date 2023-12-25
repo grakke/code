@@ -2,22 +2,11 @@
 <?php
 
 
-//var_dump($argv);
-
-$phpcli = new PHPCli();
-$res = $phpcli->resolveRequest($argv);
-
-//var_dump($res);
-
-call_user_func(array($res[0], $res[2][0]), $res[1]);
-sleep(2);
-
-
 class Test
 {
-    public function updateUserStatus($userid)
+    public function updateUserStatus($userid): void
     {
-        echo 'ok:'.json_encode($userid)."\n";
+        echo 'ok:' . json_encode($userid) . "\n";
     }
 }
 
@@ -40,7 +29,7 @@ class PHPCli
         }
     }
 
-    public function resolveRequest($args)
+    public function resolveRequest($args): array
     {
         $options = array();    // named parameters
         $params = array();    // unnamed parameters
@@ -71,3 +60,59 @@ class PHPCli
         return array($action, $options, $params);
     }
 }
+
+
+$php_cli = new PHPCli();
+$res = $php_cli->resolveRequest($argv);
+call_user_func(array($res[0], $res[2][0]), $res[1]);
+sleep(2);
+
+
+function parseArgs($argv): array
+{
+    array_shift($argv);
+
+    $out = array();
+
+    foreach ($argv as $arg) {
+        if (substr($arg, 0, 2) == '--') {
+            $eqPos = strpos($arg, '=');
+
+            if ($eqPos === false) {
+                $key = substr($arg, 2);
+
+                $out[$key] = $out[$key] ?? true;
+            } else {
+                $key = substr($arg, 2, $eqPos - 2);
+
+                $out[$key] = substr($arg, $eqPos + 1);
+            }
+        } elseif (str_starts_with($arg, '-')) {
+            if (substr($arg, 2, 1) == '=') {
+                $key = substr($arg, 1, 1);
+
+                $out[$key] = substr($arg, 3);
+            } else {
+                $chars = str_split(substr($arg, 1));
+
+                foreach ($chars as $char) {
+                    $key = $char;
+
+                    $out[$key] = $out[$key] ?? true;
+                }
+            }
+        } else {
+            $out[] = $arg;
+        }
+    }
+
+    return $out;
+}
+
+var_dump($argv);
+
+echo php_sapi_name() . PHP_EOL;
+echo PHP_SAPI . PHP_EOL;
+
+var_dump(parseArgs($argv));
+exit;

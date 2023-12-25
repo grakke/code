@@ -7,10 +7,7 @@ namespace DesignPatterns\Creational\SimpleFactory;
  */
 class Scooter implements VehicleInterface
 {
-    /**
-     * @param  mixed  $destination
-     */
-    public function driveTo($destination)
+    public function driveTo(mixed $destination): mixed
     {
     }
 }

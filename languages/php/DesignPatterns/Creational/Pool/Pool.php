@@ -4,7 +4,7 @@ namespace DesignPatterns\Creational\Pool;
 
 class Pool
 {
-    private $instances = array();
+    private array $instances = array();
     private $class;
 
     public function __construct($class)
@@ -21,7 +21,7 @@ class Pool
         return new $this->class();
     }
 
-    public function dispose($instance)
+    public function dispose($instance): void
     {
         $this->instances[] = $instance;
     }

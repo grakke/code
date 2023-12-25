@@ -16,7 +16,7 @@ class Picture extends BasePicture
      *
      * @return string
      */
-    public function render()
+    public function render(): string
     {
         return sprintf('<img src="%s" title="%s"/>', $this->path, $this->name);
     }

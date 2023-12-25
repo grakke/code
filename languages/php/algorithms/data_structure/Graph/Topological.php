@@ -52,5 +52,5 @@ $graph = [
 ];
 $sorted = $instance1::topologicalSort($graph);
 while (!$sorted->isEmpty()) {
-    echo $sorted->dequeue()."\t";
+    echo $sorted->dequeue() . "\t";
 }

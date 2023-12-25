@@ -22,7 +22,7 @@ class Bucket
         $bucket = array_fill(0, $bLen, []);
 
         for ($i = 0; $i < $n; $i++) {
-            array_push($bucket[$data[$i] - $min], $data[$i]);
+            $bucket[$data[$i] - $min][] = $data[$i];
         }
         $k = 0;
         for ($i = 0; $i < $bLen; $i++) {

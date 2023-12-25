@@ -24,7 +24,7 @@ function KMPStringMatching(string $str, string $pattern): array
         }
 
         if ($j == $M) {
-            array_push($matches, $i - $j);
+            $matches[] = $i - $j;
             $j = $lps[$j - 1];
         } else {
             if ($i < $N && $pattern[$j] != $str[$i]) {
@@ -39,7 +39,7 @@ function KMPStringMatching(string $str, string $pattern): array
     return $matches;
 }
 
-function ComputeLPS(string $pattern, array &$lps)
+function ComputeLPS(string $pattern, array &$lps): void
 {
     $len = 0;
     $i = 1;

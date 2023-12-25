@@ -28,7 +28,7 @@ class CliFormatterTest extends TestCase
         $cards->addCard(new Card('A', 'Spades'));
         $cards->addCard(new Card('2', 'Spades'));
 
-        $player = $this->ateMock(Player::class);
+        $player = $this->createMock(Player::class);
 
         $player->expects($this->once())
             ->method('getHand')

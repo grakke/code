@@ -13,7 +13,7 @@ class ChainTest extends TestCase
     /**
      * @var FastStorage
      */
-    protected $chain;
+    protected FastStorage $chain;
 
     protected function setUp(): void
     {
@@ -21,7 +21,7 @@ class ChainTest extends TestCase
         $this->chain->append(new SlowStorage(array('bar' => 'baz', 'foo' => 'bar')));
     }
 
-    public function makeRequest()
+    public function makeRequest(): array
     {
         $request = new Request();
         $request->verb = 'get';

@@ -7,7 +7,7 @@ require '../../vendor/autoload.php';
 
 class Insertion extends AbstractSort
 {
-    public static function sort(array $arr)
+    public static function sort(array $arr): array
     {
         $len = count($arr);
 

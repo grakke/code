@@ -17,10 +17,10 @@ class Cart
 
     public function getQuantity($product)
     {
-        return isset($this->products[$product]) ? $this->products[$product] : false;
+        return $this->products[$product] ?? false;
     }
 
-    public function getTotal($tax)
+    public function getTotal($tax): float
     {
         $total = 0.00;
 
@@ -48,9 +48,7 @@ function html($code, $id = "", $class = "")
     }
 
     $class = ($class !== "") ? " class =\"$class\"" : ">";
-
     $open = "<$code$id$class";
-
     $close = "</$code>";
 
     return function ($inner = "") use ($open, $close) {

@@ -4,7 +4,7 @@ namespace syntax\phpunit;
 
 class Subject
 {
-    protected $observers = [];
+    protected array $observers = [];
     protected $name;
 
     public function __construct($name)
@@ -17,12 +17,12 @@ class Subject
         return $this->name;
     }
 
-    public function attach(Observer $observer)
+    public function attach(Observer $observer): void
     {
         $this->observers[] = $observer;
     }
 
-    public function doSomething()
+    public function doSomething(): void
     {
         // 随便做点什么。
         // ...
@@ -31,14 +31,14 @@ class Subject
         $this->notify('something');
     }
 
-    public function doSomethingBad()
+    public function doSomethingBad(): void
     {
         foreach ($this->observers as $observer) {
             $observer->reportError(42, 'Something bad happened', $this);
         }
     }
 
-    protected function notify($argument)
+    protected function notify($argument): void
     {
         foreach ($this->observers as $observer) {
             $observer->update($argument);

@@ -18,7 +18,7 @@ class BinaryTreeByArray
     {
         if (isset($this->nodes[$num])) {
             echo str_repeat("-", $level);
-            echo $this->nodes[$num]."\n";
+            echo $this->nodes[$num] . "\n";
             $this->traverse(2 * $num + 1, $level + 1);
             $this->traverse(2 * ($num + 1), $level + 1);
         }
@@ -26,7 +26,6 @@ class BinaryTreeByArray
 }
 
 try {
-
     $nodes = [];
     $nodes[] = "Final";
     $nodes[] = "Semi Final 1";

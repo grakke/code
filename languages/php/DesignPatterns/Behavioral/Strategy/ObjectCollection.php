@@ -10,15 +10,15 @@ class ObjectCollection
     /**
      * @var array
      */
-    private $elements;
+    private array $elements;
 
     /**
      * @var ComparatorInterface
      */
-    private $comparator;
+    private ComparatorInterface $comparator;
 
     /**
-     * @param  array  $elements
+     * @param array $elements
      */
     public function __construct(array $elements = array())
     {
@@ -26,9 +26,19 @@ class ObjectCollection
     }
 
     /**
+     * @param ComparatorInterface $comparator
+     *
+     * @return void
+     */
+    public function setComparator(ComparatorInterface $comparator): void
+    {
+        $this->comparator = $comparator;
+    }
+
+    /**
      * @return array
      */
-    public function sort()
+    public function sort(): array
     {
         if (!$this->comparator) {
             throw new \LogicException("Comparator is not set");
@@ -38,15 +48,5 @@ class ObjectCollection
         uasort($this->elements, $callback);
 
         return $this->elements;
-    }
-
-    /**
-     * @param  ComparatorInterface  $comparator
-     *
-     * @return void
-     */
-    public function setComparator(ComparatorInterface $comparator)
-    {
-        $this->comparator = $comparator;
     }
 }

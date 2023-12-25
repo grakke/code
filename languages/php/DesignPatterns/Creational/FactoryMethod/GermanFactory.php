@@ -10,15 +10,15 @@ class GermanFactory extends FactoryMethod
     /**
      * {@inheritdoc}
      */
-    protected function createVehicle($type)
+    protected function createVehicle($type): VehicleInterface
     {
         switch ($type) {
-            case parent::CHEAP:
+            case parent::SLOW:
                 return new Bicycle();
                 break;
             case parent::FAST:
                 $obj = new Porsche();
-                //因为我们已经知道是什么对象所以可以调用具体方法
+                //因为已经知道是什么对象所以可以调用具体方法
                 $obj->addTuningAMG();
 
                 return $obj;

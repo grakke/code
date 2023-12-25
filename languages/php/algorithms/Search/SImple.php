@@ -15,9 +15,9 @@ function search(array $numbers, int $neeedle): bool
 $numbers = range(1, 200, 5);
 
 if (search($numbers, 31)) {
-    echo "Found".PHP_EOL;
+    echo "Found" . PHP_EOL;
 } else {
-    echo "Not found".PHP_EOL;
+    echo "Not found" . PHP_EOL;
 }
 
 $arr = [];

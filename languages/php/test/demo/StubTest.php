@@ -114,7 +114,7 @@ class StubTest extends TestCase
 
         // 配置桩件
         $stub->method('doSomething')
-            ->will($this->throwException(new Exception));
+            ->will($this->throwException(new \Exception));
 
         // $stub->doSomething() 抛出异常
         $stub->doSomething();

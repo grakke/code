@@ -1,7 +1,7 @@
 <?php
 
-define("N", 9);
-define("UNASSIGNED", 0);
+const N = 9;
+const UNASSIGNED = 0;
 
 function SolveSudoku(array &$grid): bool
 {
@@ -72,7 +72,7 @@ function isSafe(array $grid, int $row, int $col, int $num): bool
 function printGrid(array $grid)
 {
     foreach ($grid as $row) {
-        echo implode("", $row)."\n";
+        echo implode("", $row) . "\n";
     }
 }
 
@@ -106,7 +106,7 @@ $grid = [
     [0, 0, 2, 0, 9, 0, 5, 0, 0]
 ];
 
-if (SolveSudoku($grid) == true) {
+if (SolveSudoku($grid)) {
     printGrid($grid);
 } else {
     echo "No solution exists";

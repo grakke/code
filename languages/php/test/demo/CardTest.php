@@ -26,7 +26,7 @@ class CardTest extends TestCase
         $this->assertEquals('spades', $actual, 'Suit should be <spades>');
     }
 
-    public function matchingCardDataProvider(): array
+    public static function matchingCardDataProvider(): array
     {
         return [
             '4 of Hearts' => [new Card('4', 'hearts'), true, 'should match'],

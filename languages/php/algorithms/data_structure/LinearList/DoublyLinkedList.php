@@ -25,6 +25,7 @@ class DoublyLinkedList
             $currentFirstNode->prev = $newNode;
         }
         $this->totalNode++;
+
         return true;
     }
 
@@ -42,6 +43,7 @@ class DoublyLinkedList
             $this->lastNode = $newNode;
         }
         $this->totalNode++;
+
         return true;
     }
 
@@ -67,7 +69,7 @@ class DoublyLinkedList
         }
     }
 
-    public function insertAfter(string $data = null, string $query = null)
+    public function insertAfter(string $data = null, string $query = null): void
     {
         $newNode = new ListKVNode($data);
 

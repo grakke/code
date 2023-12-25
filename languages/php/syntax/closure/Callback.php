@@ -5,7 +5,7 @@ namespace syntax\closure;
 require '../../vendor/autoload.php';
 
 # 函数调用另一种方式
-function barber($type)
+function barber($type): void
 {
     echo "You wanted a $type haircut, no problem" . PHP_EOL;
 }

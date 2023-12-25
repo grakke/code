@@ -10,27 +10,13 @@ namespace DesignPatterns\Creational\AbstractFactory;
 class JsonFactory extends AbstractFactory
 {
 
-    /**
-     * 创建图片组件
-     *
-     * @param  string  $path
-     * @param  string  $name
-     *
-     * @return Json\Picture|Picture
-     */
-    public function createPicture($path, $name = '')
+
+    public function createPicture(string $path, string $name = ''): Picture
     {
         return new Json\Picture($path, $name);
     }
 
-    /**
-     * 创建文本组件
-     *
-     * @param  string  $content
-     *
-     * @return Json\Text|Text
-     */
-    public function createText($content)
+    public function createText(string $content): Text
     {
         return new Json\Text($content);
     }

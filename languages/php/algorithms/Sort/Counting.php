@@ -1,15 +1,11 @@
 <?php
 
-
 namespace Algorithms\Sort;
 
 class Counting extends AbstractSort
 {
     public static function sort(array $arr)
     {
-        if (!is_array($arr)) {
-            return false;
-        }
         $len = count($arr);
         if ($len <= 1) {
             return $arr;

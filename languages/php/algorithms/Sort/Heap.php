@@ -5,11 +5,8 @@ namespace Algorithms\Sort;
 
 class Heap extends AbstractSort
 {
-    public static function sort(array $arr)
+    public static function sort(array $arr): false|array
     {
-        if (!is_array($arr)) {
-            return false;
-        }
         global $len;
         $len = count($arr);
         if ($len <= 1) {
@@ -23,7 +20,7 @@ class Heap extends AbstractSort
         return $arr;
     }
 
-    public static function heapify($arr, $i)
+    public static function heapify($arr, $i): void
     {
         $left = 2 * $i + 1;
         $right = 2 * $i + 2;
@@ -51,7 +48,7 @@ class Heap extends AbstractSort
      *
      * @return void
      */
-    function heapAdjust(&$arr, $start, $len)
+    function heapAdjust(&$arr, $start, $len): void
     {
         for ($child = $start * 2 + 1; $child < $len; $child = $child * 2 + 1) {
             //左节点小于右节点
@@ -75,7 +72,7 @@ class Heap extends AbstractSort
      *
      * @return void
      */
-    function heapSort(&$arr)
+    function heapSort(&$arr): void
     {
         /**
          * 将待排序数组构建成一个大顶（根）堆

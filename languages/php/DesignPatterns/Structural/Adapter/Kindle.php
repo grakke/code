@@ -10,14 +10,14 @@ class Kindle implements EBookInterface
 	/**
 	 * {@inheritdoc}
 	 */
-	public function pressNext()
-	{
+	public function pressNext(): mixed
+    {
 	}
 
 	/**
 	 * {@inheritdoc}
 	 */
-	public function pressStart()
-	{
+	public function pressStart(): mixed
+    {
 	}
 }

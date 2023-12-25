@@ -64,7 +64,7 @@ class QueueByLikedList implements Iterator
         return false;
     }
 
-    public function insertBefore(string $data = null, string $query = null)
+    public function insertBefore(string $data = null, string $query = null): void
     {
         $newNode = new ListNode($data);
 
@@ -84,7 +84,7 @@ class QueueByLikedList implements Iterator
         }
     }
 
-    public function insertAfter(string $data = null, string $query = null)
+    public function insertAfter(string $data = null, string $query = null): void
     {
         $newNode = new ListNode($data);
 
@@ -106,7 +106,7 @@ class QueueByLikedList implements Iterator
         }
     }
 
-    public function deleteFirst()
+    public function deleteFirst(): bool
     {
         if ($this->firstNode !== null) {
             if ($this->firstNode->next !== null) {
@@ -117,10 +117,11 @@ class QueueByLikedList implements Iterator
             $this->totalNode--;
             return true;
         }
+
         return false;
     }
 
-    public function deleteLast()
+    public function deleteLast(): bool
     {
         if ($this->firstNode !== null) {
             $currentNode = $this->firstNode;
@@ -139,6 +140,7 @@ class QueueByLikedList implements Iterator
                 return true;
             }
         }
+
         return false;
     }
 

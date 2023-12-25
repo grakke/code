@@ -19,10 +19,10 @@ function fibonacci(int $n): int
     }
 }
 
-echo fibonacci(30)."\n";
-echo "Function called: ".$count."\n";
+echo fibonacci(30) . "\n";
+echo "Function called: " . $count . "\n";
 $endTime = microtime();
-echo "time =".($endTime - $startTime)."\n";
+echo "time =" . ($endTime - $startTime) . "\n";
 
 
 $startTime = microtime();
@@ -60,8 +60,7 @@ function fibonacciMemoized(int $n): int
     }
 }
 
-echo fibonacciMemoized(30)."\n";
-echo "Function called: ".$count."\n";
+echo fibonacciMemoized(30) . "\n";
+echo "Function called: " . $count . "\n";
 $endTime = microtime();
-echo "time =".($endTime - $startTime)."\n";
-
+echo "time =" . ($endTime - $startTime) . "\n";

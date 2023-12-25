@@ -15,9 +15,9 @@ namespace syntax\redis;
 
 class RedisConnection
 {
-    public $hostname = 'localhost';
-    public $port = 6379;
-    public $password = '';
+    public string $hostname = 'localhost';
+    public int $port = 6379;
+    public string $password = '';
     public $redis;
 
     public function connect()
@@ -47,6 +47,7 @@ class RedisConnection
         }
         return $this->redis;
     }
+
     public function __call($name, $params = [])
     {
         switch ($name) {

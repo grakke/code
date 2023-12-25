@@ -3,43 +3,44 @@
 namespace Test\DesignPatterns;
 
 use DesignPatterns\Creational\FactoryMethod\FactoryMethod;
-use InvalidArgumentException;
-use PHPUnit\Framework\TestCase;
 use DesignPatterns\Creational\FactoryMethod\GermanFactory;
 use DesignPatterns\Creational\FactoryMethod\ItalianFactory;
+use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
 
 /**
  * FactoryMethodTest用于测试工厂方法模式
  */
 class FactoryMethodTest extends TestCase
 {
-    protected $type = array(
-        FactoryMethod::CHEAP,
+    protected array $types = [
+        FactoryMethod::SLOW,
         FactoryMethod::FAST
-    );
+    ];
 
-    public function getShop()
+    public static function getFactories(): array
     {
-        return array(
-            array(new GermanFactory()),
-            array(new ItalianFactory())
-        );
+        return [
+            [new GermanFactory()],
+            [new ItalianFactory()]
+        ];
     }
 
     /**
-     * @dataProvider getShop
+     * 客户端 不关心什么工厂，只知道可以可以用它来造车
+     *
+     * @dataProvider getFactories
      */
     public function testCreation(FactoryMethod $shop)
     {
-        // 该方法扮演客户端角色，我们不关心什么工厂，我们只知道可以可以用它来造车
-        foreach ($this->type as $oneType) {
-            $vehicle = $shop->create($oneType);
+        foreach ($this->types as $type) {
+            $vehicle = $shop->create($type);
             $this->assertInstanceOf('DesignPatterns\Creational\FactoryMethod\VehicleInterface', $vehicle);
         }
     }
 
     /**
-     * @dataProvider getShop
+     * @dataProvider getFactories
      */
     public function testUnknownType(FactoryMethod $shop)
     {

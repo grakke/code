@@ -21,7 +21,7 @@ function Kruskal(array $graph): array
     for ($i = 0; $i < $len; $i++) {
         for ($j = 0; $j < $i; $j++) {
             if ($graph[$i][$j]) {
-                $edges[$i.','.$j] = $graph[$i][$j];
+                $edges[$i . ',' . $j] = $graph[$i][$j];
             }
         }
     }

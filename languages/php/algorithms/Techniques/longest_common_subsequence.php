@@ -31,4 +31,4 @@ function LCS(string $X, string $Y): int
 
 $X = "AGGTAB";
 $Y = "GGTXAYB";
-echo "LCS Length:".LCS($X, $Y);
+echo "LCS Length:" . LCS($X, $Y);

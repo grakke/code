@@ -10,7 +10,7 @@ echo memory_get_usage() - $startMemory, ' bytes';
 $startMemory = memory_get_usage();
 $array = range(1, 100000);
 $endMemory = memory_get_usage();
-echo ($endMemory - $startMemory)." bytes";
+echo ($endMemory - $startMemory) . " bytes";
 
 
 $items = 100000;
@@ -27,7 +27,7 @@ $endTime = microtime();
 $memoryConsumed = ($endMemory - $startMemory) / (1024 * 1024);
 $memoryConsumed = ceil($memoryConsumed);
 echo "memory = {$memoryConsumed} MB\n";
-echo "time =".($endTime - $startTime)."\n";
+echo "time =" . ($endTime - $startTime) . "\n";
 
 $array = [1 => 10, 2 => 100, 3 => 1000, 4 => 10000];
 $splArray = SplFixedArray::fromArray($array, false);

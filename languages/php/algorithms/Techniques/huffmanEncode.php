@@ -20,10 +20,10 @@ function huffmanEncode(array $symbols): array
         $low = $heap->extract();
         $high = $heap->extract();
         foreach ($low['data'] as &$x) {
-            $x = '0'.$x;
+            $x = '0' . $x;
         }
         foreach ($high['data'] as &$x) {
-            $x = '1'.$x;
+            $x = '1' . $x;
         }
         $heap->insert($low['data'] + $high['data'], $low['priority'] + $high['priority']);
     }

@@ -15,9 +15,9 @@ class Bicycle implements VehicleInterface
     /**
      * 设置自行车的颜色
      *
-     * @param  string  $rgb
+     * @param string $rgb
      */
-    public function setColor($rgb)
+    public function setColor(string $rgb): void
     {
         $this->color = $rgb;
     }

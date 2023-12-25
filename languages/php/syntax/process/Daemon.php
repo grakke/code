@@ -2,8 +2,6 @@
 
 namespace syntax\process;
 
-use tool\Logger;
-
 class Daemon extends Logger
 {
     /* config */

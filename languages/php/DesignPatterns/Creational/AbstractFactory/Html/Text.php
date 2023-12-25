@@ -16,7 +16,7 @@ class Text extends BaseText
      *
      * @return string
      */
-    public function render()
+    public function render(): string
     {
         return '<div>'.htmlspecialchars($this->text).'</div>';
     }

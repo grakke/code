@@ -2,6 +2,8 @@
 
 namespace Algorithms\Tree;
 
+use Algorithms\data_structure\Tree\BinaryNode;
+
 class BinarySortedTree extends BT
 {
     /**
@@ -9,7 +11,7 @@ class BinarySortedTree extends BT
      */
     private $tree;
 
-    public function getTree()
+    public function getTree(): BinaryNode
     {
         return $this->tree;
     }

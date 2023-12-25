@@ -64,9 +64,9 @@ try {
     $agents->enqueue("Keith");
     $agents->enqueue("Adiyan");
     $agents->enqueue("Mikhael");
-    echo $agents->dequeue()."\n";
-    echo $agents->dequeue()."\n";
-    echo $agents->peek()."\n";
+    echo $agents->dequeue() . "\n";
+    echo $agents->dequeue() . "\n";
+    echo $agents->peek() . "\n";
 } catch (Exception $e) {
     echo $e->getMessage();
 }

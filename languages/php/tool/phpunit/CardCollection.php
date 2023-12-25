@@ -6,12 +6,12 @@ class CardCollection
 {
     private array $collections = [];
 
-    public function addCard(Card $card)
+    public function addCard(Card $card): void
     {
         $this->collections[] = $card;
     }
 
-    public function count()
+    public function count(): int
     {
         return count($this->collections);
     }

@@ -2,36 +2,28 @@
 
 namespace DesignPatterns\Creational\SimpleFactory;
 
-/**
- * ConcreteFactory类
- */
 class ConcreteFactory
 {
-    /**
-     * @var array
-     */
-    protected $typeList;
+    protected array $typeList;
 
-    /**
-     * 注入自己的车子类型
-     */
+
     public function __construct()
     {
-        $this->typeList = array(
-            'bicycle' => __NAMESPACE__.'\Bicycle',
-            'other' => __NAMESPACE__.'\Scooter'
-        );
+        $this->typeList = [
+            'bicycle' => __NAMESPACE__ . '\Bicycle',
+            'scooter' => __NAMESPACE__ . '\Scooter'
+        ];
     }
 
     /**
      * 创建车子
      *
-     * @param  string  $type  a known type key
+     * @param string $type a known type key
      *
      * @return VehicleInterface a new instance of VehicleInterface
      * @throws \InvalidArgumentException
      */
-    public function createVehicle($type)
+    public function createVehicle(string $type): VehicleInterface
     {
         if (!array_key_exists($type, $this->typeList)) {
             throw new \InvalidArgumentException("$type is not valid vehicle");

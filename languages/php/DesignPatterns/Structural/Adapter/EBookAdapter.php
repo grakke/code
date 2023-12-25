@@ -28,16 +28,16 @@ class EBookAdapter implements PaperBookInterface
 	/**
 	 * 电子书将纸质书接口方法转换为电子书对应方法
 	 */
-	public function open()
-	{
+	public function open(): mixed
+    {
 		$this->eBook->pressStart();
 	}
 
 	/**
 	 * 纸质书翻页转化为电子书翻页
 	 */
-	public function turnPage()
-	{
+	public function turnPage(): mixed
+    {
 		$this->eBook->pressNext();
 	}
 }

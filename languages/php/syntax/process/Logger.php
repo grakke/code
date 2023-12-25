@@ -1,6 +1,6 @@
 <?php
 
-namespace tool;
+namespace syntax\process;
 
 class Logger
 {
@@ -8,7 +8,7 @@ class Logger
     {
     }
 
-    public function logger($type, $message)
+    public function logger($type, $message): void
     {
         $log = sprintf("%s\t%s\t%s\n", date('Y-m-d H:i:s'), $type, $message);
         file_put_contents(sprintf(__DIR__ . "/../log/sender.%s.log", date('Y-m-d')), $log, FILE_APPEND);

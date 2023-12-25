@@ -122,7 +122,7 @@ print implode(' ', $new_numbers);
 
 class Hello
 {
-    private function getMsg()
+    private function getMsg(): void
     {
         echo "Hello";
     }

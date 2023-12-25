@@ -8,19 +8,19 @@ use PHPUnit\Framework\TestCase;
 
 class SimpleFactoryTest extends TestCase
 {
-    protected $factory;
+    protected ConcreteFactory $factory;
 
     protected function setUp(): void
     {
         $this->factory = new ConcreteFactory();
     }
 
-    public function getType()
+    public static function getType(): array
     {
-        return array(
-            array('bicycle'),
-            array('other')
-        );
+        return [
+            ['bicycle'],
+            ['scooter']
+        ];
     }
 
     /**

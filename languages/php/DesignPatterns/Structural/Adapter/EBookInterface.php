@@ -12,12 +12,12 @@ interface EBookInterface
 	 *
 	 * @return mixed
 	 */
-	public function pressNext();
+	public function pressNext(): mixed;
 
 	/**
 	 * 打开电子书
 	 *
 	 * @return mixed
 	 */
-	public function pressStart();
+	public function pressStart(): mixed;
 }

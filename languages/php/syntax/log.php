@@ -12,7 +12,7 @@
  *
  * @return void
  */
-function super_debug($data, $log_path = '/var/log/', $log_name = 'debug.log'): void
+function super_debug(mixed $data, string $log_path = '/var/log/', string $log_name = 'debug.log'): void
 {
     error_log('[' . time() . ']:' . json_encode($data, JSON_UNESCAPED_UNICODE) . "\n", 3, $log_path . $log_name);
 }

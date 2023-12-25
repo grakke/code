@@ -44,16 +44,16 @@ class HttpProtocol
      *
      * @var string
      */
-    private $responseBody = '';
+    private string $responseBody = '';
 
     /**
      * 解析请求信息
      *
-     * @param  string  $context
+     * @param string $context
      *
      * @return void
      */
-    public function request($context = '')
+    public function request(string $context = ''): void
     {
         if (empty($context)) {
             // exception
@@ -87,9 +87,8 @@ class HttpProtocol
      *
      * @return void
      */
-    public function response($responseBody)
+    public function response($responseBody): void
     {
-        $count = count($this->responseHead);
         $finalHead = '';
         foreach ($this->responseHead as $v) {
             $finalHead .= $v."\r\n";

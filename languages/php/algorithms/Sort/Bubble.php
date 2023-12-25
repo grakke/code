@@ -26,7 +26,7 @@ class Bubble extends AbstractSort
             }
         }
 
-        echo $count.PHP_EOL;
+        echo $count . PHP_EOL;
         return $nums;
     }
 
@@ -49,7 +49,7 @@ class Bubble extends AbstractSort
             }
         }
 
-        echo $count.PHP_EOL;
+        echo $count . PHP_EOL;
         return $arr;
     }
 
@@ -68,7 +68,7 @@ class Bubble extends AbstractSort
             }
         } while ($swapped);
 
-        echo $count.PHP_EOL;
+        echo $count . PHP_EOL;
         return $arr;
     }
 
@@ -96,14 +96,14 @@ class Bubble extends AbstractSort
             }
         }
 
-        echo $count.PHP_EOL;
+        echo $count . PHP_EOL;
         return $arr;
     }
 }
 
 $arr = [20, 45, 93, 67, 10, 97, 52, 88, 33, 92];
 
-echo implode(",", Bubble::sort($arr)).PHP_EOL;
-echo implode(",", Bubble::sort1($arr)).PHP_EOL;
-echo implode(",", Bubble::sort2($arr)).PHP_EOL;
+echo implode(",", Bubble::sort($arr)) . PHP_EOL;
+echo implode(",", Bubble::sort1($arr)) . PHP_EOL;
+echo implode(",", Bubble::sort2($arr)) . PHP_EOL;
 echo implode(",", Bubble::sort3($arr));

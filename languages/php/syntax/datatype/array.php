@@ -1,12 +1,16 @@
 <?php
 
-require '../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 # 可以包含任何数据类型，支持无限扩容,将传统数组和字典类型合二为一, 底层通过哈希表实现数组功能
 use syntax\oop\Users;
 
 print_r(str_split('werty'));
-die;
+
+$arr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+echo count($arr) . PHP_EOL;
+unset($arr[5]);
+echo count($arr) . PHP_EOL;
 
 # 索引数组
 $season = ["summer", "winter", "spring", "autumn"];
@@ -17,12 +21,12 @@ $fruits[] = 'Apple';
 $fruits[] = 'Orange';
 $fruits[] = 'Pear';
 foreach ($fruits as $index => $value) {
-    echo "Position ".$index." holds the value ".$value."\n";
+    echo "Position " . $index . " holds the value " . $value . "\n";
 }
 echo memory_get_usage() - $startMemory, " bytes\n";
 
 $fruits[2] = 'Banana';
-print($fruits[0].PHP_EOL);
+print($fruits[0] . PHP_EOL);
 unset($fruits[1]);
 
 $emp = [
@@ -32,7 +36,7 @@ $emp = [
 ];
 for ($row = 0; $row < 3; $row++) {
     for ($col = 0; $col < 3; $col++) {
-        echo $emp[$row][$col]."  ";
+        echo $emp[$row][$col] . "  ";
     }
     echo "<br/>";
 }
@@ -57,8 +61,8 @@ $array3 = range("z", "a");
 print_r($array3);
 
 $array = range(1, 10);
-$fillarray = range("a", "d");
-$arrayFilled = array_fill(0, 5, $fillarray);//这里的$fillarray可以是字符串，如"test".
+$fillArray = range("a", "d");
+$arrayFilled = array_fill(0, 5, $fillArray);//这里的$fillarray可以是字符串，如"test".
 echo "<pre>";
 print_r($arrayFilled);
 echo "</pre>";
@@ -77,7 +81,7 @@ $salary["Kartik"] = "200000";
 echo count($salary);
 
 foreach ($salary as $k => $v) {
-    echo "Key: ".$k." Value: ".$v."<br/>";
+    echo "Key: " . $k . " Value: " . $v . "<br/>";
 }
 
 $arr = [
@@ -116,9 +120,9 @@ $players[] = ['Name' => "Neymar", "Age" => 24, "Country" => "Brazil", "Team" => 
 $players[] = ['Name' => "Rooney", "Age" => 30, "Country" => "England", "Team" => "Man United"];
 
 foreach ($players as $index => $playerInfo) {
-    echo "Info of player # ".($index + 1)."\n";
+    echo "Info of player # " . ($index + 1) . "\n";
     foreach ($playerInfo as $key => $value) {
-        echo $key.": ".$value."\n";
+        echo $key . ": " . $value . "\n";
     }
     echo "\n";
 }
@@ -166,10 +170,10 @@ while (next($a)) {
     next($a);
 }
 
-echo $sum.PHP_EOL;
+echo $sum . PHP_EOL;
 reset($vehicles);
 do {
-    print key($vehicles).':'.current($vehicles).PHP_EOL;
+    print key($vehicles) . ':' . current($vehicles) . PHP_EOL;
 } while (next($vehicles));
 
 $array = [
@@ -181,7 +185,7 @@ $array = [
 ];
 while ($fruit_name = current($array)) {
     if ($fruit_name == 'apple') { # fruit1 friut4 fruit5
-        echo key($array).PHP_EOL;
+        echo key($array) . PHP_EOL;
     }
     next($array);
 }
@@ -322,7 +326,7 @@ print_r(array_unshift($stack, "orange", "pear")); # 4
 print_r($stack); # [ [0] => orange [1] => pear [2] => orange [3] => banana]
 print_r(array_product([2, 4, 5])); # 40
 
-echo "############## array_count_values ################".PHP_EOL;
+echo "############## array_count_values ################" . PHP_EOL;
 // 数组的键是 array 里单元的值； 数组的值是 array 单元的值出现的次数
 print_r(array_count_values([1, 'hello', 1, 'world', 1])); # [ [1] => 3 [hello] => 1 [world] => 1]
 // #  移除数组中重复的值
@@ -330,7 +334,7 @@ print_r(array_count_values([1, 'hello', 1, 'world', 1])); # [ [1] => 3 [hello] =
 // # 返回字符串所用字符的信息
 //count_chars();
 
-echo "############## array sort ################".PHP_EOL;
+echo "############## array sort ################" . PHP_EOL;
 # sort 索引数组排序
 $season = array("summer", "winter", "spring", "autumn");
 sort($season); # 自身操作
@@ -387,7 +391,7 @@ $arr = array(
 );
 //array_multisort(array_column($arr, 'norder'), SORT_ASC, $arr);
 
-echo "############## array diff && insert ################".PHP_EOL;
+echo "############## array diff && insert ################" . PHP_EOL;
 // 支持多个数组比较
 // 回调函数 等于1 的返回
 $array1 = ["a" => "green", "b" => "brown", "c" => "blue", "red"];
@@ -474,7 +478,7 @@ print_r(array_map( # [[henry] => name [34] => age]
     ['henry' => 'user_name', 'user_age']
 ));
 print_r(array_map(function ($a, $b) {
-    return $a.':'.$b;
+    return $a . ':' . $b;
 }, ['Henry', 'Lily'], [15, 17])); # [ [0] => Henry:15 [1] => Lily:17]
 print_r(array_map(null, [1, 2, 3], ['one', 'two', 'three'])); # [[1,one], [2,two], [3,three]]
 # 仅传入一个数组，键（key）会保留；传入多个数组，键（key）是整型数字的序列
@@ -519,8 +523,9 @@ print_r(array_filter($array8, function ($v, $k) {
 
 function myfun1($value, $key, $p)
 {
-    echo "$key $p $value". PHP_EOL;
+    echo "$key $p $value" . PHP_EOL;
 }
+
 array_walk($array8, "myfun1", "has the value");
 echo 4555;
 die;
@@ -609,13 +614,13 @@ foreach ($arr as $v) {
 var_dump($arr);
 
 $arr2 = [["hello", "MySQl", "HTML", "CSS"]];
-echo json_encode($arr2, JSON_PRETTY_PRINT).'<br>';
+echo json_encode($arr2, JSON_PRETTY_PRINT) . '<br>';
 
 $countries = ["Bangladesh", "Nepal", "Bhutan"];
 
 $key = array_search("Bangladesh", $countries);
 if ($key !== false) {
-    echo "Found in: ".$key;
+    echo "Found in: " . $key;
 } else {
     echo "Not found";
 }
@@ -625,13 +630,13 @@ $newCountries = array_map(function ($country) {
     return strtoupper($country);
 }, $countries);
 foreach ($newCountries as $country) {
-    echo $country."\n";
+    echo $country . "\n";
 }
 
 $countries = ["bangladesh", "nepal", "bhutan"];
 $newCountries = array_map('strtoupper', $countries);
 foreach ($newCountries as $country) {
-    echo $country."\n";
+    echo $country . "\n";
 }
 
 $countries = ["bangladesh", "nepal", "bhutan"];
@@ -644,7 +649,55 @@ echo $newNumber;
 
 // change to index array
 $arr = [2 => 4, 3 => 5, 7 => 9];
-//array_shift($arr);
+array_shift($arr);
 echo current($arr);
 unset($arr[array_key_first($arr)]);
 var_dump($arr);
+
+$nums = [2, 2, 1];
+
+foreach ($nums as $k => $v) {
+    unset($nums[$k]);
+    if (!in_array($v, $nums)) {
+        echo $v . PHP_EOL;
+        break;
+    } else {
+        $index = array_search($v, $nums);
+        echo $index . PHP_EOL;
+        if ($index) {
+            // unset not effect
+            unset($nums[$index]);
+            continue;
+        }
+    }
+}
+
+var_dump($nums);
+
+$arr = [1, 2, 3];
+$brr = $arr;
+$brr[1] = 4;
+
+var_dump($arr);
+
+
+$arr['name'] = 'henry';
+$arr[] = 'henry';
+echo count($arr);
+$arr[] = 'henry';
+echo count($arr);
+
+echo in_array(5, [1, 2, 3, 4, 5], true);
+
+$arr = [];
+$obj1 = new stdClass();
+array_push($arr, $obj1);
+$obj2 = new stdClass();
+array_push($arr, $obj2);
+array_push($arr, $obj2);
+var_dump($arr);
+var_dump(in_array((new stdClass()), $arr));
+var_dump(in_array((new stdClass()), $arr, true));
+
+var_dump(new stdClass() == new stdClass());
+var_dump(new stdClass() === new stdClass());

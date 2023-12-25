@@ -49,7 +49,7 @@ class TemplateMethodsTest extends TestCase
         fwrite(STDOUT, __METHOD__."\n");
     }
 
-    protected function onNotSuccessfulTest(Throwable $e): void
+    protected function onNotSuccessfulTest(Throwable $e):never
     {
         fwrite(STDOUT, __METHOD__ . "\n");
         throw $e;

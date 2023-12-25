@@ -15,8 +15,8 @@ class BinaryTree
     }
 
     /**
-     * @param  int         $value
-     * @param  BinaryNode  $node
+     * @param int $value
+     * @param BinaryNode $node
      *
      * @return BinaryNode|bool
      */
@@ -93,7 +93,7 @@ class BinaryTree
     {
         if ($node) {
             echo str_repeat("-", $level);
-            echo $node->data.PHP_EOL;
+            echo $node->data . PHP_EOL;
             if ($node->leftChild) {
                 $this->preTraverse($node->leftChild, $level + 1);
             }
@@ -113,7 +113,7 @@ class BinaryTree
             if ($node->leftChild) {
                 $this->midTraverse($node->leftChild, $level + 1);
             }
-            echo $node->data.PHP_EOL;
+            echo $node->data . PHP_EOL;
             if ($node->rightChild) {
                 $this->midTraverse($node->rightChild, $level + 1);
             }
@@ -133,27 +133,27 @@ class BinaryTree
             if ($node->rightChild) {
                 $this->afterTraverse($node->rightChild, $level + 1);
             }
-            echo $node->data.PHP_EOL;
+            echo $node->data . PHP_EOL;
         }
     }
 }
 
-echo "/-----构造树--------/ ".PHP_EOL;
+echo "/-----构造树--------/ " . PHP_EOL;
 $root = new BinaryNode(5);
 $node = new BinaryNode(1, $root);
 $node1 = new BinaryNode(10, $root);
 $root->addChildren($node, $node1);
 
-echo "Max:".$root->max()->data.PHP_EOL;
-echo "Min:".$root->min()->data.PHP_EOL;
-echo "/-----构造树 over--------/ ".PHP_EOL;
+echo "Max:" . $root->max()->data . PHP_EOL;
+echo "Min:" . $root->min()->data . PHP_EOL;
+echo "/-----构造树 over--------/ " . PHP_EOL;
 
-echo BinaryTree::search(10, $root)->data.PHP_EOL;
+echo BinaryTree::search(10, $root)->data . PHP_EOL;
 BinaryTree::insert(3, $root);
-echo BinaryTree::search(3, $root)->data.PHP_EOL;
+echo BinaryTree::search(3, $root)->data . PHP_EOL;
 var_dump(BinaryTree::delete(10, $root));
 
-echo "/-----构造字符串树 over--------/ ".PHP_EOL;
+echo "/-----构造字符串树 over--------/ " . PHP_EOL;
 $final = new BinaryNode("Final");
 $semiFinal1 = new BinaryNode("Semi Final 1");
 $semiFinal2 = new BinaryNode("Semi Final 2");

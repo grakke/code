@@ -11,12 +11,7 @@ use DesignPatterns\Creational\AbstractFactory\Text as BaseText;
  */
 class Text extends BaseText
 {
-    /**
-     * 以 JSON 格式输出的渲染
-     *
-     * @return string
-     */
-    public function render()
+    public function render(): string
     {
         return json_encode(array('content' => $this->text));
     }

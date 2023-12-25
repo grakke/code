@@ -4,20 +4,20 @@ namespace syntax\process;
 
 final class Signal
 {
-    public static $signo = 0;
+    public static int $signo = 0;
     protected static $ini = null;
 
-    public static function set($signo)
+    public static function set($signo): void
     {
         self::$signo = $signo;
     }
 
-    public static function get()
+    public static function get(): int
     {
         return (self::$signo);
     }
 
-    public static function reset()
+    public static function reset(): void
     {
         self::$signo = 0;
     }

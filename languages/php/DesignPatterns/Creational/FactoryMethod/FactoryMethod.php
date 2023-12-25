@@ -7,26 +7,19 @@ namespace DesignPatterns\Creational\FactoryMethod;
  */
 abstract class FactoryMethod
 {
-    const CHEAP = 1;
+    const SLOW = 1;
     const FAST = 2;
 
-    /**
-     * 子类必须实现该方法
-     *
-     * @param  string  $type  a generic type
-     *
-     * @return VehicleInterface a new vehicle
-     */
-    abstract protected function createVehicle($type);
+
+    abstract protected function createVehicle(int $type): VehicleInterface;
 
     /**
      * 创建新的车辆
      *
-     * @param  int  $type
      *
      * @return VehicleInterface a new vehicle
      */
-    public function create($type)
+    public function create($type): VehicleInterface
     {
         $obj = $this->createVehicle($type);
         $obj->setColor("#f00");

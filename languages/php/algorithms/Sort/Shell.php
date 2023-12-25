@@ -5,11 +5,8 @@ namespace Algorithms\Sort;
 
 class Shell extends AbstractSort
 {
-    public static function sort(array $arr)
+    public static function sort(array $arr): false|array
     {
-        if (!is_array($arr)) {
-            return false;
-        }
         $len = count($arr);
         if ($len <= 1) {
             return $arr;

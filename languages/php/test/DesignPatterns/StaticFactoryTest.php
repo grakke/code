@@ -8,12 +8,12 @@ use PHPUnit\Framework\TestCase;
 
 class StaticFactoryTest extends TestCase
 {
-    public function getTypeList()
+    public static function getTypeList()
     {
-        return array(
-            array('string'),
-            array('number')
-        );
+        return [
+            ['string'],
+            ['number']
+        ];
     }
 
     /**

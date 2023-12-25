@@ -39,7 +39,7 @@ function pearsonScore(array $reviews, string $person1, string $person2): float
         $pearsonCorrelation = $num / $den;
     }
 
-    return (float) $pearsonCorrelation;
+    return (float)$pearsonCorrelation;
 }
 
 function similarReviewers(array $reviews, string $person, int $n): array
@@ -108,17 +108,14 @@ $person1 = 'Adiyan';
 $person2 = 'Arush';
 $person3 = 'Mikhael';
 
-echo 'The similarity score calculated with the Pearson Correlation between '.$person1.' and '.$person2.' is: '.pearsonScore($reviews,
-        $person1, $person2).'\n';
-echo 'The similarity score calculated with the Pearson Correlation between '.$person2.' and '.$person3.' is: '.pearsonScore($reviews,
-        $person2, $person3).'\n';
+echo 'The similarity score calculated with the Pearson Correlation between ' . $person1 . ' and ' . $person2 . ' is: ' . pearsonScore($reviews, $person1, $person2) . " \n";
+echo 'The similarity score calculated with the Pearson Correlation between ' . $person2 . ' and ' . $person3 . ' is: ' . pearsonScore($reviews, $person2, $person3) . " \n";
 
 print_r(similarReviewers($reviews, $person1, 2));
 
 $person = 'Arush';
-echo 'Restaurant recommendations for  '.$person."\n";
+echo 'Restaurant recommendations for  ' . $person . "\n";
 $recommendations = getRecommendations($reviews, $person);
 foreach ($recommendations as $restaturant => $score) {
-    echo $restaturant." \n";
+    echo $restaturant . " \n";
 }
-echo '<br /><br />';

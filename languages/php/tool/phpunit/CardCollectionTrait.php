@@ -4,7 +4,7 @@ namespace syntax\phpunit;
 
 trait CardCollectionTrait
 {
-    public function count()
+    public function count(): int
     {
         return count($this->cards);
     }

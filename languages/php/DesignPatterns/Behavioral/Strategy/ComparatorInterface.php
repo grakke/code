@@ -8,10 +8,10 @@ namespace DesignPatterns\Behavioral\Strategy;
 interface ComparatorInterface
 {
     /**
-     * @param  mixed  $a
-     * @param  mixed  $b
+     * @param mixed $a
+     * @param mixed $b
      *
      * @return bool
      */
-    public function compare($a, $b);
+    public function compare(mixed $a, mixed $b): bool;
 }

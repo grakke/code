@@ -1,6 +1,6 @@
 <?php
 
-function primMST(array $graph)
+function primMST(array $graph): void
 {
     $parent = []; // Array to store the MST
     $key = []; // Key values used to pick minimum weight edge in cut
@@ -47,7 +47,7 @@ function primMST(array $graph)
     echo "Edge\tWeight\n";
     $minimumCost = 0;
     for ($i = 1; $i < $len; $i++) {
-        echo $parent[$i]." - ".$i."\t".$graph[$i][$parent[$i]]."\n";
+        echo $parent[$i] . " - " . $i . "\t" . $graph[$i][$parent[$i]] . "\n";
         $minimumCost += $graph[$i][$parent[$i]];
     }
     echo "Minimum cost: $minimumCost \n";
@@ -60,6 +60,7 @@ $G = [
     [6, 8, 0, 0, 9],
     [0, 5, 7, 9, 0],
 ];
+primMST($G);
 
 $G = [
     [0, 3, 1, 6, 0, 0],
@@ -69,5 +70,4 @@ $G = [
     [0, 3, 6, 0, 0, 6],
     [0, 0, 4, 2, 6, 0]
 ];
-
 primMST($G);

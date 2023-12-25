@@ -6,19 +6,19 @@
 
 $arr = [99, 98, 97, 96, 95];
 
-function arrayPrinter($arr, $steps = 0)
+function arrayPrinter($arr, $steps = 0): void
 {
     echo implode(" ", $arr)." Steps:".$steps.PHP_EOL;
 }
 
-function swap(&$arr, $i, $j)
+function swap(&$arr, $i, $j): void
 {
     $tmp = $arr[$i];
     $arr[$i] = $arr[$j];
     $arr[$j] = $tmp;
 }
 
-function bubble(array &$arr)
+function bubble(array &$arr): void
 {
     $steps = 0;
     $unsorted_until_index = count($arr) - 1;
@@ -44,7 +44,7 @@ bubble($arr);
 
 
 $arr = [99, 98, 97, 96, 95];
-function selection(array &$arr)
+function selection(array &$arr): void
 {
     $steps = 0;
     for ($j = 0; $j < count($arr); $j++) {
@@ -71,7 +71,7 @@ selection($arr);
 
 
 $arr = [99, 98, 97, 96, 95];
-function insert(array &$arr)
+function insert(array &$arr): void
 {
     $steps = 0;
 

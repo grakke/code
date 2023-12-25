@@ -4,6 +4,7 @@ $mem->connect('localhost', '11211');
 $sql = 'select * from cetsix limit 20';
 $key = md5($sql1);
 $data1 = $mem->get($key1);
+
 if (!$data1) {
     echo 'ok';
     $conn = mysql_connect('localhost', 'root', 'root');

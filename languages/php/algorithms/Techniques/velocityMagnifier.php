@@ -7,7 +7,7 @@
  *
  */
 
-function velocityMagnifier(array $jobs)
+function velocityMagnifier(array $jobs): void
 {
 
     $n = count($jobs);

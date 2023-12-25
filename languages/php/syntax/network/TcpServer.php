@@ -7,7 +7,6 @@ socket_bind($server, '127.0.0.1', '8889');
 socket_listen($server);
 
 while (true) {
-    // accept
     $client = socket_accept($server);
     if (!$client) {
         continue;
@@ -28,5 +27,5 @@ while (true) {
     socket_write($client, $http->responseData);
 
     socket_close($client);
-    echo socket_strerror(socket_last_error($server))."\n";
+    echo socket_strerror(socket_last_error($server)) . "\n";
 }

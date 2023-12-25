@@ -12,12 +12,12 @@ interface PaperBookInterface
 	 *
 	 * @return mixed
 	 */
-	public function turnPage();
+	public function turnPage(): mixed;
 
 	/**
 	 * 打开书的方法
 	 *
 	 * @return mixed
 	 */
-	public function open();
+	public function open(): mixed;
 }

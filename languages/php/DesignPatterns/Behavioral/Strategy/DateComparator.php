@@ -10,7 +10,7 @@ class DateComparator implements ComparatorInterface
     /**
      * {@inheritdoc}
      */
-    public function compare($a, $b)
+    public function compare(mixed $a, mixed $b): bool
     {
         $aDate = new \datetime($a['date']);
         $bDate = new \datetime($b['date']);

@@ -34,6 +34,6 @@ $matches = strFindAll($pattern, $txt);
 
 if ($matches) {
     foreach ($matches as $pos) {
-        echo "Pattern found at index : ".$pos."\n";
+        echo "Pattern found at index : " . $pos . "\n";
     }
 }

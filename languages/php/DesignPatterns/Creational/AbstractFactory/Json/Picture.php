@@ -11,12 +11,7 @@ use DesignPatterns\Creational\AbstractFactory\Picture as BasePicture;
  */
 class Picture extends BasePicture
 {
-    /**
-     * JSON 格式输出
-     *
-     * @return string
-     */
-    public function render()
+    public function render(): string
     {
         return json_encode(array('title' => $this->name, 'path' => $this->path));
     }

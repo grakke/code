@@ -10,7 +10,7 @@ class IdComparator implements ComparatorInterface
     /**
      * {@inheritdoc}
      */
-    public function compare($a, $b)
+    public function compare(mixed $a, mixed $b): bool
     {
         if ($a['id'] == $b['id']) {
             return 0;

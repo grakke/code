@@ -61,5 +61,5 @@ extract($result);
 echo "Distance from $source to $target is $distance \n";
 echo "Path to follow : ";
 while (!$path->isEmpty()) {
-    echo $path->pop()."\t";
+    echo $path->pop() . "\t";
 }

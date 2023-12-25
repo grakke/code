@@ -2,14 +2,15 @@
 
 namespace Tests\DesignPatterns;
 
-use PHPUnit\Framework\TestCase;
 use DesignPatterns\Behavioral\Strategy\DateComparator;
 use DesignPatterns\Behavioral\Strategy\IdComparator;
 use DesignPatterns\Behavioral\Strategy\ObjectCollection;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 class StrategyTest extends TestCase
 {
-    public function getIdCollection()
+    public static function getIdCollection(): array
     {
         return [
             [
@@ -19,11 +20,22 @@ class StrategyTest extends TestCase
             [
                 [['id' => 3], ['id' => 2], ['id' => 1]],
                 ['id' => 1]
-            ],
+            ]
         ];
     }
 
-    public function getDateCollection()
+    #[DataProvider('getIdCollection')]
+    public function testIdComparator($collection, $expected): void
+    {
+        $obj = new ObjectCollection($collection);
+        $obj->setComparator(new IdComparator());
+        $elements = $obj->sort();
+        $firstElement = array_shift($elements);
+
+        $this->assertEquals($expected, $firstElement);
+    }
+
+    public static function getDateCollection(): array
     {
         return [
             [
@@ -37,29 +49,14 @@ class StrategyTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider getIdCollection
-     */
-    public function testIdComparator($collection, $expected)
-    {
-        $obj = new ObjectCollection($collection);
-        $obj->setComparator(new IdComparator());
-        $elements = $obj->sort();
-
-        $firstElement = array_shift($elements);
-        $this->assertEquals($expected, $firstElement);
-    }
-
-    /**
-     * @dataProvider getDateCollection
-     */
+    #[DataProvider("getDateCollection")]
     public function testDateComparator($collection, $expected)
     {
         $obj = new ObjectCollection($collection);
         $obj->setComparator(new DateComparator());
         $elements = $obj->sort();
-
         $firstElement = array_shift($elements);
+
         $this->assertEquals($expected, $firstElement);
     }
 }

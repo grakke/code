@@ -8,12 +8,12 @@
  */
 
 
-define("GC", "-");
-define("SP", 1);
-define("GP", -1);
-define("MS", -1);
+const GC = "-";
+const SP = 1;
+const GP = -1;
+const MS = -1;
 
-function NWSquencing(string $s1, string $s2)
+function NWSquencing(string $s1, string $s2): void
 {
     $grid = [];
     $M = strlen($s1);
@@ -47,7 +47,7 @@ function NWSquencing(string $s1, string $s2)
     printSequence($grid, $s1, $s2, $M, $N);
 }
 
-function printSequence($grid, $s1, $s2, $j, $i)
+function printSequence($grid, $s1, $s2, $j, $i): void
 {
     $sq1 = [];
     $sq2 = [];
@@ -64,26 +64,26 @@ function printSequence($grid, $s1, $s2, $j, $i)
             case $d:
                 $j--;
                 $i--;
-                array_push($sq1, $s1[$j]);
-                array_push($sq2, $s2[$i]);
+                $sq1[] = $s1[$j];
+                $sq2[] = $s2[$i];
                 if ($s1[$j] == $s2[$i]) {
-                    array_push($sq3, "|");
+                    $sq3[] = "|";
                 } else {
-                    array_push($sq3, " ");
+                    $sq3[] = " ";
                 }
                 break;
             case $t:
                 $i--;
-                array_push($sq1, GC);
-                array_push($sq2, $s2[$i]);
-                array_push($sq3, " ");
+                $sq1[] = GC;
+                $sq2[] = $s2[$i];
+                $sq3[] = " ";
                 break;
 
             case $l:
                 $j--;
-                array_push($sq1, $s1[$j]);
-                array_push($sq2, GC);
-                array_push($sq3, " ");
+                $sq1[] = $s1[$j];
+                $sq2[] = GC;
+                $sq3[] = " ";
                 break;
         }
     } while ($i > 0 && $j > 0);

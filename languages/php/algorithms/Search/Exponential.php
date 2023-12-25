@@ -7,7 +7,7 @@ include '../../vendor/autoload.php';
 
 class Exponential
 {
-    static function binarySearch(array $numbers, int $neeedle, int $low, int $high): int
+    static function binarySearch(array $numbers, int $needle, int $low, int $high): int
     {
 
         if ($high < $low) {
@@ -15,11 +15,11 @@ class Exponential
         }
         $mid = (int) (($low + $high) / 2);
 
-        if ($numbers[$mid] > $neeedle) {
-            return self::binarySearch($numbers, $neeedle, $low, $mid - 1);
+        if ($numbers[$mid] > $needle) {
+            return self::binarySearch($numbers, $needle, $low, $mid - 1);
         } else {
-            if ($numbers[$mid] < $neeedle) {
-                return self::binarySearch($numbers, $neeedle, $mid + 1, $high);
+            if ($numbers[$mid] < $needle) {
+                return self::binarySearch($numbers, $needle, $mid + 1, $high);
             } else {
                 return $mid;
             }
