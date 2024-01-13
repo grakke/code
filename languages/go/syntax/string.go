@@ -77,4 +77,7 @@ func main() {
 	q = strconv.QuoteToASCII("Hello, 世界") // 将字符串转化为 ASCII 编码
 
 	fmt.Println(v2, v4, v5, v6, v7, v8, v9, v10, v11, q, err)
+
+	fmt.Printf("%#v\n", []rune("世界")) // []int32{19990 , 30028}
+	fmt.Printf("%#v\n", string([]rune{'世', '界'})) // 世界
 }

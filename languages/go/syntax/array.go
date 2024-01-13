@@ -47,4 +47,18 @@ func main() {
 
 	numbers := [...]int{99: -1}
 	fmt.Println("First Position:", numbers[0], " Last Position:", numbers[99], " Length:", len(numbers))
+
+	// 用空数组来作为管道类型可以减少管道元素赋值时的开销。当然一般更倾向于用无类型的匿名结构体代替
+	c1 := make(chan [0]int)
+	go func() {
+		fmt.Println("c1")
+		c1 <- [0]int{}
+	}()
+	<-c1
+
+	c2 := make(chan struct{})
+go func() {
+    fmt.Println("c2")
+c2 <- struct{}{} // struct{}部分是类型, {}表示对应的结构体值 }()
+<-c2
 }
