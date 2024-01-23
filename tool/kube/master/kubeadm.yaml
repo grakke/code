@@ -23,9 +23,9 @@ kind: MasterConfiguration
 #   criSocket: /var/run/dockershim.sock
 
 controllerManagerExtraArgs:
-  horizontal-pod-autoscaler-use-rest-clients: "true"
-  horizontal-pod-autoscaler-sync-period: "10s"
-  node-monitor-grace-period: "10s"
+    horizontal-pod-autoscaler-use-rest-clients: 'true'
+    horizontal-pod-autoscaler-sync-period: '10s'
+    node-monitor-grace-period: '10s'
 apiServerExtraArgs:
-  runtime-config: "api/all=true"
-kubernetesVersion: "stable-1.18"
+    runtime-config: 'api/all=true'
+kubernetesVersion: 'stable-1.18'

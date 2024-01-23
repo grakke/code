@@ -1,17 +1,17 @@
 apiVersion: ceph.rook.io/v1
 kind: CephBlockPool
 metadata:
-  name: replicapool
-  namespace: rook-ceph
+    name: replicapool
+    namespace: rook-ceph
 spec:
-  replicated:
-    size: 3
+    replicated:
+        size: 3
 ---
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: rook-ceph-block
+    name: rook-ceph-block
 provisioner: ceph.rook.io/block
 parameters:
-  pool: replicapool
-  clusterNamespace: rook-ceph
+    pool: replicapool
+    clusterNamespace: rook-ceph

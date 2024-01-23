@@ -27,4 +27,4 @@ spec:
             exec:
               command:
               - ls
-              - /var/ready
+              - '/var/ready'

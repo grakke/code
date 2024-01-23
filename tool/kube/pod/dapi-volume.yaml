@@ -28,5 +28,6 @@ spec:
                   - downwardAPI:
                         items:
                             - path: 'labels'
+                              # 声明了要暴露 Pod 的 metadata.labels 信息给容器
                               fieldRef:
                                   fieldPath: metadata.labels

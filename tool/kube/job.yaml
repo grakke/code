@@ -13,7 +13,3 @@ spec:
           command: ["sh", "-c", "echo 'scale=10000; 4*a(1)' | bc -l "]
       restartPolicy: Never
   backoffLimit: 4
-
-# kubectl create -f job.yaml
-# kubectl describe jobs/pi
-# kubectl logs pi-2bdq5

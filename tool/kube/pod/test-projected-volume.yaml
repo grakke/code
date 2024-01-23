@@ -21,3 +21,17 @@ spec:
                         name: user
                   - secret:
                         name: pass
+# kubectl create secret generic user --from-file=./username.txt
+# kubectl create secret generic pass --from-file=./password.txt
+
+# kubectl get secrets
+
+# kubectl exec -it test-projected-volume -- /bin/sh
+# ls /projected-volume/
+# user
+# pass
+
+# cat /projected-volume/user
+# root
+# cat /projected-volume/pass
+# 1f2d1e2e67df
