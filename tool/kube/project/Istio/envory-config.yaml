@@ -1,0 +1,16 @@
+apiVersion: admissionregistration.k8s.io/v1alpha1
+kind: InitializerConfiguration
+metadata:
+    name: envoy-config
+    # Kubernetes 对所有的 Pod 进行这个 Initialize 操作，指定了负责这个操作的 Initializer 叫：envoy-initializer
+initializers:
+    # 名字必须至少包括两个 "."
+    - name: envoy.initializer.kubernetes.io
+      rules:
+          # core API Group的意思
+          - apiGroups:
+                - ''
+            apiVersions:
+                - v1
+            resources:
+                - pods

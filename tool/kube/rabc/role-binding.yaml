@@ -1,0 +1,23 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+    name: example-rolebinding
+    namespace: mynamespace
+subjects:
+    - kind: ServiceAccount
+      name: example-sa
+      namespace: mynamespace
+# 这个 Role 的权限规则作用于 mynamespace 里的所有 ServiceAccount
+# subjects:
+#     - kind: Group
+#       name: system:serviceaccounts:mynamespace
+#       apiGroup: rbac.authorization.k8s.io
+# 这个 Role 的权限规则作用于整个系统里的所有 ServiceAccount
+# subjects:
+#   - kind: Group
+#     name: system:serviceaccounts
+#     apiGroup: rbac.authorization.k8s.io
+roleRef:
+    kind: Role
+    name: example-role
+    apiGroup: rbac.authorization.k8s.io
