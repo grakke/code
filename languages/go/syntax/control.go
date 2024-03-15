@@ -41,7 +41,7 @@ func main() {
 
 	// 条件为布尔值
 	sec := time.Now().Unix()
-	rand.Seed(sec)
+	rand.NewSource(sec)
 	var score = rand.Int31n(200)
 
 	switch {

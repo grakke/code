@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/agiledragon/gomonkey/v2 v2.9.0
-	github.com/davecgh/go-spew v1.1.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-sql-driver/mysql v1.5.0 // indirect
 	github.com/gofrs/uuid v4.3.1+incompatible
 	github.com/golang/mock v1.6.0
@@ -14,7 +14,7 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.9.0
 	golang.org/x/text v0.3.3 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 	rsc.io/quote v1.5.2
@@ -30,6 +30,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
+	go.uber.org/atomic v1.11.0
 	golang.org/x/exp v0.0.0-20230111222715-75897c7a292a
 )
 
