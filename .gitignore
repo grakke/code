@@ -28,6 +28,9 @@ Docker/mysql/test_db/
 **/Cargo.lock
 **/bin
 **/vendor
+**/.project
+**/.settings
+**/.classpath
 logs
 static
 basic/native/get_enddate_after_days_from_begindate
