@@ -1,11 +1,12 @@
 import pytest
+import unittest
 
 
 def f():
     raise SystemExit(1)
 
 
-class TestClass:
+class TestClass(unittest.TestCase):
     def test_one(self):
         x = "this"
         assert "h" in x
@@ -14,7 +15,7 @@ class TestClass:
         x = "hello"
         assert hasattr(x, "__len__")
 
-    def test_mytest(self):
+    def test_my_test(self):
         with pytest.raises(SystemExit):
             f()
 
@@ -22,3 +23,7 @@ class TestClass:
     def test_min(self):
         values = (2, 3, 1, 4, 6)
         assert min(values) == 1
+
+
+if __name__ == 'main':
+    unittest.main()

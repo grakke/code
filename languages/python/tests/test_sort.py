@@ -3,6 +3,7 @@ import unittest
 # 编写子类继承unittest.TestCase
 from algorithms.sort.bubble import bubble_sort
 
+
 class TestSort(unittest.TestCase):
 
     # 以test开头的函数将会被测试
@@ -14,6 +15,6 @@ class TestSort(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    ## Jupyter下，请用如下方式运行单元测试
+    # Jupyter下，请用如下方式运行单元测试
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
     unittest.main(argv=['first-arg-is-ignored'], exit=False)

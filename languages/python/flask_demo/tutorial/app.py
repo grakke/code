@@ -1,7 +1,7 @@
 from werkzeug.utils import secure_filename, escape
 
-from flask import (Flask, abort, make_response, redirect, render_template,
-                   request, session, url_for)
+from flask import (Flask, make_response, redirect,
+                   render_template, request, session, url_for)
 
 app = Flask(__name__)
 
@@ -95,7 +95,7 @@ def not_found(error):
 
 
 if __name__ == '__main__':
-    # app.run(debug=True)
+    app.run(debug=True)
     app.run()
     # with app.test_request_context():
     #  print url_for('index')

@@ -6,9 +6,12 @@ from syntax.calculator import Calculator
 
 
 class TestCalculatorWithFixture(unittest.TestCase):
+    # 测试用例前置动作
     def setUp(self):
         print("test start")
+        yield
 
+    # 测试用例后置动作
     def tearDown(self):
         print("test end")
 
@@ -28,6 +31,14 @@ class TestCalculatorWithFixture(unittest.TestCase):
         c = Calculator()
         self.assertEqual(c.div(84, 12), 7)
 
+    @unittest.mock.patch('syntax.calculator')
+    def test_calculator_div(self, MockMyObject):
+        obj = MockMyObject()
+        obj.div.return_value = 42
+
+        assert obj.div() == 42
+        obj.div.assert_called_once()
+
 
 if __name__ == '__main__':
     # 创建测试套件
@@ -36,6 +47,9 @@ if __name__ == '__main__':
     suit.addTest(TestCalculatorWithFixture("test_sub"))
     suit.addTest(TestCalculatorWithFixture("test_mul"))
     suit.addTest(TestCalculatorWithFixture("test_div"))
+
+    loader = unittest.TestLoader()
+    suit.addTest(loader.loadTestsFromTestCase(TestCalculatorWithFixture))
 
     # 创建测试运行器
     runner = unittest.TestRunner()

@@ -1,7 +1,7 @@
 import unittest
 
 
-class TestStringMethods(unittest.TestCase):
+class TestStr(unittest.TestCase):
 
     def setUp(self):
         # 单测启动前的准备工作，比如初始化一个mysql连接对象

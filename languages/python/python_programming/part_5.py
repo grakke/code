@@ -187,7 +187,7 @@ def invert(dic):
 
 
 def dict_of_numbers():
-    dics = {}
+    dicts = {}
     dic = {
         0: "zero",
         1: "one",
@@ -205,10 +205,10 @@ def dict_of_numbers():
         13: "thirteen",
         14: "fourteen",
         15: "fifteen",
-        16: "sixtenn",
+        16: "sixteen",
         17: "seventeen",
         18: "eighteen",
-        19: "ninteen",
+        19: "nineteen",
         20: "twenty"
     }
     decades = {
@@ -226,11 +226,11 @@ def dict_of_numbers():
         if int(i / 10) != 0 and i > 20:
             str += decades[int(i / 10)]
             str += "-"
-            dics[i] = str + dic[i % 10]
+            dicts[i] = str + dic[i % 10]
         elif (i <= 20):
-            dics[i] = dic[i]
+            dicts[i] = dic[i]
 
-    return dics
+    return dicts
 
 
 def add_movie(database, name, director, year, runtime):

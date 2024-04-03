@@ -1,9 +1,15 @@
 import unittest
 
-from mydict import Dict
+from syntax.mydict import Dict
 
 
-class TestDict(unittest.TestCase):
+class TestMyDict(unittest.TestCase):
+
+    def setUp(self):
+        print('setUp...')
+
+    def tearDown(self):
+        print('tearDown...')
 
     def test_init(self):
         d = Dict(a=1, b='tests')
@@ -27,16 +33,10 @@ class TestDict(unittest.TestCase):
         with self.assertRaises(KeyError):
             value = d['empty']
 
-    def test_attrerror(self):
+    def test_attr_error(self):
         d = Dict()
         with self.assertRaises(AttributeError):
             value = d.empty
-
-    def setUp(self):
-        print('setUp...')
-
-    def tearDown(self):
-        print('tearDown...')
 
 
 if __name__ == '__main__':
