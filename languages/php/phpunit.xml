@@ -4,14 +4,14 @@
   <testsuites>
     <testsuite name="Unit">
       <!--            <directory>test/demo/Unit</directory>-->
-      <directory suffix="Test.php">test/demo/Unit</directory>
+      <directory suffix="Test.php">tests/demo/Unit</directory>
       <!--            <directory>.</directory>-->
       <!--            <directory>tests/tdd</directory>-->
       <!--            <directory>tests/popp</directory>-->
-      <file>test/demo/CardTest.php</file>
+      <file>tests/demo/CardTest.php</file>
     </testsuite>
     <testsuite name="money">
-      <directory>test</directory>
+      <directory>tests</directory>
     </testsuite>
   </testsuites>
   <logging>

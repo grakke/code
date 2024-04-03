@@ -44,7 +44,7 @@
     ],
     "psr-4": {
       "": "./",
-      "Tests\\": "test/",
+      "Tests\\": "tests/",
       "Algorithms\\": "algorithms/",
       "Application\\": "application/",
       "Popp\\": "Popp/"
