@@ -151,7 +151,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! DataTables 1
 
 	/**
 	 * DataTables is a plug-in for the jQuery Javascript library. It is a highly
-	 * flexible tool, based upon the foundations of progressive enhancement,
+	 * flexible tools, based upon the foundations of progressive enhancement,
 	 * which will add advanced interaction controls to any HTML table. For a
 	 * full list of features please refer to
 	 * [DataTables.net](href="http://datatables.net).
@@ -26571,7 +26571,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! DataTables 1
 
 	/**
 	 * DataTables is a plug-in for the jQuery Javascript library. It is a highly
-	 * flexible tool, based upon the foundations of progressive enhancement,
+	 * flexible tools, based upon the foundations of progressive enhancement,
 	 * which will add advanced interaction controls to any HTML table. For a
 	 * full list of features please refer to
 	 * [DataTables.net](href="http://datatables.net).

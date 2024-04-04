@@ -1,22 +1,18 @@
 <?php
 
-namespace syntax\Reflect;
-
-use ReflectionClass;
+namespace syntax\reflect;
 
 class Circle
 {
-    /**
+        public const PI = 3.14;//半径
+/**
      * @var int
      */
-    public $radius;//半径
-
-    /**
+    public $radius;//圆心点
+/**
      * @var Point
      */
-    public Point $center;//圆心点
-
-    public const PI = 3.14;
+    public Point $center;
 
     public function __construct(Point $point, $radius = 1)
     {

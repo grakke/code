@@ -11,10 +11,6 @@ trait PowerTrait
         $this->power = '电池';
     }
 
-    public function printText()
-    {
-        echo "动力来源：" . $this->power . PHP_EOL;
-    }
 
     protected function gas()
     {
@@ -24,5 +20,10 @@ trait PowerTrait
     private function water()
     {
         $this->power = '水';
+    }
+
+    public function printText()
+    {
+        echo "动力来源：" . $this->power . PHP_EOL;
     }
 }

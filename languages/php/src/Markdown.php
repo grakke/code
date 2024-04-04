@@ -1,5 +1,5 @@
 <?php
-namespace spec;
+namespace Src;
 
 class Markdown
 {

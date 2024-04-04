@@ -2,22 +2,22 @@
 
 namespace Tests\demo;
 
-use Helper\CsvFileIterator;
 use PHPUnit\Framework\TestCase;
+use Tools\CsvFileIterator;
 
 class DataProvider extends TestCase
 {
-    public function addtionOProvider()
+    public static function addtionProvider()
     {
         return [
             [0, 1, 1],
             [1, 0, 1],
             [1, 0, 1],
-            [1, 1, 2],
+            [1, 1, 2]
         ];
     }
 
-    public function additionWithNegativeNumbersProvider(): array
+    public static function additionWithNegativeNumbersProvider(): array
     {
         return [
             [-1, 1, 0],
@@ -26,7 +26,7 @@ class DataProvider extends TestCase
         ];
     }
 
-    public function addtionWithNameProvider()
+    public static function addtionWithNameProvider()
     {
         return [
             'adding zeros' => [0, 0, 0],
@@ -36,13 +36,13 @@ class DataProvider extends TestCase
         ];
     }
 
-    public function addtionWithCsvProvider()
+    public static function addtionWithCsvProvider()
     {
         return new CsvFileIterator(__DIR__ . '/../../assets/files/data.csv');
     }
 
     /**
-     * @dataProvider addtionOProvider
+     * @dataProvider addtionProvider
      * @dataProvider addtionWithNameProvider
      * @dataProvider addtionWithCsvProvider
      * @dataProvider additionWithNegativeNumbersProvider
@@ -52,7 +52,7 @@ class DataProvider extends TestCase
         $this->assertEquals($expected, $a + $b);
     }
 
-    public function trueValues()
+    public static function trueValues()
     {
         return [
             [1],

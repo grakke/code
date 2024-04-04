@@ -13,6 +13,7 @@ class Person
 
     public $name;
     public $gender;
+    public $job;
     private $age;
 
     /**
@@ -26,9 +27,13 @@ class Person
     {
         $this->job = $job;
         $this->age = $age;
-        $this->sex = $sex;
+        $this->gender = $sex;
     }
 
+    public function __destruct()
+    {
+        echo 'Well, my job is ' . $this->job . "\n";
+    }
 
     /**
      * @return integer
@@ -50,7 +55,7 @@ class Person
 
     public function say()
     {
-        echo 'Job：' . $this->job . ',Sex：' . $this->sex . ',Age：' . $this->age . ";\n";
+        echo 'Job：' . $this->job . ',Sex：' . $this->gender . ',Age：' . $this->age . ";\n";
     }
 
 
@@ -62,10 +67,7 @@ class Person
     }
 
 
-    public function __destruct()
-    {
-        echo 'Well, my job is ' . $this->job . "\n";
-    }
+
 
     public function output(PersonWriter $writer): void
     {

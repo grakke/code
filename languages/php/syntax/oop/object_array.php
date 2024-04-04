@@ -1,6 +1,6 @@
 <?php
 
-$obj = (object) array(
+$obj = (object)array(
     'journal' => 'Oracle Magazine', 'publisher' => 'Oracle Publishing', 'edition' => 'January February 2018'
 );
 echo $obj->{'journal'};
@@ -33,7 +33,7 @@ if ($obj instanceof stdClass) {
     echo '$obj is instance of built-in class stdClass';
     echo "<br/>";
 }
-$obj = (object) 'hello';
+$obj = (object)'hello';
 echo $obj->scalar;
 echo "<br/>";
 if ($obj instanceof stdClass) {
@@ -54,7 +54,7 @@ if ($A instanceof stdClass) {
 }
 echo '<br/>';
 echo '<br/>';
-$AObj = (object) $A;
+$AObj = (object)$A;
 if ($AObj instanceof stdClass) {
     echo '$AObj is instance of built-in class stdClass';
 } else {
@@ -65,9 +65,9 @@ echo '<br/>';
 //  object_empty
 
 
-$obj1 = (object) (new class () {
+$obj1 = (object)(new class () {
 }); // 实例化匿名类
-$obj2 = (object) []; // 将空数组转换为对象
+$obj2 = (object)[]; // 将空数组转换为对象
 
 $A = new A();  // 空类的实例
 var_dump($A);
@@ -79,7 +79,7 @@ echo "<br/>";
 echo empty($obj1);
 echo "<br/>";
 $obj1 = null;
-$obj3 = (object) $obj1;// NULL转换为对象
+$obj3 = (object)$obj1;// NULL转换为对象
 var_dump($obj3);
 echo "<br/>";
 echo empty($A);

@@ -17,7 +17,7 @@ $writeConcern = new MongoDB\Driver\WriteConcern(MongoDB\Driver\WriteConcern::MAJ
 // 更新数据
 //$bulk->update(
 //    ['x' => 5],
-//    ['$set' => ['name' => '菜鸟工具2', 'url' => 'tool.runoob.com']],
+//    ['$set' => ['name' => '菜鸟工具2', 'url' => 'tools.runoob.com']],
 //    ['multi' => true, 'upsert' => true]
 //);
 //$result = $manager->executeBulkWrite('test.sites', $bulk, $writeConcern);

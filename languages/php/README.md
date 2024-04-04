@@ -272,7 +272,7 @@ cp -r node_modules/@fortawesome/fontawesome-free/webfonts application/public
 
 ## 升级
 
-### [thrift](tool/thrift)
+### [thrift](tools/thrift)
 
 ```sh
 thrift -r --gen php:server hello.thrift

@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use syntax\Reflect\Resolve;
+use syntax\reflect\Resolve;
 
 class ReflectTest extends TestCase
 {

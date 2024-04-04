@@ -36,7 +36,8 @@
     "ext-simplexml": "*",
     "ext-libxml": "*",
     "ext-redis": "*",
-    "ext-sockets": "*"
+    "ext-sockets": "*",
+    "ext-openssl": "*"
   },
   "autoload": {
     "files": [
@@ -47,7 +48,9 @@
       "Tests\\": "tests/",
       "Algorithms\\": "algorithms/",
       "Application\\": "application/",
-      "Popp\\": "Popp/"
+      "Popp\\": "Popp/",
+      "Src\\": "src/",
+      "Tools\\": "tools/"
     },
     "classmap": [
       "./",
@@ -65,8 +68,7 @@
     "php-webdriver/webdriver": "^1.14",
     "phpunit/php-code-coverage": "^10.0",
     "phpspec/phpspec": "^1.4",
-    "behat/behat": "^3.13",
-    "phpstan/phpstan": "^1.10"
+    "behat/behat": "^3.13"
   },
   "config": {
     "allow-plugins": {

@@ -2,15 +2,17 @@
 
 namespace syntax\oop;
 
-use syntax\oop\Trit\EngineTrait;
+include './Trit/EngineTrait.php';
+include './Trit/PowerTrait.php';
+
 use syntax\oop\Trit\PowerTrait;
 
-class Component extends Engine
+trait Component
 {
-    use PowerTrait {
-        EngineTrait::print insteadof PowerTrait;
-        PowerTrait::print as printPower;
-        EngineTrait::print as printEngine;
+    use PowerTrait, PowerTrait {
+        Engine::printText insteadof PowerTrait;
+        PowerTrait::printText as printPower;
+        Engine::printText as printEngine;
     }
 
     protected function init()

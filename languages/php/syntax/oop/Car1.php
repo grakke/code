@@ -5,9 +5,10 @@ namespace syntax\oop;
 use syntax\oop\Trit\EngineTrait;
 use syntax\oop\Trit\PowerTrait;
 
+include 'Engine.php';
+
 class Car1 extends Engine
 {
-    // TODO:to fix
     use PowerTrait, EngineTrait {
         Engine::printText insteadof PowerTrait;
         PowerTrait::printText as printPower;

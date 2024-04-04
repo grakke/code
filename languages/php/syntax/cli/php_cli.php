@@ -1,7 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-
 class Test
 {
     public function updateUserStatus($userid): void
@@ -73,9 +72,8 @@ function parseArgs($argv): array
     array_shift($argv);
 
     $out = array();
-
     foreach ($argv as $arg) {
-        if (substr($arg, 0, 2) == '--') {
+        if (str_starts_with($arg, '--')) {
             $eqPos = strpos($arg, '=');
 
             if ($eqPos === false) {

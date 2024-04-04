@@ -1,17 +1,8 @@
 <?php
 
-// $a = pconnect(host, port, time_out);
-// select(3);
-// $a -> setex(id, 3);
-// echo $a -> get(id);
+namespace syntax;
 
-// //之后执行下面的连接
-// $b = pconnect(host, port, time_out);
-// select(2);
-// $b->set(id,2)
-// echo $a->get(id);
-
-namespace syntax\redis;
+use Redis;
 
 class RedisConnection
 {
@@ -19,24 +10,6 @@ class RedisConnection
     public int $port = 6379;
     public string $password = '';
     public $redis;
-
-    public function connect()
-    {
-        $this->redis = new \Redis();
-        $this->redis->connect($this->hostname, $this->port);
-        if ($this->password !== null) {
-            $this->redis->auth($this->password);
-        }
-    }
-
-    public function pconnect()
-    {
-        $this->redis = new \Redis();
-        $this->redis->pconnect($this->hostname, $this->port);
-        if ($this->password !== null) {
-            $this->redis->auth($this->password);
-        }
-    }
 
     public function getRedis($pconnect = false)
     {
@@ -46,6 +19,24 @@ class RedisConnection
             $this->connect();
         }
         return $this->redis;
+    }
+
+    public function pconnect()
+    {
+        $this->redis = new Redis();
+        $this->redis->pconnect($this->hostname, $this->port);
+        if ($this->password !== null) {
+            $this->redis->auth($this->password);
+        }
+    }
+
+    public function connect()
+    {
+        $this->redis = new Redis();
+        $this->redis->connect($this->hostname, $this->port);
+        if ($this->password !== null) {
+            $this->redis->auth($this->password);
+        }
     }
 
     public function __call($name, $params = [])
@@ -96,3 +87,14 @@ $instance = new RedisConnection();
 $instance->pconnect();
 $instance->set('City', 'Shanghai');
 echo $instance->get('City');
+
+// $a = pconnect(host, port, time_out);
+// select(3);
+// $a -> setex(id, 3);
+// echo $a -> get(id);
+
+// //之后执行下面的连接
+// $b = pconnect(host, port, time_out);
+// select(2);
+// $b->set(id,2)
+// echo $a->get(id);

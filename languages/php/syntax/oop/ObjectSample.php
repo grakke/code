@@ -2,9 +2,10 @@
 
 namespace syntax\oop;
 
-include './ObjectIterator.php';
+include 'OwnIterator.php';
 
 use IteratorAggregate;
+use Traversable;
 
 class ObjectSample implements IteratorAggregate
 {
@@ -15,9 +16,9 @@ class ObjectSample implements IteratorAggregate
         $this->data = $in;
     }
 
-    public function getIterator()
+    public function getIterator(): Traversable
     {
-        return new ObjectIterator($this);
+        return new OwnIterator($this);
     }
 }
 
@@ -26,5 +27,5 @@ $myIterator = $myObject->getIterator();
 for ($myIterator->rewind(); $myIterator->valid(); $myIterator->next()) {
     $key = $myIterator->key();
     $value = $myIterator->current();
-    echo $key." => ".$value."<br />";
+    echo $key . " => " . $value . "<br />";
 }

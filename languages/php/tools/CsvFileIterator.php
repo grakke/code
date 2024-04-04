@@ -1,6 +1,6 @@
 <?php
 
-namespace tool;
+namespace Tools;
 
 use Iterator;
 
@@ -20,29 +20,29 @@ class CsvFileIterator implements Iterator
         fclose($this->file);
     }
 
-    public function rewind()
+    public function rewind(): void
     {
         rewind($this->file);
         $this->current = fgetcsv($this->file);
         $this->key = 0;
     }
 
-    public function valid()
+    public function valid():bool
     {
         return !feof($this->file);
     }
 
-    public function key()
+    public function key(): mixed
     {
         return $this->key;
     }
 
-    public function current()
+    public function current(): mixed
     {
         return $this->current;
     }
 
-    public function next()
+    public function next():void
     {
         $this->current = fgetcsv($this->file);
         $this->key++;

@@ -1,6 +1,6 @@
 <?php
 
-namespace syntax\Reflect;
+namespace syntax\reflect;
 
 class Printer
 {

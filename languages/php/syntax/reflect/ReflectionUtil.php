@@ -1,10 +1,13 @@
 <?php
 
-namespace syntax\Reflect;
+namespace syntax\reflect;
+
+use ReflectionClass;
+use ReflectionMethod;
 
 class ReflectionUtil
 {
-    public static function getClassSource(\ReflectionClass $class): string
+    public static function getClassSource(ReflectionClass $class): string
     {
         $path = $class->getFileName();
         $lines = @file($path);
@@ -15,7 +18,7 @@ class ReflectionUtil
         return implode(array_slice($lines, $from - 1, $len));
     }
 
-    public static function getMethodSource(\ReflectionMethod $method): string
+    public static function getMethodSource(ReflectionMethod $method): string
     {
         $path = $method->getFileName();
         $lines = @file($path);

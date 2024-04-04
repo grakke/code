@@ -1,5 +1,5 @@
 <?php
-namespace Application\services\controllers;
+namespace Application\Http\controllers;
 
 use sf\web\Controller;
 use Sf;

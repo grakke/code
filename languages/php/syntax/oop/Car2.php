@@ -2,7 +2,10 @@
 
 namespace syntax\oop;
 
-class Car2
+include 'Engine.php';
+include 'Component.php';
+
+class Car2 extends Engine
 {
     use Component;
 
@@ -12,6 +15,6 @@ class Car2
         $this->init();
         $this->printPower();
         $this->printEngine();
-        echo "汽车启动...".PHP_EOL;
+        echo "汽车启动..." . PHP_EOL;
     }
 }

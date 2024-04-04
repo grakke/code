@@ -1,9 +1,9 @@
 <?php
 
-namespace spec;
+namespace Src;
 
-use spec\Markdown;
 use PhpSpec\ObjectBehavior;
+use spec\Markdown;
 
 class MarkdownSpec extends ObjectBehavior
 {
