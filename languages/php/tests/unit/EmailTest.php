@@ -1,9 +1,8 @@
 <?php
 
-namespace Tests\demo\Unit;
+namespace Tests\unit;
 
 use Application\services\Model\Email;
-use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase

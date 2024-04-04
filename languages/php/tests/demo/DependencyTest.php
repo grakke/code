@@ -3,6 +3,7 @@
 
 namespace Tests\demo;
 
+use PHPUnit\Framework\Attributes\Depends;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
@@ -26,9 +27,7 @@ class DependencyTest extends TestCase
         $obj->foo = 'notbar';
     }
 
-    /**
-     * @depends testCreateStdClass
-     */
+    #[Depends('testCreateStdClass')]
     public function testDepency2($obj)
     {
         $this->assertEquals('notbar', $obj->foo);
