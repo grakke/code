@@ -102,6 +102,10 @@
     - 等待：如果在计时器到期之前发生新事件，则重置计时器
     - 执行：如果计时器达到倒计时结束，将执行防抖函数
 - Mutating Data（数据突变）： 如何使用 React Server Actions 操作数据，并重新验证 Next.js 缓存
+  - React Server Actions 允许在服务器上直接运行异步代码。消除了通过创建 API 改变数据的方式。相反编写的在服务器上执行的异步函数可以在客户端或 Server Components 中直接调用
+  - 对于 Web 应用程序安全性是最重要的，因为可能受到各种威胁。这就是 Server Actions 发挥作用的地方。提供了一种有效的安全解决方案，防范各种类型的攻击，保护数据，并确保访问是经过授权的。Server Actions 通过诸如 POST 请求、加密闭包、严格的输入检查、错误消息 hashing 和主机限制等技术实现这一点，所有这些技术共同作用以显着增强应用程序的安全性
+  - 在 React 中，可以在 <form> 元素中使用 action 属性来调用操作。该操作将自动接收包含捕获数据的原生 FormData 对象
+  - 在 Server Component 中调用 Server Action 的一个优势 渐进增强 - 即使客户端上禁用了 JavaScript，forms 仍可以工作
 - Error Handling（错误处理）： 如何处理一般错误和 404 未找到错误
 - Form Validation and Accessibility（表单验证和可访问性）： 如何进行服务器端表单验证以及提高可访问性的提示
 - Authentication（身份验证）： 如何使用 NextAuth.js 和中间件为应用程序添加身份验证
