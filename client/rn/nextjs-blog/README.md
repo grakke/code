@@ -21,12 +21,12 @@
   - 字体
     - 累积布局移位（Cumulative Layout Shift）是 Google 用于评估网站性能和用户体验的度量标准。对于字体而言，布局移位发生在浏览器最初使用备用或系统字体呈现文本，然后在加载完自定义字体后进行替换。这种替换可能导致文本大小、间距或布局发生变化，从而使其周围的元素发生移位
     - Next.js 使用 next/font 模块时会自动优化应用程序中的字体。在构建时下载字体文件并将其托管在其他静态资产之中。意味着当用户访问您的应用程序时，不会有额外的字体网络请求，从而不会影响性能
-- 图片
-  - 用 next/image 组件来自动优化图片(屏幕 设备 懒加载)
-    - 图片加载时自动防止布局移位
-    - 调整图像大小，避免向视口较小的设备传送大图像
-    - 默认情况下懒加载图像（图像在进入视口时加载）
-    - 在浏览器支持的情况下，以现代格式提供图像
+  - 图片
+    - 用 next/image 组件来自动优化图片(屏幕 设备 懒加载)
+      - 图片加载时自动防止布局移位
+      - 调整图像大小，避免向视口较小的设备传送大图像
+      - 默认情况下懒加载图像（图像在进入视口时加载）
+      - 在浏览器支持的情况下，以现代格式提供图像
 - Routing（路由）： 使用文件系统路由创建嵌套布局和页面
   - 用文件系统路由，文件夹用于创建嵌套路由。每个文件夹代表一个路由段，对应到一个 URL 段
   - page.tsx 是 Next.js 的一个特殊文件，导出一个 React 组件，让该路由可访问是必需的
@@ -107,10 +107,40 @@
   - 在 React 中，可以在 <form> 元素中使用 action 属性来调用操作。该操作将自动接收包含捕获数据的原生 FormData 对象
   - 在 Server Component 中调用 Server Action 的一个优势 渐进增强 - 即使客户端上禁用了 JavaScript，forms 仍可以工作
 - Error Handling（错误处理）： 如何处理一般错误和 404 未找到错误
+  - 使用特殊的 error.tsx 文件捕获路由段中的错误，并向用户显示一个备用 UI
+  - 使用 notFound 函数和 not-found 文件来处理 404 错误（对于不存在的资源）
 - Form Validation and Accessibility（表单验证和可访问性）： 如何进行服务器端表单验证以及提高可访问性的提示
+  - 可访问性是指设计和实现每个人都可以使用的 Web 应用程序，包括那些具有残障的人。这是一个广泛的主题，涵盖了许多领域，如键盘导航，语义 HTML，图像，颜色，视频等
+  - 提升 form 可访问性
+    - 语义化 HTML：使用语义元素（如<input>、<option> 等）而不是 <div>。这使辅助技术（AT）能够专注于输入元素，并向用户提供适当的上下文信息，使 form 更易于导航和理解
+    - 标签：包括 <label> 和 htmlFor 属性确保每个 form 字段都有一个描述性的文本标签。这通过提供上下文来改善AT支持，并通过允许用户单击标签以聚焦到相应的输入字段来增强可用性
+    - 聚焦轮廓（Focus Outline）：字段在聚焦时被正确地样式化，以显示轮廓。这对于可访问性至关重要，因为它在视觉上指示页面上的活动元素，帮助键盘和屏幕阅读器用户理解他们在 form 上的位置。您可以通过按 Tab 键进行验证
 - Authentication（身份验证）： 如何使用 NextAuth.js 和中间件为应用程序添加身份验证
+  - 身份验证是确保用户是他们所说的那个人。通过拥有的东西（如用户名和密码）证明身份
+  - 授权是下一步。一旦用户的身份确认，授权决定了被允许使用应用程序中的哪些部分
 - Metadata（元数据）： 如何添加元数据并为社交分享准备您的应用程序
+  - 元数据提供有关网页的其他详细信息。元数据对于访问页面的用户来说是不可见的。相反在幕后工作，嵌入在页面的 HTML 中，通常位于 <head> 元素内。这些隐藏的信息对于搜索引擎和其他需要更好了解网页内容的系统非常重要
+  - 类型
+    - 标题元数据（Title Metadata）：负责显示在浏览器标签上的网页标题。对于 SEO 来说非常关键，因为它帮助搜索引擎了解网页的主题
+    - 描述元数据（Description Metadata）：提供对网页内容的简要概述，通常显示在搜索引擎结果中
+    - 关键字元数据（Keyword Metadata）：包括与网页内容相关的关键字，帮助搜索引擎索引页面
+    - Open Graph 元数据（Open Graph Metadata）：当在社交媒体平台上分享时，此元数据增强了网页的表示，提供标题、描述和预览图像等信息
+    - Favicon 元数据（Favicon Metadata）：将网页的图标（小图标）链接到网页，显示在浏览器的地址栏或标签中
+  - 向应用程序添加元数据方法：
+    - 基于配置：在 layout.js 或 page.js 文件中导出一个静态的 metadata 对象或一个动态的 generateMetadata 函数
+    - 基于文件：Next.js 有一系列专门用于元数据目的的特殊文件：
+      - favicon.ico、apple-icon.jpg 和 icon.jpg：用于 favicon 和图标
+      - opengraph-image.jpg 和 twitter-image.jpg：用于社交媒体图片
+      - robots.txt：提供搜索引擎爬取的指令
+      - sitemap.xml：提供有关网站结构的信息
+- #TODO
+  - 身份验证出现 TypeError: Cannot read properties of undefined (reading 'substring')
+
 
 ```sh
 npx create-next-app@latest nextjs-dashboard --use-npm --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example"
 ```
+
+## 资源
+
+- [Next.js 官方文档](https://nextjs.org/docs)
