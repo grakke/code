@@ -4,3 +4,6 @@
 [submodule "languages/geektime-zero"]
 	path = languages/geektime-zero
 	url = git@github.com:dreamhead/geektime-zero.git
+[submodule "languages/rust/inviting-rust"]
+	path = languages/rust/inviting-rust
+	url = https://github.com/ZhangHanDong/inviting-rust
