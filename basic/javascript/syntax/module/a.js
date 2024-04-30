@@ -1,6 +1,5 @@
-
 export var a = 1;
 
-export function modify(){
+export function modify() {
     a = 2;
 }

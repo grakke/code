@@ -52,6 +52,35 @@
 - JavaScript
   - The official name of the JavaScript standard is ECMAScript. At this moment, the latest version is the one released in June of 2023 with the name ECMAScript®2023, otherwise known as ES14. Today, the most popular way to do transpiling is by using Babel. Transpilation is automatically configured in React applications created with vite.
   - Node.js is a JavaScript runtime environment based on Google's Chrome V8 JavaScript engine and works practically anywhere - from servers to mobile phones.
+  - Variables
+  - Arrays
+  - Objects
+    - Object methods and "this"
+    - Arrow functions and functions defined using the function keyword vary substantially when it comes to how they behave with respect to the keyword this, which refers to the object itself.
+    - Methods can be assigned to objects even after the creation of the object
+    - When calling the method through a reference, the method loses knowledge of what the original this was. Contrary to other languages, in JavaScript the value of this is defined based on how the method is called. When calling the method through a reference, the value of this becomes the so-called global object and the end result is often not what the software developer had originally intended.
+    - Losing track of this when writing JavaScript code brings forth a few potential issues. Situations often arise where React or Node (or more specifically the JavaScript engine of the web browser) needs to call some method in an object that the developer has defined.
+      - One situation leading to the "disappearance" of this arises when we set a timeout to call the greet function on the arto object, `setTimeout(arto.greet.bind(arto), 1000)`
+  - Functions
+  - 重构数据结构
+  - Classes
+  - JavaScript materials
+    - [Mozilla's JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - [A re-introduction to JavaScript (JS tutorial)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+    - [You-Dont-Know-JS](https://github.com/getify/You-Dont-Know-JS)
+    - [javascript.info](https://javascript.info/)
+    - The free and highly engaging book [Eloquent JavaScript](https://eloquentjavascript.net/) takes you from the basics to interesting stuff quickly. It is a mixture of theory projects and exercises and covers general programming theory as well as the JavaScript language.
+    - [Namaste 🙏 JavaScript](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP) is another great and highly recommended free JavaScript tutorial in order to understand how JS works under the hood. Namaste JavaScript is a pure in-depth JavaScript course released for free on YouTube. It will cover the core concepts of JavaScript in detail and everything about how JS works behind the scenes inside the JavaScript engine.
+    - [egghead.io](https://egghead.io/) has plenty of quality screencasts on JavaScript, React, and other interesting topics. Unfortunately, some of the material is behind a paywall.
+- Component state, event handlers
+  - Component helper functions
+  - destructure values from objects and arrays upon assignment
+    - 不能跨级解析
+  - Page re-rendering
+  - Stateful component
+  - Event handling
+  - An event handler is a function
+  - Passing state - to child components
 
 ```sh
 npm create vite@latest part1 -- --template react
@@ -117,3 +146,10 @@ npx json-server --port 3001 --watch db.json
 - 前端build文件夹复制到后端项目根目录
 - `app.use(express.static('build'))`
 - 前端构建的baseURl 去掉 http
+
+## 思考
+
+- 课程的进化方法 优化的思路
+  - 分块重构，不破坏功能
+  - 方法深挖
+- 框架借鉴后端的代码重构

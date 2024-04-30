@@ -20,6 +20,17 @@ function () {
 }
 ];
 
+const t = [1, -1, 3]
+
+t.push(5)
+
+console.log(t.length) // 4 is printed
+console.log(t[1])     // -1 is printed
+
+t.forEach(value => {
+    console.log(value)  // numbers 1, -1, 3, 5 are printed, each on its own line
+})
+
 var arr = [1, 2, 3.14, 'Hello', null, true];
 arr.length; // 6
 arr[0]; // 返回索引为0的元素，即1
@@ -89,11 +100,6 @@ mycars[2] = "BMW"
 for (x in mycars) {
     document.write(mycars[x] + "<br />")
 }
-
-var colors = ['red', 'green', 'blue'];
-colors.forEach(function (color) {
-    console.log(color);
-});
 
 var a = [, , ,];
 
@@ -254,12 +260,15 @@ Array.prototype.slice.call(arguments);
 });
 // [0, 2, 6]
 
+const m1 = t.map(value => value * 2)
+console.log(m1)   // [2, 4, 6] is printed
 var arr = ['a', 'b', 'c'];
-
 [1, 2].map(function (e) {
     return this[e];
 }, arr)
 // ['b', 'c']
+const m2 = t.map(value => '<li>' + value + '</li>')
+console.log(m2)
 
 function log(element, index, array) {
     console.log('[' + index + '] = ' + element);
@@ -358,3 +367,10 @@ users
     .forEach(function (email) {
         console.log(email);
     });
+
+const t2 = [1, 2, 3, 4, 5]
+
+const [first, second, ...rest] = t2
+
+console.log(first, second)  // 1, 2 is printed
+console.log(rest)          // [3, 4, 5] is printed

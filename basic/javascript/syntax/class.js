@@ -1,31 +1,4 @@
 class Car {
-    constructor() {
-        this.fuel = 0;
-        this.distance = 0;
-        this.topSpeed = Math.random();
-    }
-    static isFaster(left, right) {
-        return left.topSpeed > right.topSpeed;
-    }
-    move() {
-        if (this.fuel < 1) {
-            throw new RangeError("Fuel tank is depleted");
-        }
-        this.fuel--;
-        this.distance += 2;
-    }
-    addFuel() {
-        if (this.fuel >= 60) {
-            throw new RangeError("Fuel tank is full");
-        }
-        this.fuel++;
-    }
-}
-
-
-
-// ES6
-class Car {
     constructor(speed) {
         this.speed = speed;
         this.fuel = 0;
@@ -45,7 +18,6 @@ class Car {
         }
         this.fuel++;
     }
-    // 静态方法
     static isFaster(left, right) {
         return left.topSpeed > right.topSpeed;
     }
@@ -142,3 +114,20 @@ var SimpleRange = defineClass(
         },
     }
 );
+
+
+class Person {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+    greet() {
+        console.log('hello, my name is ' + this.name)
+    }
+}
+
+const adam = new Person('Adam Ondra', 29)
+adam.greet()
+
+const janja = new Person('Janja Garnbret', 23)
+janja.greet()
