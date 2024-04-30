@@ -1,10 +1,58 @@
 # [Fullstack](https://fullstackopen.com/en/)
 
+- Parts 0-5 (core course) - Full Stack Web Development
+
 ## Web 应用的基础设施
 
-- 基础知识
+- General Info
+- Fundamentals of Web apps
+  - Make sure that the Network tab is open, and check the Disable cache option as shown. Preserve log can also be useful (it saves the logs printed by the application when the page is reloaded) as well as "Hide extension URLs"(hides requests of any extensions installed in the browser, not shown in the picture above).
+  - The Network tab shows how the browser and the server communicate.
+  - When entering the page, the browser fetches the HTML document detailing the structure and the textual content of the page from the server. The server has formed this document somehow.
+  - Event handlers and Callback functions
+    - Event handler functions are called callback functions. The application code does not invoke the functions itself, but the runtime environment - the browser, invokes the function at an appropriate time when the event has occurred
+  - Document Object Model, or DOM, is an Application Programming Interface (API) that enables programmatic modification of the element trees corresponding to web pages
+  - Manipulating the document object from console
+  - CSS
+  - Loading a [page](https://studies.cs.helsinki.fi/exampleapp/notes) containing JavaScript - review
+    - 获取 HTML->CSS->JavaScript, 执行 JavaScript 内容->the browser executes an event handler
+  - Forms and HTTP POST
+  - AJAX (Asynchronous JavaScript and XML)
+    - without the need to rerender the page.
+  - [Single page app](https://studies.cs.helsinki.fi/exampleapp/spa)
+    - comprise only one HTML page fetched from the server, the contents of which are manipulated with JavaScript that executes in the browser.
+    - <https://github.com/mluukkai/example_app>
+  - JavaScript-libraries
+    - jQuery
+    - BackboneJS
+    - [React](https://react.dev/)
+  - Full-stack web development
+    - We will code the backend with JavaScript, using the Node.js runtime environment. Using the same programming language on multiple layers of the stack gives full-stack web development a whole new dimension
+  - JavaScript fatigue
 
 ## React 入门
+
+- Introduction to React
+  - keep the console open all the time
+  - Component
+  - JSX
+  - Multiple components
+  - props: passing data to components
+    - parameter props. As an argument, the parameter receives an object, which has fields corresponding to all the "props" the user of the component defines.
+  - Possible error message
+  - Some notes
+    - The console should always be open
+    - First letter of React component names must be capitalized
+  - Do not render objects
+    - the individual things rendered in braces must be primitive values, such as numbers or strings.
+    - React also allows arrays to be rendered if the array contains values ​​that are eligible for rendering (such as numbers or strings).
+  - Exercises
+    - Don't try to program all the components concurrently, because that will almost certainly break down the whole app. Proceed in small steps, first make e.g. the component Header and only when it works for sure, you could proceed to the next component.
+    - 使用 component 中的属性会传递到 component 中 props 的属性
+
+```sh
+npm create vite@latest part1 -- --template react
+```
 
 ## 与服务端通信
 
