@@ -59,6 +59,7 @@ const Complex = () => {
 
 	return (
 		<div>
+            <h2>Complex</h2>
 			{clicks.left}
 			<Button onClick={handleLeftClick} text='left' />
 			<Button onClick={handleRightClick} text='right' />

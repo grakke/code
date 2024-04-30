@@ -17,6 +17,7 @@ const Clicker = () => {
 
 	return (
 		<div>
+            <h2>Cliker</h2>
 			<Display counter={counter} />
 			<Button
 				handleClick={increaseByOne}

@@ -49,6 +49,9 @@
   - Exercises
     - Don't try to program all the components concurrently, because that will almost certainly break down the whole app. Proceed in small steps, first make e.g. the component Header and only when it works for sure, you could proceed to the next component.
     - 使用 component 中的属性会传递到 component 中 props 的属性
+- JavaScript
+  - The official name of the JavaScript standard is ECMAScript. At this moment, the latest version is the one released in June of 2023 with the name ECMAScript®2023, otherwise known as ES14. Today, the most popular way to do transpiling is by using Babel. Transpilation is automatically configured in React applications created with vite.
+  - Node.js is a JavaScript runtime environment based on Google's Chrome V8 JavaScript engine and works practically anywhere - from servers to mobile phones.
 
 ```sh
 npm create vite@latest part1 -- --template react
