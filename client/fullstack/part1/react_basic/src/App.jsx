@@ -17,7 +17,7 @@ const Hello = ({ name, age }) => {
 
 const Header = ({ course }) => {
   return (
-    <h2>Compontent: {course} </h2>
+    <h2>Component: {course} </h2>
   )
 }
 const Part = ({ info }) => {
@@ -37,21 +37,28 @@ const Content = ({ parts }) => {
     </div>
   )
 }
-const Total = ({ parts }) => {
+
+const Total = ({ parts }) => (
+  <p>Number of exercises: {parts[0].exercises + parts[1].exercises + parts[2].exercises}</p>
+)
+const Display = ({ count }) => <div>count is {count}</div>
+const Button = ({ onClick, text }) =>
+  <button onClick={onClick}>
+    {text}
+  </button>
+
+const History = (props) => {
+  if (props.allClicks.length === 0) {
+    return (
+      <div>
+        the app is used by pressing the buttons
+      </div>
+    )
+  }
   return (
-    <p>Number of exercises: {parts[0].exercises + parts[1].exercises + parts[2].exercises}</p>
-  )
-}
-const Display = ({ count }) => {
-  return (
-    <div>count is {count}</div>
-  )
-}
-const Button = (props) => {
-  return (
-    <button onClick={props.onClick}>
-      {props.text}
-    </button>
+    <div>
+      Button press history: {props.allClicks.join(' ')}
+    </div>
   )
 }
 
@@ -63,8 +70,7 @@ const Footer = () => {
   )
 }
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
   const now = new Date()
   const a = 10
   const b = 20
@@ -92,18 +98,39 @@ function App() {
     ]
   }
 
+  const [count, setCount] = useState(0)
+
   const increaseByOne = () => setCount(count + 1)
   const decreaseByOne = () => setCount(count - 1)
   const setToZero = () => setCount(0)
+
+  const [clicks, setClicks] = useState({
+    left: 0, right: 0
+  })
+  const [allClicks, setAll] = useState([])
+  const [total, setTotal] = useState(0)
+
+  const handleLeftClick = () => {
+    setAll(allClicks.concat('L'))
+    const updatedLeft = clicks.left + 1
+    setClicks({ ...clicks, left: updatedLeft })
+    setTotal(updatedLeft + clicks.right)
+  }
+  const handleRightClick = () => {
+    setAll(allClicks.concat('R'))
+    const updateRight = clicks.right + 1
+    setClicks({ ...clicks, right: updateRight })
+    setTotal(clicks.left + updateRight)
+  }
 
   return (
     <>
       <div>
         <h2>Direct Rendering:Greetings </h2>
-      <p>Hello world, it is {now.toString()}</p>
-      <p>
-        {a} plus {b} is {a + b}
-      </p>
+        <p>Hello world, it is {now.toString()}</p>
+        <p>
+          {a} plus {b} is {a + b}
+        </p>
         <Hello name={name} age={age} />
         <p>{friends}</p>
       </div>
@@ -121,6 +148,17 @@ function App() {
         <Button onClick={increaseByOne} text='plus' />
         <Button onClick={setToZero} text='zero' />
         <Button onClick={decreaseByOne} text='minus' />
+      </div>
+
+      <div>
+        <h2>A more complex state</h2>
+        {clicks.left}
+        <Button onClick={handleLeftClick} text='left' />
+        <Button onClick={handleRightClick} text='right' />
+        {clicks.right}
+        <p>{allClicks.join(' ')}</p>
+        <p>Total: {total}</p>
+        <History allClicks={allClicks} />
       </div>
     </>
   )
