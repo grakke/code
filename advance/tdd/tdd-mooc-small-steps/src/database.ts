@@ -9,20 +9,20 @@ export type Holiday = {
 };
 
 export interface Database {
-  setBasePrice(type: string, cost: number): void;
+  setBasePrice (type: string, cost: number): void;
 
-  findBasePriceByType(type: string): BasePrice | undefined;
+  findBasePriceByType (type: string): BasePrice | undefined;
 
-  addHoliday(holiday: string, description: string): void;
+  addHoliday (holiday: string, description: string): void;
 
-  getHolidays(): Holiday[];
+  getHolidays (): Holiday[];
 }
 
 export class InMemoryDatabase implements Database {
   basePrice: BasePrice[] = [];
   holidays: Holiday[] = [];
 
-  withTestData() {
+  withTestData () {
     this.setBasePrice("1jour", 35);
     this.setBasePrice("night", 19);
     this.addHoliday("2019-02-18", "winter");
@@ -31,20 +31,20 @@ export class InMemoryDatabase implements Database {
     return this;
   }
 
-  setBasePrice(type: string, cost: number) {
+  setBasePrice (type: string, cost: number) {
     this.basePrice = this.basePrice.filter((row) => row.type !== type);
     this.basePrice.push({ type, cost });
   }
 
-  findBasePriceByType(type: string) {
+  findBasePriceByType (type: string) {
     return this.basePrice.find((row) => row.type === type);
   }
 
-  addHoliday(holiday: string, description: string) {
+  addHoliday (holiday: string, description: string) {
     this.holidays.push({ holiday, description });
   }
 
-  getHolidays() {
+  getHolidays () {
     return structuredClone(this.holidays);
   }
 }
