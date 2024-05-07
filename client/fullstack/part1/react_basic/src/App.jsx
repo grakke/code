@@ -1,6 +1,7 @@
 import { useState, React } from 'react'
 
 import './App.css'
+import Course from './components/Course'
 
 const Hello = ({ name, age }) => {
   const bornYear = () => new Date().getFullYear() - age
@@ -15,32 +16,6 @@ const Hello = ({ name, age }) => {
   )
 }
 
-const Header = ({ course }) => {
-  return (
-    <h2>Component: {course} </h2>
-  )
-}
-const Part = ({ info }) => {
-  return (
-    <p>
-      {info.name}: {info.exercises}
-    </p>
-  )
-}
-
-const Content = ({ parts }) => {
-  return (
-    <div>
-      <Part info={parts[0]} />
-      <Part info={parts[1]} />
-      <Part info={parts[2]} />
-    </div>
-  )
-}
-
-const Total = ({ parts }) => (
-  <p>Number of exercises: {parts[0].exercises + parts[1].exercises + parts[2].exercises}</p>
-)
 const Display = ({ count }) => <div>count is {count}</div>
 const Button = ({ onClick, text }) =>
   <button onClick={onClick}>
@@ -80,23 +55,49 @@ const App = () => {
   const age = 37
   const friends = ['Peter', 'Maya']
 
-  const course = {
+  const courses = [{
+    id: 1,
     name: 'Half Stack application development',
     parts: [
       {
         name: 'Fundamentals of React',
-        exercises: 10
+        exercises: 10,
+        id: 1
       },
       {
         name: 'Using props to pass data',
-        exercises: 7
+        exercises: 7,
+        id: 2
       },
       {
         name: 'State of a component',
-        exercises: 14
+        exercises: 14,
+        id: 3
+      },
+      {
+        name: 'Redux',
+        exercises: 11,
+        id: 4
+      }
+    ]
+  },
+    {
+      name: 'Node.js',
+      id: 2,
+      parts: [
+        {
+          name: 'Routing',
+          exercises: 3,
+          id: 1
+        },
+        {
+          name: 'Middlewares',
+          exercises: 7,
+          id: 2
       }
     ]
   }
+  ]
 
   const [count, setCount] = useState(0)
 
@@ -135,13 +136,10 @@ const App = () => {
         <p>{friends}</p>
       </div>
 
-      <div>
-        <Header course={course.name} />
-        <Content parts={course.parts} />
-        <Total parts={course.parts} />
-        <Footer />
-      </div>
+      {courses.map(course =>
+        <div id={course.id}><Course course={course} /></div>)}
 
+      <Footer />
       <div className="card">
         <h2>stateful</h2>
         <Display count={count} />
