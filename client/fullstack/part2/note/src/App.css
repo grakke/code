@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.note {
+    color: grey;
+    padding: 5px 10px;
+    font-size: 15px;
+}
