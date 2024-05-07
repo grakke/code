@@ -126,7 +126,7 @@
       - 投票如何传递参数与更新票数
 
 ```sh
-npm create vite@latest part1 -- --template react
+npm create vite@latest part1 --template react
 ```
 
 ## 与服务端通信
@@ -136,6 +136,8 @@ npm create vite@latest part1 -- --template react
   - Key-attribute
   - Map
 - Forms
+  - Saving the notes in the component state
+  - Controlled component
 - Getting data from server
 - Altering data in server
 - Adding styles to React app
