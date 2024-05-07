@@ -131,6 +131,15 @@ npm create vite@latest part1 -- --template react
 
 ## 与服务端通信
 
+- Rendering a collection, modules
+  - JavaScript Arrays
+  - Key-attribute
+  - Map
+- Forms
+- Getting data from server
+- Altering data in server
+- Adding styles to React app
+
 ## 用NodeJS和Express写服务端程序
 
 - 部署
