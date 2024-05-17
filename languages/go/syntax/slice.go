@@ -48,6 +48,11 @@ func main() {
 	slice7 := append(slice2, 99, 98, 77, 45, 67, 5, 5, 7, 4, 6, 7, 8)
 	fmt.Println(slice2, len(slice2), cap(slice2), slice7, len(slice7), cap(slice7))
 
+	arr := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	sl := arr[3:7:9]
+	sl[0] += 10
+	fmt.Println("arr[3] =", arr[3]) // 14
+
 	letters := []string{"A", "B", "C", "D", "E"}
 	remove := 2
 	if remove < len(letters) {
@@ -96,7 +101,7 @@ func main() {
 		}
 	}
 
-	//range也可以用在map的键值对上。
+	// range也可以用在map的键值对上
 	kvs := map[string]string{"a": "apple", "b": "banana"}
 	for k, v := range kvs {
 		fmt.Printf("%s -> %s\n", k, v)

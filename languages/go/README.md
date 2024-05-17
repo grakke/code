@@ -1,5 +1,7 @@
 # Golang
 
+## [](tour/)
+
 ## [Go语言第一课](go_first_class/) Tony Bai
 
 - bookstore
@@ -13,3 +15,13 @@ curl -X GET -H "Content-Type:application/json" localhost:8080/book/978-7-111-558
 ```
 
 ## [Go语言核心36讲](core/) 郝林
+
+## [Golong syntax guide](syntax/)
+
+## 论坛 Go Web Programming 一书中的
+
+- [chitchat](./chitchat/)
+
+```sh
+goi18n extract -outdir=locales -format=json messages.go
+```

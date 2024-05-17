@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
+	var m map[string]int // m = nil
+	m["key"] = 1         // 发生运行时异常：panic: assignment to entry in nil map
+
 	var countryCapitalMap = make(map[string]string)
 
 	/* map插入key - value对,各个国家对应的首都 */
@@ -51,4 +54,28 @@ func main() {
 	m2 := map[string]string{"two": "b", "one": "a"}
 	fmt.Println("m1 == m2:", reflect.DeepEqual(m1, m2))
 	//prints: m1 == m2: true
+
+	m3 := map[int][]string{
+		1: []string{"val1_1", "val1_2"},
+		3: []string{"val3_1", "val3_2", "val3_3"},
+		7: []string{"val7_1"},
+	}
+
+	type Position struct {
+		x float64
+		y float64
+	}
+
+	m4 := map[Position]string{
+		Position{29.935523, 52.568915}:  "school",
+		Position{25.352594, 113.304361}: "shopping-mall",
+		Position{73.224455, 111.804306}: "hospital",
+	}
+	// 与 m4 等价
+	m5 := map[Position]string{
+		{29.935523, 52.568915}:  "school",
+		{25.352594, 113.304361}: "shopping-mall",
+		{73.224455, 111.804306}: "hospital",
+	}
+	fmt.Println(m3, m4, m5)
 }

@@ -6,6 +6,8 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"syntax/simple_media_player/src/library"
+	"syntax/simple_media_player/src/mp"
 )
 
 var lib *library.MusicManager

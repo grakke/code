@@ -170,6 +170,10 @@ func main() {
 		fmt.Println("finish", msg)
 	}
 	fmt.Println("Done!")
+
+	type Empty struct{}
+	var c = make(chan Empty) // 声明一个元素类型为Empty的channel
+	c <- Empty{}             // 向channel写入一个“事件”
 }
 
 var ch = make(chan string, 10) // 创建大小为 10 的缓冲信道

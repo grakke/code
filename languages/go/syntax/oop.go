@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	//"reflect"
+	"reflect"
 
+	"syntax/animal"
 	oop "syntax/oop"
 )
 
@@ -13,45 +14,45 @@ func main() {
 	fmt.Println(l.On())
 	fmt.Println(l.Off())
 
-	// ani := NewAnimal("狗")
-	// ani := animal2.NewAnimal("Dog")
-	// dog := animal2.Dog{"Asia", &ani}
-	// puppy := animal2.Puppy{dog, ani}
-	// fmt.Println(dog.GetName(), "的叫声是", dog.Call(), "，最爱是", dog.FavorFood())
-	// fmt.Println(puppy.Dog.Animal.GetName(), "的叫声是", ani.Call(), "，最爱是", dog.FavorFood())
-	//animal := animal.Animal{"Dog"}
-	//dog2 := animal2.Dog{"Asia", &animal}
-	////dog2 := animal.Dog{"Euporean", &ani}
-	//fmt.Println(dog2.GetName(), "的叫声是", dog2.Call(), "，最爱是", dog2.Favriate())
+	ani := animal.NewAnimal("狗")
+	ani1 := animal.NewAnimal("Dog")
+	dog := animal.Dog{"Asia", &ani}
+	puppy := animal.Puppy{dog, ani}
+	fmt.Println(dog.GetName(), "的叫声是", dog.Call(), "，最爱是", dog.FavorFood())
+	fmt.Println(puppy.Dog.Animal.GetName(), "的叫声是", ani.Call(), "，最爱是", dog.FavorFood())
+	animal := animal.Animal{"Dog"}
+	dog2 := animal.Dog{"Asia", &animal}
+	//dog2 := animal.Dog{"Euporean", &ani}
+	fmt.Println(dog2.GetName(), "的叫声是", dog2.Call(), "，最爱是", dog2.Favriate())
 	//// 多重继承有重复方法时：直接调用会报错，使用时用声明该方法的类调用
-	//puppy := animal2.Puppy{dog2, &animal}
-	//fmt.Println(puppy.Dog.Animal.GetName(), "的叫声是", animal.Call(), "，最爱是", dog2.Favriate())
+	puppy := animal2.Puppy{dog2, &animal}
+	fmt.Println(puppy.Dog.Animal.GetName(), "的叫声是", animal.Call(), "，最爱是", dog2.Favriate())
 
 	// 将对象实例赋值给接口:会根据类似下面这样的非指针成员方法,自动生成一个新的与之对应的指针成员方法
-	// var a oop.Integer = 1
-	// var b oop.IntNumber = &a
-	// var c oop.IntNumber2 = a
-	// fmt.Println(b, c)
+	var a oop.Integer = 1
+	var b oop.IntNumber = &a
+	var c oop.IntNumber2 = a
+	fmt.Println(b, c)
 
 	// 将接口赋值给接口
 	// 不要求两个接口完全等价（方法完全相同）。如果接口 A 的方法列表是接口 B 的方法列表的子集，那么接口 B 可以赋值给接口 A
-	// var num1 oop.Number = 1
-	// var num2 oop.Number1 = num1
-	//var num3 oop1.Number2 = num2
+	var num1 oop.Number = 1
+	var num2 oop.Number1 = num1
+	var num3 oop.Number2 = num2
 	// 接口查询和转化:判断 num2 是否是 Number1 的实例,在运行期才能够确定
-	// if num3, ok := num2.(oop.Number1); ok {
-	// 	fmt.Println(num3.Equal(1))
-	// }
+	if num3, ok := num2.(oop.Number1); ok {
+		fmt.Println(num3.Equal(1))
+	}
 
 	// 类型查询和转化
-	//var ianimal animal.IAnimal = animal.Dog{"Asia", ani}
-	//if dog1, ok := ianimal.(animal.Dog); ok {
-	//	fmt.Println(dog1.GetName())
-	//}
+	var ianimal animal.IAnimal = animal.Dog{"Asia", ani}
+	if dog1, ok := ianimal.(animal.Dog); ok {
+		fmt.Println(dog1.GetName())
+	}
 
 	// 归属于子类的实例并不归属于父类,因为类与类之间的「继承」是通过组合实现的
 	// 要获取实际类型通过 reflect.TypeOf(ianimal) 获取,基本数据类型 通过 type 关键字即可获取对应的类型值
-	//fmt.Println(reflect.TypeOf(ianimal))
+	fmt.Println(reflect.TypeOf(ianimal))
 
 	// 接口实现不是强制的，是根据类实现的方法来动态判定的
 	// 只有都实现了系统才会判定实现了接口，才能进行相应的接口赋值

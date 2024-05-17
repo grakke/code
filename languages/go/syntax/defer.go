@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
 
 func printError() {
 	fmt.Println("兜底执行")
@@ -15,6 +18,55 @@ func get(index int) (ret int) {
 	}()
 	arr := [3]int{2, 3, 4}
 	return arr[index]
+}
+
+func doSomething() error {
+	var mu sync.Mutex
+	mu.Lock()
+	defer mu.Unlock()
+
+	r1, err := OpenResource1()
+	if err != nil {
+		return err
+	}
+	defer r1.Close()
+
+	r2, err := OpenResource2()
+	if err != nil {
+		return err
+	}
+	defer r2.Close()
+
+	r3, err := OpenResource3()
+	if err != nil {
+		return err
+	}
+	defer r3.Close()
+
+	// 使用r1，r2, r3
+	return doWithResources()
+}
+
+func foo1() {
+	for i := 0; i <= 3; i++ {
+		defer fmt.Println(i)
+	}
+}
+
+func foo2() {
+	for i := 0; i <= 3; i++ {
+		defer func(n int) {
+			fmt.Println(n)
+		}(i)
+	}
+}
+
+func foo3() {
+	for i := 0; i <= 3; i++ {
+		defer func() {
+			fmt.Println(i)
+		}()
+	}
 }
 
 func main() {
@@ -49,4 +101,11 @@ func main() {
 
 	fmt.Println(get(5))
 	fmt.Println("finished")
+
+	fmt.Println("foo1 result:")
+	foo1()
+	fmt.Println("\nfoo2 result:")
+	foo2()
+	fmt.Println("\nfoo3 result:")
+	foo3()
 }

@@ -189,6 +189,10 @@ func main() {
 	fmt.Println(join("GO", "language", "book"))
 	element := []string{"GO", "language", "book"}
 	fmt.Println(join(element...))
+
+	teardown := setup("demo")
+	defer teardown()
+	println("do some bussiness stuff")
 }
 
 const MAX = 50
@@ -220,4 +224,11 @@ func sum1(nums ...int) {
 		total += num
 	}
 	fmt.Println(total)
+}
+
+func setup(task string) func() {
+	println("do some setup stuff for", task)
+	return func() {
+		println("do some teardown stuff for", task)
+	}
 }
