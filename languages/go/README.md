@@ -6,6 +6,8 @@
 
 - 09 bookstore
 - 27 instrument_trace
+  - `go build github.com/grakke/instrument_trace/cmd/instrument`
+  - `./instrument -w  examples/demo/demo.go`
 - 33 go-channel-operation-benchmark
 - 37 tcp-server-demo1
 

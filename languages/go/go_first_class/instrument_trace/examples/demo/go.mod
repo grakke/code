@@ -1,6 +1,6 @@
 module demo
 
-go 1.17
+go 1.21.6
 
 require github.com/grakke/instrument_trace v1.0.0
 
