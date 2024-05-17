@@ -5,7 +5,6 @@ import (
 	"bookstore/store"
 	"context"
 	"encoding/json"
-	"mime"
 	"net/http"
 	"time"
 
@@ -36,26 +35,9 @@ func NewBookStoreServer(addr string, s store.Store) *BookStoreServer {
 	return srv
 }
 
-func Validating(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
-		contentType := req.Header.Get("Content-Type")
-		mediatype, _, err := mime.ParseMediaType(contentType)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusBadRequest)
-			return
-		}
-		if mediatype != "application/json" {
-			http.Error(w, "invalid Content-Type", http.StatusUnsupportedMediaType)
-			return
-		}
-		next.ServeHTTP(w, req)
-	})
-}
-
 func (bs *BookStoreServer) ListenAndServe() (<-chan error, error) {
 	var err error
 	errChan := make(chan error)
-// 把BookStoreServer内部的http.Server的运行放置到一个单独的轻量级线程Goroutine中。因为 http.Server.ListenAndServe 会阻塞代码的继续运行，如果不把它放在单独的Goroutine中，后面的代码将无法得到执行
 	go func() {
 		err = bs.srv.ListenAndServe()
 		errChan <- err
@@ -68,7 +50,6 @@ func (bs *BookStoreServer) ListenAndServe() (<-chan error, error) {
 		return errChan, nil
 	}
 }
-
 
 func (bs *BookStoreServer) Shutdown(ctx context.Context) error {
 	return bs.srv.Shutdown(ctx)

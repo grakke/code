@@ -4,7 +4,10 @@
 
 ## [Go语言第一课](go_first_class/) Tony Bai
 
-- bookstore
+- 09 bookstore
+- 27 instrument_trace
+- 33 go-channel-operation-benchmark
+- 37 tcp-server-demo1
 
 ```sh
 curl -X POST -H "Content-Type:application/json" localhost:8080/book -d '{"id": "978-7-111-55842-2", "name": "The Go Programming Language","authors":["Alan A.A.Donovan", "Brian W. Kergnighan"],"press":"Pearson Education"}'

@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "bookstore/internal/store" // internal/store将自身注册到factory中
+	_ "bookstore/internal/store"
 	"bookstore/server"
 	"bookstore/store/factory"
 	"context"
@@ -13,13 +13,14 @@ import (
 )
 
 func main() {
-	s, err := factory.New("mem") // 创建图书数据存储模块实例
+	s, err := factory.New("mem")
 	if err != nil {
 		panic(err)
 	}
 
-	srv := server.NewBookStoreServer(":8080", s) // 创建http服务实例
-	errChan, err := srv.ListenAndServe()         // 运行http服务
+	srv := server.NewBookStoreServer(":8080", s)
+
+	errChan, err := srv.ListenAndServe()
 	if err != nil {
 		log.Println("web server start failed:", err)
 		return
@@ -29,7 +30,8 @@ func main() {
 	// 监视系统信号实现 http 服务实例的优雅退出
 	c := make(chan os.Signal, 1)
 	signal.Notify(c, syscall.SIGINT, syscall.SIGTERM)
-	select { // 监视来自errChan以及c的事件
+
+	select {
 	case err = <-errChan:
 		log.Println("web server run failed:", err)
 		return
@@ -37,7 +39,7 @@ func main() {
 		log.Println("bookstore program is exiting...")
 		ctx, cf := context.WithTimeout(context.Background(), time.Second)
 		defer cf()
-		err = srv.Shutdown(ctx) // 优雅关闭http服务实例
+		err = srv.Shutdown(ctx)
 	}
 
 	if err != nil {
