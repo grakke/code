@@ -1,4 +1,4 @@
-module github.com/bigwhite/tcp-server-demo3
+module github.com/grakke/tcp-server-demo3
 
 go 1.17
 

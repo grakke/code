@@ -1,9 +1,9 @@
 all: server client
-  
+
 server: cmd/server/main.go
-	go build github.com/bigwhite/tcp-server-demo2/cmd/server
+	go build github.com/grakke/tcp-server-demo2/cmd/server
 client: cmd/client/main.go
-	go build github.com/bigwhite/tcp-server-demo2/cmd/client
+	go build github.com/grakke/tcp-server-demo2/cmd/client
 
 clean:
 	rm -fr ./server

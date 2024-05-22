@@ -6,8 +6,8 @@ import (
 	"net"
 	"sync"
 
-	"github.com/bigwhite/tcp-server-demo2/frame"
-	"github.com/bigwhite/tcp-server-demo2/packet"
+	"github.com/grakke/tcp-server-demo2/frame"
+	"github.com/grakke/tcp-server-demo2/packet"
 	"github.com/lucasepe/codename"
 )
 
