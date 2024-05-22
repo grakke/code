@@ -63,7 +63,7 @@ type imethod struct {
 
 const ptrSize = unsafe.Sizeof(uintptr(0))
 
-// 适用于go 1.17.x version
+// 适用于go 1.21.x version
 func dumpEface(i interface{}) {
 	ptrToEface := (*eface)(unsafe.Pointer(&i))
 	fmt.Printf("eface: %+v\n", *ptrToEface)

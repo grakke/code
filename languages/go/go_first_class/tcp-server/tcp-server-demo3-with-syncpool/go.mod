@@ -1,6 +1,6 @@
 module github.com/grakke/tcp-server-demo3
 
-go 1.17
+go 1.21
 
 require (
 	github.com/lucasepe/codename v0.2.0
