@@ -127,7 +127,8 @@
 ## 图书
 
 * 统计学习方法 李航
-* Python for Data Analysis
+* Python for Data Analysis pyda
+* [深度学习入门:基于Python的理论与实现 Deep Learning from Scratch](./dlps)
 
 ## 课程
 

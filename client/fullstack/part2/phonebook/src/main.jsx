@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
-ReactDOM.createRoot(document.getElementById('country')).render(
-  <React.StrictMode>
-    <Countries />
-  </React.StrictMode>,
-)
+// ReactDOM.createRoot(document.getElementById('country')).render(
+//   <React.StrictMode>
+//     <Countries />
+//   </React.StrictMode>,
+// )
