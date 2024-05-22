@@ -23,7 +23,7 @@
 
 ### [springboot](./languages/readinglist)
 
-### Golang
+### [Golang](./languages/go/README.md)
 
 ### Python
 

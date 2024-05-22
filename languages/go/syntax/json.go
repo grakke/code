@@ -60,7 +60,7 @@ func main() {
 	fmt.Printf("JSON 解码结果: %#v\n", user3)
 
 	// 不知道要解码的 JSON 数据结构:只需要将这段 JSON 数据解码输出到一个空接口即可
-	//     布尔值将会转换为 Go 语言的 bool 类型；
+	//    布尔值将会转换为 Go 语言的 bool 类型；
 	//    数值会被转换为 Go 语言的 float64 类型；
 	//    字符串转换后还是 string 类型；
 	//    JSON 数组会转换为 []interface{} 类型；

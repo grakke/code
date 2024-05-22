@@ -20,6 +20,20 @@ func reqTask(name string) {
 	}
 }
 
+func worker() {
+	heartbeat := time.NewTicker(30 * time.Second)
+	defer heartbeat.Stop()
+	for {
+		select {
+		case <-c:
+			// ... do some stuff
+		case <- heartbeat.C:
+			//... do heartbeat stuff
+		}
+	}
+}
+
+
 func main() {
 
 	stop = make(chan bool)
@@ -28,4 +42,6 @@ func main() {
 
 	stop <- true
 	time.Sleep(1 * time.Second)
+
+	// worker()
 }

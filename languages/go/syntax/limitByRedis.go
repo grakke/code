@@ -5,9 +5,10 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/redis/go-redis/v9"
 	"go.uber.org/atomic"
 
-	"git.code.oa.com/pcg-csd/trpc-ext/redis"
+	// "git.code.oa.com/pcg-csd/trpc-ext/redis"
 )
 
 type RedisClient interface {
@@ -60,7 +61,7 @@ func NewBucketClient(redis RedisClient) *Client {
 	}
 }
 
-// 获取令牌，获取成功则立即返回true，否则返回false
+// 获取令牌，获取成功立即返回true，否则返回false
 func (c *Client) isAllowed(ctx context.Context, key string, capacity int64, tokenRate int64) (bool, error) {
 	result, err := redis.Int(c.client.Do(ctx, "eval", c.script, 1, key, capacity, tokenRate))
 	if err != nil {

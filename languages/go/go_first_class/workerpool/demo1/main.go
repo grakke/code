@@ -3,7 +3,7 @@ package main
 import (
 	"time"
 
-	"github.com/bigwhite/workerpool"
+	"github.com/grakke/workerpool"
 )
 
 func main() {

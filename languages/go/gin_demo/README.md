@@ -2,12 +2,12 @@
 
 * 在中间件或处理器中开启新的协程时，不应该在其中使用原生的上下文对象，而应该使用它的只读副本
 * 模型绑定将请求数据绑定到类型:所有需要绑定的字段上设置相应的绑定标签
-    - Must Bind
-        + 方法：Bind, BindJSON, BindXML, BindQuery, BindYAML
-        + 行为：这些方法会调用底层的 MustBindWith 方法，如果出现绑定错误，会通过 c.AbortWithError(400, err).SetType(ErrorTypeBind) 退出请求，如果你想要对该行为有更多的控制，请使用下面 Should Bind 这套方案
-    - Should Bind
-        + 方法：ShouldBind, ShouldBindJSON, ShouldBindXML, ShouldBindQuery, ShouldBindYAML
-        + 行为：这些方法会调用底层的 ShouldBindWith 方法，如果出现绑定错误，需要开发者自己来处理
+  * Must Bind
+    * 方法：Bind, BindJSON, BindXML, BindQuery, BindYAML
+    * 行为：这些方法会调用底层的 MustBindWith 方法，如果出现绑定错误，会通过 c.AbortWithError(400, err).SetType(ErrorTypeBind) 退出请求，如果你想要对该行为有更多的控制，请使用下面 Should Bind 这套方案
+  * Should Bind
+    * 方法：ShouldBind, ShouldBindJSON, ShouldBindXML, ShouldBindQuery, ShouldBindYAML
+    * 行为：这些方法会调用底层的 ShouldBindWith 方法，如果出现绑定错误，需要开发者自己来处理
 
 ```shell script
 # 初始化：路由功能 auth 获取参数
@@ -33,7 +33,7 @@ curl http://localhost:8080/getd?field_x=AAA&field_d=DDDDD
 
 # 绑定 checkbox
 go run html_checkbox.go
-# GET|POST http://localhost:8080/colors 
+# GET|POST http://localhost:8080/colors
 curl -X POST "Content-Type: application/x-www-form-urlencoded"  -d 'colors[]=red' -d 'colors[]=green' localhost:8080/colors
 
 # 绑定查询字符串或 POST 数据
@@ -120,7 +120,7 @@ curl --location --request POST 'localhost:8080/post?ids[a]=234234&ids[b]=fdgsgfd
 # 模型绑定和验证
 go run model_binding.go
 curl -X POST -H "Content-Type: application/json"  http://localhost:8080/loginJSON -d '{"user":"xueyuanjun","password":"123456"}'
-curl -X POST -H "Content-Type: application/x-www-form-urlencoded" localhost:8080/loginForm -d 'user=xueyuanjun&password=123456' 
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" localhost:8080/loginForm -d 'user=xueyuanjun&password=123456'
 #curl -X POST "Content-Type: application/x-www-form-urlencoded"  -d 'colors[]=red' -d 'colors[]=green' localhost:8080/loginXML
 
 # Multipart/Urlencoded 绑定和数据解析
@@ -150,7 +150,7 @@ http  -v localhost:8080/test
 http  -v localhost:8080/test1
 
 # 运行多个服务器
-go run multi_service.go 
+go run multi_service.go
 http localhost:8080
 
 # SecureJSON 可以防止 JSON 劫持,默认会添加 "while(1)," 前缀到响应实体
@@ -181,8 +181,8 @@ curl -X POST localhost:8080/upload -F "file=@/home/henry/Pictures/wallper/bird-a
 
 go run upload_multi_files.go
 curl -X POST localhost:8080/upload \
--F "upload[]=@/home/henry/Pictures/wallper/bird-and-wall.jpg" 
--F "upload[]=@/home/henry/Pictures/wallper/livingness.jpg" 
+-F "upload[]=@/home/henry/Pictures/wallper/bird-and-wall.jpg"
+-F "upload[]=@/home/henry/Pictures/wallper/livingness.jpg"
 -H "Content-Type:multipart/form-data"
 
 # BasicAuth 中间件
@@ -197,7 +197,7 @@ curl -X POST localhost:8088/post
 curl -X PUT localhost:8088/put
 curl -X PATCH localhost:8088/patch
 curl -X DELETE localhost:8088/delete
-curl -X OPTIONS localhost:8088/options 
+curl -X OPTIONS localhost:8088/options
 curl -X localhost:8088/head --head
 
 # 使用中间件

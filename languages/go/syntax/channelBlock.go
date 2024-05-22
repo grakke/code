@@ -7,7 +7,6 @@ import (
 
 func main() {
 	// 哪一个通道中有值，哪个对应的分支就会被执行
-	//创建两个channel - c1 c2
 	c1 := make(chan string)
 	c2 := make(chan string)
 	go func() {

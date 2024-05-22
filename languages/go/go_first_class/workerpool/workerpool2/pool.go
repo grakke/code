@@ -13,7 +13,7 @@ var (
 
 type Pool struct {
 	capacity int  // workerpool大小
-	preAlloc bool // 是否在创建pool的时候，就预创建workers，默认值为：false
+	preAlloc bool // 是否在创建pool时就预创建workers，默认值为：false
 
 	// 当pool满的情况下，新的Schedule调用是否阻塞当前goroutine。默认值：true
 	// 如果block = false，则Schedule返回ErrNoWorkerAvailInPool

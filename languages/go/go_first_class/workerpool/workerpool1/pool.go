@@ -15,6 +15,7 @@ type Pool struct {
 	capacity int // workerpool大小
 
 	active chan struct{}
+	// 一个无缓冲的channel，如果pool中worker数量已达上限，而且worker都在处理task的状态，那么Schedule方法就会阻塞，直到有worker变为idle状态来读取tasks channel，schedule的调用阻塞才会解除
 	tasks  chan Task
 
 	wg   sync.WaitGroup

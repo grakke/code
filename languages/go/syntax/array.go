@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 func main() {
@@ -62,8 +63,10 @@ func main() {
 	<-c1
 
 	c2 := make(chan struct{})
-go func() {
-    fmt.Println("c2")
-c2 <- struct{}{} // struct{}部分是类型, {}表示对应的结构体值 }()
-<-c2
+
+	go func() {
+		fmt.Println("c2")
+		c2 <- struct{}{} // struct{}部分是类型, {}表示对应的结构体值 }()
+		<-c2
+	}()
 }
