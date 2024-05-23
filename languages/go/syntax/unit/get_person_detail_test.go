@@ -2,11 +2,10 @@ package unit
 
 import (
 	"errors"
-	"reflect"
 	"testing"
 
 	"github.com/agiledragon/gomonkey/v2"
-	gomock "github.com/golang/mock/gomock"
+	"github.com/golang/mock/gomock"
 	"github.com/gomodule/redigo/redis"
 	"github.com/stretchr/testify/assert"
 )
@@ -46,18 +45,9 @@ func TestGetPersonDetail(t *testing.T) {
 	defer patches.Reset()
 
 	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got, err := GetPersonDetail(tt.args.username)
-			//if (err != nil) != tt.wantErr {
-			//	t.Errorf("GetPersonDetail() error = %v, wantErr %v", err, tt.wantErr)
-			//	return
-			//}
-			//if !reflect.DeepEqual(got, tt.want) {
-			//	t.Errorf("GetPersonDetail() got = %v, want %v", got, tt.want)
-			//}
-			assert.Equal(t, tt.want, got)
-			assert.Equal(t, tt.wantErr, err != nil)
-		})
+		got, err := GetPersonDetail(tt.args.username)
+		assert.Equal(t, tt.want, got)
+		assert.Equal(t, tt.wantErr, err != nil)
 	}
 }
 
@@ -86,11 +76,6 @@ func Test_checkEmail(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
-		//t.Run(tt.name, func(t *testing.T) {
-		//	if got := checkEmail(tt.args.email); got != tt.want {
-		//		t.Errorf("checkEmail() = %v, want %v", got, tt.want)
-		//	}
-		//})
 		got := checkEmail(tt.args.email)
 		assert.Equal(t, tt.want, got)
 	}
@@ -105,24 +90,26 @@ func Test_checkUsername(t *testing.T) {
 		args args
 		want bool
 	}{
-		// TODO: Add test cases.
+		{
+			name: "valid username",
+			args: args{username: "steven"},
+			want: true,
+		},
+		{
+			name: "invalid username",
+			args: args{username: "steven xxx"},
+			want: false,
+		},
 	}
 	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := checkUsername(tt.args.username); got != tt.want {
-				t.Errorf("checkUsername() = %v, want %v", got, tt.want)
-			}
-		})
+		got := checkUsername(tt.args.username)
+		assert.Equal(t, tt.want, got)
 	}
 }
 
 func Test_getPersonDetailRedis(t *testing.T) {
-	type args struct {
-		username string
-	}
 	tests := []struct {
 		name    string
-		args    args
 		want    *PersonDetail
 		wantErr bool
 	}{
@@ -160,16 +147,11 @@ func Test_getPersonDetailRedis(t *testing.T) {
 	// 执行完毕之后释放桩序列
 	defer patches.Reset()
 
+	// 4. 断言
 	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			got, err := getPersonDetailRedis(tt.args.username)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("getPersonDetailRedis() error = %v, wantErr %v", err, tt.wantErr)
-				return
-			}
-			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("getPersonDetailRedis() got = %v, want %v", got, tt.want)
-			}
-		})
+		actual, err := getPersonDetailRedis(tt.name)
+		// 注意，equal 函数能够对结构体进行 deap diff
+		assert.Equal(t, tt.want, actual)
+		assert.Equal(t, tt.wantErr, err != nil)
 	}
 }

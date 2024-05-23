@@ -25,7 +25,12 @@ go test mutex_test.go  -test.bench=".*"  -cpu='2,8,16,32'
 
 ## [Go语言核心36讲](core/) 郝林
 
-## [Golong syntax guide](syntax/)
+## [Golang syntax guide](./syntax/)
+
+```sh
+go test -gcflags=all=-l -coverprofile=coverage.out
+go tool cover -html=coverage.out
+```
 
 ## 论坛 Go Web Programming
 

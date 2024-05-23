@@ -3,6 +3,8 @@ package main
 import (
 	"bytes"
 	"fmt"
+	"reflect"
+	"unsafe"
 )
 
 func main() {
@@ -85,9 +87,9 @@ func main() {
 	fmt.Println("Slice3:", slice3)
 
 	slice37 := slice3[:copy(slice3, slice3[3:])] // 删除开头前三个元素
-	fmt.Println(slice37)
+	fmt.Println(s)
 
-	// 用range去求一个slice的和。数组类似
+	// 用range去求一个s的和。数组类似
 	nums := []int{2, 3, 4}
 	sum := 0
 	for _, num := range nums {
@@ -122,4 +124,12 @@ func main() {
 	dir1 = append(dir1, "suffix"...)
 	fmt.Println("dir1 =>", string(dir1)) //prints: dir1 => AAAAsuffix
 	fmt.Println("dir2 =>", string(dir2)) //prints: dir2 => uffixBBBB
+
+	var s1 []int
+	s2 := make([]int,0)
+	s4 := make([]int,0)
+
+	fmt.Printf("s1 pointer:%+v, s2 pointer:%+v, s4 pointer:%+v, \n", *(*unsafe.Slice)(unsafe.Pointer(&s1)),*(*reflect.SliceHeader)(unsafe.Pointer(&s2)),*(*reflect.SliceHeader)(unsafe.Pointer(&s4)))
+	fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s1))).Data==(*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data)
+	fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data==(*(*reflect.SliceHeader)(unsafe.Pointer(&s4))).Data)
 }

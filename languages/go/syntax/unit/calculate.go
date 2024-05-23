@@ -7,3 +7,7 @@ func Division(a, b int) (int, error) {
 func Mul(a, b int) int {
 	return a * b
 }
+
+func Add(a,b int) int{
+    return a+b
+}

@@ -3,8 +3,9 @@ package unit
 import (
 	"encoding/json"
 	"errors"
-	"github.com/gomodule/redigo/redis"
 	"regexp"
+
+	"github.com/gomodule/redigo/redis"
 )
 
 type PersonDetail struct {

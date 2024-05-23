@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"os"
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func setup() {
@@ -28,17 +26,17 @@ func createMulTestCase(t *testing.T, c *calcCase) {
 }
 
 func TestMul(t *testing.T) {
-	// t.Run("pos", func(t *testing.T) {
-	// 	if Mul(2, 3) != 6 {
-	// 		t.Fatal("fail")
-	// 	}
+	t.Run("pos", func(t *testing.T) {
+		if Mul(2, 3) != 6 {
+			t.Fatal("fail")
+		}
 
-	// })
-	// t.Run("neg", func(t *testing.T) {
-	// 	if Mul(2, -3) != -6 {
-	// 		t.Fatal("fail")
-	// 	}
-	// })
+	})
+	t.Run("neg", func(t *testing.T) {
+		if Mul(2, -3) != -6 {
+			t.Fatal("fail")
+		}
+	})
 
 	cases := []struct {
 		Name           string
@@ -63,23 +61,20 @@ func TestMul(t *testing.T) {
 	createMulTestCase(t, &calcCase{2, 0, 0})
 }
 
-func TestSomething(t *testing.T) {
-
-	assert.Equal(t, 123, 123, "they should be equal")
-	assert.NotEqual(t, 123, 456, "they should not be equal")
-	// assert.Nil(t, objec)
-
-	// if assert.NotNil(t, object) {
-	// 	assert.Equal(t, "Something", object.Value)
-	// }
-}
-
 func TestDivision(t *testing.T) {
 	if i, e := Division(6, 2); i != 3 || e != nil { //try a unit test on function
 		t.Error("除法函数测试没通过")
 	} else {
 		t.Log("第一个测试通过了")
 	}
+}
+func TestAdd(t *testing.T) {
+    sum := Add(5,5)
+    if sum == 10 {
+        t.Log("the result is ok")
+    } else {
+        t.Fatal("the result is wrong")
+    }
 }
 
 func BenchmarkDivision(b *testing.B) {
@@ -104,3 +99,38 @@ func TestMain(m *testing.M) {
 	teardown()
 	os.Exit(code)
 }
+
+// func TestCalculate_stub(t *testing.T) {
+// 	assert := assert.New(t)
+// 	num := 10
+// 	f := Calculate
+
+// 	y1 := f(num)
+// 	assert.Equal(y1, 9)
+
+// 	// 变量stub
+// 	stubs := Stub(&num, 150)
+// 	defer stubs.Reset()
+
+// 	y2 := f(num)
+// 	assert.Equal(y2, 149)
+
+// 	// 函数stub1
+// 	defer stubs.Stub(&f, func(x int) int {
+// 		return x + 1
+// 	}).Reset()
+
+// 	assert.Equal(f(num), 151)
+
+// 	// 函数stub2
+// 	defer stubs.StubFunc(&f, 120).Reset()
+// 	assert.Equal(f(num), 120)
+
+// 	// 没有返回值的函数称之为过程，stub可以为过程打桩
+// 	clean := CloseUserCache
+// 	defer stubs.Stub(&clean, func(s string) {
+// 		fmt.Println(fmt.Sprintf("Clean %s old cache", s))
+// 	}).Reset()
+// 	clean("ggr")
+
+// }
