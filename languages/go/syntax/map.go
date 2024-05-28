@@ -4,10 +4,17 @@ import (
 	"fmt"
 	"reflect"
 )
+type simplePerson struct {
+    Age int
+}
+
+func (p *simplePerson) GrowUp() {
+    p.Age++
+}
 
 func main() {
-	var m map[string]int // m = nil
-	m["key"] = 1         // 发生运行时异常：panic: assignment to entry in nil map
+	// var m map[string]int // m = nil
+	// m["key"] = 1         // 发生运行时异常：panic: assignment to entry in nil map
 
 	var countryCapitalMap = make(map[string]string)
 
@@ -15,25 +22,22 @@ func main() {
 	countryCapitalMap["France"] = "巴黎"
 	countryCapitalMap["Italy"] = "罗马"
 	countryCapitalMap["Japan"] = "东京"
-	countryCapitalMap["India "] = "新德里"
+	countryCapitalMap["India"] = "新德里"
 
 	/*使用键输出地图值 */
 	for country := range countryCapitalMap {
-		fmt.Println(country, "首都是", countryCapitalMap[country])
+		fmt.Println(country, "首都：", countryCapitalMap[country])
 	}
 
 	/*查看元素在集合中是否存在 */
-	capital, ok := countryCapitalMap["American"] /*如果确定是真实的,则存在,否则不存在 */
-	/*fmt.Println(capital) */
-	/*fmt.Println(ok) */
+	capital, ok := countryCapitalMap["American"]
 	if ok {
-		fmt.Println("American 的首都是", capital)
+		fmt.Println("American 首都是", capital)
 	} else {
-		fmt.Println("American 的首都不存在")
+		fmt.Println("American 首都不存在")
 	}
 
 	fmt.Println("========================")
-	// delete() 函数删除元素
 	delete(countryCapitalMap, "France")
 	fmt.Println("法国条目被删除")
 	for country := range countryCapitalMap {
@@ -78,4 +82,10 @@ func main() {
 		{73.224455, 111.804306}: "hospital",
 	}
 	fmt.Println(m3, m4, m5)
+
+	m := map[string]*simplePerson{
+        "iswbm": &simplePerson{Age: 20},
+    }
+    m["iswbm"].Age = 23
+    m["iswbm"].GrowUp()
 }

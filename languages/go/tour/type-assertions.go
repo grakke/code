@@ -29,7 +29,7 @@ func main() {
 	do(true)
 }
 
-//类型选择 是一种按顺序从几个类型断言中选择分支的结构。
+// 类型选择 是一种按顺序从几个类型断言中选择分支的结构
 func do(i interface{}) {
 	switch v := i.(type) {
 	case int:

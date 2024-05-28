@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"golang.org/x/exp/constraints"
+)
 
 func print[T any] (arr []T) {
 	for _, v := range arr {
@@ -114,6 +118,10 @@ func (l *list[T]) print() {
 	fmt.Println("nil")
 }
 
+func Add[T constraints.Integer](a, b T) T {
+    return a + b
+}
+
 func main() {
 	strs := []string{"Hello", "World",  "Generics"}
 	decs := []float64{3.14, 1.14, 1.618, 2.718 }
@@ -155,6 +163,13 @@ func main() {
 	l.del(1)
 	l.del(4)
 	l.print() //[2] -> [3] -> nil
+
+	var m, n int = 5, 6
+    println(Add(m,n)) // Add[int](m, n)
+    var i,j int64 = 15, 16
+    println(Add(i,j)) // Add[int64](i, j)
+    var c,d byte = 0x11, 0x12
+    println(Add(c,d)) // Add[byte](c, d)
 }
 
 // go run -gcflags=-G=3

@@ -53,10 +53,12 @@ func main() {
 
 	pPerson := &person
 	fmt.Println(pPerson) //输出 &{Tom 30 tom@gmail.com}
+	fmt.Println(pPerson.name)
 
 	pPerson.age = 40
 	person.name = "Jerry"
 	fmt.Println(person) //输出 {Jerry 40 tom@gmail.com}
+
 }
 
 func printBook(book Books) {
