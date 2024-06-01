@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"sync"
 )
@@ -27,6 +28,12 @@ func main() {
 	go testPut(pool, wg.Done)
 	wg.Wait()
 	fmt.Println(pool.Get())
+
+
+	// var buf []*Student
+	// stu := studentPool.Get().(*Student)
+	// json.Unmarshal(buf, stu)
+	// studentPool.Put(stu)
 }
 
 func testPut(pool *sync.Pool, deferFunc func()) {
@@ -35,4 +42,17 @@ func testPut(pool *sync.Pool, deferFunc func()) {
 	}()
 	value := "Hello,学院君!"
 	pool.Put(value)
+
+}
+
+type Student struct {
+	Name   string
+	Age    int32
+	Remark [1024]byte
+}
+
+var studentPool = sync.Pool{
+	New: func() interface{} {
+		return new(Student)
+	},
 }

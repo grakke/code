@@ -57,3 +57,10 @@ go tool cover -html=coverage.out
 ```sh
 goi18n extract -outdir=locales -format=json messages.go
 ```
+
+## [Learn Go with tests](https://studygolang.gitbook.io/learn-go-with-tests)
+
+```sh
+curl -X POST http://localhost:5000/players/Pepper
+curl http://localhost:5000/players/Pepper
+```
