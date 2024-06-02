@@ -1,5 +1,7 @@
 # Golang
 
+- [go by example](https://gobyexample.com/)
+
 ## [A Tour of Go](tour/)
 
 - <https://go.dev/tour/>
@@ -60,7 +62,14 @@ goi18n extract -outdir=locales -format=json messages.go
 
 ## [Learn Go with tests](https://studygolang.gitbook.io/learn-go-with-tests)
 
+- <https://github.com/quii/learn-go-with-tests/>
+- #TODO异步问题
+  - 命令行更新数据后，网页版无法实时加载
+
 ```sh
 curl -X POST http://localhost:5000/players/Pepper
 curl http://localhost:5000/players/Pepper
+
+go run ./cli/main.go
+go run ./webserver/main.go
 ```
