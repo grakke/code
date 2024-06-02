@@ -6,20 +6,20 @@ import (
 	"net/http"
 )
 
+type Player struct {
+	Name string
+	Wins int
+}
+
 type PlayerStore interface {
 	GetPlayerScore(name string) int
 	RecordWin(name string)
-	GetLeague() []Player
+	GetLeague() League
 }
 
 type PlayerServer struct {
 	store PlayerStore
 	http.Handler
-}
-
-type Player struct {
-	Name string
-	Wins int
 }
 
 func NewPlayerServer(store PlayerStore) *PlayerServer {
@@ -42,8 +42,8 @@ func (p *PlayerServer) leagueHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 }
 
-func (*PlayerServer) getLeagueTable() []Player {
-	return []Player{
+func (*PlayerServer) getLeagueTable() League {
+	return League{
 		{"Chris", 20},
 	}
 }
