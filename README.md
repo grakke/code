@@ -25,7 +25,7 @@
 
 ### [Golang](./languages/go/README.md)
 
-### Python
+### [Python](./languages/python/README.md)
 
 - [Django Web Framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 

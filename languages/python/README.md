@@ -204,3 +204,7 @@ allure serve report
 - 每个组成部分的具体介绍，包括必要性、设计原理等等
 - 系统的 performance，包括 latency 等等参数
 - 主要说明如何对系统的各个部分进行修改，主要给出相应的 code pointer 及对应的测试方案
+
+## 图书
+
+- [Python 金融大数据分析 Python for Fianace](./pyhont_for_finance)
