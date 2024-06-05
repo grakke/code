@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"syntax/calculator"
 
-	"github.com/grakke/calculator"
 	"rsc.io/quote"
 )
 

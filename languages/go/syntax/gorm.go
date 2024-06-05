@@ -2,9 +2,10 @@ package main
 
 import (
 	"database/sql"
+	"time"
+
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
-	"time"
 )
 
 type Model struct {
@@ -35,13 +36,6 @@ type User struct {
 
 func (User) TableName() string {
 	return "profiles"
-}
-func (u User) TableName() string {
-	if u.Role == "admin" {
-		return "admin_users"
-	} else {
-		return "users"
-	}
 }
 
 func main() {

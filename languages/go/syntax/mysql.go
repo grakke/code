@@ -3,9 +3,10 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"github.com/gofrs/uuid"
 	"strings"
 	"time"
+
+	"github.com/gofrs/uuid"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -60,11 +61,11 @@ type User struct {
 }
 
 // 使用 scanner/valuer
-//type User struct {
-//	gorm.Model
-//	Name string
-//	Age  sql.NullInt64
-//}
+type User struct {
+	gorm.Model
+	Name string
+	Age  sql.NullInt64
+}
 
 func (user *User) BeforeCreate(scope *gorm.Scope) error {
 	scope.SetColumn("ID", uuid.NewGen())
@@ -108,6 +109,7 @@ func main() {
 			panic(err)
 		}
 	}
+
 	//插入数据
 	test := Test{Num: 123456}
 	db.Create(&test)
@@ -145,8 +147,6 @@ func main() {
 	db.Not([]int64{1,2,3}).First(&user)
 	db.Not([]int64{}).First(&user)
 	db.Where("role = ?", "admin").Or("role = ?", "super_admin").Find(&users)
-
-
 
 	defer db.Close()
 }

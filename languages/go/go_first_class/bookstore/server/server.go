@@ -32,6 +32,7 @@ func NewBookStoreServer(addr string, s store.Store) *BookStoreServer {
 	router.HandleFunc("/book/{id}", srv.delBookHandler).Methods("DELETE")
 
 	srv.srv.Handler = middleware.Logging(middleware.Validating(router))
+
 	return srv
 }
 

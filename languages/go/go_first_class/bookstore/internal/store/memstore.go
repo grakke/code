@@ -17,7 +17,6 @@ type MemStore struct {
 	books map[string]*mystore.Book
 }
 
-// Create creates a new Book in the store.
 func (ms *MemStore) Create(book *mystore.Book) error {
 	ms.Lock()
 	defer ms.Unlock()
@@ -32,7 +31,6 @@ func (ms *MemStore) Create(book *mystore.Book) error {
 	return nil
 }
 
-// Update updates the existed Book in the store.
 func (ms *MemStore) Update(book *mystore.Book) error {
 	ms.Lock()
 	defer ms.Unlock()
@@ -54,14 +52,11 @@ func (ms *MemStore) Update(book *mystore.Book) error {
 	if book.Press != "" {
 		nBook.Press = book.Press
 	}
-
 	ms.books[book.Id] = &nBook
 
 	return nil
 }
 
-// Get retrieves a book from the store, by id. If no such id exists. an
-// error is returned.
 func (ms *MemStore) Get(id string) (mystore.Book, error) {
 	ms.RLock()
 	defer ms.RUnlock()
@@ -73,8 +68,6 @@ func (ms *MemStore) Get(id string) (mystore.Book, error) {
 	return mystore.Book{}, mystore.ErrNotFound
 }
 
-// Delete deletes the book with the given id. If no such id exist. an error
-// is returned.
 func (ms *MemStore) Delete(id string) error {
 	ms.Lock()
 	defer ms.Unlock()
@@ -87,7 +80,6 @@ func (ms *MemStore) Delete(id string) error {
 	return nil
 }
 
-// GetAll returns all the books in the store, in arbitrary order.
 func (ms *MemStore) GetAll() ([]mystore.Book, error) {
 	ms.RLock()
 	defer ms.RUnlock()

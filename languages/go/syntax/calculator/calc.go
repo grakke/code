@@ -1,10 +1,10 @@
-package main
+package calculator
 
 import (
 	"fmt"
-	"github.com/grakke/calculator/src/simplemath"
 	"os"
 	"strconv"
+	"syntax/calculator/simplemath"
 )
 
 var Usage = func() {

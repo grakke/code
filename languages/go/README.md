@@ -1,6 +1,13 @@
 # Golang
 
 - [go by example](https://gobyexample.com/)
+- 结构组织
+  - module  项目结构
+    - main.main 唯一性
+    - 有依赖管理
+    - 要不要按功能分 package
+    - 包做了内外的区分 项目里 internal 目录下的Go包只可以被本项目内部的包导入。项目外部无法导入这个internal目录下面的包
+  - package 功能结构
 
 ## [A Tour of Go](tour/)
 
@@ -25,6 +32,10 @@
 ## [Go语言第一课](go_first_class/) Tony Bai
 
 - 09 bookstore
+  - 典型三层结构
+    - 应用层
+    - 数据读写层
+    - server 逻辑框架
 - 27 instrument_trace
   - `go build github.com/grakke/instrument_trace/cmd/instrument`
   - `./instrument -w  examples/demo/demo.go`
@@ -38,14 +49,18 @@ curl -X POST -H "Content-Type:application/json" localhost:8080/book -d '{"id": "
 
 curl -X GET -H "Content-Type:application/json" localhost:8080/book/978-7-111-55842-2
 
-{"id":"978-7-111-55842-2","name":"The Go Programming Language","authors":["Alan A.A.Donovan"]}
-
 go test mutex_test.go  -test.bench=".*"  -cpu='2,8,16,32'
 ```
 
 ## [Go语言核心36讲](core/) 郝林
 
 ## [Golang syntax guide](./syntax/)
+
+- 基础
+  - 数据结构
+  - 函数
+  - 控制流
+- 并发
 
 ```sh
 go test -gcflags=all=-l -coverprofile=coverage.out
