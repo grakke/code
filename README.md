@@ -6,7 +6,7 @@
 - Linux
 - Networking 网络
 	- [网络编程实战](./basic/network/network_programming_practice/)
-		- [code]([网络编程实战](./basic/network/yolanda)
+		- [code](./basic/network/yolanda)
 - Web
 
 ## 客户端
@@ -21,7 +21,7 @@
 
 ### JAVA
 
-### [springboot](./languages/readinglist)
+#### [springboot](./languages/readinglist)
 
 ### [Golang](./languages/go/README.md)
 
