@@ -1,0 +1,5 @@
+*.bak
+
+/.idea
+db.sqlite3
+geckodriver.log

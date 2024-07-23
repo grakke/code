@@ -1,0 +1,74 @@
+plugins {
+    id "org.flywaydb.flyway" version "${flywayVersion}"
+    id 'idea'
+    id 'jacoco'
+    id 'java-library'
+    id "io.swagger.core.v3.swagger-gradle-plugin" version "2.2.8"
+    id 'java'
+    // Apply the application plugin to add support for building a CLI application in Java.
+    id 'application'
+}
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    // Use JCenter for resolving dependencies.
+    jcenter()
+}
+
+apply from: "$rootDir/gradle/config/scripts/style.gradle"
+
+dependencies {
+    implementation('org.apache.commons:commons-lang3:3.12.0')
+    implementation('org.apache.kafka:kafka_2.13:3.6.0')
+    implementation('org.apache.kafka:kafka-streams:3.6.0')
+    implementation('org.apache.kafka:kafka-clients:3.6.0')
+    implementation('com.google.guava:guava:30.1.1-jre')
+
+    // SLF4J 接口 log4j 实现
+    implementation('org.apache.logging.log4j:log4j-api:2.20.0')
+    implementation('org.apache.logging.log4j:log4j-core:2.20.0')
+    implementation('org.apache.logging.log4j:log4j-slf4j-impl:2.20.0')
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.4.11'
+
+    implementation('org.jongo:jongo:1.5.1')
+    implementation('org.mongodb:mongo-java-driver:3.+')
+
+    testImplementation(platform('org.junit:junit-bom:5.+'))
+    testImplementation('org.junit.jupiter:junit-jupiter')
+//    testCompile group: 'org.testng', name: 'testng', version: '7.7.0'
+    testImplementation('org.hamcrest:hamcrest:2.2')
+
+    testImplementation 'org.mockito:mockito-core:3.+'
+
+//    testImplementation 'org.seleniumhq.selenium:selenium-java:4.14.0'
+//    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testImplementation 'com.codeborne:selenide:6.19.1'
+
+    testImplementation 'org.jbehave:jbehave-core:5.2.0'
+//    testImplementation 'io.cucumber:cucumber-java:7.14.0'
+//    testImplementation 'io.cucumber:cucumber-junit:7.14.0'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+task testJBehave(type: Test) {
+    include('**/JBehaveTest/*')
+}
+
+task testCucumber(type: Test) {
+    include('**/CucumberTest/*')
+}
+
+style.excludePackages = []
+
+style.excludeClasses = []
+//
+//coverage.excludePackages = []
+//
+//coverage.excludeClasses = []

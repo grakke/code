@@ -1,0 +1,78 @@
+{
+  "name": "henry/code",
+  "description": "PHP code test",
+  "authors": [
+    {
+      "name": "Henry",
+      "email": "liboming88@yeah.net"
+    }
+  ],
+  "require": {
+    "twig/twig": "~3.5",
+    "php-amqplib/php-amqplib": "^3.5",
+    "webonyx/graphql-php": "^15.2",
+    "workerman/phpsocket.io": "^1.1",
+    "guzzlehttp/guzzle": "^7.5",
+    "phpmailer/phpmailer": "^6.0",
+    "lcobucci/jwt": "^3.2",
+    "monolog/monolog": "^2.1",
+    "elasticsearch/elasticsearch": "^8.6",
+    "symfony/http-foundation": "^6.2",
+    "illuminate/database": "^10.4",
+    "illuminate/events": "^10.4",
+    "slim/slim": "^4.11",
+    "slim/psr7": "^1.6",
+    "willdurand/geocoder": "^4.6",
+    "league/csv": "^9.9",
+    "apache/thrift": "^0.18.1",
+    "symfony/service-contracts": "3.2",
+    "ext-intl": "*",
+    "ext-json": "*",
+    "ext-bcmath": "*",
+    "ext-posix": "*",
+    "ext-pcntl": "*",
+    "ext-pdo": "*",
+    "ext-xmlwriter": "*",
+    "ext-simplexml": "*",
+    "ext-libxml": "*",
+    "ext-redis": "*",
+    "ext-sockets": "*",
+    "ext-openssl": "*"
+  },
+  "autoload": {
+    "files": [
+      "application/helper.php"
+    ],
+    "psr-4": {
+      "": "./",
+      "Tests\\": "tests/",
+      "Algorithms\\": "algorithms/",
+      "Application\\": "application/",
+      "Popp\\": "Popp/",
+      "Src\\": "src/",
+      "Tools\\": "tools/"
+    },
+    "classmap": [
+      "./",
+      "application",
+      "syntax"
+    ],
+    "exclude-from-classmap": [
+      "algorithms/leetcode"
+    ]
+  },
+  "require-dev": {
+    "filp/whoops": "^2.7",
+    "phing/phing": "^2.16",
+    "phpunit/phpunit": "^10.0",
+    "php-webdriver/webdriver": "^1.14",
+    "phpunit/php-code-coverage": "^10.0",
+    "phpspec/phpspec": "^1.4",
+    "behat/behat": "^3.13"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  }
+}

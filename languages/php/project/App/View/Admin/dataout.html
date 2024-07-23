@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<div class="form-div">
+  <form action="index.php?p=Admin&c=Dataout&a=dataout" name="" method='post'>
+    <select name="city" id="">
+			<?php foreach($data as $v):?>
+	        <option value="<?php echo $v['cityId']?>"><?php echo $v['typename']?></option>
+			<?php endforeach;?>
+	</select>
+	<input type="submit" value='提交'>
+  </form>
+
+
+	<form action="index.php?p=Admin&c=Dataout&a=dataout" name="" method='post'>
+		<input type="text" name="out" id="">
+  	</form>
+
+</div>
+
+
+</body>
+</html>

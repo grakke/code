@@ -1,0 +1,16 @@
+.php_cs.cache
+.phpunit.result.cache
+.php-cs-fixer.cache
+syntax/debug.log
+
+vendor
+node_modules
+logs
+algorithms/leetcode/editor/cn/doc/
+application/storage/logs
+project/Framework/Lib/captcha/
+project/Public/Uploads/
+project/Public/images/
+project/App/View/Home/images/
+.idea
+/.phpunit.cache/

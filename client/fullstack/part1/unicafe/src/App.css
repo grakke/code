@@ -1,0 +1,11 @@
+.App {
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+}
+
+#anecdote {
+    height: 60px;
+}

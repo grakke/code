@@ -1,0 +1,21 @@
+{
+  "name": "ecmascript-6",
+  "version": "1.0.0",
+  "description": "Ecmascript6",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/register": "^7.22.15",
+    "core-js": "^3.33.3",
+    "regenerator-runtime": "^0.13.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ECMAScript6"
+  ],
+  "author": "henry",
+  "license": "ISC"
+}

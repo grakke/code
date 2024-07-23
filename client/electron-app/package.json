@@ -1,0 +1,26 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Hello Electron!",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "npm run build && electron ./dist/main.js"
+  },
+  "keywords": [],
+  "author": "Henry <liboming88@yeah.net> (https://www.bluebird89.cyou/)",
+  "license": "MIT",
+  "dependencies": {
+    "pretty-bytes": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.20.55",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "electron": "^27.0.0",
+    "electron-prebuilt": "^0.35.6",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<script>
+    var today = new Date()
+    document.write("类型是：" + typeof (today) + "<br>值是：" + today + "<hr>");
+
+    var i = 0;
+    while (i < 100) {
+        document.write(i + " ");
+        i++;
+    }
+    document.write('<br>');
+    /*window 对象*/
+    var arr = [5, 6, 9, 40, 55, 61, 17, 38];
+    var i = 0;
+    for (var index in arr) {
+        i++;
+        document.write(i + ":" + arr[index] + "<br>");
+    }
+
+    var i = 1;
+    for (var name in window) {
+        document.write(i + ":" + name + "<br>");
+        i++;
+    }
+
+    document.write(window.innerWidth + ',' + document.documentElement.clientWidth + '<br>')
+
+    // window.alert(arr);
+    // window.prompt(arr);
+    function closeWIn() {
+        if (window.confirm(arr)) {
+            window.setTimeout('window.close()', 2000);
+        }
+    }
+
+
+</script>
+
+<body>
+    <input type="button" value='关闭窗口' onclick="closeWIn()">
+</body>
+
+</html>

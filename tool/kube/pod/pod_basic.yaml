@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: nginx
+spec:
+    hostNetwork: true
+    hostIPC: true
+    hostPID: true
+    nodeSelector:
+        disktype: ssd
+    hostAliases:
+        - ip: '10.1.2.3'
+          hostnames:
+              - 'foo.remote'
+              - 'bar.remote'
+    shareProcessNamespace: true
+    containers:
+        - name: nginx
+          image: nginx
+          lifecycle:
+              postStart:
+                  exec:
+                      command:
+                          [
+                              '/bin/sh',
+                              '-c',
+                              'echo Hello from the postStart handler > /usr/share/message',
+                          ]
+              preStop:
+                  exec:
+                      command: ['/usr/sbin/nginx', '-s', 'quit']
+          # 等同于设置 docker run 里的 -it（-i 即 stdin，-t 即 tty）参数。使用 shell 容器的 tty 跟这个容器进行交互
+        - name: shell
+          image: busybox
+          stdin: true
+          tty: true
+# kubectl attach -it nginx -c shell

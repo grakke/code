@@ -1,0 +1,13 @@
+@import './css/global';
+
+:global(.gold) {
+    background-color: gold;
+}
+
+:local(.aqua) {
+    background-color: aqua;
+}
+
+.localRed {
+    background-color: $base-color;
+}

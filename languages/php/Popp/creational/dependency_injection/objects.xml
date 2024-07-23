@@ -1,0 +1,22 @@
+<objects>
+    <class name="Popp\creational\factory\ApptEncoder">
+        <instance inst="Popp\creational\factory\BloggsApptEncoder"/>
+    </class>
+    <class name="Popp\creational\dependency_injection\TerrainFactory">
+        <arg num="0" inst="Popp\creational\prototype\EarthSea"/>
+        <arg num="1" inst="Popp\creational\prototype\MarsPlains"/>
+        <arg num="2" inst="Popp\creational\prototype\Forest"/>
+    </class>
+    <class name="Popp\creational\prototype\Sea">
+        <instance inst="Popp\creational\prototype\EarthSea"/>
+    </class>
+    <class name="Popp\creational\prototype\Plains">
+        <instance inst="Popp\creational\prototype\MarsPlains"/>
+    </class>
+    <class name="Popp\creational\prototype\Forest">
+        <instance inst="Popp\creational\prototype\EarthForest"/>
+    </class>
+    <class name="Popp\creational\dependency_injection\AppointmentMaker">
+        <arg num="0" inst="Popp\creational\factory\BloggsApptEncoder"/>
+    </class>
+</objects>

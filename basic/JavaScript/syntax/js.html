@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    // 1、原生JavaScript实现字符串长度截取
+
+    function cutstr(str, len) {
+        var temp;
+        var icount = 0;
+        var patrn = /[^\x00-\xff]/;
+        var strre = "";
+        for (var i = 0; i < str.length; i++) {
+            if (icount < len - 1) {
+                temp = str.substr(i, 1);
+                if (patrn.exec(temp) == null) {
+                    icount = icount + 1
+                } else {
+                    icount = icount + 2
+                }
+                strre += temp
+            } else {
+                break
+            }
+        }
+        return strre + "..."
+    }
+    // 2、原生JavaScript获取域名主机
+
+    function getHost(url) {
+        var host = "null";
+        if (typeof url == "undefined" || null == url) {
+            url = window.location.href;
+        }
+        var regex = /^\w+\:\/\/([^\/]*).*/;
+        var match = url.match(regex);
+        if (typeof match != "undefined" && null != match) {
+            host = match[1];
+        }
+        return host;
+    }
+    // 3、原生JavaScript清除空格
+
+    String.prototype.trim = function () {
+        var reExtraSpace = /^\s*(.*?)\s+$/;
+        return this.replace(reExtraSpace, "$1")
+    }
+    // 4、原生JavaScript替换全部
+
+    String.prototype.replaceAll = function (s1, s2) {
+        return this.replace(new RegExp(s1, "gm"), s2)
+    }
+    // 5、原生JavaScript转义html标签
+
+    function HtmlEncode(text) {
+        return text.replace(/&/g, '&amp').replace(/\"/g, '"').replace(/</g, '<').replace(/>/g, '>')
+    }
+    // 6、原生JavaScript还原html标签
+
+    function HtmlDecode(text) {
+        return text.replace(/&/g, '&').replace(/"/g, '\"').replace(/</g, '<').replace(/>/g, '>')
+    }
+    // 7、原生JavaScript时间日期格式转换
+
+    Date.prototype.Format = function (formatStr) {
+        var str = formatStr;
+        var Week = ['日', '一', '二', '三', '四', '五', '六'];
+        str = str.replace(/yyyy|YYYY/, this.getFullYear());
+        str = str.replace(/yy|YY/, (this.getYear() % 100) > 9 ? (this.getYear() % 100).toString() : '0' + (this.getYear() % 100));
+        str = str.replace(/MM/, (this.getMonth() + 1) > 9 ? (this.getMonth() + 1).toString() : '0' + (this.getMonth() + 1));
+        str = str.replace(/M/g, (this.getMonth() + 1));
+        str = str.replace(/w|W/g, Week[this.getDay()]);
+        str = str.replace(/dd|DD/, this.getDate() > 9 ? this.getDate().toString() : '0' + this.getDate());
+        str = str.replace(/d|D/g, this.getDate());
+        str = str.replace(/hh|HH/, this.getHours() > 9 ? this.getHours().toString() : '0' + this.getHours());
+        str = str.replace(/h|H/g, this.getHours());
+        str = str.replace(/mm/, this.getMinutes() > 9 ? this.getMinutes().toString() : '0' + this.getMinutes());
+        str = str.replace(/m/g, this.getMinutes());
+        str = str.replace(/ss|SS/, this.getSeconds() > 9 ? this.getSeconds().toString() : '0' + this.getSeconds());
+        str = str.replace(/s|S/g, this.getSeconds());
+        return str
+    }
+    // 8、原生JavaScript判断是否为数字类型
+
+    function isDigit(value) {
+        var patrn = /^[0-9]*$/;
+        if (patrn.exec(value) == null || value == "") {
+            return false
+        } else {
+            return true
+        }
+    }
+    // 9、原生JavaScript设置cookie值
+
+    function setCookie(name, value, Hours) {
+        var d = new Date();
+        var offset = 8;
+        var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+        var nd = utc + (3600000 * offset);
+        var exp = new Date(nd);
+        exp.setTime(exp.getTime() + Hours * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";path=/;expires=" + exp.toGMTString() + ";domain=x.com;"
+    }
+    // 10、原生JavaScript获取cookie值
+
+    function getCookie(name) {
+        var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+        if (arr != null) return unescape(arr[2]);
+        return null
+    }
+
+    // Back to top
+    $('a.top').click(function (e) {
+        e.preventDefault();
+        $(document.body).animate({ scrollTop: 0 }, 800);
+    });
+    HTML中得有一个按钮：
+
+    <!-- Create an anchor tag -->
+    <a class="top" href="#">Back to top</a>
+可以改变 scrollTop的值来定位滚动条的位置。
+
+    图片预加载
+    如果页面使用了很多不是最初加载便可见的图片，有必要进行预加载：
+
+    $.preloadImages = function () {
+        for (var i = 0; i < arguments.length; i++) {
+            $('img').attr('src', arguments[i]);
+        }
+    };
+    $.preloadImages('img/hover-on.png', 'img/hover-off.png');
+    判断图片是否完全加载
+    有时需要图片完全加载才能进行后面的操作，下面的这段脚本可以实现：
+
+    $('img').load(function () {
+        console.log('image load successful');
+    });
+你也可以通过带 id或者 class的 img标签来判断某张特定的图片是否完全加载。
+
+    自动修复损坏图片
+    如果图片损坏，可以用另外一张进行替换：
+
+    $('img').on('error', function () {
+        $(this).prop('src', 'img/broken.png');
+    });
+    Hover状态的类切换
+    当用户的鼠标指针悬浮在一个可以点击的元素上时，你可以通过添加一个 class改变它的视觉效果，鼠标指针离开该元素时，就移开刚刚添加的 class：
+
+    $('.btn').hover(function () {
+        $(this).addClass('hover');
+    }, function () {
+        $(this).removeClass('hover');
+    });
+一个更简单的方式是使用 toggleClass：
+
+    $('.btn').hover(function () {
+        $(this).toggleClass('hover');
+    });
+    贴士：在这种情况下，CSS可能是更快的解决方案，但仍然值得去了解这个。
+
+    输入框的不可编辑
+    有时，你想要表单的提交按钮或者文本框变的不可编辑，直到用户完成某个特定的动作，通过修改 input元素的disabled属性来实现：
+
+    $('input[type="submit"]').prop('disabled', true);
+再次调用 prop方法将 disabled值改为 false，就可以更改元素状态：
+
+    $('input[type="submit"]').prop('disabled', false);
+    停止链接加载
+    若你不想点击链接跳转到另一个页面或者重新加载页面，仅仅只想让它做点别的事情，如触发其它脚本，则需要阻止链接的默认行为：
+
+    $('a.no-link').click(function (e) {
+        e.preventDefault();
+    });
+    Fade / Slide切换
+Slideing 和 fading 是很常用的 JQuery 动画。如果你想要在用户产生点击事件时显示一个元素，可以用 fadeIn或者slideDown，若要实现第一次点击显示元素而第二次点击隐藏元素的效果，可以参考下面的脚本：
+
+    // Fade
+    $('.btn').click(function () {
+        $('.element').fadeToggle('slow');
+    });
+    // Toggle
+    $('.btn').click(function () {
+        $('.element').slideToggle('slow');
+    });
+    简单地手风琴
+    下面的这段脚本可以简单实现手风琴效果：
+
+    // Close all panels
+    $('#accordion').find('.content').hide();
+    // Accordion
+    $('#accordion').find('.accordion-header').click(function () {
+        var next = $(this).next();
+        next.slideToggle('fast');
+        $('.content').not(next).slideUp('fast');
+        return false;
+    });
+    让两个Div等高
+    有时，需要让两个Div保持等高，而不管两个Div的内容如何：
+
+    $('.div').css('min-height', $(.main - div).height());
+    var $columns = $('.column');
+    var height = 0;
+    $columns.each(function () {
+        if ($(this).height() > height) {
+            height = $(this).height();
+        }
+    });
+    $columns.height(height);
+    在上述的示例中，会循环一个元素集合，并将元素的高度设置成元素集合中高度最高的。若要所有 column保持同样地高度，则可以这样：
+
+    var $rows = $('.same-height-columns');
+    $rows.each(function () {
+        $(this).find('.column').height($(this).height());
+    });
+    在新的Tab / Window打开外链
+    在浏览器的新Tab / Window打开外链，并且在同一个Tab / Window打开同源的链接：
+
+    $('a[href^="http"]').attr('target', '_blank');
+    $('a[href^="//"]').attr('target', '_blank');
+    $('a[href^="' + window.location.origin + '"]').attr('target', '_self');
+    贴士：window.location.origin不能在IE10上正常工作。
+
+    通过文本查找元素
+利用 JQuery 的 contains()选择器可以查找一个包含特定文本的元素，如果文本不存在，元素则隐藏：
+
+    var search = $('#search').val();
+    $('div:not(:contains("' + search + '"))').hide();
+
+</script>
+
+<body>
+
+</body>
+
+</html>

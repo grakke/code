@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="raytracer" default="generate-autoloader">
+    <target name="generate-autoloader" description="Generate autoloader with PHPAB">
+        <exec executable="${basedir}/tools/phpab" taskname="phpab">
+            <arg value="--output"/>
+            <arg path="src/autoload.php"/>
+            <arg path="src"/>
+        </exec>
+
+        <exec executable="${basedir}/tools/phpab" taskname="phpab">
+            <arg value="--output"/>
+            <arg path="tests/autoload.php"/>
+            <arg path="tests/fakes"/>
+            <!--            <arg path="tests/src"/>-->
+        </exec>
+    </target>
+
+    <target name="update-tools" description="Update tools">
+        <exec executable="phive" taskname="phive" failonerror="true">
+            <arg value="--no-progress"/>
+            <arg value="update"/>
+        </exec>
+    </target>
+</project>

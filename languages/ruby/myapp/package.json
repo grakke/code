@@ -1,0 +1,17 @@
+{
+  "name": "rails_blog",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.1.7",
+    "@rails/activestorage": "^6.1.7",
+    "@rails/ujs": "^6.1.7",
+    "@rails/webpacker": "^5.4.4",
+    "serialize-javascript": "^5.0.1",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.46.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^4.15.1"
+  }
+}

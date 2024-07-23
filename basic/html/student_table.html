@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学员基本信息</title>
+    <style>
+        p {
+            font-size: 30px;
+            color: yellow;
+            border: 2px solid blue;
+            background: green;
+            width: 60%;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table align="center" cellspacing="2" cellpadding="3" width="800" border="0">
+        <caption>
+            <h2 style="font-size: x-large;color: blue">学员基本信息</h2>
+        </caption>
+
+        <form action="index.php" method="post">
+            <tr>
+                <th>姓名:</th>
+                <td><input type="text" name="username" id="" size="20"></td>
+            </tr>
+
+            <tr>
+                <th>性别:</th>
+                <td>
+                    <input type="radio" name="gender" value="0">男
+                    <input type="radio" name="gender" value="1">女
+                    <input type="radio" name="gender" value="2">保密
+                </td>
+            </tr>
+
+            <tr>
+                <th>学历:</th>
+                <td>
+                    <select name="edu" id="">
+                        <option> --请选择</option>
+                        <option value="1">高中</option>
+                        <option value="2">大学</option>
+                        <option value="3">研究生</option>
+                        <option value="4">其它</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th></th>
+                <td>
+                    <p><input type="checkbox" name="course[]" id="4">
+                        Linux</p>
+                    <p><input type="checkbox" name="course[]" id="5">
+                        MySQL</p>
+                    <p><input type="checkbox" name="course[]" id="6">
+                        PHP</p>
+                    <p><input type="checkbox" name="course[]" id="7">
+                        Apache</P>
+                </td>
+            </tr>
+
+            <tr>
+                <th>自我评价:</th>
+                <td>
+                    <textarea name="evl" id="" cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center">
+                    <input type="submit" value="提交" name="submit">
+                    <input type="reset" value="重置" name="reset">
+                </td>
+            </tr>
+        </form>
+    </table>
+
+    <div id="wrapper">
+        <div class="tit">
+            <h3><a href="">栏目标题</a></h3>
+        </div>
+        <div class="list">
+            <ul>
+                <li><a>第一个列表选项</a></li>
+                <li><a>第二个列表选项</a></li>
+                <li><a>第三个列表选项</a></li>
+                <li><a>第四个列表选项</a></li>
+                <li><a>第五个列表选项</a></li>
+                <li><a>第六个列表选项</a></li>
+                <li><a>第七个列表选项</a></li>
+                <li><a>第八个列表选项</a></li>
+                <li><a>第九个列表选项</a></li>
+                <li><a>第十个列表选项</a></li>
+                <li><a>第十一个列表选项</a></li>
+                <li><a>第十二个列表选项</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ message }}</p>
+            <p>Using text interpolation: {{ rawHtml }}</p>
+            <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+            <button @click="count++">{{ count }}</button>
+            <div :id></div>
+            <button :disabled="isButtonDisabled">Button</button>o {{ number + 1
+            }}
+            {{ ok ? 'YES' : 'NO' }} {{ message.split('').reverse().join('')
+            }}
+
+            <div :id="`list-${id}`"></div>
+        </div>
+    </body>
+    <script type="module">
+        import {
+            createApp,
+            ref,
+        } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+        createApp({
+            data() {
+                return {
+                    count: 0,
+                    rawHtml: ` <span style="color: red">This should be red.</span>`,
+                    id: "container",
+                    class: "wrapper",
+                };
+            },
+            setup() {
+                const message = ref("Hello Vue!");
+                return {
+                    message,
+                };
+            },
+        }).mount("#app");
+    </script>
+</html>
