@@ -1,0 +1,10 @@
+
+[submodule "languages/rust/inviting-rust"]
+	path = languages/rust/inviting-rust
+	url = git@github.com:ZhangHanDong/inviting-rust.git
+[submodule "languages/geektime-zero"]
+	path = languages/geektime-zero
+	url = git@github.com:dreamhead/geektime-zero.git
+[submodule "basic/arch"]
+	path = basic/arch
+	url = git@github.com:qiniu/arch.git
