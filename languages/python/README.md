@@ -211,5 +211,5 @@ allure serve report
 
 ## 课程
 
-- [Python 核心技术与实战](./python_core_action/)
-- [Mooc](./mooc_tmc/)
+- [Python 核心技术与实战](./python_core_action/) 极客时间
+- [Python Programming MOOC](./Python Programming MOOC/)
