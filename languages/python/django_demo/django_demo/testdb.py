@@ -36,7 +36,6 @@ def testdb(request):
 
     # return HttpResponse("<p>修改成功</p>")
 
-
     # test1 = Test.objects.get(id=2)
     # test1.delete()
 

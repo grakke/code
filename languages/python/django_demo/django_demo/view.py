@@ -15,6 +15,7 @@ def test(request):
     context['hello'] = 'Hello World!'
     return render(request, 'test.html', context)
 
+
 def world(request):
     if request.method == 'POST':
         username = request.POST.get('username', None)

@@ -51,7 +51,7 @@ scrapy crawl douban_spider -o douban.csv
   - 使用一个 列表来记录检查过的人
 - 运行时间: O(人数 + 边数)，通常写作O(V + E)，其中V为顶点(vertice)数，E为边数
 
-## Django
+## [Django](./django_demo/)
 
 - [Django](https://developer.mozilla.org/zh-CN/docs/Learn/Server-side/Django)
 - [HelloDjango - Django博客教程](https://www.zmrenwu.com/courses/hellodjango-blog-tutorial/)

@@ -20,6 +20,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import RedirectView
+from django.conf.urls import url
+from cmdb import views
+from . import view, testdb, search, search2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,4 +40,14 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
+]
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^world$', view.hello),
+    url(r'^index/', views.index),
+    url(r'^hello$', view.test),
+    url(r'^testdb$', testdb.testdb),
+    url(r'^search-form$', search.search_form),
+    url(r'^search$', search.search),
+    url(r'^search-post$', search2.search_post),
 ]
