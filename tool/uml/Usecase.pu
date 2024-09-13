@@ -1,0 +1,22 @@
+@startuml Usecase
+(Usecase One)
+(Usecase Two) as (UC2)
+usecase UC3
+usecase (Last\nusecase) as UC4
+
+:Actor 1:
+:Another\nactor: as Men2
+actor Men3
+actor :Last actor: as Men4
+
+left to right direction
+skinparam packageStyle rect
+actor customer
+actor clerk
+rectangle checkout {
+    customer -- (checkout)
+    (checkout) .> (payment) : include
+    (help) .> (checkout) : extends
+    (checkout) -- clerk
+}
+@enduml

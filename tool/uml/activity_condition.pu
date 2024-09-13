@@ -1,0 +1,12 @@
+@startuml Activity
+(*) --> "Initialisation"
+
+if " Some Test" then
+    -->[true] "First Activity"
+    -->[You can put also labels] "Second Activity"
+    -right-> (*)
+else
+    ->[false] "Something else"
+    -->[Ending process] (*)
+endif
+@enduml

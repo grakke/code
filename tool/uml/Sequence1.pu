@@ -1,4 +1,4 @@
-@startuml
+@startuml Sequence1
 actor Foo1
 boundary Foo2
 control Foo3

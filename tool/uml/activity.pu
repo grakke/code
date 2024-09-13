@@ -1,0 +1,13 @@
+@startuml Activity
+(*) --> "1"
+-right-> "2"
+-down-> "3"
+-left-> "4"
+-le-> "5"
+-up-> "6"
+-l-> "7"
+-do-> "8"
+-d-> "9"
+-> "10"
+-->(*)
+@enduml

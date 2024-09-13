@@ -1,0 +1,74 @@
+@startuml Sequence
+actor "The <b>Famous</b> Bob" as Bob #red
+
+' The only defference between actor
+' and participant is the drawing
+participant Alice
+note left of Alice #aqua
+    This is <back:cadetblue><size:18>displayed</size></back>
+    left of Alice.
+end note
+note over Alice: This displayed over Alice.
+note over Bob, Alice
+    This is yet another
+    example of
+    a long note.
+end note
+participant "I have a really\nlong name" as L #99ff99
+/' You can also declare:
+    participant L as "I have a really\nlong name" #99ff99
+'/
+
+title Simple Comunication example
+
+autonumber
+Alice -[#red]> Bob: Authentication Request
+note left: this is a first note
+
+alt successful case
+    Bob -[#0000FF]-> Alice: Authentication Accepted
+    note right: this is anther note
+else some kind of failure
+    Bob -> Alice: Atuhentication Failue
+    group My own label
+        Alice -> Log : Log attack start
+        loop 1000 times
+            Alice -> Bob: DNS Attack
+        end
+        Alice -> Log : Log alice end
+    end
+else Another type of failue
+    Bob -> Alice: Please repeat
+end
+
+legend right
+    Short
+    legend
+endlegend
+
+Bob -> L: Log transaction
+
+Alice -> Alice: This is a signal to self.\nIt also demonstrates\nmultiline \ntext
+note left
+    a note
+    can also be defined
+    on several lines
+end note
+
+newpage
+
+autonumber 0 "<b>(<u>##</u>)"
+Bob -> Alice
+Bob ->> Alice
+Bob -\ Alice
+Bob \\- Alice
+Bob //-- Alice
+
+autonumber 40 10 "<font color=red>Message 0  "
+Bob ->o Alice
+Bob o\\-- Alice
+
+autonumber "<b>[000]"
+Bob <-> Alice
+Bob <<-\\o Alice
+@enduml

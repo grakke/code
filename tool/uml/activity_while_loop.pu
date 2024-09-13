@@ -1,0 +1,8 @@
+@startuml Activity
+start
+  while (data available?) is (not empty)
+    :read data;
+    :generate diagrams;
+  end while (empty)
+stop
+@enduml

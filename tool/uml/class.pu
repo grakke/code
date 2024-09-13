@@ -1,0 +1,60 @@
+@startuml 类图
+
+package "Class" <<Node>> {
+    class Flight {
+        - flightNumber : Integer
+        + String model
+        * void methods()
+        {static} String id
+        {abstract} void fly()
+    }
+}
+
+Object <|-- ArrayList :Extension
+Object : equals()
+ArrayList : Object[] elementData
+ArrayList : size()
+
+
+newpage
+
+Teacher "1" -- "5..10" Pupil
+School "1" *-- "many" Class: contains
+note right:Composition
+Class "1"  o--  "many" Pupil: aggregation
+note right:Aggregation
+
+newpage
+class Car
+Driver - Car : drives >
+Car *- Wheel : have 4 >
+Car -- Person : < owns
+
+newpage
+
+interface List
+interface Collection
+abstract class AbstractList
+abstract AbstractCollection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+    Object[]
+    elementData size()
+}
+
+enum TimeUnit {
+    DAYS
+    HOURS
+    MINUTES
+}
+
+annotation SuppressWarnings
+
+@enduml
