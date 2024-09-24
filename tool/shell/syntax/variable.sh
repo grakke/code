@@ -22,17 +22,17 @@ echo "Print Variable: "$your_name . ${your_name}
 
 # for-loop
 for skill in Ada Coffe Action Java; do
-  echo "I am good at ${skill} Script"
+    echo "I am good at ${skill} Script"
 done
 
 # list folder's files
 directory=$(
-  cd $(dirname $0)
-  pwd -P
+    cd $(dirname $0)
+    pwd -P
 )
 echo "List current directory:"
 for file in $(ls $directory); do
-  echo $file
+    echo $file
 done
 
 # readonly can't modify and delete,

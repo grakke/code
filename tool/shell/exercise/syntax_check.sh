@@ -1,5 +1,6 @@
 # 写一个脚本，判断一个指定的脚本是否是语法错误；如果有错误，则提醒用户键入Q或者q无视错误并退出其它任何键可以通过vim打开这个指定的脚本
 #!/bin/bash
+
 read -p “please input check script-> ” file
 if [ -f $file ]; then
 sh -n $file > /dev/null 2>&1

@@ -8,13 +8,13 @@ echo "\"It is great.\""
 read name
 echo "$name It is Ok."
 
-echo  "OK! \n"
+echo "OK! \n"
 echo "It is a test"
 
-echo  "OK! \c"
+echo "OK! \c"
 echo "It is a new test"
 
-echo "It is test" > 'output'
+echo "It is test" >'output'
 
 echo 'date'
 echo '$name'

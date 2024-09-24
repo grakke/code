@@ -2,4 +2,4 @@
 
 . ./resource
 
-echo "My website:$url";
+echo "My website:$url"

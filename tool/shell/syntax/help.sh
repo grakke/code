@@ -12,7 +12,7 @@
 ###   -h        Show this message.
 
 help() {
-  sed -rn 's/^### ?//;T;p' "$0"
+    sed -rn 's/^### ?//;T;p' "$0"
 }
 
 # if [ ${#@} -ne 0 ] && [ "${@#"--help"}" = "" ]; then
@@ -21,6 +21,6 @@ help() {
 # fi
 
 if [[ $# == 0 ]] || [[ "$1" == "-h" ]]; then
-  help
-  exit 1
+    help
+    exit 1
 fi
