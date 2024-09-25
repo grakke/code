@@ -11,11 +11,9 @@ block content
       th Name
       th Password
       th Profession
-	  -var wtf = dataset.length
-    -var n = 0
     each item in data
       tr
-        td item.id
-        td itme.name
-        td item.password
-        td val.profession
+        td #{item.id}
+        td #{item.name}
+        td #{item.password}
+        td #{item.profession}

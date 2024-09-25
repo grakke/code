@@ -7,6 +7,9 @@ a {
 	color: #00B7FF;
 }
 
-body {
-	background-color: #00B7FF;
+.sidebar-nav {
+    width: 350px;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
 }
