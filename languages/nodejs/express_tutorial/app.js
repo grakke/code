@@ -6,6 +6,8 @@ const logger = require("morgan");
 require("dotenv").config();
 const compression = require("compression");
 const helmet = require("helmet");
+var { createHandler } = require("graphql-http/lib/use/express");
+const schema = require("./graphql/schema");
 
 const app = express();
 
@@ -35,6 +37,20 @@ const catalogRouter = require("./routes/catalog");
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/catalog", catalogRouter);
+
+// The root provides a resolver function for each API endpoint
+var root = {
+  hello() {
+    return "Hello world!";
+  },
+};
+app.all(
+  "/graphql",
+  createHandler({
+    schema: schema,
+    rootValue: root,
+  })
+);
 
 app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
