@@ -6,9 +6,9 @@
     "@rails/activestorage": "^6.1.7",
     "@rails/ujs": "^6.1.7",
     "@rails/webpacker": "^5.4.4",
-    "serialize-javascript": "^5.0.1",
+    "serialize-javascript": "^6.0.2",
     "turbolinks": "^5.2.0",
-    "webpack": "^4.46.0"
+    "webpack": "^5.95.0"
   },
   "version": "0.1.0",
   "devDependencies": {
