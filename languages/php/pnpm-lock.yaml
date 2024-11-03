@@ -16,8 +16,8 @@ importers:
         specifier: ^1.7.7
         version: 1.7.7
       bootstrap:
-        specifier: ^5.0.1
-        version: 5.0.1(@popperjs/core@2.11.8)
+        specifier: ^5.0.2
+        version: 5.0.2(@popperjs/core@2.11.8)
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1090,8 +1090,8 @@ packages:
       jquery: 1.9.1 - 3
       popper.js: ^1.16.1
 
-  bootstrap@5.0.1:
-    resolution: {integrity: sha512-Fl79+wsLOZKoiU345KeEaWD0ik8WKRI5zm0YSPj2oF1Qr+BO7z0fco6GbUtqjoG1h4VI89PeKJnMsMMVQdKKTw==}
+  bootstrap@5.0.2:
+    resolution: {integrity: sha512-1Ge963tyEQWJJ+8qtXFU6wgmAVj9gweEjibUdbmcCEYsn38tVwRk8107rk2vzt6cfQcRr3SlZ8aQBqaD8aqf+Q==}
     peerDependencies:
       '@popperjs/core': ^2.9.2
 
@@ -1123,11 +1123,6 @@ packages:
 
   browserify-zlib@0.2.0:
     resolution: {integrity: sha512-Z942RysHXmJrhqk88FmKBVq/v5tqmSkDz7p54G/MGyjMnCFFnC79XWNbg+Vta8W6Wb2qtSZTSxIGkJrRpCFEiA==}
-
-  browserslist@4.21.9:
-    resolution: {integrity: sha512-M0MFoZzbUrRU4KNfCrDLnvyE7gub+peetoTid3TBIqtunaDJyXlwhakT+/VkvSXcfIzFfK/nkCs4nmyTmxdNSg==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
 
   browserslist@4.24.2:
     resolution: {integrity: sha512-ZIc+Q62revdMcqC6aChtW4jz3My3klmCO1fEmINZY/8J3EpBg5/A/D0AKmBveUh6pgoeycoMkVMko84tuYS+Gg==}
@@ -1172,11 +1167,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001516:
-    resolution: {integrity: sha512-Wmec9pCBY8CWbmI4HsjBeQLqDTqV91nFVR83DnZpYyRnPI1wePDsTg0bGLPC5VU/3OIZV1fmxEea1b+tFKe86g==}
-
-  caniuse-lite@1.0.30001675:
-    resolution: {integrity: sha512-/wV1bQwPrkLiQMjaJF5yUMVM/VdRPOCU8QZ+PmG6uW6DvYSrNY1bpwHI/3mOcUosLaJCzYDi5o91IQB51ft6cg==}
+  caniuse-lite@1.0.30001677:
+    resolution: {integrity: sha512-fmfjsOlJUpMWu+mAAtZZZHz7UEwsUxIIvu1TJfO1HqFQvB/B+ii0xr9B5HpbZY/mC4XZ8SvjHJqtAY6pDPQEog==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1512,11 +1504,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.4.464:
-    resolution: {integrity: sha512-guZ84yoou4+ILNdj0XEbmGs6DEWj6zpVOWYpY09GU66yEb0DSYvP/biBPzHn0GuW/3RC/pnaYNUWlQE1fJYtgA==}
-
-  electron-to-chromium@1.5.49:
-    resolution: {integrity: sha512-ZXfs1Of8fDb6z7WEYZjXpgIRF6MEu8JdeGA0A40aZq6OQbS+eJpnnV49epZRna2DU/YsEjSQuGtQPPtvt6J65A==}
+  electron-to-chromium@1.5.50:
+    resolution: {integrity: sha512-eMVObiUQ2LdgeO1F/ySTXsvqvxb6ZH2zPGaMYsWzRDdOddUa77tdmI0ltg+L16UpbWdhPmuF3wIQYyQq65WfZw==}
 
   elliptic@6.6.0:
     resolution: {integrity: sha512-dpwoQcLc/2WLQvJvLRHKZ+f9FgOdjnq11rurqwekGQygGPsYSK29OMMD2WalatiqQ+XGFDglTNixpPfI+lpaAA==}
@@ -2220,9 +2209,6 @@ packages:
 
   node-notifier@9.0.1:
     resolution: {integrity: sha512-fPNFIp2hF/Dq7qLDzSg4vZ0J4e9v60gJR+Qx7RbjbWqzPDdEqeVpEx5CFeDAELIl+A/woaaNn1fQ5nEVerMxJg==}
-
-  node-releases@2.0.13:
-    resolution: {integrity: sha512-uYr7J37ae/ORWdZeQ1xxMJe3NtdmqMC/JZK+geofDrkLUApKRHPd18/TxtBOJ4A0/+uUIliorNrfYV6s1b02eQ==}
 
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
@@ -3103,12 +3089,6 @@ packages:
   unpipe@1.0.0:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
-
-  update-browserslist-db@1.0.11:
-    resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
 
   update-browserslist-db@1.1.1:
     resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
@@ -4498,8 +4478,8 @@ snapshots:
 
   autoprefixer@10.4.14(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
-      caniuse-lite: 1.0.30001516
+      browserslist: 4.24.2
+      caniuse-lite: 1.0.30001677
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -4592,7 +4572,7 @@ snapshots:
       jquery: 3.7.0
       popper.js: 1.16.1
 
-  bootstrap@5.0.1(@popperjs/core@2.11.8):
+  bootstrap@5.0.2(@popperjs/core@2.11.8):
     dependencies:
       '@popperjs/core': 2.11.8
 
@@ -4650,17 +4630,10 @@ snapshots:
     dependencies:
       pako: 1.0.11
 
-  browserslist@4.21.9:
-    dependencies:
-      caniuse-lite: 1.0.30001516
-      electron-to-chromium: 1.4.464
-      node-releases: 2.0.13
-      update-browserslist-db: 1.0.11(browserslist@4.21.9)
-
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001675
-      electron-to-chromium: 1.5.49
+      caniuse-lite: 1.0.30001677
+      electron-to-chromium: 1.5.50
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
 
@@ -4699,14 +4672,12 @@ snapshots:
 
   caniuse-api@3.0.0:
     dependencies:
-      browserslist: 4.21.9
-      caniuse-lite: 1.0.30001516
+      browserslist: 4.24.2
+      caniuse-lite: 1.0.30001677
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001516: {}
-
-  caniuse-lite@1.0.30001675: {}
+  caniuse-lite@1.0.30001677: {}
 
   chalk@2.4.2:
     dependencies:
@@ -5095,9 +5066,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.4.464: {}
-
-  electron-to-chromium@1.5.49: {}
+  electron-to-chromium@1.5.50: {}
 
   elliptic@6.6.0:
     dependencies:
@@ -5695,7 +5664,7 @@ snapshots:
 
   launch-editor@2.6.0:
     dependencies:
-      picocolors: 1.0.0
+      picocolors: 1.1.1
       shell-quote: 1.8.1
 
   lilconfig@2.1.0: {}
@@ -5870,8 +5839,6 @@ snapshots:
       uuid: 8.3.2
       which: 2.0.2
 
-  node-releases@2.0.13: {}
-
   node-releases@2.0.18: {}
 
   normalize-path@3.0.0: {}
@@ -6008,7 +5975,7 @@ snapshots:
 
   postcss-colormin@5.3.1(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       caniuse-api: 3.0.0
       colord: 2.9.3
       postcss: 8.4.26
@@ -6016,7 +5983,7 @@ snapshots:
 
   postcss-convert-values@5.1.3(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       postcss: 8.4.26
       postcss-value-parser: 4.2.0
 
@@ -6059,7 +6026,7 @@ snapshots:
 
   postcss-merge-rules@5.1.4(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       caniuse-api: 3.0.0
       cssnano-utils: 3.1.0(postcss@8.4.26)
       postcss: 8.4.26
@@ -6079,7 +6046,7 @@ snapshots:
 
   postcss-minify-params@5.1.4(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       cssnano-utils: 3.1.0(postcss@8.4.26)
       postcss: 8.4.26
       postcss-value-parser: 4.2.0
@@ -6141,7 +6108,7 @@ snapshots:
 
   postcss-normalize-unicode@5.1.1(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       postcss: 8.4.26
       postcss-value-parser: 4.2.0
 
@@ -6164,7 +6131,7 @@ snapshots:
 
   postcss-reduce-initial@5.1.2(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       caniuse-api: 3.0.0
       postcss: 8.4.26
 
@@ -6200,7 +6167,7 @@ snapshots:
   postcss@8.4.26:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.1.1
       source-map-js: 1.0.2
 
   pretty-time@1.1.0: {}
@@ -6623,7 +6590,7 @@ snapshots:
 
   stylehacks@5.1.1(postcss@8.4.26):
     dependencies:
-      browserslist: 4.21.9
+      browserslist: 4.24.2
       postcss: 8.4.26
       postcss-selector-parser: 6.0.13
 
@@ -6652,7 +6619,7 @@ snapshots:
       css-select: 4.3.0
       css-tree: 1.1.3
       csso: 4.2.0
-      picocolors: 1.0.0
+      picocolors: 1.1.1
       stable: 0.1.8
 
   tapable@2.2.1: {}
@@ -6739,12 +6706,6 @@ snapshots:
   universalify@2.0.0: {}
 
   unpipe@1.0.0: {}
-
-  update-browserslist-db@1.0.11(browserslist@4.21.9):
-    dependencies:
-      browserslist: 4.21.9
-      escalade: 3.1.1
-      picocolors: 1.0.0
 
   update-browserslist-db@1.1.1(browserslist@4.24.2):
     dependencies:
