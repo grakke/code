@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: k8s-combat-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: www.service1.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: k8s-combat-service
+                port:
+                  number: 8081
+            path: /
+            pathType: Prefix
+    - host: www.service2.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: k8s-combat-service-2
+                port:
+                  number: 8081
+            path: /
+            pathType: Prefix

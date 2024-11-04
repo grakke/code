@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: k8s-combat
-          image: bluebird89/k8s-combat:v2
+          image: bluebird89/k8s-combat:v3
           imagePullPolicy: Always
           volumeMounts:
             - name: app

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/rs/zerolog/log"
 )
@@ -24,6 +25,11 @@ func main() {
 		fmt.Fprint(w, resp.Status)
 	 },
 	)
+
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		name, _ := os.Hostname()
+		fmt.Fprint(w, name)
+	 })
 
 	http.ListenAndServe(":8081", nil)
  }
