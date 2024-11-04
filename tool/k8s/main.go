@@ -156,13 +156,18 @@ type server struct {
 // SayHello implements helloworld.GreeterServer
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	defer apiCounter.Add(ctx, 1)
-	md, _ := metadata.FromIncomingContext(ctx)
+	md, ok := metadata.FromIncomingContext(ctx)
 	log.Printf("Received: %v, md: %v", in.GetName(), md)
+	var version string
+	if ok {
+		version = md.Get("version")[0]
+	}
+	log.Printf("Received: %v, version: %s", in.GetName(), version)
 	name, _ := os.Hostname()
 	span := trace.SpanFromContext(ctx)
 	span.SetAttributes(attribute.String("request.name", in.Name))
 	s.span(ctx)
-	return &pb.HelloReply{Message: fmt.Sprintf("hostname:%s, in:%s, md:%v", name, in.Name, md)}, nil
+	return &pb.HelloReply{Message: fmt.Sprintf("hostname:%s, in:%s, md:%v, version:%s", name, in.Name, md, version)}, nil
 }
 
 func (s *server) span(ctx context.Context) {
