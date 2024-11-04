@@ -19,6 +19,8 @@
 
 ### C|C++
 
+- [深入 C 语言和程序运行原理](./languages/c/dive_into_c_language_and_program_run/)
+
 ### JAVA
 
 #### [springboot](./languages/readinglist)
