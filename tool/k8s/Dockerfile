@@ -1,4 +1,4 @@
-FROM golang:1.21 AS dependencies
+FROM golang:1.22 AS dependencies
 ENV GOPROXY=https://goproxy.cn,direct
 WORKDIR /go/src/app
 COPY go.mod .
@@ -6,7 +6,7 @@ COPY go.mod .
 RUN --mount=type=ssh go mod download
 
 # 第二阶段：构建可执行文件
-FROM golang:1.21 AS builder
+FROM golang:1.22 AS builder
 WORKDIR /go/src/app
 COPY . .
 #COPY --from=dependencies /go/pkg /go/pkg
