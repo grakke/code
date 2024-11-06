@@ -1,5 +1,4 @@
-
-## Running the app
+# Running the app
 
 ```bash
 # development
@@ -28,7 +27,3 @@ $ npm run test:cov
 ## Graphql
 
 * Apollo-server
-
-## License
-
-  Nest is [MIT licensed](LICENSE).
