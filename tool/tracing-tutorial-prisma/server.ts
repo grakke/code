@@ -1,4 +1,3 @@
-
 import initializeTracing from "./tracing";
 const tracer = initializeTracing("express-server")
 
