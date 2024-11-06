@@ -12,4 +12,13 @@ npm run dev
 
 ## steps
 
+- Data Modeling
+- GraphQL API
 - fetching data server-side
+
+```sh
+npm install --save-dev prisma
+npx prisma init
+
+npx prisma db seed
+```
