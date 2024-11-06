@@ -1,4 +1,3 @@
-
 [submodule "languages/rust/inviting-rust"]
 	path = languages/rust/inviting-rust
 	url = git@github.com:ZhangHanDong/inviting-rust.git
