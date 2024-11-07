@@ -8,6 +8,10 @@ generator client {
     provider = "prisma-client-js"
 }
 
+generator pothos {
+    provider = "prisma-pothos-types"
+}
+
 datasource db {
     provider = "postgresql"
     url      = env("DATABASE_URL")
@@ -37,5 +41,5 @@ model Link {
     url         String
     imageUrl    String
     category    String
-    users      User[]
+    users       User[]
 }

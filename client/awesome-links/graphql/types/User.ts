@@ -14,24 +14,24 @@ const Role = builder.enumType('Role', {
   values: ['USER', 'ADMIN'] as const,
 })
 
-builder.queryField('favorites', (t) =>
-  t.prismaField({
-    type: 'User',
-    resolve: async (query, _parent, _args, ctx) => {
-      if (!(await ctx).user) {
-        throw new Error("You have to be logged in to perform this action")
-      }
+// builder.queryField('favorites', (t) =>
+//   t.prismaField({
+//     type: 'User',
+//     resolve: async (query, _parent, _args, ctx) => {
+//       if (!(await ctx).user) {
+//         throw new Error("You have to be logged in to perform this action")
+//       }
 
-      const user = await prisma.user.findUnique({
-        ...query,
-        where: {
-          email: (await ctx).user?.email,
-        }
-      })
+//       const user = await prisma.user.findUnique({
+//         ...query,
+//         where: {
+//           email: (await ctx).user?.email,
+//         }
+//       })
 
-      if (!user) throw Error('User does not exist');
+//       if (!user) throw Error('User does not exist');
 
-      return user
-    }
-  })
-)
+//       return user
+//     }
+//   })
+// )
