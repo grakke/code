@@ -3995,8 +3995,8 @@ packages:
     peerDependencies:
       markdown-it: '>= 13.0.0'
 
-  markdown-it@13.0.1:
-    resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
+  markdown-it@13.0.2:
+    resolution: {integrity: sha512-FtwnEuuK+2yVU7goGn/MJ0WBZMM9ZPgU9spqlFs7/A/pDIUNSOQZhUgOqYCficIuR2QaFnrt8LHqBWsbTAoI5w==}
     hasBin: true
 
   matcher-collection@1.1.2:
@@ -9234,8 +9234,8 @@ snapshots:
       js-yaml: 4.1.0
       leek: 0.0.24
       lodash.template: 4.5.0
-      markdown-it: 13.0.1
-      markdown-it-terminal: 0.4.0(markdown-it@13.0.1)
+      markdown-it: 13.0.2
+      markdown-it-terminal: 0.4.0(markdown-it@13.0.2)
       minimatch: 7.4.6
       morgan: 1.10.0
       nopt: 3.0.6
@@ -11046,15 +11046,15 @@ snapshots:
     dependencies:
       object-visit: 1.0.1
 
-  markdown-it-terminal@0.4.0(markdown-it@13.0.1):
+  markdown-it-terminal@0.4.0(markdown-it@13.0.2):
     dependencies:
       ansi-styles: 3.2.1
       cardinal: 1.0.0
       cli-table: 0.3.11
       lodash.merge: 4.6.2
-      markdown-it: 13.0.1
+      markdown-it: 13.0.2
 
-  markdown-it@13.0.1:
+  markdown-it@13.0.2:
     dependencies:
       argparse: 2.0.1
       entities: 3.0.1
