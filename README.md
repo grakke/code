@@ -13,6 +13,7 @@
 
 - Vue
 - React
+    - nextjs
 - Flutter
 
 ## 语言
