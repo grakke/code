@@ -19,7 +19,8 @@ npm run dev
     - Resolvers must match the same structure as the schema and vice-versa. Otherwise, you can end up with buggy and unpredictable behavior. These two components can accidentally go out of sync when the schema evolves or the resolver implementation changes.
     - The GraphQL schema is defined as strings, so no auto-completion and build-time error checks for the SDL code.
   - Pothos is a GraphQL schema construction library where you define your GraphQL schema using code.
-- fetching data server-side
+- Authentication
+  - <https://auth0.com/>
 
 ```sh
 npm install --save-dev prisma
@@ -31,6 +32,8 @@ npx prisma migrate dev --name init
 npx prisma db seed
 
 npx prisma generate
+
+npx ngrok http 3000 --authtoken "3kno4FFUks9NMDCyw4aWN_57QQzZbin7nMwp29Zzyae"
 ```
 
 ```graphql
