@@ -22,4 +22,18 @@ public class FileTodoItemRepositoryTest {
         final Iterable<TodoItem> items = repository.findAll();
         assertThat(items).hasSize(0);
     }
+
+    @Override
+    public Iterable<TodoItem> findAll() {
+        if (this.file.length() == 0) {
+            return ImmutableList.of();
+        }
+
+        try {
+            final CollectionType type = typeFactory.constructCollectionType(List.class, TodoItem.class);
+            return mapper.readValue(this.file, type);
+        } catch (IOException e) {
+            throw new TodoException("Fail to read todo items", e);
+        }
+    }
 }
