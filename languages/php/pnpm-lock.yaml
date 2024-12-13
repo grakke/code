@@ -16,8 +16,8 @@ importers:
         specifier: ^1.7.7
         version: 1.7.7
       bootstrap:
-        specifier: ^5.1.2
-        version: 5.1.2(@popperjs/core@2.11.8)
+        specifier: ^5.1.3
+        version: 5.1.3(@popperjs/core@2.11.8)
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1083,8 +1083,8 @@ packages:
       jquery: 1.9.1 - 3
       popper.js: ^1.16.1
 
-  bootstrap@5.1.2:
-    resolution: {integrity: sha512-me838a7TSEkldKyplkx21dqFm16+9NbH/rCj3Myo+h2cByyjckqV4m0OnS8QBsSDEoBv8R2jHqfulGQXpvM8Bw==}
+  bootstrap@5.1.3:
+    resolution: {integrity: sha512-fcQztozJ8jToQWXxVuEyXWW+dSo8AiXWKwiSSrKWsRB/Qt+Ewwza+JWoLKiTuQLaEPhdNAJ7+Dosc9DOIqNy7Q==}
     peerDependencies:
       '@popperjs/core': ^2.10.2
 
@@ -2850,8 +2850,9 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.1:
-    resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
+  shell-quote@1.8.2:
+    resolution: {integrity: sha512-AzqKpGKjrj7EM6rKVQEPpB288oCfnrEIuyoT9cyF4nmGa7V8Zk6f7RRqYisX8X9m+Q7bd632aZW4ky7EhbQztA==}
+    engines: {node: '>= 0.4'}
 
   shellwords@0.1.1:
     resolution: {integrity: sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==}
@@ -4561,7 +4562,7 @@ snapshots:
       jquery: 3.7.0
       popper.js: 1.16.1
 
-  bootstrap@5.1.2(@popperjs/core@2.11.8):
+  bootstrap@5.1.3(@popperjs/core@2.11.8):
     dependencies:
       '@popperjs/core': 2.11.8
 
@@ -5660,7 +5661,7 @@ snapshots:
   launch-editor@2.6.0:
     dependencies:
       picocolors: 1.1.1
-      shell-quote: 1.8.1
+      shell-quote: 1.8.2
 
   lilconfig@2.1.0: {}
 
@@ -6462,7 +6463,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.8.1: {}
+  shell-quote@1.8.2: {}
 
   shellwords@0.1.1: {}
 
