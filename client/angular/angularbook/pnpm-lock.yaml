@@ -2985,8 +2985,8 @@ packages:
   mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
 
-  nanoid@3.3.6:
-    resolution: {integrity: sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==}
+  nanoid@3.3.8:
+    resolution: {integrity: sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -3747,8 +3747,8 @@ packages:
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==}
     engines: {node: '>= 0.8.0'}
 
-  serialize-javascript@6.0.1:
-    resolution: {integrity: sha512-owoXEFjWRllis8/M1Q+Cw5k8ZH40e3zhp/ovX+Xr/vi1qj6QesbyXXViFbpNvWvPNAD62SutwEXavefrLJWj7w==}
+  serialize-javascript@6.0.2:
+    resolution: {integrity: sha512-Saa1xPByTTq2gdeFZYLLo+RFE35NHZkAbqZeWNd3BpzppeVisAqpDjcp8dyf6uIvEqJRd46jemmyA4iFIeVk8g==}
 
   serve-index@1.9.1:
     resolution: {integrity: sha512-pXHfKNP4qujrtteMrSBb0rc8HJ9Ms/GrXwcUtUtD5s4ewDJI8bT3Cz2zTVRMKtri49pLx2e0Ya8ziP5Ya2pZZw==}
@@ -6267,7 +6267,7 @@ snapshots:
       globby: 12.2.0
       normalize-path: 3.0.0
       schema-utils: 4.2.0
-      serialize-javascript: 6.0.1
+      serialize-javascript: 6.0.2
       webpack: 5.76.1(esbuild@0.14.22)
 
   core-js-compat@3.31.1:
@@ -7721,7 +7721,7 @@ snapshots:
 
   mute-stream@0.0.8: {}
 
-  nanoid@3.3.6: {}
+  nanoid@3.3.8: {}
 
   needle@2.9.1:
     dependencies:
@@ -8222,7 +8222,7 @@ snapshots:
 
   postcss@8.4.5:
     dependencies:
-      nanoid: 3.3.6
+      nanoid: 3.3.8
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
@@ -8546,7 +8546,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serialize-javascript@6.0.1:
+  serialize-javascript@6.0.2:
     dependencies:
       randombytes: 2.1.0
 
@@ -8835,7 +8835,7 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.18
       jest-worker: 27.5.1
       schema-utils: 3.3.0
-      serialize-javascript: 6.0.1
+      serialize-javascript: 6.0.2
       terser: 5.19.1
       webpack: 5.76.1(esbuild@0.14.22)
     optionalDependencies:
