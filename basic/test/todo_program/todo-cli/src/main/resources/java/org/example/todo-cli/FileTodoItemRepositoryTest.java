@@ -29,11 +29,6 @@ public class FileTodoItemRepositoryTest {
             return ImmutableList.of();
         }
 
-        try {
-            final CollectionType type = typeFactory.constructCollectionType(List.class, TodoItem.class);
-            return mapper.readValue(this.file, type);
-        } catch (IOException e) {
-            throw new TodoException("Fail to read todo items", e);
-        }
+        return Jsons.toObjects(this.file);
     }
 }

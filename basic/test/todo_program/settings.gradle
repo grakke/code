@@ -11,8 +11,12 @@ plugins {
 }
 
 dependencies {
-    implementation 'org.mockito:mockito-core:2.4.1'
+    implementation('org.mockito:mockito-core:2.4.1')
 }
-
+coverage {
+    excludeClasses = [
+            "com.github.dreamhead.todo.util.Jsons"
+    ]
+}
 rootProject.name = 'todo_program'
 include('app', 'list', 'utilities', 'todo-cli')

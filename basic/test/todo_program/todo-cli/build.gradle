@@ -9,4 +9,5 @@ dependencies {
     api project(':todo-cli')
 
     implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+    implementation('info.picocli:picocli:4.7.6')
 }
