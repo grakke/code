@@ -16,8 +16,8 @@ importers:
         specifier: ^1.7.7
         version: 1.7.7
       bootstrap:
-        specifier: ^5.2.0
-        version: 5.2.0(@popperjs/core@2.11.8)
+        specifier: ^5.2.1
+        version: 5.2.1(@popperjs/core@2.11.8)
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1086,10 +1086,10 @@ packages:
       jquery: 1.9.1 - 3
       popper.js: ^1.16.1
 
-  bootstrap@5.2.0:
-    resolution: {integrity: sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==}
+  bootstrap@5.2.1:
+    resolution: {integrity: sha512-UQi3v2NpVPEi1n35dmRRzBJFlgvWHYwyem6yHhuT6afYF+sziEt46McRbT//kVXZ7b1YUYEVGdXEH74Nx3xzGA==}
     peerDependencies:
-      '@popperjs/core': ^2.11.5
+      '@popperjs/core': ^2.11.6
 
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
@@ -4588,7 +4588,7 @@ snapshots:
       jquery: 3.7.0
       popper.js: 1.16.1
 
-  bootstrap@5.2.0(@popperjs/core@2.11.8):
+  bootstrap@5.2.1(@popperjs/core@2.11.8):
     dependencies:
       '@popperjs/core': 2.11.8
 
