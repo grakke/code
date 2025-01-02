@@ -31,6 +31,11 @@ func main() {
 	pv := reflect.ValueOf(p)
 	fmt.Println(pv.Kind())
 
+	// 反射调用person的Print方法
+	mPrint := pv.MethodByName("Print")
+	args := []reflect.Value{reflect.ValueOf("登录")}
+	mPrint.Call(args)
+
 	pt := reflect.TypeOf(p)
 	//遍历person的字段
 	for i := 0; i < pt.NumField(); i++ {
@@ -76,9 +81,7 @@ func main() {
 			jsonBuilder.WriteString(",")
 		}
 	}
-
 	jsonBuilder.WriteString("}")
-
 	fmt.Println(jsonBuilder.String()) //打印json字符串
 }
 
@@ -90,4 +93,10 @@ type person struct {
 
 func (p person) String() string {
 	return fmt.Sprintf("Name is %s, Age is %d.", p.Name, p.Age)
+}
+
+func (p person) Print(prefix string) {
+
+	fmt.Printf("%s:Name is %s,Age is %d\n", prefix, p.Name, p.Age)
+
 }

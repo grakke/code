@@ -1,0 +1,17 @@
+linters-settings:
+  misspell:
+    locale: US
+linters:
+  disable-all: true
+  enable:
+    - typecheck
+    - goimports
+    - misspell
+    - govet
+    - revive
+    - ineffassign
+    - gosimple
+    - unused
+    - errcheck
+service:
+  golangci-lint-version: 1.32.2 # use the fixed version to not introduce new linters unexpectedly
