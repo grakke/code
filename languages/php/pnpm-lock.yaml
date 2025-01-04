@@ -16,8 +16,8 @@ importers:
         specifier: ^1.7.7
         version: 1.7.7
       bootstrap:
-        specifier: ^5.2.1
-        version: 5.2.1(@popperjs/core@2.11.8)
+        specifier: ^5.2.2
+        version: 5.2.2(@popperjs/core@2.11.8)
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -1086,8 +1086,8 @@ packages:
       jquery: 1.9.1 - 3
       popper.js: ^1.16.1
 
-  bootstrap@5.2.1:
-    resolution: {integrity: sha512-UQi3v2NpVPEi1n35dmRRzBJFlgvWHYwyem6yHhuT6afYF+sziEt46McRbT//kVXZ7b1YUYEVGdXEH74Nx3xzGA==}
+  bootstrap@5.2.2:
+    resolution: {integrity: sha512-dEtzMTV71n6Fhmbg4fYJzQsw1N29hJKO1js5ackCgIpDcGid2ETMGC6zwSYw09v05Y+oRdQ9loC54zB1La3hHQ==}
     peerDependencies:
       '@popperjs/core': ^2.11.6
 
@@ -1530,8 +1530,8 @@ packages:
     resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
     engines: {node: '>= 0.8'}
 
-  enhanced-resolve@5.17.1:
-    resolution: {integrity: sha512-LMHl3dXhTcfv8gM4kEzIUeTQ+7fpdA0l2tUf34BddXPkz2A5xJ5L/Pchd5BL6rdccM9QGvu0sWZzK1Z1t4wwyg==}
+  enhanced-resolve@5.18.0:
+    resolution: {integrity: sha512-0/r0MySGYG8YqlayBZ6MuCfECmHFdJ5qyPh8s8wa5Hnm6SaFLSK1VYCbj+NKp090Nm1caZhD+QTnmxO7esYGyQ==}
     engines: {node: '>=10.13.0'}
 
   entities@2.2.0:
@@ -1553,8 +1553,8 @@ packages:
     resolution: {integrity: sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw==}
     engines: {node: '>= 0.4'}
 
-  es-module-lexer@1.5.4:
-    resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
+  es-module-lexer@1.6.0:
+    resolution: {integrity: sha512-qqnD1yMU6tk/jnaMosogGySTZP8YtUgAffA9nMN+E/rjxcfRQ6IEk7IiozUjgxKoFHBGjTLnrHB/YC45r/59EQ==}
 
   es5-ext@0.10.62:
     resolution: {integrity: sha512-BHLqn0klhEpnOKSrzn/Xsz2UIW8j+cGmo9JLzr8BiUapV8hPL9+FliFqjwr9ngW7jWdnxv6eO+/LqyhJVqgrjA==}
@@ -1937,8 +1937,8 @@ packages:
   is-buffer@1.1.6:
     resolution: {integrity: sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==}
 
-  is-core-module@2.16.0:
-    resolution: {integrity: sha512-urTSINYfAYgcbLb0yDQ6egFm6h3Mo1DcF9EkyXSRjjzdHbsulg01qhwWuXdOoUBuTkbQ80KDboXa0vFJ+BDH+g==}
+  is-core-module@2.16.1:
+    resolution: {integrity: sha512-UfoeMA6fIJ8wTYFEUjelnaGI67v6+N7qXJEvQuIGa99l4xsCruSYOVSQ0uPANn4dAzm8lkYPaKLrrijLq7x23w==}
     engines: {node: '>= 0.4'}
 
   is-docker@2.2.1:
@@ -2725,8 +2725,9 @@ packages:
     resolution: {integrity: sha512-ZuF55hVUQaaczgOIwqWzkEcEidmlD/xl44x1UZnhOXcYuFN2S6+rcxpG+C1N3So0wvNI3DmJICUFfu2SxhBmvg==}
     deprecated: https://github.com/lydell/resolve-url#deprecated
 
-  resolve@1.22.9:
-    resolution: {integrity: sha512-QxrmX1DzraFIi9PxdG5VkRfRwIgjwyud+z/iBwfRRrVmHc+P9Q7u2lSSpQ6bjr2gy5lrqIiU9vb6iAeGf2400A==}
+  resolve@1.22.10:
+    resolution: {integrity: sha512-NPRy+/ncIMeDlTAsuqwKIiferiawhefFJtkNSW0qZJEqMEb+qBt/77B/jGeeek+F0uOeN05CDa6HXbbIgtVX4w==}
+    engines: {node: '>= 0.4'}
     hasBin: true
 
   retry@0.13.1:
@@ -3386,7 +3387,7 @@ snapshots:
       '@babel/helper-plugin-utils': 7.25.9
       debug: 4.4.0
       lodash.debounce: 4.0.8
-      resolve: 1.22.9
+      resolve: 1.22.10
     transitivePeerDependencies:
       - supports-color
 
@@ -3397,7 +3398,7 @@ snapshots:
       '@babel/helper-plugin-utils': 7.25.9
       debug: 4.4.0
       lodash.debounce: 4.0.8
-      resolve: 1.22.9
+      resolve: 1.22.10
     transitivePeerDependencies:
       - supports-color
 
@@ -3408,7 +3409,7 @@ snapshots:
       '@babel/helper-plugin-utils': 7.25.9
       debug: 4.4.0
       lodash.debounce: 4.0.8
-      resolve: 1.22.9
+      resolve: 1.22.10
     transitivePeerDependencies:
       - supports-color
 
@@ -4588,7 +4589,7 @@ snapshots:
       jquery: 3.7.0
       popper.js: 1.16.1
 
-  bootstrap@5.2.1(@popperjs/core@2.11.8):
+  bootstrap@5.2.2(@popperjs/core@2.11.8):
     dependencies:
       '@popperjs/core': 2.11.8
 
@@ -5106,7 +5107,7 @@ snapshots:
 
   encodeurl@2.0.0: {}
 
-  enhanced-resolve@5.17.1:
+  enhanced-resolve@5.18.0:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.2.1
@@ -5125,7 +5126,7 @@ snapshots:
 
   es-errors@1.3.0: {}
 
-  es-module-lexer@1.5.4: {}
+  es-module-lexer@1.6.0: {}
 
   es5-ext@0.10.62:
     dependencies:
@@ -5550,7 +5551,7 @@ snapshots:
 
   is-buffer@1.1.6: {}
 
-  is-core-module@2.16.0:
+  is-core-module@2.16.1:
     dependencies:
       hasown: 2.0.2
 
@@ -6268,7 +6269,7 @@ snapshots:
 
   rechoir@0.7.1:
     dependencies:
-      resolve: 1.22.9
+      resolve: 1.22.10
 
   regenerate-unicode-properties@10.2.0:
     dependencies:
@@ -6334,9 +6335,9 @@ snapshots:
 
   resolve-url@0.2.1: {}
 
-  resolve@1.22.9:
+  resolve@1.22.10:
     dependencies:
-      is-core-module: 2.16.0
+      is-core-module: 2.16.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
@@ -6892,8 +6893,8 @@ snapshots:
       acorn-import-assertions: 1.9.0(acorn@8.14.0)
       browserslist: 4.24.2
       chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.17.1
-      es-module-lexer: 1.5.4
+      enhanced-resolve: 5.18.0
+      es-module-lexer: 1.6.0
       eslint-scope: 5.1.1
       events: 3.3.0
       glob-to-regexp: 0.4.1
