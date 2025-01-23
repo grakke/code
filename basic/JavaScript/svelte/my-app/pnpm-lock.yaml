@@ -37,7 +37,7 @@ importers:
         version: 4.2.1
       svelte-preprocess:
         specifier: ^4.10.7
-        version: 4.10.7(postcss@8.4.49)(sass@1.69.3)(svelte@4.2.1)(typescript@4.9.5)
+        version: 4.10.7(postcss@8.5.1)(sass@1.69.3)(svelte@4.2.1)(typescript@4.9.5)
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
@@ -854,8 +854,8 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  postcss@8.4.49:
-    resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
+  postcss@8.5.1:
+    resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -965,10 +965,6 @@ packages:
   sorcery@0.10.0:
     resolution: {integrity: sha512-R5ocFmKZQFfSTstfOtHjJuAwbpGyf9qjQa1egyhvXSbM7emjrtLXtGdZsDJDABC85YBfVvrOiGWKSYXPKdvP1g==}
     hasBin: true
-
-  source-map-js@1.0.2:
-    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
-    engines: {node: '>=0.10.0'}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -1553,7 +1549,7 @@ snapshots:
   css-tree@2.3.1:
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.0.2
+      source-map-js: 1.2.1
 
   debug@4.3.4:
     dependencies:
@@ -1944,7 +1940,7 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  postcss@8.4.49:
+  postcss@8.5.1:
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
@@ -2008,7 +2004,7 @@ snapshots:
     dependencies:
       chokidar: 3.5.3
       immutable: 4.3.4
-      source-map-js: 1.0.2
+      source-map-js: 1.2.1
 
   semver@7.6.3: {}
 
@@ -2040,8 +2036,6 @@ snapshots:
       minimist: 1.2.8
       sander: 0.5.1
       sourcemap-codec: 1.4.8
-
-  source-map-js@1.0.2: {}
 
   source-map-js@1.2.1: {}
 
@@ -2079,7 +2073,7 @@ snapshots:
     dependencies:
       svelte: 4.2.1
 
-  svelte-preprocess@4.10.7(postcss@8.4.49)(sass@1.69.3)(svelte@4.2.1)(typescript@4.9.5):
+  svelte-preprocess@4.10.7(postcss@8.5.1)(sass@1.69.3)(svelte@4.2.1)(typescript@4.9.5):
     dependencies:
       '@types/pug': 2.0.7
       '@types/sass': 1.45.0
@@ -2089,7 +2083,7 @@ snapshots:
       strip-indent: 3.0.0
       svelte: 4.2.1
     optionalDependencies:
-      postcss: 8.4.49
+      postcss: 8.5.1
       sass: 1.69.3
       typescript: 4.9.5
 
@@ -2160,7 +2154,7 @@ snapshots:
   vite@4.5.2(sass@1.69.3):
     dependencies:
       esbuild: 0.18.20
-      postcss: 8.4.49
+      postcss: 8.5.1
       rollup: 3.29.5
     optionalDependencies:
       fsevents: 2.3.3
