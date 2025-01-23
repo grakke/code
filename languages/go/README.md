@@ -52,7 +52,7 @@ curl -X GET -H "Content-Type:application/json" localhost:8080/book/978-7-111-558
 go test mutex_test.go  -test.bench=".*"  -cpu='2,8,16,32'
 ```
 
-## [Go语言核心36讲](core/) 郝林
+## [Go 语言核心 36 讲](go_core/) 郝林
 
 ## [Golang syntax guide](./syntax/)
 
@@ -95,3 +95,5 @@ go run ./webserver/main.go
 go run greet.go
 grpcurl -plaintext 127.0.0.1:8080 greet.Greet/Ping
 ```
+
+## [22 讲通关 Go 语言](./22_courses_through_golang/)
