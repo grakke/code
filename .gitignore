@@ -12,6 +12,12 @@ Docker/jenkins
 pkg/
 tool/parcel/dist/
 tool/parcel/.cache/
+basic/javascript/TypeScript/project/docs/
+basic/javascript/svelte/my-app/.svelte-kit/
+basic/javascript/svelte/my-svelte-project/public/build/
+client/fullstack/part2/phonebook/db.json
+languages/cpp/syntax/build/
+
 
 Docker/mysql/test_db/
 
