@@ -5,8 +5,7 @@
 - Algorithms 算法
 - Linux
 - Networking 网络
-	- [网络编程实战](./basic/network/network_programming_practice/)
-		- [code](./basic/network/yolanda)
+	- [网络编程实战](./basic/network/network_programming_practice/) [code](./basic/network/yolanda)
 - Web
 
 ## 客户端
