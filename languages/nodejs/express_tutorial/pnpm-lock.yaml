@@ -12,8 +12,8 @@ importers:
         specifier: ^3.2.6
         version: 3.2.6
       axios:
-        specifier: ^1.8.3
-        version: 1.8.3(debug@4.3.7)
+        specifier: ^1.8.4
+        version: 1.8.4(debug@4.3.7)
       compression:
         specifier: ^1.7.4
         version: 1.7.4
@@ -1586,8 +1586,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.8.3:
-    resolution: {integrity: sha512-iP4DebzoNlP/YN2dpwCgb8zoCmhtkajzS48JvwmkSkXvPI3DHc7m+XYL5tGnSlJtR6nImXZmdCuN5aP8dh1d8A==}
+  axios@1.8.4:
+    resolution: {integrity: sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==}
 
   babel-loader@8.4.1:
     resolution: {integrity: sha512-nXzRChX+Z1GoE6yWavBQg6jDslyFF3SDjl2paADuoQtQW10JqShJt62R6eJQ5m/pjJFDT8xgKIWSP85OY8eXeA==}
@@ -6795,7 +6795,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axios@1.8.3(debug@4.3.7):
+  axios@1.8.4(debug@4.3.7):
     dependencies:
       follow-redirects: 1.15.9(debug@4.3.7)
       form-data: 4.0.2
