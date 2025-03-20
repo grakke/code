@@ -18,7 +18,7 @@ func (dog Dog) Name() string {
 }
 
 func main() {
-	// 示例1。
+	// 示例1
 	dog := Dog{"little pig"}
 	dogP := &dog
 	dogPtr := uintptr(unsafe.Pointer(dogP))

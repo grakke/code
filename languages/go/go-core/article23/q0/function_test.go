@@ -22,7 +22,7 @@ func main() {
 	fmt.Println(greeting, introduce())
 }
 
-// hello 用于生成问候内容。
+// hello 用于生成问候内容
 func hello(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("empty name")
@@ -30,7 +30,7 @@ func hello(name string) (string, error) {
 	return fmt.Sprintf("Hello, %s!", name), nil
 }
 
-// introduce 用于生成介绍内容。
+// introduce 用于生成介绍内容
 func introduce() string {
 	return "Welcome to my Golang column."
 }

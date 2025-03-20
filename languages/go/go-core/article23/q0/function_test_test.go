@@ -16,6 +16,7 @@ func TestHello(t *testing.T) {
 		t.Errorf("Nonempty greeting, but it should not be. (name=%q)",
 			name)
 	}
+
 	name = "Robert"
 	greeting, err = hello(name)
 	if err != nil {
