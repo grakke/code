@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-//take zero or more arguments.
+// take zero or more arguments.
 func add(x int, y int) int {
 	return x + y
 }
@@ -15,13 +15,13 @@ func add1(x, y int) int {
 	return x + y
 }
 
-//multiple-results 返回任意数量返回值
+// multiple-results 返回任意数量返回值
 func swap(x, y string) (string, string) {
 	return y, x
 }
 
 // Named return values
-//Go's return values may be named. If so, they are treated as variables defined at the top of the function.
+// Go's return values may be named. If so, they are treated as variables defined at the top of the function.
 // 返回值的名称应当具有一定的意义，可以作为文档使用。
 // 没有参数的 return 语句返回已命名的返回值。也就是 直接 返回。
 // 直接返回语句应当仅用在下面这样的短函数中。在长的函数中它们会影响代码的可读性。
@@ -36,7 +36,7 @@ func compute(fn func(float64, float64) float64) float64 {
 }
 
 // 绑定函数外变量，再封装一层
-//A closure is a function value that references variables from outside its body. The function may access and assign to the referenced variables; in this sense the function is "bound" to the variables.
+// A closure is a function value that references variables from outside its body. The function may access and assign to the referenced variables; in this sense the function is "bound" to the variables.
 func adder() func(int) int {
 	sum := 0
 	return func(x int) int {

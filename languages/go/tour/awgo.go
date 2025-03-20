@@ -1,7 +1,7 @@
 package main
 
 // Package is called aw
-import "github.com/deanishe/awgo"
+import aw "github.com/deanishe/awgo"
 
 // Your workflow starts here
 func run() {

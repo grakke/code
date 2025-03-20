@@ -36,7 +36,7 @@ func main() {
 // IPAddr{1, 2, 3, 4} 应当打印为 "1.2.3.4"
 type IPAddr [4]byte
 
-//给 IPAddr 添加一个 "String() string" 方法
+// 给 IPAddr 添加一个 "String() string" 方法
 func (p IPAddr) String() string {
 	return fmt.Sprintf("%d.%d.%d.%d", p[0], p[1], p[2], p[3])
 }

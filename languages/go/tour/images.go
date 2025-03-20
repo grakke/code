@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/tour/pic"
 	"image"
 	"image/color"
+
+	"golang.org/x/tour/pic"
 )
 
 //image 包定义了 Image 接口：

@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/tour/wc"
 	"strings"
+
+	"golang.org/x/tour/wc"
 )
 
 type Vertex1 struct {
@@ -11,7 +12,7 @@ type Vertex1 struct {
 }
 
 // Map literals:与结构体相似，不过必须有键名
-//零值为 nil 。nil 映射既没有键，也不能添加键。
+// 零值为 nil 。nil 映射既没有键，也不能添加键。
 // 只是一个类型名，可以在文法的元素中省略它
 // Map literals
 var m = map[string]Vertex1{
@@ -36,7 +37,7 @@ func WordCount(s string) map[string]int {
 	return m
 }
 
-//The zero value of a map is nil. A nil map has no keys, nor can keys be added.
+// The zero value of a map is nil. A nil map has no keys, nor can keys be added.
 func main() {
 	fmt.Print("------A nil map.----- \r\n")
 	var m1 map[string]Vertex1

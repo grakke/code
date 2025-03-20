@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-//使用 Go 的并发特性来并行化一个 Web 爬虫
+// 使用 Go 的并发特性来并行化一个 Web 爬虫
 // 修改 Crawl 函数来并行地抓取 URL，并且保证不重复
 type Fetcher interface {
 	// Fetch 返回 URL 的 body 内容，并且将在这个页面上找到的 URL 放到一个 slice 中。
@@ -55,19 +55,19 @@ func Crawl(url string, depth int, fetcher Fetcher) {
 	return
 }
 
-//内部并行，通过协程处理抓取
+// 内部并行，通过协程处理抓取
 func crawl(url string, depth int, fetcher Fetcher, ch chan int) {
 	Crawl(url, depth, fetcher)
 	ch <- 1
 }
 
-//定义SafeCounter结构体，类似计数器有两个变量，一个是字符串和整数的映射，另外一个是互斥锁的实现。
+// 定义SafeCounter结构体，类似计数器有两个变量，一个是字符串和整数的映射，另外一个是互斥锁的实现。
 type SafeCounter struct {
 	v   map[string]int
 	mux sync.Mutex
 }
 
-//定义全局变量
+// 定义全局变量
 var sc SafeCounter
 
 func main() {

@@ -26,7 +26,7 @@ import (
 
 // ariable declarations may be "factored" into blocks, as with import statements
 
-//need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type
+// need an integer value you should use int unless you have a specific reason to use a sized or unsigned integer type
 var (
 	ToBe   bool       = false
 	MaxInt uint64     = 1<<64 - 1

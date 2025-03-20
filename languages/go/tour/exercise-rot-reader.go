@@ -14,10 +14,10 @@ type rot13Reader struct {
 	r io.Reader
 }
 
-//自定义错误类型
+// 自定义错误类型
 type ErrNegativeByte string
 
-//实现Error接口
+// 实现Error接口
 func (e ErrNegativeByte) Error() string {
 	return fmt.Sprintf("get Byte error: %v", e)
 }

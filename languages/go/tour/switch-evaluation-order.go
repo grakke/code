@@ -1,11 +1,11 @@
-package main 
+package main
 
 import (
 	"fmt"
 	"time"
 )
 
-func main(){
+func main() {
 	fmt.Print("When's Saturday?")
 	today := time.Now().Weekday()
 	fmt.Println(today)

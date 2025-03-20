@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
-import "golang.org/x/tour/tree"
+import (
+	"fmt"
+
+	"golang.org/x/tour/tree"
+)
 
 type Tree struct {
 	Left  *Tree
@@ -17,7 +20,7 @@ func Walk(t *tree.Tree, ch chan int) {
 	close(ch)
 }
 
-//中序遍历
+// 中序遍历
 func walk(t *tree.Tree, ch chan int) {
 	if t != nil {
 		walk(t.Left, ch)

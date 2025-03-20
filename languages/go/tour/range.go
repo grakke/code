@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-//The range form of the for loop iterates over a slice or map
+// The range form of the for loop iterates over a slice or map
 func main() {
 	var pow2 = []int{1, 2, 4, 8, 16, 32, 64, 128}
 	for i, v := range pow2 {

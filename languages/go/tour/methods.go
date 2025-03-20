@@ -10,7 +10,7 @@ type Vertex2 struct {
 }
 
 // define methods on types. 对象方法：根据类型重载 A method is a function with a special receiver argument
-//can only declare a method with a receiver whose type is defined in the same package as the method. You cannot declare a method with a receiver whose type is defined in another package (which includes the built-in types such as int).
+// can only declare a method with a receiver whose type is defined in the same package as the method. You cannot declare a method with a receiver whose type is defined in another package (which includes the built-in types such as int).
 // 声明：结构体 添加方法
 // 实例化后调用方法
 func (v Vertex2) Abs() float64 {
@@ -25,13 +25,16 @@ func (v *Vertex2) Scale(f float64) {
 }
 
 // 函数 VS 方法:不同实现方式 a method is just a function with a receiver argument.
-//Methods and pointer indirection
+// Methods and pointer indirection
 // functions
-//     with a pointer argument must take a pointer
-//     take a value argument must take a value of that specific type
+//
+//	with a pointer argument must take a pointer
+//	take a value argument must take a value of that specific type
+//
 // methods
-//     with pointer receivers take either a value or a pointer as the receiver
-//     with value receivers take either a value or a pointer as the receiver
+//
+//	with pointer receivers take either a value or a pointer as the receiver
+//	with value receivers take either a value or a pointer as the receiver
 func AbsFunc(v Vertex2) float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
@@ -42,7 +45,7 @@ func ScaleFunc(v *Vertex2, f float64) {
 
 type MyFloat1 float64
 
-//can only declare a method with a receiver whose type is defined in the same package as the method
+// can only declare a method with a receiver whose type is defined in the same package as the method
 func (f MyFloat1) Abs() float64 {
 	if f < 0 {
 		return float64(-f)
