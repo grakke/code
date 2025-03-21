@@ -1,6 +1,7 @@
 module syntax
 
 go 1.21
+toolchain go1.24.1
 
 require (
 	github.com/go-sql-driver/mysql v1.5.0 // indirect
@@ -9,7 +10,7 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0
 	github.com/stretchr/testify v1.9.0 // indirect
-	golang.org/x/text v0.3.8 // indirect
+	golang.org/x/text v0.23.0 // indirect
 	rsc.io/quote v1.5.2
 	rsc.io/sampler v1.3.0 // indirect
 )
@@ -27,7 +28,7 @@ require (
 	golang.org/x/exp v0.0.0-20230111222715-75897c7a292a
 )
 
-require github.com/redis/go-redis/v9 v9.5.1
+require github.com/redis/go-redis/v9 v9.5.5
 
 require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
