@@ -513,8 +513,8 @@ packages:
     resolution: {integrity: sha512-JfoPiD7f/vvd/PaOfu5cr9CyzwDMPg4T0nX3MQr6IgTq49DhjvUcmjmjA7j6+xih1Evq+QKZnge1SoIlYozv/Q==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@7.26.10':
-    resolution: {integrity: sha512-2WJMeRQPHKSPemqk/awGrAiuFfzBmOIPXKizAsVhWH9YJqLZ0H+HS4c8loHGgW6utJ3E/ejXQUsiGaQy2NZ9Fw==}
+  '@babel/runtime@7.27.0':
+    resolution: {integrity: sha512-VtPOkrdPHZsKc/clNqyi9WUA8TINkZ4cGk63UUE3u4pmB2k+ZMQRDuIOagv8UVd6j7k0T3+RRIb7beKTebNbcw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.22.15':
@@ -5953,7 +5953,7 @@ snapshots:
       core-js: 2.6.12
       regenerator-runtime: 0.14.1
 
-  '@babel/runtime@7.26.10':
+  '@babel/runtime@7.27.0':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -6168,7 +6168,7 @@ snapshots:
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.22.9)
       '@babel/plugin-transform-runtime': 7.22.9(@babel/core@7.22.9)
       '@babel/preset-env': 7.3.4(@babel/core@7.22.9)
-      '@babel/runtime': 7.26.10
+      '@babel/runtime': 7.27.0
       '@babel/runtime-corejs2': 7.26.10
       '@vue/babel-preset-jsx': 1.4.0(@babel/core@7.22.9)(vue@3.0.0)
       babel-plugin-dynamic-import-node: 2.3.3
@@ -10511,7 +10511,7 @@ snapshots:
 
   regenerator-transform@0.15.1:
     dependencies:
-      '@babel/runtime': 7.26.10
+      '@babel/runtime': 7.27.0
 
   regex-not@1.0.2:
     dependencies:
