@@ -30,9 +30,9 @@ func main() {
 			for mailbox == 1 {
 				sendCond.Wait()
 			}
-			log.Printf("sender [%d]: the mailbox is empty.", i)
+			log.Printf("sender   [%d]: the mailbox is empty.", i)
 			mailbox = 1
-			log.Printf("sender [%d]: the letter has been sent.", i)
+			log.Printf("sender   [%d]: the letter has been sent.", i)
 			lock.Unlock()
 			recvCond.Signal()
 		}
