@@ -23,6 +23,6 @@
     "vitest": "^0.29.8"
   },
   "dependencies": {
-    "vite": "^6.2.5"
+    "vite": "^6.2.6"
   }
 }
