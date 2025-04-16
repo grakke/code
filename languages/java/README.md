@@ -1,27 +1,28 @@
-# JAVA
+# Java
 
 ## 基础
 
 - 环境搭建
 - 基本类型
-  - double > float > long >int>short>byte
-  - float类型，需要加上f后缀,float类型可最大表示3.4x1038，而double类型可最大表示1.79x10308
-  - 自动类型转换：赋值或运算时发生
+    - double > float > long >int>short>byte
+    - float类型，需要加上f后缀,float类型可最大表示3.4x1038，而double类型可最大表示1.79x10308
+    - 自动类型转换：赋值或运算时发生
 - 引用类型 reference
     - 寻址：初始地址 + 偏移
-  - 引用与对象，数据类型一致
-    - String 内部是通过一个char[]数组表示的不可变对象
-      - 比较字符串内容是否相同必须使用equals()方法而不能用==
-      - 忽略大小写比较使用equalsIgnoreCase()方法
-      - contains()方法的参数是CharSequence而不是String，因为CharSequence是String实现的一个接口
-      - 通过new String(char[])创建新的String实例时，它并不会直接引用传入的char[]数组，而是会复制一份，所以，修改外部的char[]数组不会影响String实例内部的char[]数组，因为这是两个不同的数组。
-      - 转换编码 将String和byte[]转换，需要指定编码；转换为byte[]时，始终优先考虑UTF-8编码
-      - StringBuilder 一个可变对象，可以预分配缓冲区
-    - 数组:相同类型变量集合(定长)
-      - 索引数组：变量名是第一个内存地址（指向），实际是一块地址连续内存
-      - 0 开始方便使用索引
-      - 多维数组是索引多维,第一维指向数组的起始地址
-      - 引用数组
+    - 引用与对象，数据类型一致
+        - String 内部是通过一个char[]数组表示的不可变对象
+            - 比较字符串内容是否相同必须使用equals()方法而不能用==
+            - 忽略大小写比较使用equalsIgnoreCase()方法
+            - contains()方法的参数是CharSequence而不是String，因为CharSequence是String实现的一个接口
+            - 通过new String(char[])创建新的String实例时，它并不会直接引用传入的char[]
+              数组，而是会复制一份，所以，修改外部的char[]数组不会影响String实例内部的char[]数组，因为这是两个不同的数组。
+            - 转换编码 将String和byte[]转换，需要指定编码；转换为byte[]时，始终优先考虑UTF-8编码
+            - StringBuilder 一个可变对象，可以预分配缓冲区
+        - 数组:相同类型变量集合(定长)
+            - 索引数组：变量名是第一个内存地址（指向），实际是一块地址连续内存
+            - 0 开始方便使用索引
+            - 多维数组是索引多维,第一维指向数组的起始地址
+            - 引用数组
 - 编码
 - 运算符
 - 控制语句
@@ -31,36 +32,36 @@
     - Throwable
     - Error
     - Exception
-* 工具类
+- 工具类
     - Collection
     - List
 
 ## 面向对象
 
-* class
-  * 方法 类的一部分，不是对象
-    * 构造方法 不会被隐性继承
-    * 方法重载
-  - 隐藏 this 自引用
-  + Class
-* object
-  * 属性 private
-  * 实例：堆
-* 类属性引用
+- class
+    - 方法 类的一部分，不是对象
+        - 构造方法 不会被隐性继承
+        - 方法重载
+    - 隐藏 this 自引用
+    - Class
+- object
+    * 属性 private
+    * 实例：堆
+- 类属性引用
     + 自定义类
     + 当前类
-* 封装
+- 封装
     + 类内部方法操作内部数据
     + 缺省修饰符 protected：只能被当前包内类以及子类引用
     + private 构造 + static 构造（实例化前检查）
     + public 方法是一种约定，不能随意改动,对外公布,private 内部实现共享
     + 非public class 可以名字不一样，调用范围有限
-* 继承
+- 继承
     + 覆盖：方法 签名 返回值一样
     + super:必须第一行
     + 子类会默认调用弗父类无参构造方法，父类没有无参构造，子类必须生命构造调用父类有参构造
-    - 组合:注入
-* 多态
+    + 组合:注入
+- 多态
     + 重载（overload）：方法名+参数 唯一，调用别的重载方法，多态在于参数。参数可以转换就行
         * 调动最近的转换类型：byte->short->int->long->float->double
         * 构造方法重载 this(),第一行
@@ -89,11 +90,11 @@
 - 调用 Clone()，被复制对象类必须实现 Cloneable 接口
     - 浅复制
     - super.clone()
-* package 包
+- package 包
     + 全限定名唯一
     + classpath是JVM用到的一个环境变量，用来指示JVM如何搜索class
     + `java -classpath .;C:\work\project1\bin;C:\shared abc.xyz.Hello`
-+ 模块 Module
+- 模块 Module
 
 ## 核心类
 
@@ -101,22 +102,22 @@
 * Scanner
 * BigInteger
 * String:char array->byte array
-  - immutable
-  - 数据 private
-  - charAt
-  - substring
-  - toCharArray
-  - split
-  - indexOf
-  - contains
-  - equals equalsIgnoreCase
-  - trim()
+    - immutable
+    - 数据 private
+    - charAt
+    - substring
+    - toCharArray
+    - split
+    - indexOf
+    - contains
+    - equals equalsIgnoreCase
+    - trim()
 * StringBuilder
-  - toString()
-  - reverse()
-  - append()
-  - delete()
-  - insert()
+    - toString()
+    - reverse()
+    - append()
+    - delete()
+    - insert()
 * main
 * System
     - currentTimeMillis()
@@ -163,23 +164,23 @@
 
 - 框定需求范围，澄清需求优先级，筛除不需要伪需求，理顺程序基本结构
 - 任务一:打印出从1到100的数字，将其中3的倍数替换成“Fizz”，5的倍数替换成“Buzz”。既能被3整除、又能被5整除的数则替换成“FizzBuzz”
-  - 要求：每行代码都必须有单元测试覆盖
-  - 分析 task
-      - task1 数字到字符串的转换逻辑：创建一个对象，对象可以对输入的数字做必要的转换，输出一个字符串（可能是“Fizz”、“Buzz”、“FizzBuzz”，或者是原数字的字符串形式）。
-      - task2 转换特定的列表：创建一个列表，其中包含从1到100的整数，依次使用前面说的这个对象进行转换，转换后的结果是另一个长度为100的列表。
-      - task3 打印输出结果：打印输出任务2得到的结果列表
+    - 要求：每行代码都必须有单元测试覆盖
+    - 分析 task
+        - task1 数字到字符串的转换逻辑：创建一个对象，对象可以对输入的数字做必要的转换，输出一个字符串（可能是“Fizz”、“Buzz”、“FizzBuzz”，或者是原数字的字符串形式）。
+        - task2 转换特定的列表：创建一个列表，其中包含从1到100的整数，依次使用前面说的这个对象进行转换，转换后的结果是另一个长度为100的列表。
+        - task3 打印输出结果：打印输出任务2得到的结果列表
 - 成绩单
-  - 阶段：
-      + 核心业务实现
-      + 与命令行对接
-  - 目标
-      + 训练基本任务分解能力
-      + TDD
-  - 要求:在做一个命令行应用。当程序启动的时候，会看到一个命令行的主界面
-  - 任务要求
-      + 列出完整的任务列表
-      + 每个任务需要预估完成所需时间
-      + 测试覆盖lv100%
+    - 阶段：
+        + 核心业务实现
+        + 与命令行对接
+    - 目标
+        + 训练基本任务分解能力
+        + TDD
+    - 要求:在做一个命令行应用。当程序启动的时候，会看到一个命令行的主界面
+    - 任务要求
+        + 列出完整的任务列表
+        + 每个任务需要预估完成所需时间
+        + 测试覆盖lv100%
 - Args
     - 把命令行字符串拆分成main函数可用的字符串数组
     - 把字符串形式的Schema解析成对象

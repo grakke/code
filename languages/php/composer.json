@@ -35,7 +35,6 @@
     "ext-xmlwriter": "*",
     "ext-simplexml": "*",
     "ext-libxml": "*",
-    "ext-redis": "*",
     "ext-sockets": "*",
     "ext-openssl": "*"
   },

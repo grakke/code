@@ -105,14 +105,6 @@ $array = array(
 );
 var_dump($array);
 
-// 混合
-$array = [1, 2, 3, 4, 5];
-$mixedArray = [];
-$mixedArray[0] = 200;
-$mixedArray['name'] = "Mixed array";
-$mixedArray[1] = 10.65;
-$mixedArray[2] = ['I', 'am', 'another', 'array'];
-
 $players = [];
 $players[] = ['Name' => "Ronaldo", "Age" => 31, "Country" => "Portugal", "Team" => "Real Madrid"];
 $players[] = ['Name' => "Messi", "Age" => 27, "Country" => "Argentina", "Team" => "Barcelona"];

@@ -13,7 +13,6 @@ public class Tree {
     /**
      * @Description: 前缀树的结点
      */
-
     public static class TreeNode {
 
         public char label;  // 结点的名称，在前缀树里是单个字母
