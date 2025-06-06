@@ -826,8 +826,8 @@ packages:
   '@babel/regjsgen@0.8.0':
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
 
-  '@babel/runtime@7.27.3':
-    resolution: {integrity: sha512-7EYtGezsdiDMyY80+65EzwiGmcJqpmcZCojSXaRgdrBaGtWTgDZKq69cPIVped6MkIM78cTQ2GOiEYjwOlG4xw==}
+  '@babel/runtime@7.27.6':
+    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.22.15':
@@ -5309,8 +5309,8 @@ packages:
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
 
-  webpack-dev-server@4.15.1:
-    resolution: {integrity: sha512-5hbAst3h3C3L8w6W4P96L5vaV0PxSmJhxZvWKYIdgxOQm8pNZ5dEOmmSLBVpP85ReeyRt6AS1QJNyo/oFFPeVA==}
+  webpack-dev-server@4.15.2:
+    resolution: {integrity: sha512-0XavAZbNJ5sDrCbkpWL8mia0o5WPOd2YGtxrEiZkBK9FjLppIUK2TgxK6qGD2P3hUXTJNNPVibrerKcx5WkR1g==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
     peerDependencies:
@@ -6420,7 +6420,7 @@ snapshots:
 
   '@babel/regjsgen@0.8.0': {}
 
-  '@babel/runtime@7.27.3': {}
+  '@babel/runtime@7.27.6': {}
 
   '@babel/template@7.22.15':
     dependencies:
@@ -6857,7 +6857,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.10(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.15.1(webpack@5.99.9))(webpack@5.99.9)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.10(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.15.2(webpack@5.99.9))(webpack@5.99.9)':
     dependencies:
       ansi-html-community: 0.0.8
       common-path-prefix: 3.0.0
@@ -6872,7 +6872,7 @@ snapshots:
       webpack: 5.99.9
     optionalDependencies:
       type-fest: 0.21.3
-      webpack-dev-server: 4.15.1(webpack@5.99.9)
+      webpack-dev-server: 4.15.2(webpack@5.99.9)
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.22.9)(@types/babel__core@7.20.1)(rollup@2.79.2)':
     dependencies:
@@ -6995,7 +6995,7 @@ snapshots:
   '@testing-library/dom@8.20.1':
     dependencies:
       '@babel/code-frame': 7.22.5
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       '@types/aria-query': 5.0.1
       aria-query: 5.1.3
       chalk: 4.1.2
@@ -7006,7 +7006,7 @@ snapshots:
   '@testing-library/dom@9.3.1':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       '@types/aria-query': 5.0.4
       aria-query: 5.1.3
       chalk: 4.1.2
@@ -7017,7 +7017,7 @@ snapshots:
   '@testing-library/jest-dom@5.17.0':
     dependencies:
       '@adobe/css-tools': 4.3.2
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       '@types/testing-library__jest-dom': 5.14.8
       aria-query: 5.3.0
       chalk: 3.0.0
@@ -7028,7 +7028,7 @@ snapshots:
 
   '@testing-library/react@13.4.0(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       '@testing-library/dom': 8.20.1
       '@types/react-dom': 18.3.7(@types/react@18.3.23)
       react: 18.3.1
@@ -7038,7 +7038,7 @@ snapshots:
 
   '@testing-library/user-event@13.5.0(@testing-library/dom@9.3.1)':
     dependencies:
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       '@testing-library/dom': 9.3.1
 
   '@tootallnate/once@1.1.2': {}
@@ -7662,7 +7662,7 @@ snapshots:
 
   babel-plugin-macros@3.1.0:
     dependencies:
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       cosmiconfig: 7.1.0
       resolve: 1.22.2
 
@@ -7745,7 +7745,7 @@ snapshots:
       '@babel/preset-env': 7.22.9(@babel/core@7.22.9)
       '@babel/preset-react': 7.22.5(@babel/core@7.22.9)
       '@babel/preset-typescript': 7.22.5(@babel/core@7.22.9)
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       babel-plugin-macros: 3.1.0
       babel-plugin-transform-react-remove-prop-types: 0.4.24
     transitivePeerDependencies:
@@ -8557,7 +8557,7 @@ snapshots:
 
   eslint-plugin-jsx-a11y@6.7.1(eslint@8.45.0):
     dependencies:
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       aria-query: 5.3.0
       array-includes: 3.1.6
       array.prototype.flatmap: 1.3.1
@@ -10804,7 +10804,7 @@ snapshots:
   react-scripts@5.0.1(@babel/plugin-syntax-flow@7.22.5(@babel/core@7.22.9))(@babel/plugin-transform-react-jsx@7.22.5(@babel/core@7.22.9))(@types/babel__core@7.20.1)(eslint@8.45.0)(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5):
     dependencies:
       '@babel/core': 7.22.9
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.10(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.15.1(webpack@5.99.9))(webpack@5.99.9)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.10(react-refresh@0.11.0)(type-fest@0.21.3)(webpack-dev-server@4.15.2(webpack@5.99.9))(webpack@5.99.9)
       '@svgr/webpack': 5.5.0
       babel-jest: 27.5.1(@babel/core@7.22.9)
       babel-loader: 8.3.0(@babel/core@7.22.9)(webpack@5.99.9)
@@ -10848,7 +10848,7 @@ snapshots:
       tailwindcss: 3.3.3
       terser-webpack-plugin: 5.3.9(webpack@5.99.9)
       webpack: 5.99.9
-      webpack-dev-server: 4.15.1(webpack@5.99.9)
+      webpack-dev-server: 4.15.2(webpack@5.99.9)
       webpack-manifest-plugin: 4.1.1(webpack@5.99.9)
       workbox-webpack-plugin: 6.6.0(@types/babel__core@7.20.1)(webpack@5.99.9)
     optionalDependencies:
@@ -10934,7 +10934,7 @@ snapshots:
 
   regenerator-transform@0.15.1:
     dependencies:
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
 
   regex-parser@2.2.11: {}
 
@@ -11741,7 +11741,7 @@ snapshots:
       schema-utils: 4.2.0
       webpack: 5.99.9
 
-  webpack-dev-server@4.15.1(webpack@5.99.9):
+  webpack-dev-server@4.15.2(webpack@5.99.9):
     dependencies:
       '@types/bonjour': 3.5.10
       '@types/connect-history-api-fallback': 1.5.0
@@ -11905,7 +11905,7 @@ snapshots:
       '@apideck/better-ajv-errors': 0.3.6(ajv@8.12.0)
       '@babel/core': 7.22.9
       '@babel/preset-env': 7.22.9(@babel/core@7.22.9)
-      '@babel/runtime': 7.27.3
+      '@babel/runtime': 7.27.6
       '@rollup/plugin-babel': 5.3.1(@babel/core@7.22.9)(@types/babel__core@7.20.1)(rollup@2.79.2)
       '@rollup/plugin-node-resolve': 11.2.1(rollup@2.79.2)
       '@rollup/plugin-replace': 2.4.2(rollup@2.79.2)
