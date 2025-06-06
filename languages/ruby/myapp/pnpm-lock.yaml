@@ -31,8 +31,8 @@ importers:
         version: 5.99.9
     devDependencies:
       webpack-dev-server:
-        specifier: ^5.2.1
-        version: 5.2.1(webpack@5.99.9)
+        specifier: ^5.2.2
+        version: 5.2.2(webpack@5.99.9)
 
 packages:
 
@@ -4052,8 +4052,8 @@ packages:
       webpack:
         optional: true
 
-  webpack-dev-server@5.2.1:
-    resolution: {integrity: sha512-ml/0HIj9NLpVKOMq+SuBPLHcmbG+TGIjXRHsYfZwocUBIqEvws8NnS/V9AFQ5FKP+tgn5adwVwRrTEpGL33QFQ==}
+  webpack-dev-server@5.2.2:
+    resolution: {integrity: sha512-QcQ72gh8a+7JO63TAx/6XZf/CWhgMzu5m0QirvPfGvptOusAxG12w2+aua1Jkjr7hzaWDnJ2n6JFeexMHI+Zjg==}
     engines: {node: '>= 18.12.0'}
     hasBin: true
     peerDependencies:
@@ -4945,7 +4945,7 @@ snapshots:
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/parser': 7.23.0
       '@babel/types': 7.23.0
-      debug: 4.4.1
+      debug: 4.3.7
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -9009,7 +9009,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.99.9
 
-  webpack-dev-server@5.2.1(webpack@5.99.9):
+  webpack-dev-server@5.2.2(webpack@5.99.9):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
