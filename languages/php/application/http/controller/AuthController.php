@@ -1,10 +1,11 @@
 <?php
 
-namespace Application\services\Http\Controller;
+namespace Application\Http\Controller;
 
-use Application\services\Model\User;
+use Application\http\model\User;
+use Application\services\Http\Controller\Controller;
 
-class AuthController extends \Application\services\Http\Controller\Controller
+class AuthController extends Controller
 {
     public function login()
     {
@@ -14,7 +15,7 @@ class AuthController extends \Application\services\Http\Controller\Controller
 //        }
 
         $siteName = $this->container->resolve('app.name');
-        $pageTitle = '登录页面 - '.$siteName;
+        $pageTitle = '登录页面 - ' . $siteName;
         if ($this->request->getMethod() == 'GET') {
             $this->view->render('blog/admin/login.php', compact('siteName', 'pageTitle'));
         } else {

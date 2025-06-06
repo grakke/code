@@ -15,7 +15,7 @@ LABEL maintainer="inhere <in.798@qq.com>" version="2.0"
 
 # --build-arg timezone=Asia/Shanghai
 ARG timezone
-# app env: prod pre test dev
+# app env: prod pre tests dev
 ARG app_env=prod
 # default use www-data user
 ARG work_user=www-data

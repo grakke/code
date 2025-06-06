@@ -2,7 +2,7 @@
 
 namespace Tests\demo;
 
-use syntax\phpunit\SqliteManager;
+use Tools\Phpunit\SqliteManager;
 
 class SqliteManagerTest extends BaseDatabaseTest
 {

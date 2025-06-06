@@ -1,12 +1,12 @@
 <?php
 
-namespace T\demo;
+namespace Tests\demo;
 
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
-use syntax\phpunit\Card;
-use syntax\phpunit\CardCollection;
-use syntax\phpunit\Player;
+use Tools\Phpunit\Card;
+use Tools\Phpunit\CardCollection;
+use Tools\Phpunit\Player;
 
 /**
  * @method setExpectedException(string $string, string $string1)

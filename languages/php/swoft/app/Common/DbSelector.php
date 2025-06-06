@@ -36,7 +36,7 @@ class DbSelector implements DbSelectorInterface
         }
 
         if ($createDbName == 'test2') {
-            $createDbName = 'test';
+            $createDbName = 'tests';
         }
 
         $dbName = sprintf('%s%s', $createDbName, (string)$selectIndex);

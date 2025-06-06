@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace syntax\phpunit;
+namespace Tools\phpunit;
 
 class SomeClass
 {

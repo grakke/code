@@ -31,7 +31,7 @@ class DbBuilderController
      */
     public function schema(): void
     {
-        Schema::createIfNotExists('test', function (Blueprint $blueprint) {
+        Schema::createIfNotExists('tests', function (Blueprint $blueprint) {
             $blueprint->increments('id');
         });
     }

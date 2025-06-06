@@ -4,7 +4,7 @@ namespace Tests\demo;
 
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;
-use syntax\phpunit\AbstractClass;
+use Tools\phpunit\AbstractClass;
 
 class AbstractClassTest extends TestCase
 {

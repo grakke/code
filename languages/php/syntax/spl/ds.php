@@ -22,6 +22,6 @@ echo "Size of vector: ".$vector->count()."\n";
 $set = new Set();
 $set->add(1);
 $set->add(1);
-$set->add("test");
+$set->add("tests");
 $set->add(3);
 echo $set->get(1);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\demo;
+namespace Tests\Demo;
 
 use PHPUnit\Framework\TestCase;
 use Tools\CsvFileIterator;
@@ -41,6 +41,16 @@ class DataProvider extends TestCase
         return new CsvFileIterator(__DIR__ . '/../../assets/files/data.csv');
     }
 
+    public static function trueValues()
+    {
+        return [
+            [1],
+            ['1'],
+            ['on'],
+            [true]
+        ];
+    }
+
     /**
      * @dataProvider addtionProvider
      * @dataProvider addtionWithNameProvider
@@ -50,16 +60,6 @@ class DataProvider extends TestCase
     public function testAdd($a, $b, $expected)
     {
         $this->assertEquals($expected, $a + $b);
-    }
-
-    public static function trueValues()
-    {
-        return [
-            [1],
-            ['1'],
-            ['on'],
-            [true]
-        ];
     }
 
     /**

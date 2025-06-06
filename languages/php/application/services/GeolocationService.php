@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Application\services;
+namespace Application\Services;
 
-use Application\model\GoogleMaps;
-use Application\model\User;
+use Application\http\model\GoogleMaps;
+use Application\http\model\User;
 
 class GeolocationService
 {

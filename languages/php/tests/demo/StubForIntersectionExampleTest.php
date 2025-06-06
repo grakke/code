@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Tests\demo;
+namespace Tests\Demo;
 
 use PHPUnit\Framework\TestCase;
 use Src\Dependency;
@@ -43,10 +43,10 @@ final class StubForIntersectionExampleTest extends TestCase
     {
         $sut = new SomeClass;
 
-        // Create a test stub for the Dependency interface
+        // Create a tests stub for the Dependency interface
         $dependency = $this->createStub(Dependency::class);
 
-        // Configure the test stub
+        // Configure the tests stub
         $dependency->method('doSomething')
             ->willReturn('foo');
 

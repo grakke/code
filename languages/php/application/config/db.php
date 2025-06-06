@@ -1,8 +1,8 @@
 <?php
 
-return  [
-    'class' => '\sf\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=test',
+return [
+    'class' => '\framework\src\db\Connection',
+    'dsn' => 'mysql:host=localhost;dbname=tests',
     'username' => 'blog',
     'password' => 'blog',
     'attributes' => [

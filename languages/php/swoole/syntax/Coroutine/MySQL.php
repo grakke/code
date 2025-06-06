@@ -7,7 +7,7 @@ go(function () {
         'host' => '127.0.0.1',
         'user' => 'root',
         'password' => "123456Ac&",
-        'database' => 'test'
+        'database' => 'tests'
     ]);
 
     $res = $swoole_mysql->query('select * from user');
@@ -15,7 +15,7 @@ go(function () {
         return;
     }
     foreach ($res as $key => $value) {
-        echo $value['id'].':'.$value['name'].PHP_EOL;
+        echo $value['id'] . ':' . $value['name'] . PHP_EOL;
     }
 });
 
@@ -33,7 +33,7 @@ $server->on('Request', function ($request, $response) {
         'host' => '127.0.0.1',
         'user' => 'root',
         'password' => 'root',
-        'database' => 'test',
+        'database' => 'tests',
     ]);
     #3
     if ($res == false) {
@@ -41,7 +41,7 @@ $server->on('Request', function ($request, $response) {
         return;
     }
     $ret = $mysql->query('show tables', 2);
-    $response->end("swoole response is ok, result=".var_export($ret, true));
+    $response->end("swoole response is ok, result=" . var_export($ret, true));
     $mysql->close();
 });
 

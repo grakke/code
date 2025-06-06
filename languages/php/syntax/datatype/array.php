@@ -62,7 +62,7 @@ print_r($array3);
 
 $array = range(1, 10);
 $fillArray = range("a", "d");
-$arrayFilled = array_fill(0, 5, $fillArray);//这里的$fillarray可以是字符串，如"test".
+$arrayFilled = array_fill(0, 5, $fillArray);//这里的$fillarray可以是字符串，如"tests".
 echo "<pre>";
 print_r($arrayFilled);
 echo "</pre>";

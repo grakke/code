@@ -31,7 +31,7 @@ class SyncTask
      */
     public function test(string $name): string
     {
-        return 'sync-test-' . $name;
+        return 'sync-tests-' . $name;
     }
 
     /**

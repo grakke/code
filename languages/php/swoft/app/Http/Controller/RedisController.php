@@ -94,7 +94,7 @@ class RedisController
     }
 
     /**
-     * Only to use test. The wrong way to use it
+     * Only to use tests. The wrong way to use it
      *
      * @RequestMapping("release")
      *
@@ -113,7 +113,7 @@ class RedisController
     }
 
     /**
-     * Only to use test. The wrong way to use it
+     * Only to use tests. The wrong way to use it
      *
      * @RequestMapping("ep")
      *
@@ -135,7 +135,7 @@ class RedisController
     }
 
     /**
-     * Only to use test. The wrong way to use it
+     * Only to use tests. The wrong way to use it
      *
      * @RequestMapping("et")
      *

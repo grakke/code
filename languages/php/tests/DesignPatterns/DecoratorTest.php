@@ -53,7 +53,7 @@ class DecoratorTest extends TestCase
     {
         $this->expectException(Error::class);
         if (version_compare(PHP_VERSION, '7', '>=')) {
-            throw new Error('Skip test for PHP 7', 0, __FILE__, __LINE__);
+            throw new Error('Skip tests for PHP 7', 0, __FILE__, __LINE__);
         }
 
         $this->getMockForAbstractClass('DesignPatterns\Structural\Decorator\Decorator', array(new stdClass()));

@@ -14,7 +14,7 @@ class SampleTest extends TestCase
 
         // 在这里停止，并将此测试标记为未完成。
         $this->markTestIncomplete(
-            'This test has not been implemented yet.'
+            'This tests has not been implemented yet.'
         );
     }
 }

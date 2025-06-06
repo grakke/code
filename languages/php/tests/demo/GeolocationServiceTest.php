@@ -3,8 +3,8 @@
 
 namespace Tests\demo;
 
-use Application\model\GoogleMaps;
-use Application\model\User;
+use Application\http\model\GoogleMaps;
+use Application\http\model\User;
 use Application\services\GeolocationService;
 use PHPUnit\Framework\TestCase;
 

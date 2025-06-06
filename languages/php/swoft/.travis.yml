@@ -27,5 +27,5 @@ before_script:
 
 script:
   - composer check-cs
-  - composer test
+  - composer tests
 #  - php bin/swoft dinfo:env

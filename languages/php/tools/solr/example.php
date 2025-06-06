@@ -1,36 +1,36 @@
 <?php
 $options = array
 (
-	'hostname' => "localhost",
-	'path'     => 'solr/test',
-	'port'     => '8983',
+    'hostname' => "localhost",
+    'path' => 'solr/tests',
+    'port' => '8983',
 );
 
 $client = new SolrClient($options);
 $data = array(
-	array(
-		'id' => 'EN80922032',
-		'name' => '男士打磨直筒休闲牛仔裤',
-		'brand' => 'ENERGIE',
-		'cat' => '牛仔裤',
-		'price' => '1870.00'
-	),
-	array(
-		'id' => 'EN70906025',
-		'name' => '品牌LOGO翻领拉链外套',
-		'brand' => 'ENERGIE',
-		'cat' => '外套',
-		'price' => '1680.00'
-	),
+    array(
+        'id' => 'EN80922032',
+        'name' => '男士打磨直筒休闲牛仔裤',
+        'brand' => 'ENERGIE',
+        'cat' => '牛仔裤',
+        'price' => '1870.00'
+    ),
+    array(
+        'id' => 'EN70906025',
+        'name' => '品牌LOGO翻领拉链外套',
+        'brand' => 'ENERGIE',
+        'cat' => '外套',
+        'price' => '1680.00'
+    ),
 );
 
 
 //foreach($data as $key => $value) {
-//	$doc = new SolrInputDocument();
-//	foreach($value as $key2 =>$value2) {
-//		$doc->addField($key2,$value2);
-//	}
-//	$client->addDocument($doc);
+//  $doc = new SolrInputDocument();
+//  foreach($value as $key2 =>$value2) {
+//      $doc->addField($key2,$value2);
+//  }
+//  $client->addDocument($doc);
 //
 //}
 //$client->commit();

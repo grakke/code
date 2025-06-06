@@ -12,7 +12,7 @@ if (!($fp = fopen('date.txt', 'w'))) {
 }
 fprintf($fp, "%04d-%02d-%02d", 2020, 4, 3); // 写入一个根据 format 格式化后的字符串到 由 handle 句柄打开的流中
 
-file_put_contents('test1.txt', '你好');  // 快速写入内容到文件 test.txt（不存在则自动创建）
+file_put_contents('test1.txt', '你好');  // 快速写入内容到文件 tests.txt（不存在则自动创建）
 $context = file_get_contents('test1.txt');
 var_dump($context);
 
@@ -34,7 +34,7 @@ unlink('test1.txt');
 unlink('test2.txt');
 
 # 读取
-$filename = "./test.txt";
+$filename = "./tests.txt";
 $handle = fopen($filename, "r");//open file in read mode
 $contents = fread($handle, filesize($filename));//read file
 echo $contents;//printing data of file
@@ -103,14 +103,14 @@ echo "4) " . basename(".") . PHP_EOL;
 echo "5) " . basename("/");
 print_r(pathinfo("./debug.log"));
 
-$handle = fopen('test.txt', 'rb');
+$handle = fopen('tests.txt', 'rb');
 stream_filter_append($handle, 'string.toupper');
 while (feof($handle) !== true) {
     echo fgets($handle);
 }
 fclose($handle);
 
-$handle = fopen('php://filter/read=string.toupper/resource=test.txt', 'rb');
+$handle = fopen('php://filter/read=string.toupper/resource=tests.txt', 'rb');
 while (feof($handle) !== true) {
     echo fgets($handle);
 }

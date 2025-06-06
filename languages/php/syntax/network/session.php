@@ -22,7 +22,7 @@ session_start();
 $data = [
     [
         'id' => 1,
-        'name' => 'test',
+        'name' => 'tests',
         'password' => '123456'
     ],
     [

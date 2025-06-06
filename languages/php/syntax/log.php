@@ -38,7 +38,7 @@ use Monolog\Processor\MemoryPeakUsageProcessor;
 $log = new Logger('log');
 
 // 创建两个 Handler，对应变量 $stream 和 $fire
-$stream = new StreamHandler('runtime/logger/test.log', Logger::WARNING);
+$stream = new StreamHandler('runtime/logger/tests.log', Logger::WARNING);
 $fire = new FirePHPHandler();
 
 // 定义时间格式 "Y-m-d H:i:s"

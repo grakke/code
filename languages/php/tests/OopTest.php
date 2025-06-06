@@ -3,7 +3,7 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use syntax\oop\Satic\B;
+use Syntax\Oop\B;
 
 class OopTest extends TestCase
 {
@@ -18,7 +18,7 @@ class OopTest extends TestCase
         $this->assertEquals(B::class, B::who());
         $this->assertEquals(B::class, (new  B())->getClassName());
 
-//        B::test();
+//        B::tests();
 //        echo PHP_EOL;
 //        B::who();
 //        echo PHP_EOL;

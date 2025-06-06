@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\services\Http\Controller;
+namespace Application\Http\Controller;
 
 use Application\services\Model\Album;
 
@@ -8,7 +8,7 @@ class AlbumController extends Controller
 {
     public function list()
     {
-        $id = (int) $this->request->get('id');
+        $id = (int)$this->request->get('id');
         if (empty($id)) {
             echo '请指定要访问的专辑 ID';
             exit();

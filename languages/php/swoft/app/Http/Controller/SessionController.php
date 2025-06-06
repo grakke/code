@@ -63,7 +63,7 @@ class SessionController
     public function set(Response $response): Response
     {
         $sess = HttpSession::current();
-        $sess->set('testKey', 'test-value');
+        $sess->set('testKey', 'tests-value');
         $sess->set('testKey1', ['k' => 'v', 'v1', 3]);
 
         return $response->withData(['testKey', 'testKey1']);
@@ -127,8 +127,8 @@ class SessionController
     public function flash(): array
     {
         $sess = HttpSession::current();
-        $sess->setFlash('flash1', 'test-value');
+        $sess->setFlash('flash1', 'tests-value');
 
-        return ['set.testKey' => 'test-value'];
+        return ['set.testKey' => 'tests-value'];
     }
 }

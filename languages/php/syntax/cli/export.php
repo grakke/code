@@ -1,13 +1,13 @@
 <?php
 
-# /jobs/bin/ 导出安居客小区信息：
+# /jobs/bin/ 导出小区信息：
 
-$config['pathCursor']             = '/data/file/cursor/';
-$config['initCursor']             = array('maxCommId' => 0, 'totalCount' => 0);
+$config['pathCursor'] = '/data/file/cursor/';
+$config['initCursor'] = array('maxCommId' => 0, 'totalCount' => 0);
 
 /*数据处理文件存放目录*/
-$config['pathFile']               = '/home/www/file/datafile/';
-$config['pathExportFile']         = '/data/file/datafile/export/';
+$config['pathFile'] = '/home/www/file/datafile/';
+$config['pathExportFile'] = '/data/file/datafile/export/';
 
 
 $resArr = $this->getOptions();

@@ -10,10 +10,10 @@ use PHPUnit\Framework\TestCase;
 final class SkippingTest extends TestCase
 {
     // skip method 1
-//    public function testConnection(): void
-//    {
-//        // ...
-//    }
+    public function testConnection(): void
+    {
+        // ...
+    }
 
     protected function setUp(): void
     {

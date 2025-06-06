@@ -21,8 +21,8 @@ use Swoft\WebSocket\Server\MessageParser\TokenTextParser;
  * Class TestModule
  *
  * @WsModule(
- *     "/test",
- *     defaultCommand="test.index",
+ *     "/tests",
+ *     defaultCommand="tests.index",
  *     messageParser=TokenTextParser::class,
  *     controllers={TestController::class}
  * )

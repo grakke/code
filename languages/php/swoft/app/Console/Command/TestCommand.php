@@ -24,7 +24,7 @@ use function sprintf;
  *
  * @since 2.0
  *
- * @Command(name="test",coroutine=false)
+ * @Command(name="tests",coroutine=false)
  */
 class TestCommand
 {
@@ -77,7 +77,7 @@ class TestCommand
                 '/redis/set',
             ],
             'log'     => [
-                '/log/test'
+                '/log/tests'
             ],
             'db'      => [
                 '/dbTransaction/ts',
@@ -138,7 +138,7 @@ class TestCommand
     }
 
     /**
-     * Mock request some api for test server
+     * Mock request some api for tests server
      *
      * @CommandMapping("ca")
      */

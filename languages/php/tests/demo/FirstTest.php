@@ -8,7 +8,7 @@ class FirstTest extends TestCase
 {
     public function testTrueAssertsToTrue()
     {
-        $conditon = true;
-        $this->assertTrue($conditon);
+        $condition = true;
+        $this->assertTrue($condition);
     }
 }

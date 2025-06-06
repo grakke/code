@@ -1,6 +1,6 @@
 <?php
 
-namespace syntax\phpunit;
+namespace Tools\phpunit;
 
 class Card
 {
@@ -11,11 +11,6 @@ class Card
     {
         $this->number = $number;
         $this->suit = $suit;
-    }
-
-    public function getNumber()
-    {
-        return $this->number;
     }
 
     public function getSuit()
@@ -33,5 +28,10 @@ class Card
     public function isInMatchingSet(Card $card)
     {
         return ($this->getNumber() == $card->getNumber());
+    }
+
+    public function getNumber()
+    {
+        return $this->number;
     }
 }

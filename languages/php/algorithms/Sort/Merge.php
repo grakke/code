@@ -2,7 +2,7 @@
 
 namespace Algorithms\Sort;
 
-require '../../vendor/autoload.php';
+require './vendor/autoload.php';
 
 class Merge extends AbstractSort
 {

@@ -5,10 +5,10 @@ namespace Tests\demo;
 
 use PHPUnit\Framework\TestCase;
 use ReflectionMethod;
-use syntax\phpunit\Card;
-use syntax\phpunit\CardCollection;
-use syntax\phpunit\CliFormatter;
-use syntax\phpunit\Player;
+use Tools\phpunit\Card;
+use Tools\phpunit\CardCollection;
+use Tools\phpunit\CliFormatter;
+use Tools\phpunit\Player;
 
 class CliFormatterTest extends TestCase
 {

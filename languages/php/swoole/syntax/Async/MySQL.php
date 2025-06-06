@@ -8,7 +8,7 @@ class AsyMysql
         'host' => '127.0.0.1',
         'user' => 'root',
         'password' => '123456Ac&',
-        'database' => 'test',
+        'database' => 'tests',
         'charset' => 'utf8', //指定字符集
         'timeout' => 2,  // 可选：连接超时时间（非查询超时时间），默认为SW_MYSQL_CONNECT_TIMEOUT（1.0）
     ];
@@ -46,6 +46,3 @@ class AsyMysql
 
 $instance = new AsyMysql();
 $instance->exexute();
-
-
-

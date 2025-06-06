@@ -2,7 +2,7 @@
 
 namespace Tests\unit;
 
-use Application\services\Model\Email;
+use Application\http\model\Email;
 use PHPUnit\Framework\TestCase;
 
 class EmailTest extends TestCase

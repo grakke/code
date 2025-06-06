@@ -4,7 +4,7 @@ header("Content-Type:text/html;charset=utf-8");
 $dir = dirname(__FILE__);//当前脚本所在路径
 
 require $dir . "/PHPExcel/Classes/PHPExcel/IOFactory.php";//引入读取excel的类文件
-$filename = $dir . "/test.xls";
+$filename = $dir . "/tests.xls";
 $fileType = PHPExcel_IOFactory::identify($filename);//自动获取文件的类型提供给phpexcel用
 $objReader = PHPExcel_IOFactory::createReader($fileType);//获取文件读取操作对象
 $sheetName = array("Sheet1");

@@ -3,7 +3,7 @@
 namespace Tests\demo;
 
 use PHPUnit\Framework\TestCase;
-use syntax\phpunit\AbstractTrait;
+use Tools\phpunit\AbstractTrait;
 
 class ArstractTraitTest extends TestCase
 {

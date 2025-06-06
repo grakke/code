@@ -8,7 +8,7 @@ use Swoft\Event\EventInterface;
 
 /**
  * Class TestHandler
- * @Listener("test.evt")
+ * @Listener("tests.evt")
  */
 class TestHandler implements EventHandlerInterface
 {

@@ -30,18 +30,18 @@ use const WEBSOCKET_OPCODE_PONG;
 class TestController
 {
     /**
-     * Message command is: 'test.index'
+     * Message command is: 'tests.index'
      *
      * @return void
      * @MessageMapping()
      */
     public function index(): void
     {
-        Session::current()->push('hi, this is test.index');
+        Session::current()->push('hi, this is tests.index');
     }
 
     /**
-     * Message command is: 'test.index'
+     * Message command is: 'tests.index'
      *
      * @param Message $msg
      *
@@ -63,7 +63,7 @@ class TestController
     }
 
     /**
-     * Message command is: 'test.req'
+     * Message command is: 'tests.req'
      *
      * @param Request $req
      *
@@ -78,7 +78,7 @@ class TestController
     }
 
     /**
-     * Message command is: 'test.msg'
+     * Message command is: 'tests.msg'
      *
      * @param Message $msg
      *
@@ -146,7 +146,7 @@ class TestController
     }
 
     /**
-     * Message command is: 'test.ar'
+     * Message command is: 'tests.ar'
      *
      * @MessageMapping("ar")
      * @param string $data
@@ -159,7 +159,7 @@ class TestController
     }
 
     /**
-     * Message command is: 'test.ar'
+     * Message command is: 'tests.ar'
      *
      * @MessageMapping("stop-worker")
      */

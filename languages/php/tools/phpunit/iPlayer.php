@@ -1,6 +1,8 @@
 <?php
 
-namespace syntax\phpunit;
+namespace Tools\phpunit;
+
+use RuntimeException;
 
 abstract class iPlayer
 {

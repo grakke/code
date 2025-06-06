@@ -1,6 +1,6 @@
 <?php
 
-namespace syntax\phpunit;
+namespace Tools\phpunit;
 
 class Subject
 {
@@ -31,17 +31,17 @@ class Subject
         $this->notify('something');
     }
 
-    public function doSomethingBad(): void
-    {
-        foreach ($this->observers as $observer) {
-            $observer->reportError(42, 'Something bad happened', $this);
-        }
-    }
-
     protected function notify($argument): void
     {
         foreach ($this->observers as $observer) {
             $observer->update($argument);
+        }
+    }
+
+    public function doSomethingBad(): void
+    {
+        foreach ($this->observers as $observer) {
+            $observer->reportError(42, 'Something bad happened', $this);
         }
     }
 }

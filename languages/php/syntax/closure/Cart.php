@@ -1,6 +1,6 @@
 <?php
 
-namespace syntax\closure;
+namespace Syntax\Closure;
 
 class Cart
 {

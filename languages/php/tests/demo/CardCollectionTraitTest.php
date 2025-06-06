@@ -3,8 +3,8 @@
 namespace Tests\demo;
 
 use PHPUnit\Framework\TestCase;
-use syntax\phpunit\Card;
-use syntax\phpunit\CardCollectionTrait;
+use Tools\phpunit\Card;
+use Tools\phpunit\CardCollectionTrait;
 
 class CardCollectionTraitTest extends TestCase
 {

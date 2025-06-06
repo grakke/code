@@ -18,9 +18,9 @@
     "monolog/monolog": "^2.1",
     "elasticsearch/elasticsearch": "^8.6",
     "symfony/http-foundation": "^6.2",
-    "illuminate/database": "^10.4",
-    "illuminate/events": "^10.4",
-    "slim/slim": "^4.11",
+    "illuminate/database": "^12",
+    "illuminate/events": "^12",
+    "slim/slim": "^4.1",
     "slim/psr7": "^1.6",
     "willdurand/geocoder": "^4.6",
     "league/csv": "^9.9",
@@ -36,7 +36,17 @@
     "ext-simplexml": "*",
     "ext-libxml": "*",
     "ext-sockets": "*",
-    "ext-openssl": "*"
+    "ext-openssl": "*",
+    "nesbot/carbon": "^3"
+  },
+  "require-dev": {
+    "filp/whoops": "^2.7",
+    "phing/phing": "^2.16",
+    "phpunit/phpunit": "^10",
+    "php-webdriver/webdriver": "^1.14",
+    "phpunit/php-code-coverage": "^10",
+    "phpspec/phpspec": "^1.4",
+    "behat/behat": "^3.13"
   },
   "autoload": {
     "files": [
@@ -49,7 +59,8 @@
       "Application\\": "application/",
       "Popp\\": "Popp/",
       "Src\\": "src/",
-      "Tools\\": "tools/"
+      "Tools\\": "tools/",
+      "Syntax\\": "syntax/"
     },
     "classmap": [
       "./",
@@ -59,15 +70,6 @@
     "exclude-from-classmap": [
       "algorithms/leetcode"
     ]
-  },
-  "require-dev": {
-    "filp/whoops": "^2.7",
-    "phing/phing": "^2.16",
-    "phpunit/phpunit": "^10.0",
-    "php-webdriver/webdriver": "^1.14",
-    "phpunit/php-code-coverage": "^10.0",
-    "phpspec/phpspec": "^1.4",
-    "behat/behat": "^3.13"
   },
   "config": {
     "allow-plugins": {

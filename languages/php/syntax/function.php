@@ -239,10 +239,10 @@ $func = 'foo';
 $func();        // This calls foo()
 
 $func = 'bar';
-$func('test');  // This calls bar()
+$func('tests');  // This calls bar()
 
 $func = 'echoit';
-$func('test');  // This calls echoit()
+$func('tests');  // This calls echoit()
 
 echo preg_replace_callback('~-([a-z])~', function ($match) {
     return strtoupper($match[1]);

@@ -76,7 +76,7 @@ return [
     ],
     'db'                 => [
         'class'    => Database::class,
-        'dsn'      => 'mysql:dbname=test;host=127.0.0.1',
+        'dsn'      => 'mysql:dbname=tests;host=127.0.0.1',
         'username' => 'root',
         'password' => 'swoft123456',
         'charset'  => 'utf8mb4',
@@ -187,6 +187,6 @@ return [
             \App\Tcp\Middleware\GlobalTcpMiddleware::class
         ],
     ],
-    'cliRouter'          => [// 'disabledGroups' => ['demo', 'test'],
+    'cliRouter'          => [// 'disabledGroups' => ['demo', 'tests'],
     ],
 ];

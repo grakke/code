@@ -1,11 +1,15 @@
 <?php
 
+use Application\services\Printer\PrinterProvider;
+use Application\services\Store\StoreProvider;
+use Application\services\View\ViewProvider;
+
 return [
     'app' => [
         'name' => 'Henry 的个人网站',
         'desc' => '让学习与进取者不再孤独',
         'url' => 'https://xueyuanjun.com',
-        'basePath' => __DIR__.'/../',
+        'basePath' => __DIR__ . '/../',
         'store' => [
             'default' => 'mysql',
             'drivers' => [
@@ -24,14 +28,14 @@ return [
         ],
         'editor' => 'html',  // 支持html和markdown
         'providers' => [
-            \Application\services\Store\StoreProvider::class,
-            \Application\services\Printer\PrinterProvider::class,
-            \Application\services\View\ViewProvider::class,
+            StoreProvider::class,
+            PrinterProvider::class,
+            ViewProvider::class,
         ],
     ],
     'view' => [
         'engine' => 'php',  // 视图模板引擎
-        'path' => __DIR__.'/../resources/views/',  // 视图模板根路径
+        'path' => __DIR__ . '/../resources/views/',
     ],
     'session' => [
         'lifetime' => 2 * 60 * 60

@@ -31,7 +31,7 @@ $child->selfFoo();
 $child->staticFoo();
 $child->thisFoo();
 
-//Benz::test();
+//Benz::tests();
 Benz::getClass();
 
 

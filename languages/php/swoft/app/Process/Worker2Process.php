@@ -43,8 +43,8 @@ class Worker2Process implements ProcessInterface
             CLog::info('user=' . json_encode($user));
 
             // Redis
-            Redis::set('test', 'ok');
-            CLog::info('test=' . Redis::get('test'));
+            Redis::set('tests', 'ok');
+            CLog::info('tests=' . Redis::get('tests'));
 
             CLog::info('worker-' . $workerId . ' context=' . context()->getWorkerId());
 

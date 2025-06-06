@@ -49,7 +49,7 @@ class Solution
             }
 
             if ($words[$mid] == ' ') {
-                // test direction
+                // tests direction
                 if ($words[$mid] > $s) {
                     $low = $mid + 1;
                 } else {

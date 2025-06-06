@@ -65,7 +65,7 @@ class invoke
 
     public function test()
     {
-        echo "test".PHP_EOL;
+        echo "tests".PHP_EOL;
     }
 
     public $param = 222;

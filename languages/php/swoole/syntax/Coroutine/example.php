@@ -19,7 +19,7 @@ Co\run(function () {
     // 10k file read and write
     for ($c = 100; $c--;) {
         go(function () use ($c) {
-            $tmp_filename = "/tmp/test-{$c}.php";
+            $tmp_filename = "/tmp/tests-{$c}.php";
             for ($n = 100; $n--;) {
                 $self = file_get_contents(__FILE__);
                 file_put_contents($tmp_filename, $self);
@@ -32,7 +32,7 @@ Co\run(function () {
     // 10k pdo and mysqli read
     for ($c = 50; $c--;) {
         go(function () {
-            $pdo = new PDO('mysql:host=127.0.0.1;dbname=test;charset=utf8', 'root', 'root');
+            $pdo = new PDO('mysql:host=127.0.0.1;dbname=tests;charset=utf8', 'root', 'root');
             $statement = $pdo->prepare('SELECT * FROM `user`');
             for ($n = 100; $n--;) {
                 $statement->execute();
@@ -42,7 +42,7 @@ Co\run(function () {
     }
     for ($c = 50; $c--;) {
         go(function () {
-            $mysqli = new Mysqli('127.0.0.1', 'root', 'root', 'test');
+            $mysqli = new Mysqli('127.0.0.1', 'root', 'root', 'tests');
             $statement = $mysqli->prepare('SELECT `id` FROM `user`');
             for ($n = 100; $n--;) {
                 $statement->bind_result($id);

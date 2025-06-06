@@ -1,10 +1,11 @@
 <?php
 
 
-namespace Tests\demo;
+namespace Tests\Demo;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
-use syntax\phpunit\SomeClass;
+use Tools\Phpunit\SomeClass;
 
 class StubTest extends TestCase
 {
@@ -114,7 +115,7 @@ class StubTest extends TestCase
 
         // 配置桩件
         $stub->method('doSomething')
-            ->will($this->throwException(new \Exception));
+            ->will($this->throwException(new Exception));
 
         // $stub->doSomething() 抛出异常
         $stub->doSomething();

@@ -30,7 +30,7 @@ abstract class Car
         echo static::class . PHP_EOL;
     }
 
-//    public static function test()
+//    public static function tests()
 //    {
 //        # 后期静态绑定
 //        self::getLine();

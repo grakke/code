@@ -140,8 +140,8 @@ function CheckUpload()
 
         sFile_count ++;
 
-//        if ( ( FCKConfig.LinkUploadAllowedExtensions.length > 0 && !oUploadAllowedExtRegex.test( sFile ) ) ||
-//            ( FCKConfig.LinkUploadDeniedExtensions.length > 0 && oUploadDeniedExtRegex.test( sFile ) ) )
+//        if ( ( FCKConfig.LinkUploadAllowedExtensions.length > 0 && !oUploadAllowedExtRegex.tests( sFile ) ) ||
+//            ( FCKConfig.LinkUploadDeniedExtensions.length > 0 && oUploadDeniedExtRegex.tests( sFile ) ) )
 //        {
 //            OnUploadCompleted( 202 ) ;
 //            return false ;

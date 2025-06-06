@@ -1,8 +1,9 @@
 <?php
+
 namespace Application\Http\controllers;
 
-use sf\web\Controller;
-use Sf;
+use framework\src\Sf;
+use framework\src\web\Controller;
 
 class SiteController extends Controller
 {
@@ -22,10 +23,10 @@ class SiteController extends Controller
     public function actionCache()
     {
         $cache = Sf::createObject('cache');
-        $cache->set('test', 'Just a filecache test');
+        $cache->set('tests', 'Just a filecache tests');
         echo 'FileCache store:' . '</br>';
 
-        $rs = $cache->get('test');
+        $rs = $cache->get('tests');
         $cache->flush();
 
         echo $rs;
@@ -34,10 +35,10 @@ class SiteController extends Controller
     public function actionRds()
     {
         $cache = Sf::createObject('redis');
-        $cache->set('test', 'Just a redisCache test');
+        $cache->set('tests', 'Just a redisCache tests');
         echo 'RedisCache store:' . '</br>';
 
-        $rs = $cache->get('test');
+        $rs = $cache->get('tests');
         $cache->flush();
 
         echo $rs;

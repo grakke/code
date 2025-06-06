@@ -1,6 +1,6 @@
 <?php
 
-namespace syntax\phpunit;
+namespace Tools\phpunit;
 
 trait AbstractTrait
 {

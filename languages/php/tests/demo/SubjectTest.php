@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests\demo;
+namespace Tests\Demo;
 
 use PHPUnit\Framework\TestCase;
 use stdClass;
 use syntax\phpunit\Observer;
-use syntax\phpunit\Subject;
+use Tools\phpunit\Subject;
 
 class SubjectTest extends TestCase
 {

@@ -23,7 +23,7 @@ if ($memcache) {
     $memcache->set("num_key", 123);
 
     $object = new StdClass();
-    $object->attribute = 'test';
+    $object->attribute = 'tests';
     $memcache->set("obj_key", $object);
 
     $array = array('assoc' => 123, 345, 567);
@@ -85,7 +85,7 @@ $version = $mem->getVersion();
 echo "服务端版本信息: " . $version . "<br/>\n";
 
 $tmp_object = new stdClass();
-$tmp_object->str_attr = 'test';
+$tmp_object->str_attr = 'tests';
 $tmp_object->int_attr = 123;
 
 $mem->set('key', $tmp_object, false, 10) or die("Failed to save data at the server");

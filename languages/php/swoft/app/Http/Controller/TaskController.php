@@ -109,7 +109,7 @@ class TaskController
      */
     public function syncTask(): array
     {
-        $result  = Task::co('sync', 'test', ['name']);
+        $result = Task::co('sync', 'tests', ['name']);
         $result2 = Task::co('sync', 'testBool');
         $result3 = Task::co('sync', 'testNull');
 

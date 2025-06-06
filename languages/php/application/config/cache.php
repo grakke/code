@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'class' => '\sf\cache\FileCache',
+    'class' => '\framework\src\cache\FileCache',
     'cachePath' => SF_PATH . '/runtime/cache/'
 ];

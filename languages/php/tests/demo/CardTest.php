@@ -3,11 +3,20 @@
 namespace Tests\demo;
 
 use PHPUnit\Framework\TestCase;
-use syntax\phpunit\Card;
+use Tools\phpunit\Card;
 
 class CardTest extends TestCase
 {
     private Card $card;
+
+    public static function matchingCardDataProvider(): array
+    {
+        return [
+            '4 of Hearts' => [new Card('4', 'hearts'), true, 'should match'],
+            '5 of Hearts' => [new Card('5', 'hearts'), false, 'should not match'],
+            '4 of Clubs' => [new Card('4', 'clubs'), true, 'should not match'],
+        ];
+    }
 
     public function setUp(): void
     {
@@ -24,15 +33,6 @@ class CardTest extends TestCase
     {
         $actual = $this->card->getSuit();
         $this->assertEquals('spades', $actual, 'Suit should be <spades>');
-    }
-
-    public static function matchingCardDataProvider(): array
-    {
-        return [
-            '4 of Hearts' => [new Card('4', 'hearts'), true, 'should match'],
-            '5 of Hearts' => [new Card('5', 'hearts'), false, 'should not match'],
-            '4 of Clubs' => [new Card('4', 'clubs'), true, 'should not match'],
-        ];
     }
 
     /**

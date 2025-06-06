@@ -45,8 +45,8 @@ class MonitorLogic
             CLog::info('user=' . json_encode($user));
 
             // Redis
-            Redis::set('test', 'ok');
-            CLog::info('test=' . Redis::get('test'));
+            Redis::set('tests', 'ok');
+            CLog::info('tests=' . Redis::get('tests'));
 
             Coroutine::sleep(3);
         }

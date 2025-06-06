@@ -1,8 +1,7 @@
 <?php
 
-namespace Tests\demo;
+namespace Tests\Demo;
 
-use PDO;
 use PHPUnit\Framework\TestCase;
 
 //在同一个测试套件内的不同测试之间共享基境
@@ -20,15 +19,6 @@ class DatabaseTest extends TestCase
 //        self::$dbh = null;
 //    }
 
-    protected function setUp(): void
-    {
-        if (!extension_loaded('mysqli')) {
-            $this->markTestSkipped(
-                'The MySQLi extension is not available.'
-            );
-        }
-    }
-
     public function testtSomthing(): void
     {
         $this->markTestIncomplete('something new');
@@ -40,5 +30,14 @@ class DatabaseTest extends TestCase
     public function testConnection(): void
     {
         // 测试需要 mysqli 扩展，并且要求 PHP >= 5.3
+    }
+
+    protected function setUp(): void
+    {
+        if (!extension_loaded('mysqli')) {
+            $this->markTestSkipped(
+                'The MySQLi extension is not available.'
+            );
+        }
     }
 }

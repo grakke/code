@@ -71,9 +71,9 @@ class ConsulLogic
     public function kv(): void
     {
         $value = 'value content';
-        $this->kv->put('/test/my/key', $value);
+        $this->kv->put('/tests/my/key', $value);
 
-        $response = $this->kv->get('/test/my/key');
+        $response = $this->kv->get('/tests/my/key');
         var_dump($response->getBody(), $response->getResult());
     }
 }

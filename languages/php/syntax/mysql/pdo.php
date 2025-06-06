@@ -43,12 +43,12 @@ class post
             $stmt->execute();
             return $this->pdo->lastInsertId();
         } catch (PDOException $e) {
-            printf("数据库插入失败: %s 条".PHP_EOL, $e->getMessage());
+            printf("数据库插入失败: %s 条" . PHP_EOL, $e->getMessage());
         }
     }
 
     /**
-     * @param  array  $items
+     * @param array $items
      *
      * @return int
      */
@@ -69,7 +69,7 @@ class post
             return $stmt->rowCount();
         } catch (PDOException $e) {
             $this->pdo->rollBack();
-            printf("数据库批量插入失败: %s条".PHP_EOL, $e->getMessage());
+            printf("数据库批量插入失败: %s条" . PHP_EOL, $e->getMessage());
         }
     }
 
@@ -82,7 +82,7 @@ class post
             $stmt->execute();
             return $stmt->fetchObject(self::class);  // 以对象方式返回结果集
         } catch (PDOException $e) {
-            printf("数据库查询失败: %s 条".PHP_EOL, $e->getMessage());
+            printf("数据库查询失败: %s 条" . PHP_EOL, $e->getMessage());
         }
     }
 
@@ -94,7 +94,7 @@ class post
             $stmt->execute();
             return $stmt->fetchAll();
         } catch (PDOException $e) {
-            printf("数据库查询失败: %s".PHP_EOL, $e->getMessage());
+            printf("数据库查询失败: %s" . PHP_EOL, $e->getMessage());
         }
     }
 
@@ -108,7 +108,7 @@ class post
             $stmt->bindValue(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
         } catch (PDOException $e) {
-            printf("数据库更新失败: %s条".PHP_EOL, $e->getMessage());
+            printf("数据库更新失败: %s条" . PHP_EOL, $e->getMessage());
         }
     }
 
@@ -121,21 +121,21 @@ class post
             $stmt->execute();
             return $stmt->rowCount();
         } catch (PDOException $e) {
-            printf("数据库删除失败: %s条".PHP_EOL, $e->getMessage());
+            printf("数据库删除失败: %s条" . PHP_EOL, $e->getMessage());
         }
     }
 }
 
 
-$dsn = 'mysql:host=127.0.0.1;port=3306;dbname=test;charset=utf8mb4';
+$dsn = 'mysql:host=127.0.0.1;port=3306;dbname=tests;charset=utf8mb4';
 $user = 'blog';
 $pass = 'blog';
-$db = 'test';
+$db = 'tests';
 
 try {
     $pdo = new PDO($dsn, $user, $pass);
 } catch (PDOException $e) {
-    printf("数据库连接失败: %s".PHP_EOL, $e->getMessage());
+    printf("数据库连接失败: %s" . PHP_EOL, $e->getMessage());
 }
 
 $post = new post($pdo);
@@ -146,14 +146,14 @@ $context = '测试内容: 今天天气不错☀️';
 $id = $post->insert($title, $context);
 if ($id) {
     $item = $post->select($id);
-    echo '插入成功,ID: '.$id.'.创建时间:'.$item->created_at.PHP_EOL;
+    echo '插入成功,ID: ' . $id . '.创建时间:' . $item->created_at . PHP_EOL;
 }
 $post->update($id);
 $item = $post->select($id);
-echo '更新成功,时间:'.$item->created_at.PHP_EOL;
+echo '更新成功,时间:' . $item->created_at . PHP_EOL;
 
 if ($post->delete($id)) {
-    echo '已删除，删除影响行数: '.PHP_EOL;
+    echo '已删除，删除影响行数: ' . PHP_EOL;
 }
 
 $post1 = new Post($pdo);

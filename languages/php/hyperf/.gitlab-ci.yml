@@ -11,31 +11,31 @@ variables:
 build_test_docker:
   stage: build
   before_script:
-#    - git submodule sync --recursive
-#    - git submodule update --init --recursive
+  #    - git submodule sync --recursive
+  #    - git submodule update --init --recursive
   script:
     - docker build . -t $PROJECT_NAME
-    - docker tag $PROJECT_NAME $REGISTRY_URL/$PROJECT_NAME:test
-    - docker push $REGISTRY_URL/$PROJECT_NAME:test
+    - docker tag $PROJECT_NAME $REGISTRY_URL/$PROJECT_NAME:tests
+    - docker push $REGISTRY_URL/$PROJECT_NAME:tests
   only:
-    - test
+    - tests
   tags:
     - builder
 
 deploy_test_docker:
   stage: deploy
   script:
-    - docker stack deploy -c deploy.test.yml --with-registry-auth $PROJECT_NAME
+    - docker stack deploy -c deploy.tests.yml --with-registry-auth $PROJECT_NAME
   only:
-    - test
+    - tests
   tags:
-    - test
+    - tests
 
 build_docker:
   stage: build
   before_script:
-#    - git submodule sync --recursive
-#    - git submodule update --init --recursive
+  #    - git submodule sync --recursive
+  #    - git submodule update --init --recursive
   script:
     - docker build . -t $PROJECT_NAME
     - docker tag $PROJECT_NAME $REGISTRY_URL/$PROJECT_NAME:$CI_COMMIT_REF_NAME

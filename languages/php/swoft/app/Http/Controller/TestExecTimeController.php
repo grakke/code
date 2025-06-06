@@ -15,7 +15,7 @@ class TestExecTimeController
     /**
      * 闭包递归 计算阶乘
      *
-     * @RequestMapping(route="test/{number}")
+     * @RequestMapping(route="tests/{number}")
      *
      * @param int $number
      *

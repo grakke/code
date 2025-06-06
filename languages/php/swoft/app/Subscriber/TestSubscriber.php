@@ -13,8 +13,8 @@ use Swoft\Event\Listener\ListenerPriority;
  */
 class TestSubscriber implements EventSubscriberInterface
 {
-    public const EVENT_ONE = 'test.event1';
-    public const EVENT_TWO = 'test.event2';
+    public const EVENT_ONE = 'tests.event1';
+    public const EVENT_TWO = 'tests.event2';
 
     /**
      * Configure events and corresponding processing methods (you can configure the priority)
@@ -34,11 +34,11 @@ class TestSubscriber implements EventSubscriberInterface
 
     public function handleEvent1(EventInterface $evt): void
     {
-        $evt->setParams(['msg' => 'handle the event: test.event1 position: TestSubscriber.handleEvent1()']);
+        $evt->setParams(['msg' => 'handle the event: tests.event1 position: TestSubscriber.handleEvent1()']);
     }
 
     public function handleEvent2(EventInterface $evt): void
     {
-        $evt->setParams(['msg' => 'handle the event: test.event2 position: TestSubscriber.handleEvent2()']);
+        $evt->setParams(['msg' => 'handle the event: tests.event2 position: TestSubscriber.handleEvent2()']);
     }
 }

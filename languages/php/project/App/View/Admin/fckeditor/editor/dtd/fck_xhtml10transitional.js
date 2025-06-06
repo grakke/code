@@ -135,6 +135,6 @@ FCK.DTD = (function()
 	(1) According to the DTD, many elements, like <b> accept <a> elements
 	    inside of them. But, to produce better output results, we have manually
 	    changed the map to avoid breaking the links on pieces, having
-	    "<b>this is a </b><a><b>link</b> test</a>", instead of
-	    "<b>this is a <a>link</a></b><a> test</a>".
+	    "<b>this is a </b><a><b>link</b> tests</a>", instead of
+	    "<b>this is a <a>link</a></b><a> tests</a>".
 */

@@ -25,7 +25,7 @@ use Swoft\Log\Helper\Log;
 class LogController
 {
     /**
-     * @RequestMapping("test")
+     * @RequestMapping("tests")
      *
      * @return array
      */

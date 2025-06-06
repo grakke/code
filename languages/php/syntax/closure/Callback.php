@@ -40,7 +40,7 @@ call_user_func(['B', 'self::who']);
 call_user_func(['B', 'static::who']);
 call_user_func(function ($arg) {
     print "[$arg]\n";
-}, 'test');
+}, 'tests');
 
 class c
 {
@@ -87,5 +87,5 @@ class Foo2
     }
 }
 
-call_user_func_array(__NAMESPACE__ . 'Foo2::test', array('Hannes'));
-call_user_func_array(array(__NAMESPACE__ . 'Foo2', 'test'), array('Philip'));
+call_user_func_array(__NAMESPACE__ . 'Foo2::tests', array('Hannes'));
+call_user_func_array(array(__NAMESPACE__ . 'Foo2', 'tests'), array('Philip'));

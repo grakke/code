@@ -69,7 +69,7 @@ class HomeController
      */
     public function wsTest(): Response
     {
-        return view('home/ws-test');
+        return view('home/ws-tests');
     }
 
     /**
