@@ -432,67 +432,56 @@ packages:
     resolution: {integrity: sha512-q2aqiDKNKNj9jG/6JIHakx1hmj6A8bxc3U6rpZjL8znx3O4OGpPJcyEiJSxmFd8olpjfRezh7PONU+3RTQmj0A==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.41.2':
     resolution: {integrity: sha512-qDtvGRNcj2SCY+XFV24s6/vOV46fktFa3/AtedKLVJZdO/WGyOtDDq2zF7nNGhzJa0Tx7bvJ92z9PjjF7nKbBg==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.41.2':
     resolution: {integrity: sha512-Cg1ywrBHMMCj4Il0QdcVamt5UK9HQ1ntNUXzhAw4yZ2rTJGFkjnkYyEPEpunb1L9orm+g0kvtZUydShTtLUNkA==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.41.2':
     resolution: {integrity: sha512-FxPrm21SE2/p+L/Qy2P6zPPWtbKRunZ71ChHXuZu6b//zOeDYCF7kbXiGdE7ZJgUvboLx8lQtov4jsz04zdmiw==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-loongarch64-gnu@4.41.2':
     resolution: {integrity: sha512-Bp2BYb+QWgefn2e8DblGUzejLEyhtG0DnIcSMzAzFtBK33ITvzLM9B8maTHPoy7Cx7XdxEb7l0iNKQAXBZ1NOw==}
     cpu: [loong64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.41.2':
     resolution: {integrity: sha512-1DmJwH0PPRPjVwUGHINP1YiH7fO25mhpf2B5N8ubBQdOjEVTRI0x69m8eJGoUSLISoW0kgPX2zTAiHc4zllQ/g==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.41.2':
     resolution: {integrity: sha512-/9TBJIyoervs137gteTbzOSsIc/Io6xnXvjXYTEEqDRi3a9OokdBwfllN8AmPFGcU+WzoAiTc6n9SJiPohJ3CQ==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.41.2':
     resolution: {integrity: sha512-qqwpXqu6mV6Vm+EsU2NQk/xLiQfCv+NYmYNCYF8FFIf7kzlHvDoqiNaqqOw0hAr8O5nRBQO+H6X4qEw4Y/0b8w==}
     cpu: [riscv64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.41.2':
     resolution: {integrity: sha512-j5oHqcj58pDqN3+CeJdTB3NfHipxIxVIH24VkRlVVhs9jJXks1ovtO4Tf6YxlBzf44ZTx9D2uhO9DZttC/wgUA==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.41.2':
     resolution: {integrity: sha512-F3fxs7ajUNny4z1TsprdWB9gg8QRwSNSSILVfTmG8rXdeUFWuHEf3Uf5ltrdii8CkzZS3kD/VFPdNVdH3BOpIA==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.41.2':
     resolution: {integrity: sha512-2S74RTJ1lJeiX+HSCxlLD/6Z6ndu9/+Huf8kYrI2XTCztFosOWsjPt+aD4cxBG1JTWjoiRYtutc8HABruppFQQ==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.41.2':
     resolution: {integrity: sha512-LOXSg8GprvL36erslsrNEUirlxy28JcuyTH5PYSBj8wwa0gDQlR8sZricFRbZGCzLhFixvmW2ozj7Mi+j023sg==}
@@ -682,8 +671,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  brace-expansion@1.1.11:
-    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
+  brace-expansion@1.1.12:
+    resolution: {integrity: sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==}
 
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -1371,8 +1360,8 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
-  postcss@8.5.4:
-    resolution: {integrity: sha512-QSa9EBe+uwlGTFmHsPKokv3B/oEMQZxfqW0QqNCyhpa6mB1afzulwn8hihglqAb2pOw+BJgNlmXQ8la2VeHB7w==}
+  postcss@8.5.5:
+    resolution: {integrity: sha512-d/jtm+rdNT8tpXuHY5MMtcbJFBkhXE6593XVR9UoGCH8jSFGci7jGvMGH5RYd5PBJW+00NZQt6gf7CbagJCrhg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -2290,7 +2279,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  brace-expansion@1.1.11:
+  brace-expansion@1.1.12:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
@@ -3005,7 +2994,7 @@ snapshots:
 
   minimatch@3.1.2:
     dependencies:
-      brace-expansion: 1.1.11
+      brace-expansion: 1.1.12
 
   mlly@1.7.4:
     dependencies:
@@ -3099,7 +3088,7 @@ snapshots:
 
   possible-typed-array-names@1.1.0: {}
 
-  postcss@8.5.4:
+  postcss@8.5.5:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
@@ -3411,7 +3400,7 @@ snapshots:
   vite@4.5.14(@types/node@22.15.30):
     dependencies:
       esbuild: 0.18.20
-      postcss: 8.5.4
+      postcss: 8.5.5
       rollup: 3.29.5
     optionalDependencies:
       '@types/node': 22.15.30
@@ -3422,7 +3411,7 @@ snapshots:
       esbuild: 0.25.5
       fdir: 6.4.5(picomatch@4.0.2)
       picomatch: 4.0.2
-      postcss: 8.5.4
+      postcss: 8.5.5
       rollup: 4.41.2
       tinyglobby: 0.2.14
     optionalDependencies:
