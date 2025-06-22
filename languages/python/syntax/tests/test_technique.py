@@ -22,19 +22,19 @@ class A(unittest.TestCase):
         self.assertTrue(a.m2.called)  # 验证m2被call过
         a.m3.assert_called_with("custom_val")  # 验证m3被指定参数call过
 
-    def side_effect(arg):
+    def side_effect(self, arg):
         if arg < 0:
             return 1
         else:
             return 2
 
-    def test_side_effect(arg):
+    def test_side_effect(self):
         mock = MagicMock()
         a = A()
-        mock.side_effect = a.side_effect(arg)
+        mock.side_effect = a.side_effect
 
-        assertEqual(mock(-1), 1)
-        assertEqual(mock(1), 2)
+        self.assertEqual(mock(-1), 1)
+        self.assertEqual(mock(1), 2)
 
 
 if __name__ == '__main__':

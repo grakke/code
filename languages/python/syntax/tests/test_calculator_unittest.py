@@ -19,7 +19,7 @@ def is_error(a, b):
     # 实际调用函数
     try:
         return multiple(a, b)
-    except Exception as e:
+    except Exception:
         return -1
 
 
@@ -122,7 +122,7 @@ class TestCalculator(unittest.TestCase):
 
     @unittest.skip("需要修复...")
     def test_magic_mock_side_effect(self):
-        mock = mock()
+        mock = self.mock()
         mock.side_effect = self.side_effect
         self.assertEqual(mock(-1), 1)
         self.assertEqual(mock(1), 2)
