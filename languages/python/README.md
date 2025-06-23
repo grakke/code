@@ -2,6 +2,10 @@
 
 - 语言简洁
 
+## 环境
+
+- Conda
+
 ## 语法
 
 - 数据结构
@@ -40,8 +44,8 @@ scrapy crawl douban_spider -o douban.csv
 
 ### 递归
 
-- 递归只是让解决方案更清晰，并没有性能上的优势
-- 基线条件(base case) 指的是函数不再调用自己，从而避免形成无限循环
+- 只是让解决方案更清晰，并没有性能上的优势
+- 基线条件(base case) 指函数不再调用自己，从而避免形成无限循环
 - 递归条件(recursive case)：函数调用自己
 
 ### BFS
@@ -60,7 +64,7 @@ scrapy crawl douban_spider -o douban.csv
 
 - test 运行功能测试和单元测试
 
-```shell script
+```sh
 django-admin.py startproject superlists
 python manage.py startapp lists
 python manage.py runserver
@@ -79,7 +83,7 @@ python manage.py test functional_tests
 
 - 不要预先做大量设计
   - 除了要花费大量时间收集需求之外，设计阶段还要用等量的时间在纸上规划软件
-  - 在实践中解决问题比理论分析能学到更多，而且让应用尽早接 受真实用户的检验效果更好
+  - 在实践中解决问题比理论分析能学到更多，而且让应用尽早接受真实用户的检验效果更好
   - 尽早把最简可用的应用放出来，根据实际使用中得到的反馈逐步向前推进设计
 - “YAGNI”(读作 yag-knee) “You ain’t gonna need it” 不管想法有多好，大多数情况下最终用不到这个功能
 
@@ -111,10 +115,10 @@ python manage.py test functional_tests
 - 确保测试隔离，管理全局状态
   - 每次测试结束后都要还原永久状态
 - 避免使用“含糊的”休眠
-  - 使用重试循环，它可以轮询应用，尽早向前行进
+  - 使用重试循环，可以轮询应用，尽早向前行进
 - 不要依赖Selenium的隐式等待
 
-## behave
+## Behave
 
 ```shell script
 pip install allure-behave
@@ -207,7 +211,7 @@ allure serve report
 
 ## 图书
 
-- [Python 金融大数据分析 Python for Fianace](./pyhont_for_finance)
+- [Python 金融大数据分析 Python for Finance](./pyhont_for_finance)
 
 ## 课程
 

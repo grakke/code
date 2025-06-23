@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # __author__ = 'henry'
 import unittest
-from unittest import mock
 from unittest.mock import MagicMock
 from ddt import data, unpack, ddt
 from parameterized import parameterized, param
