@@ -1,6 +1,20 @@
 <?php
 
-# 值传递
+/**
+ * PHP Function, Closure, and Arrow Function Comprehensive Guide
+ *
+ * - Value and reference passing
+ * - Scope and global/static variables
+ * - Closures and use keyword
+ * - Variadic functions
+ * - Arrow functions
+ * - Modern PHP features
+ * - Error handling and compatibility
+ */
+
+declare(strict_types=1);
+
+// === 1. VALUE PASSING ===
 $a = 1;
 $b = 2;
 function add(int $a, int $b): int
@@ -10,29 +24,28 @@ function add(int $a, int $b): int
 }
 
 $c = add($a, $b);
-printf("$a = %d\n", $a);
-printf("$c = %d\n", $c);
+printf("Value passing: a = %d, c = %d\n", $a, $c);
 
-# 引用传递
-function add_v(int &$a, int $b)
+// === 2. REFERENCE PASSING ===
+function add_v(int &$a, int $b): void
 {
     $a += $b;
 }
 
 add_v($a, $b);
-printf("\$a = %d\n", $a);
+printf("Reference passing: a = %d\n", $a);
 
-# 作用域
+// === 3. SCOPE DEMO ===
 $d = 10;
 function myFunction($d)
 {
-    echo $d . PHP_EOL;
+    echo "myFunction param: $d\n";
     ++$d;
-    echo $d . PHP_EOL;
+    echo "myFunction incremented: $d\n";
 }
 
-myFunction($d++); # 传入10, 函数内改变对外无影响
-echo $d . PHP_EOL;
+myFunction($d++); // 传入10, 函数内改变对外无影响
+echo "d after myFunction: $d\n";
 
 $f = 7;
 function myFunction1(&$d)
@@ -40,38 +53,33 @@ function myFunction1(&$d)
     return $d++;
 }
 
-echo myFunction1($f) . PHP_EOL;
+echo "myFunction1 returned: " . myFunction1($f) . ", f now: $f\n";
 echo $f . PHP_EOL;
 
-#### 匿名(闭包)函数Closure
+// === 4. CLOSURE (ANONYMOUS FUNCTION) ===
 $add = function (int $a, int $b) {
     return $a + $b;
 };
-echo "$a + $b = " . $add($a, $b) . PHP_EOL;
+echo "Closure: $a + $b = " . $add($a, $b) . "\n";
 
-# 动态设置函数类型值
+// === 5. DYNAMIC FUNCTION NAME ===
 function multi(int $a, int $b): int
 {
     return $a * $b;
 }
 
 $add = 'multi';
-echo "$a x $b = " . $add($a, $b) . PHP_EOL;
+echo "Dynamic function: $a x $b = " . $add($a, $b) . "\n";
 
-# 支持在函数体中直接引用上下文变量(继承父作用域的变量)
-# 通过 use 关键字传递当前上下文中的变量，就可以在闭包函数体中直接使用，而不需要通过参数形式传入
-# 其他引用该文件的代码就可以间接引用当前父作用域下的变量，如果是在类方法中定义的匿名函数，则可以直接引用相应类实例的属性
-# 函数　默认不能引用全局变量
+// === 6. CLOSURE WITH USE KEYWORD ===
 $a = 5;
 $b = 6;
-//function multiV()
-//{
-//    return $a * $b;
-//}
+$closure = function () use ($a, $b) {
+    return $a * $b;
+};
+echo "Closure with use: " . $closure() . "\n";
 
-//echo multiV().PHP_EOL;
-
-# 基于 global 关键字通过全局变量引用函数体外部定义的变量
+// === 7. GLOBAL KEYWORD ===
 $n1 = 100;
 $n2 = 54;
 function sub()
@@ -80,11 +88,9 @@ function sub()
     return $n1 - $n2;
 }
 
-echo sub() . PHP_EOL;
+echo "Global keyword: " . sub() . "\n";
 
-# global vs. 匿名函数:作用域不一样
-# 全局变量存在于一个全局的范围
-# 而闭包的父作用域是定义该闭包的函数，不一定是调用它的函数
+// === 8. CLOSURE SCOPE VS GLOBAL ===
 function add1($n1, $n2)
 {
     return function () use ($n1, $n2) {
@@ -105,42 +111,44 @@ $n2 = 3;
 $n3 = 4;
 $add = add1($n1, $n2);
 $sum = $add();
-echo "$n1 + $n2 = $sum" . PHP_EOL;
+echo "Closure scope: $n1 + $n2 = $sum\n";
 
 $add = add2();
 $sum = $add();
-echo "$n1 + $n2 + $n3 = $sum" . PHP_EOL;
+echo "Closure global: $n1 + $n2 + $n3 = $sum\n";
 
-# 可变数量的参数列表
+// === 9. VARIADIC FUNCTIONS ===
 function sum(...$numbers)
 {
     $sum = 0;
     foreach ($numbers as $number) {
         $sum += $number;
     }
-    printf("The num of the arguments are %d\n", func_num_args());
-    printf("The sum of these numbers are %d\n", $sum);
+    printf("Variadic: count = %d, sum = %d\n", func_num_args(), $sum);
 }
 
 sum(1, 2, 3, 4, 5);
 
+// === 10. DEFAULT PARAMETERS ===
 function sayHello($name, $age = 28)
 {
-    echo "Hello $name, you are $age years old<br/>";
+    echo "Hello $name, you are $age years old\n";
 }
 
 sayHello("Maxsu", 27);
 sayHello("Henry");
 
+// === 11. REFERENCE PARAMETER ===
 function add_some_extra(&$string)
 {
     $string .= 'and something extra.';
-    echo $string;
+    echo $string . "\n";
 }
 
 $str = 'This is a string, ';
-add_some_extra($str); # This is a string, and something extra.
+add_some_extra($str);
 
+// === 12. ARRAY DEFAULTS ===
 function makecoffee($types = array("cappuccino"), $coffeeMaker = null)
 {
     $device = is_null($coffeeMaker) ? "hands" : $coffeeMaker;
@@ -150,23 +158,25 @@ function makecoffee($types = array("cappuccino"), $coffeeMaker = null)
 echo makecoffee();
 echo makecoffee(array("cappuccino", "lavazza"), "teapot");
 
+// === 13. POST/INCREMENT ===
 function increment($i)
 {
-    echo $i++;
+    echo $i++ . "\n";
 }
 
 $i = 10;
-increment($i); # 10
+increment($i);
 
 function increment1(&$i)
 {
-    echo $i++;
+    echo $i++ . "\n";
 }
 
 $i = 10;
 increment1($i);
-echo $i; # 10 11
+echo $i . "\n";
 
+// === 14. RETURNING VALUES ===
 function sum1(...$numbers)
 {
     $acc = 0;
@@ -176,8 +186,9 @@ function sum1(...$numbers)
     return $acc;
 }
 
-echo sum1(1, 2, 3, 4);
+echo "sum1: " . sum1(1, 2, 3, 4) . "\n";
 
+// === 15. LIST DESTRUCTURING ===
 function small_numbers()
 {
     return array(0, 1, 2);
@@ -185,80 +196,54 @@ function small_numbers()
 
 list($zero, $one, $two) = small_numbers();
 
-function add3(...$numbers)
-{
-    $sum = 0;
-    foreach ($numbers as $n) {
-        $sum += $n;
-    }
-    return $sum;
-}
-
-echo add3(1, 2, 3, 4);
-
+// === 16. RECURSION ===
 function display($number)
 {
     if ($number <= 5) {
-        echo "$number <br/>";
+        echo "$number ";
         display($number + 1);
     }
 }
 
 display(1);
+echo "\n";
 
-function factorial($n)
-{
-    if ($n < 0) {
-        return -1;
-    } /*Wrong value*/
-    if ($n == 0) {
-        return 1;
-    } /*Terminating condition*/
-    return ($n * factorial($n - 1));
-}
-
-echo factorial(5);
-
+// === 17. FUNCTION VARIABLE CALLS ===
 function foo()
 {
-    echo "In foo()<br />\n";
+    echo "In foo()\n";
 }
 
 function bar($arg = '')
 {
-    echo "In bar(); argument was '$arg'.<br />\n";
+    echo "In bar(); argument was '$arg'.\n";
 }
 
-// 使用 echo 的包装函数
 function echoit($string)
 {
-    echo $string;
+    echo $string . "\n";
 }
 
 $func = 'foo';
-$func();        // This calls foo()
+$func();
 
 $func = 'bar';
-$func('tests');  // This calls bar()
+$func('tests');
 
 $func = 'echoit';
-$func('tests');  // This calls echoit()
+$func('tests');
 
+// === 18. CLOSURE CALLBACK ===
 echo preg_replace_callback('~-([a-z])~', function ($match) {
     return strtoupper($match[1]);
-}, 'hello-world');// 输出 helloWorld
-$greet = function ($name) {
-    printf("Hello %s\r\n", $name);
-};
+}, 'hello-world') . "\n";
 
-$greet('World');
-$greet('PHP');
-
+// === 19. CLOSURE WITH USE (BY REFERENCE) ===
 $message = 'hello';
 $example = function () use ($message) {
     echo $message;
 };
-echo $example();
+echo $example() . "\n";
 
 function getClosure($n)
 {
@@ -270,79 +255,113 @@ function getClosure($n)
 }
 
 $fn = getClosure(1);
-$fn(1);//102
-$fn(2);//105
-$fn(3);//109
-echo $a;//Notice: Undefined variable
+$fn(1);
+$fn(2);
+$fn(3);
 
+// === 20. CLASS METHOD CLOSURE (DEMO, COMMENTED) ===
+// $dog = new \syntax\oop\Dog("Rover", "red");
+// $dog->greet("Hello")();
+// $dog->swim()();
+// $dog();
+// $class = new ReflectionClass('Dog');
+// $closure = $class->getMethod('privateMethod')->getClosure($dog);
+// $closure();
 
-$dog = new \syntax\oop\Dog("Rover", "red");
-$dog->greet("Hello")();
-$dog->swim()();
-$dog();
-//通过ReflectionClass、ReflectionMethod来动态创建闭包，并实现直接调用非公开方法。
-$class = new ReflectionClass('Dog');
-$closure = $class->getMethod('privateMethod')->getClosure($dog);
-$closure();
+// === 21. RANDOM BYTES/INT (PHP 7+) ===
+if (function_exists('random_bytes') && function_exists('random_int')) {
+    $bytes = random_bytes(5);
+    echo "random_bytes: " . bin2hex($bytes) . "\n";
+    echo "random_int: " . random_int(100, 999) . "\n";
+} else {
+    echo "random_bytes/random_int not available in this PHP version.\n";
+}
 
-$username = $_GET['user'] ?? 'nobody';
-
-$bytes = random_bytes(5);
-echo bin2hex($bytes) . PHP_EOL;//string(10) "385e33f741"
-echo random_int(100, 999);//int(248)
-
-
-## 作用域
+// === 22. SCOPE: GLOBAL, STATIC, LOCAL ===
 $x = 5;
 $y = 10;
 function myTest()
 {
     global $x, $y;
     $y = $x + $y;
-    echo $y;
+    echo "myTest: y = $y\n";
 }
 
-myTest(); // 15
+myTest();
 
 function myTest1()
 {
     static $x = 0;
-    echo $x;
+    echo "myTest1: x = $x\n";
     $x++;
 }
 
-myTest1(); // 0
-myTest1(); // 1
-myTest1(); // 2
+myTest1();
+myTest1();
+myTest1();
 
 function myTest2($x)
 {
-    echo $x;
+    echo "myTest2: x = $x\n";
 }
 
-myTest2(5); # 5
+myTest2(5);
 
-// 函数内销毁全局变量$foo无效,应使用 $GLOBALS 数组来实现
+// === 23. UNSET GLOBALS ===
 function destroy_foo()
 {
     global $foo;
     // unset($foo);
     unset($GLOBALS['bar']);
-    echo $foo;//Notice: Undefined variable: foo
+    // echo $foo; // Notice: Undefined variable: foo
 }
 
 $foo = 'bar';
 destroy_foo();
-echo $foo;
+echo "foo after destroy_foo: $foo\n";
 
+// === 24. FUNC_GET_ARGS DEMO ===
 function foo1()
 {
     $args = func_get_args();
     foreach ($args as $k => $v) {
-        echo "arg" . ($k + 1) . ": $v";
+        echo "arg" . ($k + 1) . ": $v ";
     }
+    echo "\n";
 }
 
 foo1();
 foo1('hello');
 foo1('hello', 'world', 'again');
+
+// === 25. IS_COUNTABLE DEMO (PHP 7.3+) ===
+if (function_exists('is_countable')) {
+    echo "is_countable array: " . (is_countable(['ANull', 'B', 3]) ? 'yes' : 'no') . "\n";
+    echo "is_countable ArrayIterator: " . (is_countable(new ArrayIterator()) ? 'yes' : 'no') . "\n";
+    // use syntax\php7\ANull if available
+    if (class_exists('syntax\\php7\\ANull')) {
+        echo "is_countable ANull: " . (is_countable(new \syntax\php7\ANull()) ? 'yes' : 'no') . "\n";
+    }
+    $array = ['ANull', 'B', 3];
+    if (is_countable($array)) {
+        var_dump(count($array));
+    }
+}
+
+// === 26. ARROW FUNCTIONS (PHP 7.4+) ===
+$name = "John";
+$fn1 = fn ($msg) => $msg . ' ' . $name;
+echo "Arrow fn1: "; var_export($fn1("Hello")); echo "\n";
+$fn = fn ($msg1) => fn ($msg2) => $msg1 . ' ' . $msg2 . ' ' . $name;
+echo "Arrow fn2: "; var_export($fn("Hello")("Hi")); echo "\n";
+$fn = fn (string $msg = 'Hi'): string => $msg . ' ' . $name;
+$fn2 = fn (...$x) => $x;
+$fn3 = fn (&$x) => $x++;
+$x = 1;
+$fn3($x);
+echo "Arrow fn3 x: $x\n";
+var_export($fn("Hello"));
+var_export($fn());
+var_export($fn2(1, 2, 3));
+
+echo "=== FUNCTION DEMO COMPLETED ===\n";

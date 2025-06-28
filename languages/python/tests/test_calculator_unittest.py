@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # __author__ = 'henry'
 import unittest
-from unittest.mock import MagicMock
+from unittest import mock
 from ddt import data, unpack, ddt
 from parameterized import parameterized, param
 
@@ -107,8 +107,8 @@ class TestCalculator(unittest.TestCase):
 
     def test_magic_mock(self):
         a = Calculator()
-        a.m2 = MagicMock(return_value="custom_val")
-        a.m3 = MagicMock()
+        a.m2 = mock(return_value="custom_val")
+        a.m3 = mock()
         a.m1()
         self.assertTrue(a.m2.called)  # 验证m2被call过
         a.m3.assert_called_with("custom_val")  # 验证m3被指定参数call过

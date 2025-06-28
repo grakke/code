@@ -11,7 +11,7 @@ class BinarySearch
 
     public static function binary_search_first($nums, $num)
     {
-        return self::binary_search_internal($nums, $num, 0, count($nums) - 1);
+        return self::binary_search_internal_first($nums, $num, 0, count($nums) - 1);
     }
 
     public static function binary_search_last($nums, $num)
@@ -27,7 +27,7 @@ class BinarySearch
      *
      * @return false|float|int
      */
-    public function binary_search_internal($nums, $num, $low, $high)
+    public static function binary_search_internal($nums, $num, $low, $high)
     {
         if ($low > $high) {
             return -1;
@@ -45,7 +45,7 @@ class BinarySearch
         return $mid;
     }
 
-    public function binary_search_internal_first($nums, $num, $low, $high)
+    public static function binary_search_internal_first($nums, $num, $low, $high)
     {
         if ($low > $high) {
             return -1;
@@ -72,7 +72,7 @@ class BinarySearch
         return self::binary_search_internal_first($nums, $num, $low, $mid - 1);
     }
 
-    public function binary_search_internal_last($nums, $num, $low, $high)
+    public static function binary_search_internal_last($nums, $num, $low, $high)
     {
         if ($low > $high) {
             return -1;
@@ -108,7 +108,7 @@ class BinarySearch
         return self::binary_search_internal_bigger_first($nums, $num, 0, count($nums) - 1);
     }
 
-    public function binary_search_internal_bigger_first($nums, $num, $low, $high)
+    public static function binary_search_internal_bigger_first($nums, $num, $low, $high)
     {
         if ($low > $high) {
             return -1;
@@ -139,7 +139,7 @@ class BinarySearch
         return self::binary_search_internal_smaller_last($nums, $num, 0, count($nums) - 1);
     }
 
-    public function binary_search_internal_smaller_last($nums, $num, $low, $high)
+    public static function binary_search_internal_smaller_last($nums, $num, $low, $high)
     {
         if ($low > $high) {
             return -1;

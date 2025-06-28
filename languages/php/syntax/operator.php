@@ -180,4 +180,3 @@ $arr[1] = $arr[0] ^ $arr[1];
 var_dump($arr); # array(2) { [0]=> int(14) [1]=> int(6) }
 $arr[0] = $arr[0] ^ $arr[1];
 var_dump($arr); # array(2) { [0]=> int(8) [1]=> int(6) }
-

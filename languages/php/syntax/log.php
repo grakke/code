@@ -1,73 +1,179 @@
 <?php
 
 /**
- * 日志调试方法
+ * PHP Logging Utilities and Examples
  *
- * 调试非本地环境或分布式环境，通过Log查看变量传递
- * 写入变量值到\var\log\php_super_debug.log
- *
- * @param mixed $data 日志数据
- * @param string $log_path 日志路径
- * @param string $log_name 日志名称
- *
- * @return void
+ * This file demonstrates various logging approaches in PHP including:
+ * - Custom debug logging function
+ * - Monolog library usage
+ * - Different log levels and handlers
+ * - Log formatting and processors
  */
-function super_debug(mixed $data, string $log_path = '/var/log/', string $log_name = 'debug.log'): void
-{
-    error_log('[' . time() . ']:' . json_encode($data, JSON_UNESCAPED_UNICODE) . "\n", 3, $log_path . $log_name);
+
+declare(strict_types=1);
+
+/**
+ * Custom debug logging function
+ *
+ * Useful for debugging in non-local or distributed environments
+ * Writes variable values to a specified log file
+ *
+ * @param mixed $data Log data to write
+ * @param string $logPath Log file path (default: /var/log/)
+ * @param string $logName Log file name (default: debug.log)
+ * @param bool $includeTimestamp Whether to include timestamp (default: true)
+ * @return bool Success status
+ */
+function super_debug(
+    mixed $data,
+    string $logPath = '/var/log/',
+    string $logName = 'debug.log',
+    bool $includeTimestamp = true
+): bool {
+    try {
+        // Ensure log directory exists
+        if (!is_dir($logPath)) {
+            if (!mkdir($logPath, 0755, true)) {
+                throw new RuntimeException("Cannot create log directory: {$logPath}");
+            }
+        }
+
+        $fullPath = $logPath . $logName;
+        $timestamp = $includeTimestamp ? '[' . date('Y-m-d H:i:s') . '] ' : '';
+        $logData = $timestamp . json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . PHP_EOL;
+
+        return (bool) file_put_contents($fullPath, $logData, FILE_APPEND | LOCK_EX);
+    } catch (Exception $e) {
+        error_log("Super debug error: " . $e->getMessage());
+        return false;
+    }
 }
 
-super_debug(['name' => 'henry', 'time' => time()], './');
+/**
+ * Simple file download function
+ *
+ * @param string $fileUrl URL of file to download
+ * @param string $filename Custom filename (optional)
+ * @return bool Success status
+ */
+function downloadFile(string $fileUrl, string $filename = ''): bool {
+    try {
+        if (!filter_var($fileUrl, FILTER_VALIDATE_URL)) {
+            throw new InvalidArgumentException("Invalid URL: {$fileUrl}");
+        }
 
-// 下载
-$file_url = 'https://upload.chinaz.com/picmap/201811151633430899_60.jpg';
-header('context-Type: application/octet-stream');
-header("context-Transfer-Encoding: Binary");
-header("context-disposition: attachment; filename=\"" . basename($file_url) . "\"");
-readfile($file_url); # 获取图片 base64
+        $filename = $filename ?: basename($fileUrl);
 
-require __DIR__ . '/../vendor/autoload.php';
+        // Set headers for file download
+        header('Content-Type: application/octet-stream');
+        header('Content-Transfer-Encoding: Binary');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
 
-use Monolog\Formatter\LineFormatter;
-use Monolog\Handler\FirePHPHandler;
-use Monolog\Handler\StreamHandler;
-use Monolog\Logger;
-use Monolog\Processor\MemoryPeakUsageProcessor;
+        // Read and output file
+        $fileContent = file_get_contents($fileUrl);
+        if ($fileContent === false) {
+            throw new RuntimeException("Cannot read file from URL: {$fileUrl}");
+        }
 
-// 创建一个 Channel，参数 log 即为 Channel 的名字
-$log = new Logger('log');
+        echo $fileContent;
+        return true;
+    } catch (Exception $e) {
+        error_log("Download error: " . $e->getMessage());
+        return false;
+    }
+}
 
-// 创建两个 Handler，对应变量 $stream 和 $fire
-$stream = new StreamHandler('runtime/logger/tests.log', Logger::WARNING);
-$fire = new FirePHPHandler();
+/**
+ * Advanced logging with Monolog
+ *
+ * Demonstrates professional logging setup with multiple handlers,
+ * formatters, and processors
+ *
+ * @return object Logger instance or null if Monolog not available
+ */
+function setupAdvancedLogging() {
+    // Check if Monolog is available
+    if (!class_exists('Monolog\Logger')) {
+        return null;
+    }
 
-// 定义时间格式 "Y-m-d H:i:s"
-$dateFormat = "Y n j, g:i a";
-// 定义日志格式 "[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n"
-$output = "%datetime%||%channel||%level_name%||%message%||%context%||%extra%\n";
-// 根据时间格式和日志格式，创建一个 Formatter
-$formatter = new LineFormatter($output, $dateFormat);
+    try {
+        // Import Monolog classes
+        require_once __DIR__ . '/../vendor/autoload.php';
 
-// 将 Formatter 设置到 Handler 里面
-$stream->setFormatter($formatter);
+        // Create logger instance
+        $logger = new \Monolog\Logger('application');
 
-//  Handler 推入到 Channel 的 Handler 队列内
-$log->pushHandler($stream);
-$log->pushHandler($fire);
+        // Create handlers
+        $streamHandler = new \Monolog\Handler\StreamHandler(
+            __DIR__ . '/runtime/logger/app.log',
+            \Monolog\Logger::DEBUG
+        );
+        $fireHandler = new \Monolog\Handler\FirePHPHandler();
 
-// clone new log channel
-$log2 = $log->withName('log2');
+        // Configure formatter
+        $dateFormat = "Y-m-d H:i:s";
+        $outputFormat = "[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n";
+        $formatter = new \Monolog\Formatter\LineFormatter($outputFormat, $dateFormat, true, true);
 
-// add records to the log
-$log->warning('Foo');
+        // Apply formatter to stream handler
+        $streamHandler->setFormatter($formatter);
 
-// add extra data to record
-// 1. log context
-$log->error('a new user', ['username' => 'daydaygo']);
-// 2. processor
-$log->pushProcessor(function ($record) {
-    $record['extra']['dummy'] = 'hello';
-    return $record;
-});
-$log->pushProcessor(new MemoryPeakUsageProcessor());
-$log->alert('czl');
+        // Add handlers to logger
+        $logger->pushHandler($streamHandler);
+        $logger->pushHandler($fireHandler);
+
+        // Add processors for additional context
+        $logger->pushProcessor(new \Monolog\Processor\UidProcessor());
+        $logger->pushProcessor(new \Monolog\Processor\MemoryPeakUsageProcessor());
+        $logger->pushProcessor(function ($record) {
+            $record['extra']['server'] = $_SERVER['SERVER_NAME'] ?? 'unknown';
+            $record['extra']['ip'] = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            return $record;
+        });
+
+        return $logger;
+    } catch (Exception $e) {
+        error_log("Monolog setup error: " . $e->getMessage());
+        return null;
+    }
+}
+
+// Example usage and demonstration
+if (php_sapi_name() === 'cli' || isset($_GET['demo'])) {
+    echo "=== PHP Logging Demo ===\n";
+
+    // Test custom debug function
+    echo "1. Testing custom debug function...\n";
+    $testData = [
+        'name' => 'henry',
+        'time' => time(),
+        'environment' => 'development'
+    ];
+
+    $debugResult = super_debug($testData, './logs/', 'demo.log');
+    echo $debugResult ? "✓ Debug log written successfully\n" : "✗ Debug log failed\n";
+
+    // Test advanced logging (if Monolog is available)
+    echo "\n2. Testing advanced logging...\n";
+    $logger = setupAdvancedLogging();
+
+    if ($logger !== null) {
+        // Log different levels
+        $logger->info('Application started', ['version' => '1.0.0']);
+        $logger->warning('Deprecated feature used', ['feature' => 'old_api']);
+        $logger->error('Database connection failed', ['db' => 'mysql']);
+        $logger->debug('Processing user request', ['user_id' => 123]);
+
+        echo "✓ Advanced logging completed\n";
+    } else {
+        echo "✗ Advanced logging failed: Monolog not available\n";
+        echo "  Install Monolog: composer require monolog/monolog\n";
+    }
+
+    // Test file download (commented out to avoid actual download)
+    echo "\n3. File download function available (commented out for demo)\n";
+    // downloadFile('https://example.com/file.jpg', 'downloaded_file.jpg');
+
+    echo "\n=== Demo completed ===\n";
+}

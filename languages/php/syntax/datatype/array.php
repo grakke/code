@@ -1,16 +1,32 @@
 <?php
 
-require '../../vendor/autoload.php';
+/**
+ * PHP Array Operations Comprehensive Guide
+ *
+ * This file demonstrates various array operations in PHP including:
+ * - Array creation and manipulation
+ * - Array functions and methods
+ * - Array iteration and traversal
+ * - Array sorting and filtering
+ * - Array merging and comparison
+ * - Performance considerations
+ */
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 # 可以包含任何数据类型，支持无限扩容,将传统数组和字典类型合二为一, 底层通过哈希表实现数组功能
 use syntax\oop\Users;
 
+echo "=== 1. BASIC ARRAY CREATION AND MANIPULATION ===\n";
+
 print_r(str_split('werty'));
 
 $arr = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
-echo count($arr) . PHP_EOL;
+echo "Original count: " . count($arr) . PHP_EOL;
 unset($arr[5]);
-echo count($arr) . PHP_EOL;
+echo "After unset count: " . count($arr) . PHP_EOL;
 
 # 索引数组
 $season = ["summer", "winter", "spring", "autumn"];
@@ -23,7 +39,7 @@ $fruits[] = 'Pear';
 foreach ($fruits as $index => $value) {
     echo "Position " . $index . " holds the value " . $value . "\n";
 }
-echo memory_get_usage() - $startMemory, " bytes\n";
+echo "Memory used: " . (memory_get_usage() - $startMemory) . " bytes\n";
 
 $fruits[2] = 'Banana';
 print($fruits[0] . PHP_EOL);
@@ -43,13 +59,14 @@ for ($row = 0; $row < 3; $row++) {
 
 $arr = ['a', 'b', 'c'];
 foreach ($arr as $k => &$v) {
-    # code...
+    // Always unset the reference after foreach
 }
-print_r($arr); // ['a', 'b', 'c']
-// unset($v); # 引用赋值指针未消除，下轮生效
+unset($v); // Important: unset the reference
+
 foreach ($arr as $k => $v) {
+    // Now safe to use $v
 }
-print_r($arr); # ['a', 'b', 'b']
+print_r($arr);
 
 $array1 = range(0, 100, 10);//0为起始值，100为结束值，10为步进值(默认步进值为1).
 print_r($array1);
@@ -78,7 +95,7 @@ $salary["Hema"] = "350000";
 $salary["John"] = "450000";
 $salary["Kartik"] = "200000";
 # 计算数组中单元数目，或对象中的属性个数
-echo count($salary);
+echo "Count: " . count($salary) . PHP_EOL;
 
 foreach ($salary as $k => $v) {
     echo "Key: " . $k . " Value: " . $v . "<br/>";
@@ -119,8 +136,8 @@ foreach ($players as $index => $playerInfo) {
     echo "\n";
 }
 
-// 所有键名改为全小写或大写,不改变数字索引
-// 如果输入值（array）不是一个数组，就会抛出一个错误警告（E_WARNING）
+# 所有键名改为全小写或大写,不改变数字索引
+# 如果输入值（array）不是一个数组，就会抛出一个错误警告（E_WARNING）
 $input_array = array("FirSt" => 1, "SecOnd" => 4);
 print_r(array_change_key_case($input_array, CASE_UPPER)); # [[FIRST] => 1 [SECOND] => 4]
 print_r(array_change_key_case($input_array, CASE_LOWER)); # [[first] => 1 [second] => 4]]
@@ -153,7 +170,7 @@ $vehicles = ['car', 'truck', 'van', 'bus'];
 current($vehicles);
 next($vehicles);
 //each($vehicles);
-echo current($vehicles);
+echo "Current: " . current($vehicles) . PHP_EOL;
 $a = [1, 2, 3, 4, 5];
 $sum = 0;
 while (next($a)) {
@@ -162,7 +179,7 @@ while (next($a)) {
     next($a);
 }
 
-echo $sum . PHP_EOL;
+echo "Sum: " . $sum . PHP_EOL;
 reset($vehicles);
 do {
     print key($vehicles) . ':' . current($vehicles) . PHP_EOL;
@@ -214,15 +231,15 @@ $var_array = array(
 extract($var_array, EXTR_PREFIX_SAME, "wddx");
 echo "$color, $size, $shape, $wddx_size\n"; // blue, large, sphere, medium
 
-// 一个数组分割成多个数组，其中每个数组的单元数目由 size 决定。最后一个数组的单元数目可能会少于 size 个 第三个参数决定是否保留键名
-// size 小于 1，会抛出一个 E_WARNING 错误并返回 NULL
+# 一个数组分割成多个数组，其中每个数组的单元数目由 size 决定。最后一个数组的单元数目可能会少于 size 个 第三个参数决定是否保留键名
+# size 小于 1，会抛出一个 E_WARNING 错误并返回 NULL
 $input_array = array('a', 'b', 'c');
 print_r(array_chunk($input_array, 2)); # [[a,b], [c]]
 print_r(array_chunk($input_array, 2, true)); # [[a,b], [2 => c]]
 //print_r(array_slice());
 
-// 如果提供的是包含一组对象的数组，只有 public 属性会被直接取出。 为了也能取出 private 和 protected 属性，类必须实现 __get() 和 __isset() 魔术方法
-// 返回input数组中键值为column_key的列， 如果指定了可选参数index_key，那么input数组中的这一列的值将作为返回数组中对应值的键
+# 如果提供的是包含一组对象的数组，只有 public 属性会被直接取出。 为了也能取出 private 和 protected 属性，类必须实现 __get() 和 __isset() 魔术方法
+# 返回input数组中键值为column_key的列， 如果指定了可选参数index_key，那么input数组中的这一列的值将作为返回数组中对应值的键
 $records = array(
     array(
         'id' => 2135,
@@ -250,14 +267,12 @@ $users = [
 ];
 print_r(array_column($users, 'username')); # [[0] => user 1 [1] => user 2 [2] => user 3]
 
-// 用一个数组的值作为其键名，另一个数组的值作为其值
-// 键中 非法值将会被转换为字符串类型
-// 如果两个数组的单元数不同则返回 FALSE
+# 用一个数组的值作为其键名，另一个数组的值作为其值
+# 键中 非法值将会被转换为字符串类型
+# 如果两个数组的单元数不同则返回 FALSE
 $a = ['green', 'red', 'yellow'];
 $b = ['avacado', 'apple', 'banara'];
 print_r(array_combine($a, $b)); # [[green] => avacado [red] => apple [yellow] => banara]
-
-//array_splice();
 
 # 合并一个或多个数组
 # 相同的字符串键名，则后面的值将覆盖前一个值
@@ -319,12 +334,8 @@ print_r($stack); # [ [0] => orange [1] => pear [2] => orange [3] => banana]
 print_r(array_product([2, 4, 5])); # 40
 
 echo "############## array_count_values ################" . PHP_EOL;
-// 数组的键是 array 里单元的值； 数组的值是 array 单元的值出现的次数
+# 数组的键是 array 里单元的值； 数组的值是 array 单元的值出现的次数
 print_r(array_count_values([1, 'hello', 1, 'world', 1])); # [ [1] => 3 [hello] => 1 [world] => 1]
-// #  移除数组中重复的值
-//array_unique();
-// # 返回字符串所用字符的信息
-//count_chars();
 
 echo "############## array sort ################" . PHP_EOL;
 # sort 索引数组排序
@@ -381,11 +392,11 @@ $arr = array(
         'norder' => 11
     )
 );
-//array_multisort(array_column($arr, 'norder'), SORT_ASC, $arr);
+#array_multisort(array_column($arr, 'norder'), SORT_ASC, $arr);
 
 echo "############## array diff && insert ################" . PHP_EOL;
-// 支持多个数组比较
-// 回调函数 等于1 的返回
+# 支持多个数组比较
+# 回调函数 等于1 的返回
 $array1 = ["a" => "green", "b" => "brown", "c" => "blue", "red"];
 $array2 = ["a" => "green", "yellow", "red"];
 $array3 = ['blue' => 1, 'red' => 2, 'green' => 3, 'purple' => 4];
@@ -425,7 +436,7 @@ print_r(array_intersect_ukey($array3, $array4, function ($key1, $key2) {
 print_r(array_diff($array1, $array2)); # [[b] => brown[c] => blue]
 # 用用户提供的回调函数做索引检查来计算数组的差集
 
-// 所有在 array1 中但是不在任何其它参数数组中的值。和 array_diff() 不同的是键名也用于比较
+# 所有在 array1 中但是不在任何其它参数数组中的值。和 array_diff() 不同的是键名也用于比较
 print_r(array_diff_assoc($array1, $array2)); # [[b] => brown[c] => blue [0] => red]
 # 值仅在 (string) $elem1 === (string) $elem2 时被认为相等
 print_r(array_diff_assoc([0, 1, 2], ["00", "01", "2"])); # [ [0] => 0 [1] => 1]
@@ -436,10 +447,6 @@ print_r(array_diff_uassoc($array1, $array2, function ($a, $b) {
     }
     return ($a > $b) ? 1 : -1;
 }));
-// # 带索引检查计算数组的差集，用回调函数比较数据
-//array_udiff_assoc();
-// # 带索引检查计算数组的差集，用回调函数比较数据和索引
-//array_udiff_uassoc();
 
 # 所有出现在 array1 中但是未出现在任何其它参数数组中的键名的值, 键名仅在 (string) $key1 === (string) $key2 时被认为相等
 print_r(array_diff_key($array3, $array4)); # [[red] => 2 [purple] => 4]
@@ -454,9 +461,6 @@ print_r(array_diff_ukey($array3, $array4, function ($key1, $key2) {
         return -1;
     }
 }));
-
-// is_array(), explode(), implode(), split(), preg_split(), and unset()
-// base64_encode();
 
 # 批处理, 每条为索引数组一条数据
 # 如果几个数组的元素数量不一致：空元素会扩展短那个数组，直到长度和最长的数组一样。
@@ -483,9 +487,14 @@ print_r(array_map(function ($key, $value) {
     return [$key, $value];
 }, ['key' => 'value'], ['key' => 'value']));
 
-array_map(function ($element) {
-    return strtotime($element['add_time']);
-}, $datas);
+# Example of array_map with date conversion (commented out due to undefined $datas)
+# $datas = [
+#     ['add_time' => '2023-01-01 10:00:00'],
+#     ['add_time' => '2023-01-02 11:00:00']
+# ];
+# array_map(function ($element) {
+#     return strtotime($element['add_time']);
+# }, $datas);
 
 # value 过滤
 print_r(array_filter([0 => 'foo', 1 => false, 2 => -1, 3 => null, 4 => ''])); # [ [0] => foo [2] => -1]
@@ -493,12 +502,12 @@ $array6 = array("a" => 1, "b" => 2, "c" => 3, "d" => 4, "e" => 5);
 $array7 = array(6, 7, 8, 9, 10, 11, 12);
 print_r(array_filter($array6, function ($var) {
     # [[a] => 1 [c] => 3 [e] => 5]
-    // returns whether the input integer is odd
+    # returns whether the input integer is odd
     return ($var & 1);
 }));
 print_r(array_filter($array7, function ($var) {
     # [ [1] => 7 [3] => 9 [5] => 11]
-    // returns whether the input integer is odd
+    # returns whether the input integer is odd
     return ($var & 1);
 }));
 $array8 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4];
@@ -519,9 +528,13 @@ function myfun1($value, $key, $p)
 }
 
 array_walk($array8, "myfun1", "has the value");
-echo 4555;
-die;
-array_reduce();
+
+# Example of array_reduce usage
+$numbers = [1, 2, 3, 4, 5];
+$sum = array_reduce($numbers, function($carry, $item) {
+    return $carry + $item;
+}, 0);
+echo "Sum using array_reduce: " . $sum . PHP_EOL;
 
 $salary = array("Maxsu" => "550000", "Vimal" => "250000", "Ratan" => "200000");
 print_r(array_change_key_case($salary, CASE_UPPER)); # Array ( [SONOO] => 550000 [VIMAL] => 250000 [RATAN] => 200000 )
@@ -562,9 +575,9 @@ $items = array(
 array_column($items, 'uid'); # [1,2,3,4,5];
 array_column($items, 'uid', 'view'); # [100=>1,200=>2,300=>3,400=>4,500=>5];
 
-$foo = $foo * 1.3;  // $foo 现在是一个浮点数 (2.6)
-$foo = 5 * "10 Little Piggies"; // $foo 是整数 (50)
-$foo = 5 * "10 Small Pigs";     // $foo 是整数 (50)
+$foo = $foo * 1.3;  # $foo 现在是一个浮点数 (2.6)
+$foo = 5 * "10 Little Piggies"; # $foo 是整数 (50)
+$foo = 5 * "10 Small Pigs";     # $foo 是整数 (50)
 
 function array2gbk($array)
 {
@@ -600,8 +613,12 @@ error_reporting(0);
 
 $arr = [1, 3, 5, 6];
 foreach ($arr as &$v) {
+    # Empty loop
 }
+unset($v); # Always unset reference
+
 foreach ($arr as $v) {
+    # Safe to use $v
 }
 var_dump($arr);
 
@@ -639,7 +656,7 @@ $baseNumber = "123456754";
 $newNumber = base_convert($baseNumber, 8, 16);
 echo $newNumber;
 
-// change to index array
+# Change to index array
 $arr = [2 => 4, 3 => 5, 7 => 9];
 array_shift($arr);
 echo current($arr);
@@ -657,7 +674,7 @@ foreach ($nums as $k => $v) {
         $index = array_search($v, $nums);
         echo $index . PHP_EOL;
         if ($index) {
-            // unset not effect
+            # unset not effect
             unset($nums[$index]);
             continue;
         }
@@ -693,3 +710,5 @@ var_dump(in_array((new stdClass()), $arr, true));
 
 var_dump(new stdClass() == new stdClass());
 var_dump(new stdClass() === new stdClass());
+
+echo "\n=== ARRAY OPERATIONS COMPLETED ===\n";
