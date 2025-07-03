@@ -126,12 +126,12 @@
 
 ## 图书
 
-- 统计学习方法 李航
-- [Python for Data Analysis](./pydata-book/)
-- [Machine Learning in Action 机器学习实战](./machine_learning_in_action/)
-	- 经典,需要数据科学的基础
-- [Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow](./handson-ml3/)
-- [深度学习入门:基于Python的理论与实现 Deep Learning from Scratch](./dlps/)
+* 统计学习方法 李航
+* [Python for Data Analysis](./pydata-book/)
+* [Machine Learning in Action 机器学习实战](./machine_learning_in_action/)
+ 	* 经典,需要数据科学的基础
+* [Hands-on Machine Learning with Scikit-Learn, Keras, and TensorFlow](./handson-ml3/)
+* [深度学习入门:基于Python的理论与实现 Deep Learning from Scratch](./dlps/)
 
 ## 课程
 
