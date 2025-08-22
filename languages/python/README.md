@@ -1,7 +1,5 @@
 # Python
 
-- 语言简洁
-
 ## 环境
 
 - Conda
@@ -19,7 +17,7 @@
 - oop
 - 函数式编程
 - 模块
-  - 有效 Python 模块 文件夹中有一个 `__init__.py` 文件
+  - 有效 Python 模块 文件夹中有 `__init__.py` 文件
 
 ## 表现层状态转化 representational state transfer REST
 
