@@ -1736,8 +1736,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  min-document@2.19.1:
-    resolution: {integrity: sha512-8lqe85PkqQJzIcs2iD7xW/WSxcncC3/DPVbTOafKNJDIMXwGfwXS350mH4SJslomntN2iYtFBuC0yNO3CEap6g==}
+  min-document@2.19.2:
+    resolution: {integrity: sha512-8S5I8db/uZN8r9HSLFVWPdJCvYOejMcEC82VIzNUc6Zkklf/d1gg2psfE79/vyhWOj4+J8MtwmoOz3TmvaGu5A==}
 
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
@@ -4122,7 +4122,7 @@ snapshots:
 
   global@4.4.0:
     dependencies:
-      min-document: 2.19.1
+      min-document: 2.19.2
       process: 0.11.10
 
   globals@11.12.0: {}
@@ -4468,7 +4468,7 @@ snapshots:
 
   mime@1.6.0: {}
 
-  min-document@2.19.1:
+  min-document@2.19.2:
     dependencies:
       dom-walk: 0.1.2
 
