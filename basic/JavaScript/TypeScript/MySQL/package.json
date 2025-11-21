@@ -12,7 +12,7 @@
         "minimist": "^1.2.6",
         "mysql": "^2.18.1",
         "reflect-metadata": "^0.1.10",
-        "typeorm": "^0.3.26"
+        "typeorm": "^0.3.27"
     },
     "scripts": {
         "start": "ts-node src/index.ts"
