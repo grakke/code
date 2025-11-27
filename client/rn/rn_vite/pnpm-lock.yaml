@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       vite:
-        specifier: ^7.2.1
-        version: 7.2.1(@types/node@22.15.30)
+        specifier: ^7.2.2
+        version: 7.2.2(@types/node@22.15.30)
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^5.17.0
@@ -35,7 +35,7 @@ importers:
         version: 5.8.3
       vite-plugin-eslint:
         specifier: ^1.8.1
-        version: 1.8.1(eslint@8.57.1)(vite@7.2.1(@types/node@22.15.30))
+        version: 1.8.1(eslint@8.57.1)(vite@7.2.2(@types/node@22.15.30))
       vitest:
         specifier: ^0.29.8
         version: 0.29.8(jsdom@21.1.2)
@@ -1674,8 +1674,8 @@ packages:
       terser:
         optional: true
 
-  vite@7.2.1:
-    resolution: {integrity: sha512-qTl3VF7BvOupTR85Zc561sPEgxyUSNSvTQ9fit7DEMP7yPgvvIGm5Zfa1dOM+kOwWGNviK9uFM9ra77+OjK7lQ==}
+  vite@7.2.2:
+    resolution: {integrity: sha512-BxAKBWmIbrDgrokdGZH1IgkIk/5mMHDreLDmCJ0qpyJaAteP8NvMhkwr/ZCQNqNH97bw/dANTE9PDzqwJghfMQ==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -3413,13 +3413,13 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-eslint@1.8.1(eslint@8.57.1)(vite@7.2.1(@types/node@22.15.30)):
+  vite-plugin-eslint@1.8.1(eslint@8.57.1)(vite@7.2.2(@types/node@22.15.30)):
     dependencies:
       '@rollup/pluginutils': 4.2.1
       '@types/eslint': 8.56.12
       eslint: 8.57.1
       rollup: 2.79.2
-      vite: 7.2.1(@types/node@22.15.30)
+      vite: 7.2.2(@types/node@22.15.30)
 
   vite@4.5.14(@types/node@22.15.30):
     dependencies:
@@ -3430,7 +3430,7 @@ snapshots:
       '@types/node': 22.15.30
       fsevents: 2.3.3
 
-  vite@7.2.1(@types/node@22.15.30):
+  vite@7.2.2(@types/node@22.15.30):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
