@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@apollo/datasource-rest": "^6.4.1",
-    "@apollo/server": "^4.12.2",
+    "@apollo/server": "^5.4.0",
     "@parcel/watcher": "^2.5.1",
     "graphql": "^16.11.0",
     "graphql-tag": "^2.12.6"
