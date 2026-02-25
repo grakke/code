@@ -3700,8 +3700,8 @@ packages:
   lodash.truncate@4.4.2:
     resolution: {integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -7308,7 +7308,7 @@ snapshots:
       convert-source-map: 1.9.0
       debug: 2.6.9
       json5: 0.5.1
-      lodash: 4.17.21
+      lodash: 4.17.23
       minimatch: 3.1.2
       path-is-absolute: 1.0.1
       private: 0.1.8
@@ -7324,7 +7324,7 @@ snapshots:
       babel-types: 6.26.0
       detect-indent: 4.0.0
       jsesc: 1.3.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       source-map: 0.5.7
       trim-right: 1.0.1
 
@@ -7348,7 +7348,7 @@ snapshots:
       babel-helper-function-name: 6.24.1
       babel-runtime: 6.26.0
       babel-types: 6.26.0
-      lodash: 4.17.21
+      lodash: 4.17.23
     transitivePeerDependencies:
       - supports-color
 
@@ -7381,7 +7381,7 @@ snapshots:
     dependencies:
       babel-runtime: 6.26.0
       babel-types: 6.26.0
-      lodash: 4.17.21
+      lodash: 4.17.23
 
   babel-helper-replace-supers@6.24.1:
     dependencies:
@@ -7444,7 +7444,7 @@ snapshots:
 
   babel-plugin-react-transform@2.0.2:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
 
   babel-plugin-syntax-flow@6.18.0: {}
 
@@ -7464,7 +7464,7 @@ snapshots:
       babel-template: 6.26.0
       babel-traverse: 6.26.0
       babel-types: 6.26.0
-      lodash: 4.17.21
+      lodash: 4.17.23
     transitivePeerDependencies:
       - supports-color
 
@@ -7676,7 +7676,7 @@ snapshots:
       babel-runtime: 6.26.0
       core-js: 2.6.12
       home-or-tmp: 2.0.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       mkdirp: 0.5.6
       source-map-support: 0.4.18
     transitivePeerDependencies:
@@ -7693,7 +7693,7 @@ snapshots:
       babel-traverse: 6.26.0
       babel-types: 6.26.0
       babylon: 6.18.0
-      lodash: 4.17.21
+      lodash: 4.17.23
     transitivePeerDependencies:
       - supports-color
 
@@ -7707,7 +7707,7 @@ snapshots:
       debug: 2.6.9
       globals: 9.18.0
       invariant: 2.2.4
-      lodash: 4.17.21
+      lodash: 4.17.23
     transitivePeerDependencies:
       - supports-color
 
@@ -7715,7 +7715,7 @@ snapshots:
     dependencies:
       babel-runtime: 6.26.0
       esutils: 2.0.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       to-fast-properties: 1.0.3
 
   babylon@6.18.0: {}
@@ -9660,7 +9660,7 @@ snapshots:
   globule@1.3.4:
     dependencies:
       glob: 7.1.7
-      lodash: 4.17.21
+      lodash: 4.17.23
       minimatch: 3.0.8
 
   gopd@1.2.0: {}
@@ -9844,7 +9844,7 @@ snapshots:
       '@types/webpack': 4.41.40
       html-minifier-terser: 5.1.1
       loader-utils: 1.4.2
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-error: 2.1.2
       tapable: 1.1.3
       util.promisify: 1.0.0
@@ -10541,7 +10541,7 @@ snapshots:
 
   lodash.truncate@4.4.2: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   loose-envify@1.4.0:
     dependencies:
@@ -10930,7 +10930,7 @@ snapshots:
       gaze: 1.1.3
       get-stdin: 4.0.1
       glob: 7.2.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       meow: 9.0.0
       nan: 2.22.2
       node-gyp: 8.4.1
@@ -11411,7 +11411,7 @@ snapshots:
 
   pretty-error@2.1.2:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       renderkid: 2.0.7
 
   private@0.1.8: {}
@@ -11547,7 +11547,7 @@ snapshots:
 
   react-proxy@1.1.8:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       react-deep-force-update: 1.1.2
 
   react-transform-hmr@1.0.4:
@@ -11697,7 +11697,7 @@ snapshots:
       css-select: 4.3.0
       dom-converter: 0.2.0
       htmlparser2: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       strip-ansi: 3.0.1
 
   repeat-element@1.1.4: {}
@@ -11830,7 +11830,7 @@ snapshots:
   sass-graph@4.0.1:
     dependencies:
       glob: 7.2.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       scss-tokenizer: 0.4.3
       yargs: 17.7.2
 
