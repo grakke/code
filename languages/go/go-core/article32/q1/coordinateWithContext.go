@@ -27,7 +27,7 @@ func coordinateWithContext() {
 	fmt.Println("End.")
 }
 
-// addNum 用于原子地增加一次numP所指的变量的值。
+// addNum 用于原子地增加一次 numP 所指的变量的值
 func addNum(numP *int32, id int, deferFunc func()) {
 	defer func() {
 		deferFunc()
@@ -40,7 +40,7 @@ func addNum(numP *int32, id int, deferFunc func()) {
 			fmt.Printf("The number: %d [%d-%d]\n", newNum, id, i)
 			break
 		} else {
-			//fmt.Printf("The CAS operation failed. [%d-%d]\n", id, i)
+			fmt.Printf("The CAS operation failed. [%d-%d]\n", id, i)
 		}
 	}
 }

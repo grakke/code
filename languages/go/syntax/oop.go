@@ -15,7 +15,7 @@ func main() {
 	fmt.Println(l.Off())
 
 	ani := animal.NewAnimal("狗")
-	ani1 := animal.NewAnimal("Dog")
+	// ani1 := animal.NewAnimal("Dog")
 	dog := animal.Dog{"Asia", &ani}
 	puppy := animal.Puppy{dog, ani}
 	fmt.Println(dog.GetName(), "的叫声是", dog.Call(), "，最爱是", dog.FavorFood())
@@ -24,7 +24,8 @@ func main() {
 	dog2 := animal.Dog{"Asia", &animal}
 	//dog2 := animal.Dog{"Euporean", &ani}
 	fmt.Println(dog2.GetName(), "的叫声是", dog2.Call(), "，最爱是", dog2.Favriate())
-	//// 多重继承有重复方法时：直接调用会报错，使用时用声明该方法的类调用
+
+	// 多重继承有重复方法时：直接调用会报错，使用时用声明该方法的类调用
 	puppy := animal2.Puppy{dog2, &animal}
 	fmt.Println(puppy.Dog.Animal.GetName(), "的叫声是", animal.Call(), "，最爱是", dog2.Favriate())
 

@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-// ConcurrentMap 代表自制的简易并发安全字典。
+// ConcurrentMap 代表自制的简易并发安全字典
 type ConcurrentMap struct {
 	m  map[interface{}]interface{}
 	mu sync.RWMutex

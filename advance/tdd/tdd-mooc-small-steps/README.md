@@ -2,29 +2,15 @@
 
 This is a refactoring exercise to practise doing small, safe steps.
 
-**Refactor the code in [src/prices.mjs](src/prices.mjs) to replace all usages of
-the [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) class with
-the [Temporal.PlainDate](https://tc39.es/proposal-temporal/docs/plaindate.html) class.**
+## action
 
-Alternatively you may refactor the statically typed version: [src/prices_typed.ts](src/prices_typed.ts)
-
-(In [test/date_conversion.spec.mjs](test/date_conversion.spec.mjs) there are learning tests about using the Temporal
+- **Refactor the code in [src/prices.mjs](src/prices.mjs) to replace all usages of the [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) class with the [Temporal.PlainDate](https://tc39.es/proposal-temporal/docs/plaindate.html) class.**
+- Alternatively you may refactor the statically typed version: [src/prices_typed.ts](src/prices_typed.ts) (In [test/date_conversion.spec.mjs](test/date_conversion.spec.mjs) there are learning tests about using the Temporal
 API.)
-
-Repeat this refactoring many times.
-
-Focus on doing as small changes as possible, so that all the tests will pass between every change. Make it your goal to
-change at most _2 lines_ at a time. It's even possible to do this refactoring by changing only _1 line_ at a time,
-though that will require some unconventional refactoring strategies and good familiarity with JavaScript, because then
-you can no longer change a function signature and all calls to that function at the same time. (In real life, changing
-1-3 lines at a time is normal.)
-
-Try out different approaches. For example refactor starting from where the `Date` value is created vs. where it is used.
-You may also try copying a function, changing the new function, and then migrating all code to use it one-by-one,
-instead of changing an existing function.
-
-Get to know your IDE and the automated refactorings it provides.
-Try [refactoring golf](https://github.com/daviddenton/refactoring-golf#readme) and get the lowest score possible.
+- Repeat this refactoring many times.
+  - Focus on doing as small changes as possible, so that all the tests will pass between every change. Make it your goal to change at most _2 lines_ at a time. It's even possible to do this refactoring by changing only _1 line_ at a time, though that will require some unconventional refactoring strategies and good familiarity with JavaScript, because then you can no longer change a function signature and all calls to that function at the same time. (In real life, changing 1-3 lines at a time is normal.)
+- Try out different approaches. For example refactor starting from where the `Date` value is created vs. where it is used. You may also try copying a function, changing the new function, and then migrating all code to use it one-by-one, instead of changing an existing function.
+- Get to know your IDE and the automated refactorings it provides. Try [refactoring golf](https://github.com/daviddenton/refactoring-golf#readme) and get the lowest score possible.
 
 ## When is a change small?
 
@@ -72,7 +58,7 @@ const cost = calculateCost(age, type, date, baseCost, date2);
 Next go inside the `calculateCost` function, change it to use `date2`, and forward the variable to the next level of
 functions. Repeat until every function has been migrated use `date2`.
 
-This refactoring strategy is demonstrated at https://youtu.be/MMAXNUCPMBw
+This refactoring strategy is demonstrated at <https://youtu.be/MMAXNUCPMBw>
 
 ### Example: conversion propagation
 
@@ -112,7 +98,7 @@ function isMonday(date) {
 Repeat for each function, until the conversion has propagated up to the place where the old value is produced and you
 can produce the new value there directly.
 
-This refactoring strategy is demonstrated at https://youtu.be/5jXgXip5LhA
+This refactoring strategy is demonstrated at <https://youtu.be/5jXgXip5LhA>
 
 ## TCR challenge
 
@@ -139,32 +125,26 @@ by [Johan Martinsson](https://twitter.com/johan_alps)._
 
 ## Prerequisites
 
-You'll need a recent [Node.js](https://nodejs.org/) version. Then download this project's dependencies with:
-
-    npm install
+You'll need a recent [Node.js](https://nodejs.org/) version. Then download this project's dependencies with: `npm install`
 
 ## Developing
 
-This project uses [Vitest](https://vitest.dev/), [Chai](https://www.chaijs.com/)
-and [SuperTest](https://github.com/visionmedia/supertest) for testing.
+- This project uses [Vitest](https://vitest.dev/), [Chai](https://www.chaijs.com/) and [SuperTest](https://github.com/visionmedia/supertest) for testing.
 
-Run tests once
+```sh
+# Run tests once
+npm run test
 
-    npm run test
-
-Run tests continuously
-
+# Run tests continuously
     npm run autotest
 
-Run tests [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) style. Defaults to `MAX_CHANGES=1`
-
+# Run tests [TCR](https://medium.com/@kentbeck_7670/test-commit-revert-870bbd756864) style. Defaults to `MAX_CHANGES=1`
     npm run tcr
     MAX_CHANGES=2 npm run tcr
 
-Start the application
-
+# Start the application
     npm run start
 
-Code reformat
-
+# Code reformat
     npm run format
+```

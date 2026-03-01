@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	// 第二个衍生问题的示例。
+	// 第二个衍生问题的示例
 	num := uint32(18)
 	fmt.Printf("The number: %d\n", num)
 	delta := int32(-3)
@@ -22,7 +22,7 @@ func main() {
 	fmt.Printf("The equivalent: %b\n", ^uint32(-(-3)-1)) // 与-3的补码相同。
 	fmt.Println()
 
-	// 第三个衍生问题的示例。
+	// 第三个衍生问题的示例
 	forAndCAS1()
 	fmt.Println()
 	forAndCAS2()

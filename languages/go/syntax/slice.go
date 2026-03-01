@@ -4,8 +4,25 @@ import (
 	"bytes"
 	"fmt"
 	"reflect"
+	"sort"
 	"unsafe"
 )
+
+func SortFloat64FastV1(a []float64) { // 强制类型转换
+	var b []int = ((*[1 << 20]int)(unsafe.Pointer(&a[0])))[:len(
+		a):cap(a)]
+	// 以int方式给float64排序
+	sort.Ints(b)
+}
+func SortFloat64FastV2(a []float64) {
+	// 通过 reflect.SliceHeader 更新切片头部信息实现转换
+	var c []int
+	aHdr := (*unsafe.slice)(unsafe.Pointer(&a))
+	cHdr := (*reflect.SliceHeader)(unsafe.Pointer(&c))
+	*cHdr = *aHdr
+	// 以int方式给float64排序
+	sort.Ints(c)
+}
 
 func main() {
 	// 通过内置 make 函数创建切片，长度必选，容量可选，默认容量和切片长度一致
@@ -87,7 +104,7 @@ func main() {
 	fmt.Println("Slice3:", slice3)
 
 	slice37 := slice3[:copy(slice3, slice3[3:])] // 删除开头前三个元素
-	fmt.Println(s)
+	fmt.Println(slice37)
 
 	// 用range去求一个s的和。数组类似
 	nums := []int{2, 3, 4}
@@ -126,10 +143,14 @@ func main() {
 	fmt.Println("dir2 =>", string(dir2)) //prints: dir2 => uffixBBBB
 
 	var s1 []int
-	s2 := make([]int,0)
-	s4 := make([]int,0)
+	s2 := make([]int, 0)
+	s4 := make([]int, 0)
 
-	fmt.Printf("s1 pointer:%+v, s2 pointer:%+v, s4 pointer:%+v, \n", *(*unsafe.Slice)(unsafe.Pointer(&s1)),*(*reflect.SliceHeader)(unsafe.Pointer(&s2)),*(*reflect.SliceHeader)(unsafe.Pointer(&s4)))
-	fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s1))).Data==(*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data)
-	fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data==(*(*reflect.SliceHeader)(unsafe.Pointer(&s4))).Data)
+	fmt.Printf("s1 pointer:%+v, s2 pointer:%+v, s4 pointer:%+v, \n", *(*unsafe.Slice)(unsafe.Pointer(&s1)), *(*reflect.SliceHeader)(unsafe.Pointer(&s2)), *(*reflect.SliceHeader)(unsafe.Pointer(&s4)))
+	fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s1))).Data == (*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data)
+	fmt.Printf("%v\n", (*(*reflect.SliceHeader)(unsafe.Pointer(&s2))).Data == (*(*reflect.SliceHeader)(unsafe.Pointer(&s4))).Data)
+
+	var a = []float64{4, 2, 5, 7, 2, 1, 88, 1}
+	fmt.Println(SortFloat64FastV1(a))
+	fmt.Println(SortFloat64FastV2(a))
 }
