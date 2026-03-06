@@ -187,6 +187,6 @@ websocket-client==1.4.2
 Werkzeug==3.0.2
 wrapt==1.16.0
 wsproto==1.2.0
-zipp==3.18.1
+zipp==3.19.1
 zope.event==5.0
 zope.interface==6.2
