@@ -8,7 +8,7 @@ require (
 	github.com/go-kratos/kratos/v2 v2.4.1
 	github.com/google/wire v0.5.0
 	go.uber.org/automaxprocs v1.5.1
-	google.golang.org/genproto/googleapis/api v0.0.0-20250324211829-b45e905df463
+	google.golang.org/genproto/googleapis/api a57be14db171
 	google.golang.org/grpc v1.73.0
 	google.golang.org/protobuf v1.36.6
 )
