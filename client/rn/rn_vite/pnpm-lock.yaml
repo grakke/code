@@ -823,8 +823,8 @@ packages:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
 
-  diff@5.2.0:
-    resolution: {integrity: sha512-uIFDxqpRZGZ6ThOk84hEfqWoHx2devRFvpTZcTHur85vImfaxUbTW9Ryh4CpCuDnToOP1CEtXKIgytHBPVff5A==}
+  diff@5.2.2:
+    resolution: {integrity: sha512-vtcDfH3TOjP8UekytvnHH1o1P4FcUdt4eQ1Y+Abap1tk/OB2MWQvcwS2ClCd1zuIhc3JKOx6p3kod8Vfys3E+A==}
     engines: {node: '>=0.3.1'}
 
   doctrine@3.0.0:
@@ -2256,7 +2256,7 @@ snapshots:
   '@vitest/utils@0.29.8':
     dependencies:
       cli-truncate: 3.1.0
-      diff: 5.2.0
+      diff: 5.2.2
       loupe: 2.3.7
       pretty-format: 27.5.1
 
@@ -2469,7 +2469,7 @@ snapshots:
 
   diff-sequences@29.6.3: {}
 
-  diff@5.2.0: {}
+  diff@5.2.2: {}
 
   doctrine@3.0.0:
     dependencies:
