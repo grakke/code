@@ -25,7 +25,7 @@ require (
 require (
 	github.com/BurntSushi/toml v1.2.1
 	go.uber.org/atomic v1.11.0
-	golang.org/x/exp v0.0.0-20230111222715-75897c7a292a
+	golang.org/x/exp 3dfff04db8fa
 )
 
 require github.com/redis/go-redis/v9 v9.5.5
