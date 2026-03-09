@@ -3,7 +3,7 @@ module grpc_demo
 go 1.21
 
 require (
-	google.golang.org/grpc v1.52.0
+	google.golang.org/grpc v1.56.3
 	rsc.io/quote v1.5.2
 )
 
