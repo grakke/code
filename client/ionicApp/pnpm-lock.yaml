@@ -3896,8 +3896,8 @@ packages:
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.17.23:
+    resolution: {integrity: sha512-LgVTMpQtIopCi79SJeDiP0TfWi5CNEc/L/aRdTh3yIvmZXTnheWpKjSZhnvMl8iXbC1tFg9gdHHDMLoV7CnG+w==}
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
@@ -7662,7 +7662,7 @@ snapshots:
       css.escape: 1.5.1
       jest-diff: 24.9.0
       jest-matcher-utils: 24.9.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-format: 24.9.0
       redent: 3.0.0
 
@@ -9346,7 +9346,7 @@ snapshots:
       '@babel/plugin-syntax-flow': 7.27.1(@babel/core@7.27.4)
       '@babel/plugin-transform-react-jsx': 7.27.1(@babel/core@7.27.4)
       eslint: 8.45.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       string-natural-compare: 3.0.1
 
   eslint-plugin-import@2.31.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@3.8.3))(eslint@8.45.0):
@@ -9956,7 +9956,7 @@ snapshots:
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-error: 4.0.0
       tapable: 2.2.2
     optionalDependencies:
@@ -10889,7 +10889,7 @@ snapshots:
 
   lodash.uniq@4.5.0: {}
 
-  lodash@4.17.21: {}
+  lodash@4.17.23: {}
 
   loose-envify@1.4.0:
     dependencies:
@@ -11734,7 +11734,7 @@ snapshots:
 
   pretty-error@4.0.0:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       renderkid: 3.0.0
 
   pretty-format@24.9.0:
@@ -12086,7 +12086,7 @@ snapshots:
       css-select: 4.3.0
       dom-converter: 0.2.0
       htmlparser2: 6.1.0
-      lodash: 4.17.21
+      lodash: 4.17.23
       strip-ansi: 6.0.1
 
   require-directory@2.1.1: {}
@@ -13097,7 +13097,7 @@ snapshots:
 
   whatwg-url@8.7.0:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.17.23
       tr46: 2.1.0
       webidl-conversions: 6.1.0
 
@@ -13186,7 +13186,7 @@ snapshots:
       fast-json-stable-stringify: 2.1.0
       fs-extra: 9.1.0
       glob: 7.2.3
-      lodash: 4.17.21
+      lodash: 4.17.23
       pretty-bytes: 5.6.0
       rollup: 2.80.0
       rollup-plugin-terser: 7.0.2(rollup@2.80.0)
