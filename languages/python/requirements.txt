@@ -23,7 +23,7 @@ certifi==2024.2.2
 cffi==1.16.0
 charset-normalizer==3.3.2
 click==8.1.7
-comm==0.2.2
+comm==0.2.3
 ConfigArgParse==1.7
 contourpy==1.2.1
 coverage==7.4.4
