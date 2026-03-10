@@ -25,7 +25,7 @@ contourpy==1.2.1
 cryptography==42.0.5
 cycler==0.12.1
 Cython==0.29.37
-debugpy==1.8.1
+debugpy==1.8.20
 decorator==5.1.1
 defusedxml==0.7.1
 Deprecated==1.2.14
