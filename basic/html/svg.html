@@ -1,0 +1,61 @@
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        align-items: center;
+        height: 100vh;
+        background: hsl(210deg 15% 6%);
+        color: white;
+    }
+
+    body::before {
+        content: 'Hover/tap/focus this element:';
+        display: block;
+        text-align: center;
+    }
+
+    button {
+        display: block;
+        background: none;
+        border: 1px solid hsl(210deg 15% 30%);
+    }
+
+    svg {
+        display: block;
+    }
+
+    circle {
+        fill: hotpink;
+        transition: r 400ms, cy 600ms;
+    }
+
+    button:hover circle,
+    button:focus-visible circle {
+        r: 50px;
+        cy: 100px;
+    }
+</style>
+
+<div class="wrapper">
+    <p>
+        Check out this SVG:
+    </p>
+
+    <svg width="100" height="100">
+        <circle fill="hotpink" r="30" cx="50" cy="50" />
+    </svg>
+</div>
+
+<button>
+    <svg width="100" height="100">
+        <circle r="30" cx="50" cy="50" />
+    </svg>
+</button>
+<svg width="280" height="280">
+    <line x1="80" y1="80" x2="200" y2="200" stroke="oklch(0.9 0.3 164)" stroke-width="5" />
+</svg>
+<svg width="300" height="300">
+    <rect x="60" y="100" width="180" height="100" fill="none" stroke="oklch(0.9 0.3 164)" stroke-width="5" />
+</svg>
