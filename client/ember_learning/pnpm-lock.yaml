@@ -33,6 +33,11 @@ importers:
         specifier: ^4.12.1
 <<<<<<< HEAD
         version: 4.12.3(@types/node@25.4.0)(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8)
+||||||| 2350222e
+        version: 4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(underscore@1.13.8)
+=======
+        version: 4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(underscore@1.13.8)
+>>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
       ember-cli-app-version:
         specifier: ^3.2.0
         version: 3.2.0(@babel/core@7.22.9)
