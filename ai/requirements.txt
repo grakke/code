@@ -22,7 +22,7 @@ click==8.1.7
 comm==0.2.3
 conllu==4.5.3
 contourpy==1.2.1
-cryptography==42.0.5
+cryptography==43.0.1
 cycler==0.12.1
 Cython==0.29.37
 debugpy==1.8.20
