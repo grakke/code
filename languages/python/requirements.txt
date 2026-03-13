@@ -27,7 +27,7 @@ comm==0.2.3
 ConfigArgParse==1.7.5
 contourpy==1.2.1
 coverage==7.4.4
-cryptography==43.0.1
+cryptography==43.0.3
 curlify==2.2.1
 cycler==0.12.1
 ddt==1.7.2
