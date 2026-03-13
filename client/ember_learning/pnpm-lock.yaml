@@ -31,13 +31,7 @@ importers:
         version: 3.1.3(@babel/core@7.22.9)
       ember-cli:
         specifier: ^4.12.1
-<<<<<<< HEAD
         version: 4.12.3(@types/node@25.4.0)(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8)
-||||||| 2350222e
-        version: 4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(underscore@1.13.8)
-=======
-        version: 4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(underscore@1.13.8)
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
       ember-cli-app-version:
         specifier: ^3.2.0
         version: 3.2.0(@babel/core@7.22.9)
@@ -8289,11 +8283,6 @@ snapshots:
   braces@3.0.3:
     dependencies:
       fill-range: 7.1.1
-
-  braces@3.0.3:
-    dependencies:
-      fill-range: 7.1.1
-
   broccoli-amd-funnel@2.0.1:
     dependencies:
       broccoli-plugin: 1.3.1
@@ -9220,13 +9209,7 @@ snapshots:
       ora: 3.4.0
       through2: 3.0.2
 
-<<<<<<< HEAD
   consolidate@0.16.0(babel-core@6.26.3)(handlebars@4.7.8)(lodash@4.17.23)(mustache@4.2.0)(underscore@1.13.8):
-||||||| 2350222e
-  consolidate@0.16.0(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(mustache@4.2.0)(underscore@1.13.8):
-=======
-  consolidate@0.16.0(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(mustache@4.2.0)(underscore@1.13.8):
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
     dependencies:
       bluebird: 3.7.2
     optionalDependencies:
@@ -9594,19 +9577,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-<<<<<<< HEAD
-  ember-cli-dependency-checker@3.3.2(ember-cli@4.12.3(@types/node@25.4.0)(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8)):
-||||||| 2350222e
-  ember-cli-dependency-checker@3.3.2(ember-cli@4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(underscore@1.13.8)):
-=======
   ember-cli-dependency-checker@3.3.3(ember-cli@4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(underscore@1.13.8)):
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
     dependencies:
       chalk: 2.4.2
-<<<<<<< HEAD
-      ember-cli: 4.12.3(@types/node@25.4.0)(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8)
-      find-yarn-workspace-root: 1.2.1
       find-yarn-workspace-root: 2.0.0
+      ember-cli: 4.12.3(@types/node@25.4.0)(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8)
       is-git-url: 1.0.0
       resolve: 1.22.11
       semver: 5.7.2
@@ -9794,13 +9769,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-<<<<<<< HEAD
-  ember-cli@4.12.3(@types/node@25.4.0)(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8):
-||||||| 2350222e
-  ember-cli@4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(underscore@1.13.8):
-=======
   ember-cli@4.12.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(underscore@1.13.8):
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
     dependencies:
       '@babel/core': 7.22.9
       '@babel/plugin-transform-modules-amd': 7.27.1(@babel/core@7.22.9)
@@ -9887,13 +9856,7 @@ snapshots:
       sort-package-json: 1.57.0
       symlink-or-copy: 1.3.1
       temp: 0.9.4
-<<<<<<< HEAD
-      testem: 3.18.0(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8)
-||||||| 2350222e
-      testem: 3.10.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(underscore@1.13.8)
-=======
       testem: 3.10.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(underscore@1.13.8)
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
       tiny-lr: 2.0.0
       tree-sync: 2.1.0
       uuid: 9.0.1
@@ -10101,11 +10064,8 @@ snapshots:
       resolve: 1.22.11
 ||||||| 2350222e
       micromatch: 4.0.5
-      resolve: 1.22.2
-=======
       micromatch: 4.0.5
       resolve: 1.22.11
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
       v8-compile-cache: 2.3.0
       yargs: 16.2.0
     transitivePeerDependencies:
@@ -10466,9 +10426,6 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-<<<<<<< HEAD
-      micromatch: 4.0.8
-
   fast-glob@3.3.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -10476,11 +10433,6 @@ snapshots:
       glob-parent: 5.1.2
       merge2: 1.4.1
       micromatch: 4.0.8
-||||||| 2350222e
-      micromatch: 4.0.5
-=======
-      micromatch: 4.0.8
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
 
   fast-json-stable-stringify@2.1.0: {}
 
@@ -10583,15 +10535,6 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
     optional: true
-
-
-  fill-range@7.1.1:
-    dependencies:
-      to-regex-range: 5.0.1
-
-  fill-range@7.1.1:
-    dependencies:
-      to-regex-range: 5.0.1
 
   finalhandler@1.1.2:
     dependencies:
@@ -11123,22 +11066,11 @@ snapshots:
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       path-root: 0.1.1
-<<<<<<< HEAD
-      resolve: 1.22.11
-      resolve-package-path: 1.2.7
-    transitivePeerDependencies:
-      - supports-color
-
   hash-for-dep@1.5.2:
     dependencies:
       heimdalljs: 0.2.6
       heimdalljs-logger: 0.1.10
       resolve: 1.22.11
-||||||| 2350222e
-      resolve: 1.22.2
-=======
-      resolve: 1.22.11
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
       resolve-package-path: 1.2.7
     transitivePeerDependencies:
       - supports-color
@@ -12963,9 +12895,7 @@ snapshots:
 
   semver@7.7.4: {}
 
-<<<<<<< HEAD
   send@0.19.2:
-||||||| 2350222e
   send@0.19.0:
 =======
   semver@7.7.4: {}
@@ -13396,13 +13326,7 @@ snapshots:
       source-map: 0.6.1
       source-map-support: 0.5.21
 
-<<<<<<< HEAD
   testem@3.18.0(babel-core@6.26.3)(handlebars@4.7.8)(underscore@1.13.8):
-||||||| 2350222e
-  testem@3.10.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(underscore@1.13.8):
-=======
-  testem@3.10.1(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(underscore@1.13.8):
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
     dependencies:
       '@xmldom/xmldom': 0.8.11
       backbone: 1.6.1
@@ -13415,10 +13339,6 @@ snapshots:
 ||||||| 2350222e
       compression: 1.7.4
       consolidate: 0.16.0(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.21)(mustache@4.2.0)(underscore@1.13.8)
-=======
-      compression: 1.7.4
-      consolidate: 0.16.0(babel-core@6.26.3)(handlebars@4.7.7)(lodash@4.17.23)(mustache@4.2.0)(underscore@1.13.8)
->>>>>>> origin/renovate/ember-cli-dependency-checker-3.x-lockfile
       execa: 1.0.0
       express: 4.22.1
       fireworm: 0.7.2
