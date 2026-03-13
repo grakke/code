@@ -80,7 +80,7 @@ importers:
         version: 14.2.35(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
       eslint-config-prettier:
         specifier: ^9.1.0
-        version: 9.1.0(eslint@9.28.0(jiti@1.21.7))
+        version: 9.1.2(eslint@9.28.0(jiti@1.21.7))
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
@@ -1299,8 +1299,8 @@ packages:
       typescript:
         optional: true
 
-  eslint-config-prettier@9.1.0:
-    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
+  eslint-config-prettier@9.1.2:
+    resolution: {integrity: sha512-iI1f+D2ViGn+uvv5HuHVUamg8ll4tN+JRHGc6IJi4TP9Kl976C57fzPXgseXNs8v0iA8aSJpHsTWjDb9QJamGQ==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -3453,10 +3453,10 @@ snapshots:
 
   '@types/semver@7.7.0': {}
 
-  '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)':
+  '@typescript-eslint/eslint-plugin@7.18.0(@typescript-eslint/parser@8.57.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
+      '@typescript-eslint/parser': 8.57.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
       '@typescript-eslint/scope-manager': 7.18.0
       '@typescript-eslint/type-utils': 7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
       '@typescript-eslint/utils': 7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
@@ -3737,9 +3737,9 @@ snapshots:
       '@babel/core': 7.27.4
       '@babel/eslint-parser': 7.27.5(@babel/core@7.27.4)(eslint@9.28.0(jiti@1.21.7))
       '@rushstack/eslint-patch': 1.11.0
-      '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
+      '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@8.57.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
       '@typescript-eslint/parser': 7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
-      eslint-config-prettier: 9.1.0(eslint@9.28.0(jiti@1.21.7))
+      eslint-config-prettier: 9.1.2(eslint@9.28.0(jiti@1.21.7))
       eslint-import-resolver-alias: 1.1.2(eslint-plugin-import@2.31.0)
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@1.21.7))
       eslint-plugin-eslint-comments: 3.2.0(eslint@9.28.0(jiti@1.21.7))
@@ -4265,7 +4265,7 @@ snapshots:
       - eslint-plugin-import-x
       - supports-color
 
-  eslint-config-prettier@9.1.0(eslint@9.28.0(jiti@1.21.7)):
+  eslint-config-prettier@9.1.2(eslint@9.28.0(jiti@1.21.7)):
     dependencies:
       eslint: 9.28.0(jiti@1.21.7)
 
@@ -4402,7 +4402,7 @@ snapshots:
       '@typescript-eslint/utils': 5.62.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
       eslint: 9.28.0(jiti@1.21.7)
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
+      '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@8.57.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4503,7 +4503,7 @@ snapshots:
       '@typescript-eslint/utils': 7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
       eslint: 9.28.0(jiti@1.21.7)
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
+      '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@8.57.0(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5))(eslint@9.28.0(jiti@1.21.7))(typescript@5.4.5)
     transitivePeerDependencies:
       - supports-color
       - typescript
