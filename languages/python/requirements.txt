@@ -123,7 +123,7 @@ psycogreen==1.0.2
 psycopg2==2.9.9
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
-pure-eval==0.2.2
+pure-eval==0.2.3
 PyByteBuffer==1.0.5
 pycodestyle==2.10.0
 pycparser==2.22
