@@ -142,7 +142,7 @@ PyQt6-sip==13.6.0
 PyQt6-WebEngine==6.6.0
 PyQtChart==5.15.7
 PyQtDataVisualization==5.15.5
-PyQtNetworkAuth==5.15.5
+PyQtNetworkAuth==5.15.6
 PyQtPurchasing==5.15.5
 PyQtWebEngine==5.15.6
 PySocks==1.7.1
