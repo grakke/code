@@ -143,7 +143,7 @@ PyQt6-WebEngine==6.6.0
 PyQtChart==5.15.7
 PyQtDataVisualization==5.15.5
 PyQtNetworkAuth==5.15.5
-PyQtPurchasing==5.15.5
+PyQtPurchasing==5.15.6
 PyQtWebEngine==5.15.6
 PySocks==1.7.1
 python-dateutil @ file:///private/tmp/python-dateutil-20231119-5087-1k8apsg/python-dateutil-2.8.2
