@@ -129,7 +129,6 @@ pure-eval==0.2.3
 pycparser @ file:///private/tmp/pycparser-20231211-26022-8sypv1/pycparser-2.21
 Pygments @ file:///private/tmp/pygments-20231121-5568-1g7pt/pygments-2.17.2
 pyparsing @ file:///private/tmp/python-pyparsing-20231212-62627-s1w3j6/pyparsing-3.1.1
-<<<<<<< HEAD
 PyQt3D==5.15.7
 PyQt5==5.15.11
 PyQt5-sip==12.13.0
