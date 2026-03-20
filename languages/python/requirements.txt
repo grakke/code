@@ -120,7 +120,7 @@ prometheus_client==0.20.0
 prompt-toolkit==3.0.52
 psutil==5.9.8
 psycogreen==1.0.2
-psycopg2==2.9.9
+psycopg2==2.9.11
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
 pure-eval==0.2.2
