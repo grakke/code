@@ -141,7 +141,6 @@ PyQt6-QScintilla==2.14.1
 PyQt6-sip==13.6.0
 PyQt6-WebEngine==6.6.0
 PyQtChart==5.15.7
-<<<<<<< HEAD
 PyQtDataVisualization==5.15.6
 PyQtNetworkAuth==5.15.6
 PyQtPurchasing==5.15.5
