@@ -1,4 +1,4 @@
-From ubuntu:14.04
+From ubuntu:14.04.5
 
 COPY ./httpd /root/httpd
 RUN chmod +x /root/httpd
