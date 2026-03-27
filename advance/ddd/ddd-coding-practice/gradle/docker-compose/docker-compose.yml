@@ -3,7 +3,7 @@ services:
   mysql:
     restart: always
     container_name: ecommerce-order-mysql
-    image: mysql:5.7.23
+    image: mysql:5.7.44
     command: [
       'mysqld',
       '--innodb-buffer-pool-size=20M',
