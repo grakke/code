@@ -1,4 +1,4 @@
-From ubuntu:14.04
+From ubuntu:14.04.5
 
 RUN apt-get update \
       && apt-get install -y software-properties-common \
