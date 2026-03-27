@@ -123,7 +123,7 @@ bootJar {
 }
 
 wrapper {
-    gradleVersion = '5.2.1'
+    gradleVersion = '5.6.4'
 }
 
 apply from: "${rootProject.projectDir}/gradle/idea.gradle"
