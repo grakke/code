@@ -122,7 +122,7 @@ ply @ file:///private/tmp/python-ply-20231123-5460-rityrl/ply-3.11
 pptree==3.1
 prometheus_client==0.20.0
 prompt-toolkit==3.0.52
-protobuf==4.25.9
+protobuf==5.29.6
 psutil==5.9.8
 ptyprocess==0.7.0
 pure-eval==0.2.3
