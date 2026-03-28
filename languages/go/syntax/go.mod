@@ -19,7 +19,7 @@ require (
 require (
 	github.com/go-ini/ini v1.67.1
 	github.com/mattn/go-sqlite3 v1.14.0 // indirect
-	gopkg.in/ini.v1 v1.67.0
+	gopkg.in/ini.v1 v1.67.1
 	gopkg.in/yaml.v2 v2.4.0
 )
 
