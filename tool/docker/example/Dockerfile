@@ -1,5 +1,5 @@
 # Start from the alpine image that is smaller but no fancy tools
-FROM alpine:3.13
+FROM alpine:3.23
 
 # Use /usr/src/app as our workdir. The following instructions will be executed in this location.
 WORKDIR /usr/src/app
