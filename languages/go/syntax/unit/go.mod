@@ -5,7 +5,7 @@ go 1.21.6
 require (
 	github.com/agiledragon/gomonkey/v2 v2.11.0
 	github.com/golang/mock v1.6.0
-	github.com/gomodule/redigo v1.9.2
+	github.com/gomodule/redigo v1.9.3
 	github.com/prashantv/gostub v1.1.0
 	github.com/smartystreets/goconvey v1.8.1
 	github.com/stretchr/testify v1.9.0
