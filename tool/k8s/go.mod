@@ -3,8 +3,8 @@ module k8s-combat
 go 1.25.5
 
 require (
-	github.com/open-feature/go-sdk v1.13.1
-	github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.4
+	github.com/open-feature/go-sdk v1.17.0
+	github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.7
 	github.com/open-feature/go-sdk-contrib/providers/flagd v0.2.3
 	github.com/rs/zerolog v1.31.0
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.60.0
@@ -55,6 +55,7 @@ require (
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.38.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.7.1 // indirect
+	go.uber.org/mock v0.6.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/exp v0.0.0-20250210185358-939b2ce775ac // indirect
