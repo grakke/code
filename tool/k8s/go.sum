@@ -96,6 +96,8 @@ github.com/open-feature/go-sdk v1.13.1 h1:RJbS70eyi7Jd3Zm5bFnaahNKNDXn+RAVnctpGu
 github.com/open-feature/go-sdk v1.13.1/go.mod h1:O8r4mhgeRIsjJ0ZBXlnE0BtbT/79W44gQceR7K8KYgo=
 github.com/open-feature/go-sdk v1.17.0 h1:/OUBBw5d9D61JaNZZxb2Nnr5/EJrEpjtKCTY3rspJQk=
 github.com/open-feature/go-sdk v1.17.0/go.mod h1:lPxPSu1UnZ4E3dCxZi5gV3et2ACi8O8P+zsTGVsDZUw=
+github.com/open-feature/go-sdk v1.17.1 h1:1AwQ2NppOv69sfGiRH9pWfsMVLembvkhQ3hdk9eAsTY=
+github.com/open-feature/go-sdk v1.17.1/go.mod h1:+2UML7oZADJa0Swg27d6pu5kLKeCpZM2X2hWcGQutJ0=
 github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.4 h1:1+YZs4PjvIX2vGjg3FenuXJpN8m83jiTAdfudUjAQuU=
 github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.4/go.mod h1:QiuIhaGRUFNmW+w1q0OaYLm92lfm//aJr4uTPQonSGQ=
 github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.7 h1:7UpXGobmWrTi8LcXDQo33sjU8vvRv/1raL5iIk+YZR0=

@@ -3,7 +3,7 @@ module k8s-combat
 go 1.25.5
 
 require (
-	github.com/open-feature/go-sdk v1.17.0
+	github.com/open-feature/go-sdk v1.17.1
 	github.com/open-feature/go-sdk-contrib/hooks/open-telemetry v0.3.7
 	github.com/open-feature/go-sdk-contrib/providers/flagd v0.2.3
 	github.com/rs/zerolog v1.31.0
