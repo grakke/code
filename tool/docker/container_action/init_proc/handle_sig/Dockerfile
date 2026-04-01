@@ -1,4 +1,4 @@
-FROM centos:8.1.1911
+FROM centos:8.4.2105
 
 COPY ./bin/go-init /
 COPY ./bin/c-init-sig /

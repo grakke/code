@@ -1,4 +1,4 @@
-FROM centos:8.1.1911
+FROM centos:8.4.2105
 
 COPY ./mem-alloc/mem_alloc /
 COPY ./read-file/read_file /
