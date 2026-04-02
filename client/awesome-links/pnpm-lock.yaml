@@ -19,7 +19,7 @@ importers:
         version: 4.12.0(graphql@16.13.2)
       '@pothos/plugin-prisma':
         specifier: ^4.3.1
-        version: 4.14.2(@pothos/core@4.12.0(graphql@16.13.2))(@prisma/client@5.22.0(prisma@5.22.0))(graphql@16.13.2)(typescript@4.9.5)
+        version: 4.14.3(@pothos/core@4.12.0(graphql@16.13.2))(@prisma/client@5.22.0(prisma@5.22.0))(graphql@16.13.2)(typescript@4.9.5)
       '@pothos/plugin-relay':
         specifier: ^4.3.0
         version: 4.7.0(@pothos/core@4.12.0(graphql@16.13.2))(graphql@16.13.2)
@@ -422,8 +422,8 @@ packages:
     peerDependencies:
       graphql: ^16.10.0
 
-  '@pothos/plugin-prisma@4.14.2':
-    resolution: {integrity: sha512-GZ/AFKS1HmV1Oz+7Bl/7A5j3JpKryiL9hsgj8djyBHb1glS3NnDnmGT9iiwvazUe6WHbwC2HhatLH3EWYsdQTQ==}
+  '@pothos/plugin-prisma@4.14.3':
+    resolution: {integrity: sha512-jeI6gGhozIpig4zmDT7uIu8LUjUZLRCG8GPD6ij/3y7hjl92yG7gc9vbqy14YbTNoYXPpoMPkumiOy+FeRSDcw==}
     hasBin: true
     peerDependencies:
       '@pothos/core': '*'
@@ -1414,7 +1414,7 @@ snapshots:
     dependencies:
       graphql: 16.13.2
 
-  '@pothos/plugin-prisma@4.14.2(@pothos/core@4.12.0(graphql@16.13.2))(@prisma/client@5.22.0(prisma@5.22.0))(graphql@16.13.2)(typescript@4.9.5)':
+  '@pothos/plugin-prisma@4.14.3(@pothos/core@4.12.0(graphql@16.13.2))(@prisma/client@5.22.0(prisma@5.22.0))(graphql@16.13.2)(typescript@4.9.5)':
     dependencies:
       '@pothos/core': 4.12.0(graphql@16.13.2)
       '@prisma/client': 5.22.0(prisma@5.22.0)
