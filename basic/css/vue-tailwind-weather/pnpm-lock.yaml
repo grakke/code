@@ -38,22 +38,10 @@ importers:
         version: 18.19.130
       '@vitejs/plugin-vue':
         specifier: ^4.4.0
-<<<<<<< HEAD
-        version: 4.6.2(vite@8.0.8(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))
-||||||| 2436aa0b
-        version: 4.6.2(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))
-=======
         version: 4.6.2(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.32(typescript@5.2.2))
->>>>>>> origin/renovate/vue-monorepo
       '@vitejs/plugin-vue-jsx':
         specifier: ^3.0.2
-<<<<<<< HEAD
         version: 3.1.0(vite@8.0.8(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))
-||||||| 2436aa0b
-        version: 3.1.0(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))
-=======
-        version: 3.1.0(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.32(typescript@5.2.2))
->>>>>>> origin/renovate/vue-monorepo
       '@vue/eslint-config-prettier':
         specifier: ^8.0.0
         version: 8.0.0(eslint@8.57.1)(prettier@3.5.3)
@@ -3394,13 +3382,7 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-<<<<<<< HEAD
   '@vitejs/plugin-vue-jsx@3.1.0(vite@8.0.8(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))':
-||||||| 2436aa0b
-  '@vitejs/plugin-vue-jsx@3.1.0(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))':
-=======
-  '@vitejs/plugin-vue-jsx@3.1.0(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.32(typescript@5.2.2))':
->>>>>>> origin/renovate/vue-monorepo
     dependencies:
       '@babel/core': 7.27.3
       '@babel/plugin-transform-typescript': 7.27.1(@babel/core@7.27.3)
@@ -3411,20 +3393,10 @@ snapshots:
 ||||||| 2436aa0b
       vite: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0)
       vue: 3.5.30(typescript@5.2.2)
-=======
-      vite: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0)
-      vue: 3.5.32(typescript@5.2.2)
->>>>>>> origin/renovate/vue-monorepo
     transitivePeerDependencies:
       - supports-color
 
-<<<<<<< HEAD
-  '@vitejs/plugin-vue@4.6.2(vite@8.0.8(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))':
-||||||| 2436aa0b
   '@vitejs/plugin-vue@4.6.2(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.30(typescript@5.2.2))':
-=======
-  '@vitejs/plugin-vue@4.6.2(vite@8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0))(vue@3.5.32(typescript@5.2.2))':
->>>>>>> origin/renovate/vue-monorepo
     dependencies:
 <<<<<<< HEAD
       vite: 8.0.8(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0)
@@ -3432,10 +3404,6 @@ snapshots:
 ||||||| 2436aa0b
       vite: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0)
       vue: 3.5.30(typescript@5.2.2)
-=======
-      vite: 8.0.5(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@types/node@18.19.130)(esbuild@0.27.7)(jiti@1.21.7)(yaml@2.8.0)
-      vue: 3.5.32(typescript@5.2.2)
->>>>>>> origin/renovate/vue-monorepo
 
   '@vitest/expect@0.34.6':
     dependencies:
