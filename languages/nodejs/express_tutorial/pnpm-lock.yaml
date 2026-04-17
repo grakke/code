@@ -3517,8 +3517,8 @@ packages:
   promise@7.3.1:
     resolution: {integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==}
 
-  protobufjs@6.11.4:
-    resolution: {integrity: sha512-5kQWPaJHi1WoCpjTGszzQ32PG2F4+wRY6BmAT4Vfw56Q2FZ4YZzK20xUYQH4YkfehY1e6QSICrJquM6xXZNcrw==}
+  protobufjs@6.11.5:
+    resolution: {integrity: sha512-OKjVH3hDoXdIZ/s5MLv8O2X0s+wOxGfV7ar6WFSKGaSAxi/6gYn3px5POS4vi+mc/0zCOdL7Jkwrj0oT1Yst2A==}
     hasBin: true
 
   proxy-addr@2.0.7:
@@ -6419,7 +6419,7 @@ snapshots:
 
   apollo-engine-reporting-protobuf@0.2.1:
     dependencies:
-      protobufjs: 6.11.4
+      protobufjs: 6.11.5
 
   apollo-engine-reporting@1.0.7(graphql@14.7.0):
     dependencies:
@@ -9111,7 +9111,7 @@ snapshots:
     dependencies:
       asap: 2.0.6
 
-  protobufjs@6.11.4:
+  protobufjs@6.11.5:
     dependencies:
       '@protobufjs/aspromise': 1.1.2
       '@protobufjs/base64': 1.1.2
