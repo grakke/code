@@ -16,7 +16,7 @@ devDependencies:
     version: 7.28.6(@babel/core@7.29.0)
   core-js:
     specifier: ^3.33.3
-    version: 3.33.3
+    version: 3.49.0
   regenerator-runtime:
     specifier: ^0.13.11
     version: 0.13.11
@@ -1206,8 +1206,8 @@ packages:
       browserslist: 4.28.1
     dev: true
 
-  /core-js@3.33.3:
-    resolution: {integrity: sha512-lo0kOocUlLKmm6kv/FswQL8zbkH7mVsLJ/FULClOhv8WRVmKLVcs6XPNQAzstfeJTCHMyButEwG+z1kHxHoDZw==}
+  /core-js@3.49.0:
+    resolution: {integrity: sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==}
     requiresBuild: true
     dev: true
 
