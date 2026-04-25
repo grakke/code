@@ -184,7 +184,7 @@ webcolors==1.13
 webdriver-manager==4.0.2
 webencodings==0.5.1
 websocket-client==1.4.2
-Werkzeug==3.1.6
+Werkzeug==3.1.8
 wrapt==1.16.0
 wsproto==1.2.0
 zipp==3.19.1
