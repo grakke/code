@@ -26,7 +26,7 @@ cryptography==46.0.7
 cycler==0.12.1
 Cython==0.29.37
 debugpy==1.8.20
-decorator==5.1.1
+decorator==5.2.1
 defusedxml==0.7.1
 Deprecated==1.2.14
 distlib @ file:///private/tmp/python-distlib-20231213-5303-70ss3l/distlib-0.3.8

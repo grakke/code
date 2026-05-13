@@ -32,7 +32,7 @@ curlify==2.2.1
 cycler==0.12.1
 ddt==1.7.2
 debugpy==1.8.20
-decorator==5.1.1
+decorator==5.2.1
 defusedxml==0.7.1
 delayed-assert==0.3.6
 dill==0.3.8
