@@ -18,7 +18,7 @@ bpemb==0.3.6
 certifi @ file:///private/tmp/certifi-20240307-4909-d45d8o/certifi-2024.2.2
 cffi @ file:///private/tmp/cffi-20231211-41533-ztvmir/cffi-1.16.0
 charset-normalizer==3.4.7
-click==8.1.7
+click==8.3.3
 comm==0.2.3
 conllu==4.5.3
 contourpy==1.2.1
