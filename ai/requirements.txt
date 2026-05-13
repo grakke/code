@@ -13,7 +13,7 @@ Babel==2.18.0
 beautifulsoup4==4.14.3
 bleach==6.3.0
 boto3==1.42.96
-botocore==1.42.94
+botocore==1.42.96
 bpemb==0.3.6
 certifi @ file:///private/tmp/certifi-20240307-4909-d45d8o/certifi-2024.2.2
 cffi @ file:///private/tmp/cffi-20231211-41533-ztvmir/cffi-1.16.0
