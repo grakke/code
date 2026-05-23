@@ -87,7 +87,7 @@ jupyterlab_server==2.25.4
 kiwisolver==1.4.5
 lazy-object-proxy==1.10.0
 locust==2.12.1
-lxml==6.1.0
+lxml==6.1.1
 MarkupSafe==2.1.5
 matplotlib==3.8.3
 matplotlib-inline==0.1.6
