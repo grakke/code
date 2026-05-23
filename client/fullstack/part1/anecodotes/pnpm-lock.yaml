@@ -48,6 +48,7 @@ overrides:
   underscore@<=1.13.7: '>=1.13.8'
   webpack-dev-middleware@<=5.3.3: '>=5.3.4'
   webpack-dev-server@<=5.2.0: '>=5.2.1'
+  webpack-dev-server@<=5.2.3: '>=5.2.4'
 
 importers:
 
@@ -1189,7 +1190,7 @@ packages:
       sockjs-client: ^1.4.0
       type-fest: ^0.13.1
       webpack: '>=4.43.0 <6.0.0'
-      webpack-dev-server: '>=5.2.1'
+      webpack-dev-server: '>=5.2.4'
       webpack-hot-middleware: 2.x
       webpack-plugin-serve: 0.x || 1.x
     peerDependenciesMeta:
@@ -5058,8 +5059,8 @@ packages:
     resolution: {integrity: sha512-2tLuBsA6P4rYTNKCXYG/71C7j1pU6pK503suYOmn4xYrQIzW+opD+7FAFNuGSdZC/3Qfy334QbeMu7MEb8gOxg==}
     engines: {node: '>=6.14.4'}
 
-  postcss@8.5.14:
-    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
+  postcss@8.5.15:
+    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -5162,8 +5163,8 @@ packages:
 
       (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
-  qs@6.15.1:
-    resolution: {integrity: sha512-6YHEFRL9mfgcAvql/XhwTvf5jKcOiiupt2FiJxHkiX1z4j7WL8J/jRHYLluORvc1XxB5rV20KoeK00gVJamspg==}
+  qs@6.15.2:
+    resolution: {integrity: sha512-Rzq0KEyX/w/tEybncDgdkZrJgVUsUMk3xjh3t5bv3S1HTAtg+uOYt72+ZfwiQwKdysThkTBdL/rTi6HDmX9Ddw==}
     engines: {node: '>=0.6'}
 
   query-string@4.3.4:
@@ -8984,7 +8985,7 @@ snapshots:
       normalize-range: 0.1.2
       num2fraction: 1.2.2
       picocolors: 0.2.1
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -9232,7 +9233,7 @@ snapshots:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       on-finished: 2.4.1
-      qs: 6.15.1
+      qs: 6.15.2
       raw-body: 2.5.2
       type-is: 1.6.18
       unpipe: 1.0.0
@@ -9723,18 +9724,18 @@ snapshots:
 
   css-blank-pseudo@0.1.4:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   css-color-names@0.0.4: {}
 
   css-declaration-sorter@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       timsort: 0.3.0
 
   css-has-pseudo@0.10.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 5.0.0
 
   css-loader@4.3.0(webpack@4.44.2):
@@ -9743,7 +9744,7 @@ snapshots:
       cssesc: 3.0.0
       icss-utils: 4.1.1
       loader-utils: 2.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-modules-extract-imports: 2.0.0
       postcss-modules-local-by-default: 3.0.3
       postcss-modules-scope: 2.2.0
@@ -9755,7 +9756,7 @@ snapshots:
 
   css-prefers-color-scheme@3.1.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   css-select-base-adapter@0.1.1: {}
 
@@ -9807,7 +9808,7 @@ snapshots:
     dependencies:
       css-declaration-sorter: 4.0.1
       cssnano-util-raw-cache: 4.0.1
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-calc: 7.0.5
       postcss-colormin: 4.0.3
       postcss-convert-values: 4.0.1
@@ -9842,7 +9843,7 @@ snapshots:
 
   cssnano-util-raw-cache@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   cssnano-util-same-parent@4.0.1: {}
 
@@ -9851,7 +9852,7 @@ snapshots:
       cosmiconfig: 5.2.1
       cssnano-preset-default: 4.0.8
       is-resolvable: 1.1.0
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   csso@4.2.0:
     dependencies:
@@ -10624,7 +10625,7 @@ snapshots:
       parseurl: 1.3.3
       path-to-regexp: 0.1.13
       proxy-addr: 2.0.7
-      qs: 6.15.1
+      qs: 6.15.2
       range-parser: 1.2.1
       safe-buffer: 5.2.1
       send: 0.19.0
@@ -11118,7 +11119,7 @@ snapshots:
 
   icss-utils@4.1.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   identity-obj-proxy@3.0.0:
     dependencies:
@@ -12603,45 +12604,45 @@ snapshots:
 
   postcss-attribute-case-insensitive@4.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 6.1.2
 
   postcss-browser-comments@3.0.0(browserslist@4.25.0):
     dependencies:
       browserslist: 4.25.0
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-calc@7.0.5:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 6.1.2
       postcss-value-parser: 4.2.0
 
   postcss-color-functional-notation@2.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-color-gray@5.0.0:
     dependencies:
       '@csstools/convert-colors': 1.4.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-color-hex-alpha@5.0.3:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-color-mod-function@3.0.3:
     dependencies:
       '@csstools/convert-colors': 1.4.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-color-rebeccapurple@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-colormin@4.0.3:
@@ -12649,92 +12650,92 @@ snapshots:
       browserslist: 4.25.0
       color: 3.2.1
       has: 1.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-convert-values@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-custom-media@7.0.8:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-custom-properties@8.0.11:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-custom-selectors@5.1.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 5.0.0
 
   postcss-dir-pseudo-class@5.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 5.0.0
 
   postcss-discard-comments@4.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-discard-duplicates@4.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-discard-empty@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-discard-overridden@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-double-position-gradients@1.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-env-function@2.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-flexbugs-fixes@4.2.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-focus-visible@4.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-focus-within@3.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-font-variant@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-gap-properties@2.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-image-set-function@3.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-initial@3.0.4:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-lab-function@2.0.1:
     dependencies:
       '@csstools/convert-colors': 1.4.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-load-config@2.1.2:
@@ -12745,22 +12746,22 @@ snapshots:
   postcss-loader@3.0.0:
     dependencies:
       loader-utils: 1.4.2
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-load-config: 2.1.2
       schema-utils: 1.0.0
 
   postcss-logical@3.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-media-minmax@4.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-merge-longhand@4.0.11:
     dependencies:
       css-color-names: 0.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
       stylehacks: 4.0.3
 
@@ -12769,20 +12770,20 @@ snapshots:
       browserslist: 4.25.0
       caniuse-api: 3.0.0
       cssnano-util-same-parent: 4.0.1
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 3.1.2
       vendors: 1.0.4
 
   postcss-minify-font-values@4.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-minify-gradients@4.0.2:
     dependencies:
       cssnano-util-get-arguments: 4.0.0
       is-color-stop: 1.1.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-minify-params@4.0.2:
@@ -12790,7 +12791,7 @@ snapshots:
       alphanum-sort: 1.0.2
       browserslist: 4.25.0
       cssnano-util-get-arguments: 4.0.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
       uniqs: 2.0.0
 
@@ -12798,113 +12799,113 @@ snapshots:
     dependencies:
       alphanum-sort: 1.0.2
       has: 1.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 3.1.2
 
   postcss-modules-extract-imports@2.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-modules-local-by-default@3.0.3:
     dependencies:
       icss-utils: 4.1.1
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 6.1.2
       postcss-value-parser: 4.2.0
 
   postcss-modules-scope@2.2.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 6.1.2
 
   postcss-modules-values@3.0.0:
     dependencies:
       icss-utils: 4.1.1
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-nesting@7.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-normalize-charset@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-normalize-display-values@4.0.2:
     dependencies:
       cssnano-util-get-match: 4.0.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-positions@4.0.2:
     dependencies:
       cssnano-util-get-arguments: 4.0.0
       has: 1.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-repeat-style@4.0.2:
     dependencies:
       cssnano-util-get-arguments: 4.0.0
       cssnano-util-get-match: 4.0.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-string@4.0.2:
     dependencies:
       has: 1.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-timing-functions@4.0.2:
     dependencies:
       cssnano-util-get-match: 4.0.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-unicode@4.0.1:
     dependencies:
       browserslist: 4.25.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-url@4.0.1:
     dependencies:
       is-absolute-url: 2.1.0
       normalize-url: 3.3.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize-whitespace@4.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-normalize@8.0.1:
     dependencies:
       '@csstools/normalize.css': 10.1.0
       browserslist: 4.25.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-browser-comments: 3.0.0(browserslist@4.25.0)
       sanitize.css: 10.0.0
 
   postcss-ordered-values@4.1.2:
     dependencies:
       cssnano-util-get-arguments: 4.0.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-overflow-shorthand@2.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-page-break@2.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-place@4.0.1:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-values-parser: 2.0.1
 
   postcss-preset-env@6.7.0:
@@ -12916,7 +12917,7 @@ snapshots:
       css-has-pseudo: 0.10.0
       css-prefers-color-scheme: 3.1.1
       cssdb: 4.4.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-attribute-case-insensitive: 4.0.2
       postcss-color-functional-notation: 2.0.1
       postcss-color-gray: 5.0.0
@@ -12949,7 +12950,7 @@ snapshots:
 
   postcss-pseudo-class-any-link@6.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 5.0.0
 
   postcss-reduce-initial@4.0.3:
@@ -12957,32 +12958,32 @@ snapshots:
       browserslist: 4.25.0
       caniuse-api: 3.0.0
       has: 1.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-reduce-transforms@4.0.2:
     dependencies:
       cssnano-util-get-match: 4.0.0
       has: 1.0.4
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
 
   postcss-replace-overflow-wrap@3.0.0:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-safe-parser@5.0.2:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-selector-matches@4.0.0:
     dependencies:
       balanced-match: 1.0.2
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-selector-not@4.0.1:
     dependencies:
       balanced-match: 1.0.2
-      postcss: 8.5.14
+      postcss: 8.5.15
 
   postcss-selector-parser@3.1.2:
     dependencies:
@@ -13003,14 +13004,14 @@ snapshots:
 
   postcss-svgo@4.0.3:
     dependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-value-parser: 3.3.1
       svgo: 1.3.2
 
   postcss-unique-selectors@4.0.1:
     dependencies:
       alphanum-sort: 1.0.2
-      postcss: 8.5.14
+      postcss: 8.5.15
       uniqs: 2.0.0
 
   postcss-value-parser@3.3.1: {}
@@ -13023,9 +13024,9 @@ snapshots:
       indexes-of: 1.0.1
       uniq: 1.0.1
 
-  postcss@8.5.14:
+  postcss@8.5.15:
     dependencies:
-      nanoid: 3.3.11
+      nanoid: 3.3.12
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -13132,7 +13133,7 @@ snapshots:
 
   q@1.5.1: {}
 
-  qs@6.15.1:
+  qs@6.15.2:
     dependencies:
       side-channel: 1.1.0
 
@@ -13463,7 +13464,7 @@ snapshots:
       convert-source-map: 1.7.0
       es6-iterator: 2.0.3
       loader-utils: 1.4.2
-      postcss: 8.5.14
+      postcss: 8.5.15
       rework: 1.0.1
       rework-visit: 1.0.0
       source-map: 0.6.1
@@ -14073,7 +14074,7 @@ snapshots:
   stylehacks@4.0.3:
     dependencies:
       browserslist: 4.25.0
-      postcss: 8.5.14
+      postcss: 8.5.15
       postcss-selector-parser: 3.1.2
 
   supports-color@5.5.0:
@@ -14421,7 +14422,7 @@ snapshots:
   url@0.11.4:
     dependencies:
       punycode: 1.4.1
-      qs: 6.15.1
+      qs: 6.15.2
 
   util-deprecate@1.0.2: {}
 

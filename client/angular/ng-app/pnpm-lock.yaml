@@ -9693,11 +9693,7 @@ snapshots:
       ws: 8.20.0
 ||||||| acd6c8eb
       webpack-dev-middleware: 7.4.2(tslib@2.8.1)(webpack@5.105.0)
-      ws: 8.20.0
-=======
-      webpack-dev-middleware: 7.4.2(tslib@2.8.1)(webpack@5.105.0)
       ws: 8.20.1
->>>>>>> origin/dependabot/npm_and_yarn/advance/tdd/tdd-mooc-small-steps/npm_and_yarn-84a809cb43
     optionalDependencies:
       webpack: 5.105.0(esbuild@0.28.0)(postcss@8.5.12)
     transitivePeerDependencies:
