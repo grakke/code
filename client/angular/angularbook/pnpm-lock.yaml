@@ -4483,8 +4483,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.18.3:
-    resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
+  ws@8.20.1:
+    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -9496,7 +9496,7 @@ snapshots:
       strip-ansi: 7.1.0
       webpack: 5.76.1(esbuild@0.14.22)
       webpack-dev-middleware: 5.3.0(webpack@5.76.1)
-      ws: 8.18.3
+      ws: 8.20.1
     transitivePeerDependencies:
       - '@types/express'
       - bufferutil
@@ -9593,7 +9593,7 @@ snapshots:
 
   ws@8.17.1: {}
 
-  ws@8.18.3: {}
+  ws@8.20.1: {}
 
   xml2js@0.4.23:
     dependencies:

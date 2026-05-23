@@ -37,7 +37,7 @@ importers:
         version: 5.55.7
       svelte-preprocess:
         specifier: ^4.10.7
-        version: 4.10.7(postcss@8.5.14)(sass@1.69.3)(svelte@5.55.7)(typescript@4.9.5)
+        version: 4.10.7(postcss@8.5.15)(sass@1.69.3)(svelte@5.55.7)(typescript@4.9.5)
       tslib:
         specifier: ^2.6.2
         version: 2.8.1
@@ -575,8 +575,8 @@ packages:
     resolution: {integrity: sha512-YQLXUplAwJgCydQ78IMJywZCceoqk1oH01OERdSAJc/7U2AylwjhSCLDEtqwg811idIS/9fIU5GjG73IgjKMVg==}
     engines: {node: '>=0.10'}
 
-  esrap@2.2.8:
-    resolution: {integrity: sha512-MPweq2EvEGj8jwOI7Hgycw/QIHzqA1EbAM8lG7p+FBfZbZq/hQ6h3AMsqnu/djzisH1KVWNzbb7LSgIVtMlPSg==}
+  esrap@2.2.9:
+    resolution: {integrity: sha512-4KijP+NxCWthMCUC3qHbE6n4vCjqgJS1uAYKhuT/GWfFTf1Qyive2TgOjep+gzbSzRfnNyaN/UU9YmdOt8Eg0A==}
     peerDependencies:
       '@typescript-eslint/types': ^8.2.0
     peerDependenciesMeta:
@@ -858,8 +858,8 @@ packages:
     resolution: {integrity: sha512-V7+vQEJ06Z+c5tSye8S+nHUfI51xoXIXjHQ99cQtKUkQqqO1kO/KCJUfZXuB47h/YBlDhah2H3hdUGXn8ie0oA==}
     engines: {node: '>=8.6'}
 
-  postcss@8.5.14:
-    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
+  postcss@8.5.15:
+    resolution: {integrity: sha512-FfR8sjd4em2T6fb3I2MwAJU7HWVMr9zba+enmQeeWFfCbm+UOC/0X4DS8XtpUTMwWMGbjKYP7xjfNekzyGmB3A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -1694,7 +1694,7 @@ snapshots:
     dependencies:
       estraverse: 5.3.0
 
-  esrap@2.2.8:
+  esrap@2.2.9:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -1931,7 +1931,7 @@ snapshots:
 
   picomatch@2.3.2: {}
 
-  postcss@8.5.14:
+  postcss@8.5.15:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
@@ -2064,7 +2064,7 @@ snapshots:
     dependencies:
       svelte: 5.55.7
 
-  svelte-preprocess@4.10.7(postcss@8.5.14)(sass@1.69.3)(svelte@5.55.7)(typescript@4.9.5):
+  svelte-preprocess@4.10.7(postcss@8.5.15)(sass@1.69.3)(svelte@5.55.7)(typescript@4.9.5):
     dependencies:
       '@types/pug': 2.0.7
       '@types/sass': 1.45.0
@@ -2074,7 +2074,7 @@ snapshots:
       strip-indent: 3.0.0
       svelte: 5.55.7
     optionalDependencies:
-      postcss: 8.5.14
+      postcss: 8.5.15
       sass: 1.69.3
       typescript: 4.9.5
 
@@ -2091,7 +2091,7 @@ snapshots:
       clsx: 2.1.1
       devalue: 5.8.1
       esm-env: 1.2.2
-      esrap: 2.2.8
+      esrap: 2.2.9
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
@@ -2150,7 +2150,7 @@ snapshots:
   vite@4.5.2(sass@1.69.3):
     dependencies:
       esbuild: 0.18.20
-      postcss: 8.5.14
+      postcss: 8.5.15
       rollup: 3.30.0
     optionalDependencies:
       fsevents: 2.3.3
