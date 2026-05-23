@@ -1132,14 +1132,6 @@ packages:
     resolution: {integrity: sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg==}
     engines: {node: '>= 0.10'}
 
-<<<<<<< HEAD
-  qs@6.15.1:
-    resolution: {integrity: sha512-6YHEFRL9mfgcAvql/XhwTvf5jKcOiiupt2FiJxHkiX1z4j7WL8J/jRHYLluORvc1XxB5rV20KoeK00gVJamspg==}
-||||||| acd6c8eb
-  qs@6.14.0:
-    resolution: {integrity: sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w==}
-    engines: {node: '>=0.6'}
-
   qs@6.14.2:
     resolution: {integrity: sha512-V/yCWTTF7VJ9hIh18Ugr2zhJMP01MY7c5kh4J870L7imm6/DIzBsNLTXzMwUA3yZ5b/KBqLx8Kp3uRvd7xSe3Q==}
 =======
@@ -2353,13 +2345,6 @@ snapshots:
       forwarded: 0.2.0
       ipaddr.js: 1.9.1
 
-<<<<<<< HEAD
-  qs@6.15.1:
-||||||| acd6c8eb
-  qs@6.14.0:
-    dependencies:
-      side-channel: 1.1.0
-
   qs@6.14.2:
 =======
   qs@6.14.2:
@@ -2517,13 +2502,7 @@ snapshots:
       formidable: 3.5.4
       methods: 1.1.2
       mime: 2.6.0
-<<<<<<< HEAD
-      qs: 6.15.1
-||||||| acd6c8eb
-      qs: 6.14.0
-=======
       qs: 6.14.2
->>>>>>> origin/dependabot/npm_and_yarn/advance/tdd/tdd-mooc-small-steps/npm_and_yarn-525fd22a9a
     transitivePeerDependencies:
       - supports-color
 
