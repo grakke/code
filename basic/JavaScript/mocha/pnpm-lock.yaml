@@ -20,7 +20,7 @@ importers:
         version: 7.29.0
       '@babel/register':
         specifier: ^7.22.5
-        version: 7.28.6(@babel/core@7.29.0)
+        version: 7.29.3(@babel/core@7.29.0)
       babel-core:
         specifier: ^6.26.3
         version: 6.26.3
@@ -94,8 +94,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  '@babel/register@7.28.6':
-    resolution: {integrity: sha512-pgcbbEl/dWQYb6L6Yew6F94rdwygfuv+vJ/tXfwIOYAfPB6TNWpXUMEtEq3YuTeHRdvMIhvz13bkT9CNaS+wqA==}
+  '@babel/register@7.29.3':
+    resolution: {integrity: sha512-F6C1KpIdoImKQfsD6HSxZ+mS4YY/2Q+JsqrmTC5ApVkTR2rG+nnbpjhWwzA5bDNu8mJjB3AryqDaWFLd4gCbJQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1190,6 +1190,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validator@10.11.0:
@@ -1339,7 +1340,7 @@ snapshots:
     dependencies:
       '@babel/types': 7.29.0
 
-  '@babel/register@7.28.6(@babel/core@7.29.0)':
+  '@babel/register@7.29.3(@babel/core@7.29.0)':
     dependencies:
       '@babel/core': 7.29.0
       clone-deep: 4.0.1
