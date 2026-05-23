@@ -5117,6 +5117,13 @@ snapshots:
       proc-log: 6.1.0
       semver: 7.8.0
       tar: 7.5.15
+||||||| acd6c8eb
+      semver: 7.7.2
+      tar: 7.5.14
+=======
+      semver: 7.8.0
+      tar: 7.5.15
+>>>>>>> origin/dependabot/npm_and_yarn/advance/tdd/tdd-mooc-small-steps/npm_and_yarn-afcdf7eef7
       tinyglobby: 0.2.16
       undici: 6.25.0
       which: 6.0.1
