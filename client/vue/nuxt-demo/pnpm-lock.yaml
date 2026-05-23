@@ -5383,11 +5383,7 @@ snapshots:
       tar: 7.5.15
 ||||||| acd6c8eb
       semver: 7.7.4
-      tar: 7.5.14
-=======
-      semver: 7.7.4
       tar: 7.5.15
->>>>>>> origin/dependabot/npm_and_yarn/advance/tdd/tdd-mooc-small-steps/npm_and_yarn-525fd22a9a
     transitivePeerDependencies:
       - encoding
       - supports-color

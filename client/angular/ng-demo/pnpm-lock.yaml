@@ -5115,9 +5115,6 @@ snapshots:
       graceful-fs: 4.2.11
       nopt: 9.0.0
       proc-log: 6.1.0
-<<<<<<< HEAD
-      semver: 7.7.2
-      tar: 7.5.15
       semver: 7.8.0
       tar: 7.5.15
       tinyglobby: 0.2.16

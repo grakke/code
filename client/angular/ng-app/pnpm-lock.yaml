@@ -8821,11 +8821,7 @@ snapshots:
       semver: 7.7.2
 ||||||| acd6c8eb
       postcss: 8.5.6
-      semver: 7.7.2
-=======
-      postcss: 8.5.6
       semver: 7.8.0
->>>>>>> origin/dependabot/npm_and_yarn/advance/tdd/tdd-mooc-small-steps/npm_and_yarn-525fd22a9a
     optionalDependencies:
       webpack: 5.105.0(esbuild@0.28.0)(postcss@8.5.12)
     transitivePeerDependencies:
