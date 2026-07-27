@@ -3728,16 +3728,8 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-<<<<<<< HEAD
-      '@types/node': 22.19.21
-      '@types/yargs': 17.0.33
-||||||| 05776bbc
-      '@types/node': 22.19.19
-      '@types/yargs': 17.0.33
-=======
       '@types/node': 22.19.21
       '@types/yargs': 17.0.35
->>>>>>> origin/renovate/nest-monorepo
       chalk: 4.1.2
 
   '@jridgewell/gen-mapping@0.3.13':
