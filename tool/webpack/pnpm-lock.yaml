@@ -6719,10 +6719,6 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
-  '@types/node@25.9.3':
-    dependencies:
-      undici-types: 7.24.6
-
   '@types/normalize-package-data@2.4.4': {}
 
   '@types/q@1.5.8':
