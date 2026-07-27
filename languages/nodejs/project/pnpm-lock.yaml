@@ -764,11 +764,6 @@ snapshots:
       es-define-property: 1.0.1
       side-channel: 1.1.1
 
-  qs@6.15.3:
-    dependencies:
-      es-define-property: 1.0.1
-      side-channel: 1.1.1
-
   range-parser@1.2.1: {}
 
   raw-body@2.5.3:
