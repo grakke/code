@@ -3,6 +3,9 @@ package tests
 import (
 	"reflect"
 	"testing"
+
+	"go-web/model/dao"
+	"go-web/model/dao/table"
 )
 
 func TestCreateUser(t *testing.T) {
@@ -18,7 +21,7 @@ func TestCreateUser(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := CreateUser(tt.args.user); (err != nil) != tt.wantErr {
+			if err := dao.CreateUser(tt.args.user); (err != nil) != tt.wantErr {
 				t.Errorf("CreateUser() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})
@@ -38,7 +41,7 @@ func TestDeleteUserById(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := DeleteUserById(tt.args.userId); (err != nil) != tt.wantErr {
+			if err := dao.DeleteUserById(tt.args.userId); (err != nil) != tt.wantErr {
 				t.Errorf("DeleteUserById() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})
@@ -53,7 +56,7 @@ func TestGetAllUser(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotUsers, err := GetAllUser()
+			gotUsers, err := dao.GetAllUser()
 			if (err != nil) != tt.wantErr {
 				t.Errorf("GetAllUser() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -79,7 +82,7 @@ func TestGetUserBYId(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotUser, err := GetUserBYId(tt.args.userId)
+			gotUser, err := dao.GetUserBYId(tt.args.userId)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("GetUserBYId() error = %v, wantErr %v", err, tt.wantErr)
 				return
@@ -105,7 +108,7 @@ func TestUpdateUserNameById(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if err := UpdateUserNameById(tt.args.userName, tt.args.userId); (err != nil) != tt.wantErr {
+			if err := dao.UpdateUserNameById(tt.args.userName, tt.args.userId); (err != nil) != tt.wantErr {
 				t.Errorf("UpdateUserNameById() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})
