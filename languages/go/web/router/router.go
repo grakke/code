@@ -3,6 +3,7 @@ package router
 import (
 	"go-web/handler"
 	"go-web/middleware"
+	"net/http"
 
 	"github.com/gorilla/mux"
 )
@@ -25,4 +26,8 @@ func RegisterRoutes(r *mux.Router) {
 
 	viewRouter := r.PathPrefix("/view").Subrouter()
 	viewRouter.HandleFunc("/index", handler.ShowIndexView)
+
+	fs := http.FileServer(http.Dir("./assets"))
+	serveFileHandler := http.StripPrefix("/static/", fs)
+	r.PathPrefix("/static/").Handler(serveFileHandler)
 }
