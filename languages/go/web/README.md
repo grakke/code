@@ -6,6 +6,8 @@
 ## 路由
 
 - `/user/names/James/countries/NewZealand`
+- `index/display_headers`
+- `display_url_params?a=b&c=d&a=c`
 
 ## 中间件
 

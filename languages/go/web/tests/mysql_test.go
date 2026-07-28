@@ -1,10 +1,9 @@
 package tests
 
 import (
+	mysql "go-web/model"
 	"testing"
 	"time"
-
-	"go-web/mysql"
 )
 
 func TestMysql(t *testing.T) {
