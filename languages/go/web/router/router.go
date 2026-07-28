@@ -22,4 +22,7 @@ func RegisterRoutes(r *mux.Router) {
 	userRouter := r.PathPrefix("/user").Subrouter()
 	userRouter.HandleFunc("/names/{name}/countries/{country}", handler.ShowVisitorInfo)
 	userRouter.Use(middleware.Method("GET"))
+
+	viewRouter := r.PathPrefix("/view").Subrouter()
+	viewRouter.HandleFunc("/index", handler.ShowIndexView)
 }
