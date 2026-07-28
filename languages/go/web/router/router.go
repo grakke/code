@@ -2,6 +2,7 @@ package router
 
 import (
 	"go-web/handler"
+	"go-web/handler/user"
 	"go-web/middleware"
 	"net/http"
 
@@ -22,7 +23,10 @@ func RegisterRoutes(r *mux.Router) {
 
 	userRouter := r.PathPrefix("/user").Subrouter()
 	userRouter.HandleFunc("/names/{name}/countries/{country}", handler.ShowVisitorInfo)
-	userRouter.Use(middleware.Method("GET"))
+	userRouter.HandleFunc("/login", user.Login).Methods("POST")
+	userRouter.HandleFunc("/secret", user.Secret)
+	userRouter.HandleFunc("/logout", user.Logout)
+	// userRouter.Use(middleware.Method("GET"))
 
 	viewRouter := r.PathPrefix("/view").Subrouter()
 	viewRouter.HandleFunc("/index", handler.ShowIndexView)

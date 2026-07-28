@@ -1,10 +1,9 @@
 # Go 语言 Web 编程入门
 
-- net/http
-- gorilla
-
 ## Web 路由
 
+- net/http
+- gorilla
 - `/user/names/James/countries/NewZealand`
 - `index/display_headers`
 - `display_url_params?a=b&c=d&a=c`
@@ -39,4 +38,12 @@ docker-compose up -d
 docker-compose restart
 docker exec -it <container name> bash
 docker-compose exec app go test
+```
+
+## 数据存储
+
+```sh
+curl -XPOST   -d 'name=Klein&password=123' \
+     -c - http://localhost:8080/user/login
+curl --cookie "user-session=MTU4m..." http://localhost:8000/user/secret
 ```

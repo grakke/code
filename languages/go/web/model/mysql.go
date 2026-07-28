@@ -53,6 +53,13 @@ func QueryUserByID(db *sql.DB, id int64) (User, error) {
 	return u, err
 }
 
+func QueryUserByName(db *sql.DB, name string) (User, error) {
+	var u User
+	query := `SELECT id, username, password, created_at FROM users WHERE username = ?`
+	err := db.QueryRow(query, name).Scan(&u.ID, &u.Username, &u.Password, &u.CreatedAt)
+	return u, err
+}
+
 func ListUsers(db *sql.DB) ([]User, error) {
 	rows, err := db.Query(`SELECT id, username, password, created_at FROM users`)
 	if err != nil {
