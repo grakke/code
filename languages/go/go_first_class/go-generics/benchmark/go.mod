@@ -2,4 +2,4 @@ module demo
 
 go 1.25.0
 
-require golang.org/x/exp v0.0.0-20260527015227-08cc5374adb3
+require golang.org/x/exp v0.0.0-20260727155853-b88d891fe743
