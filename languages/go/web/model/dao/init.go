@@ -1,6 +1,10 @@
 package dao
 
-import "time"
+import (
+	"time"
+
+	"gorm.io/gorm"
+)
 
 var _DB *gorm.DB
 
@@ -13,7 +17,7 @@ func init() {
 }
 
 func initDB() *gorm.DB {
-	db,err := gorm.Open("mysql", "go_web:go_web@tcp(localhost:33063)/g0_web?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "go_web:go_web@tcp(localhost:33063)/g0_web?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
@@ -21,7 +25,7 @@ func initDB() *gorm.DB {
 	db.Db().setMaxOpenConns(100)
 	db.Db().setMaxIdleConns(10)
 	db.Db().setConnMaxLifetime(time.Second * 300)
-	if err = db.DB().Ping();err != nil {
+	if err = db.DB().Ping(); err != nil {
 		panic(err)
 	}
 	return db

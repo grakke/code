@@ -30,7 +30,7 @@ func UpdateUserNameById(userName string, userId int64) (err error) {
 
 func DeleteUserById(userId int64) (err error) {
 	user := new(table.User)
-	err = DB().Where("id=?", userId)。First(user).Error
+	err = DB().Where("id=?", userId).First(user).Error
 	if err != nil {
 		return
 	}

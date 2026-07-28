@@ -38,6 +38,7 @@ func Logging() Middleware {
 	}
 }
 
+// 验证请求用的是否是指定的HTTP Method，不是返回 400 Bad Request
 func Method(m string) Middleware {
 	return func(f http.HandlerFunc) http.HandlerFunc {
 		return func(w http.ResponseWriter, r *http.Request) {
@@ -57,17 +58,17 @@ func Chain(f http.HandlerFunc, middlewares ...Middleware) http.HandlerFunc {
 	return f
 }
 
-// func main() {
-// 	http.HandleFunc("/", Chain(HelloHandler, Method("GET"), Logging()))
-// 	http.Handle("/hello", &HelloHandlerStruct{content: "Hello World!"})
-
-//		http.ListenAndServe(":8000", nil)
-//	}
-//
-// 自定义 mux
 func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", HelloHandler)
-	mux.Handle("/welcome", &WelcomeHandlerStruct{})
-	http.ListenAndServe(":8080", mux)
+	http.HandleFunc("/", Chain(HelloHandler, Method("GET"), Logging()))
+	http.Handle("/hello", &HelloHandlerStruct{content: "Hello World!"})
+
+	http.ListenAndServe(":8000", nil)
 }
+
+// 自定义 mux
+// func main() {
+// 	mux := http.NewServeMux()
+// 	mux.HandleFunc("/", HelloHandler)
+// 	mux.Handle("/welcome", &WelcomeHandlerStruct{})
+// 	http.ListenAndServe(":8080", mux)
+// }
