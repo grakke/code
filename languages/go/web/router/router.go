@@ -15,6 +15,9 @@ func RegisterRoutes(r *mux.Router) {
 	indexRouter.Handle("/welcome", &handler.Welcome{})
 	indexRouter.HandleFunc("/display_headers", handler.DisplayHeadersHandler)
 	indexRouter.HandleFunc("/display_url_params", handler.DisplayUrlParamsHandler)
+	indexRouter.HandleFunc("/display_form_data", handler.DisplayFormDataHandler)
+	indexRouter.HandleFunc("/read_cookie", handler.ReadCookieHandler)
+	indexRouter.HandleFunc("/parse_json_request", handler.DisplayPersonHandler).Methods("POST")
 
 	userRouter := r.PathPrefix("/user").Subrouter()
 	userRouter.HandleFunc("/names/{name}/countries/{country}", handler.ShowVisitorInfo)

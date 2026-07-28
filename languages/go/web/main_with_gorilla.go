@@ -1,20 +1,20 @@
 package main
 
-// import (
-// 	"go-web/router"
-// 	"log"
-// 	"net/http"
+import (
+	"go-web/router"
+	"log"
+	"net/http"
 
-// 	"github.com/gorilla/mux"
-// )
+	"github.com/gorilla/mux"
+)
 
-// func main() {
-// 	r := mux.NewRouter()
-// 	router.RegisterRoutes(r)
+func main() {
+	r := mux.NewRouter()
+	router.RegisterRoutes(r)
 
-// 	server := &http.Server{
-// 		Addr:    ":8080",
-// 		Handler: r,
-// 	}
-// 	log.Fatal(server.ListenAndServe())
-// }
+	server := &http.Server{
+		Addr:    ":8080",
+		Handler: r,
+	}
+	log.Fatal(server.ListenAndServe())
+}

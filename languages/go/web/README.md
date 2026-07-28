@@ -3,11 +3,23 @@
 - net/http
 - gorilla
 
-## 路由
+## Web 路由
 
 - `/user/names/James/countries/NewZealand`
 - `index/display_headers`
 - `display_url_params?a=b&c=d&a=c`
+- 接收客户端上传的文件，使用 Request定义的 FormFile()方法。该方法会自动调用 r.ParseMultipartForm(32<<20)方法解析请求多部表单中的上传文件，并把文件可读入内存的大小设置为 32M（32向左位移20位），如果内存大小需要单独设置，在程序里单独调用 ParseMultipartForm() 方法才行
+
+```sh
+curl -X POST -d 'username=James&password=123' \
+http://localhost:8080/index/display_form_data
+
+curl --cookie "USER_TOKEN=Yes" http://localhost:8080/index/read_cookie
+
+curl -X POST -d '{"name": "James", "age": 18}' \
+-H "Content-Type: application/json" \
+http://localhost:8080/index/parse_json_request
+```
 
 ## 中间件
 

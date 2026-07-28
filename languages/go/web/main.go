@@ -1,24 +1,24 @@
 package main
 
-import (
-	"go-web/handler"
-	"go-web/middleware"
-	"log"
-	"net/http"
+// import (
+// 	"go-web/handler"
+// 	"go-web/middleware"
+// 	"log"
+// 	"net/http"
 
-	"github.com/gorilla/mux"
-)
+// 	"github.com/gorilla/mux"
+// )
 
-func main() {
-	r := mux.NewRouter()
-	r.Use(middleware.Logging())
-	r.Use(middleware.Method("GET"))
+// func main() {
+// 	r := mux.NewRouter()
+// 	r.Use(middleware.Logging())
+// 	r.Use(middleware.Method("GET"))
 
-	r.HandleFunc("/", handler.HelloHandler).Methods("GET")
-	r.Handle("/hello", &handler.Hello{Content: "Hello World!"})
+// 	r.HandleFunc("/", handler.HelloHandler).Methods("GET")
+// 	r.Handle("/hello", &handler.Hello{Content: "Hello World!"})
 
-	log.Fatal(http.ListenAndServe(":8000", r))
-}
+// 	log.Fatal(http.ListenAndServe(":8000", r))
+// }
 
 // 自定义 mux
 // func main() {
