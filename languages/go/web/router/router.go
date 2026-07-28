@@ -3,6 +3,7 @@ package router
 import (
 	"go-web/handler"
 	"go-web/handler/user"
+	"go-web/handler/ws"
 	"go-web/middleware"
 	"net/http"
 
@@ -34,4 +35,8 @@ func RegisterRoutes(r *mux.Router) {
 	fs := http.FileServer(http.Dir("./assets"))
 	serveFileHandler := http.StripPrefix("/static/", fs)
 	r.PathPrefix("/static/").Handler(serveFileHandler)
+
+	wsRouter := r.PathPrefix("/ws").Subrouter()
+	wsRouter.HandleFunc("/echo", ws.EchoMessage)
+	wsRouter.HandleFunc("/echo_display", ws.DisplayEcho)
 }
