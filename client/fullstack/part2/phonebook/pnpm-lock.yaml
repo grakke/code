@@ -1988,7 +1988,13 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
+<<<<<<< HEAD
   axios@1.18.1:
+||||||| 10981d76
+  axios@1.18.0:
+=======
+  axios@1.18.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
+>>>>>>> origin/renovate/react-monorepo
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3(supports-color@7.2.0))
       form-data: 4.0.6
