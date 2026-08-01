@@ -40,10 +40,17 @@ docker exec -it <container name> bash
 docker-compose exec app go test
 ```
 
-## 数据存储
+## 数据
 
 ```sh
 curl -XPOST   -d 'name=Klein&password=123' \
      -c - http://localhost:8080/user/login
 curl --cookie "user-session=MTU4m..." http://localhost:8000/user/secret
+
+curl -X POST -d '{"name": "James", "age": 18}' \
+     -H "Content-Type: application/json" \
+     http://localhost:8080/index/parse_json_request
+
+curl -X GET http://localhost:8080/index/get_json_response
+{"firstname":"John","lastname":"Doe","age":25}
 ```
