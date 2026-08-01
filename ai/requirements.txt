@@ -121,7 +121,7 @@ platformdirs @ file:///private/tmp/python-platformdirs-20231204-5443-mdrjzo/plat
 ply @ file:///private/tmp/python-ply-20231123-5460-rityrl/ply-3.11
 pptree==3.1
 prometheus_client==0.20.0
-prompt-toolkit==3.0.52
+prompt-toolkit==3.0.53
 protobuf==5.29.6
 psutil==5.9.8
 ptyprocess==0.7.0
