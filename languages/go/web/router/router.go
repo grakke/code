@@ -11,7 +11,7 @@ import (
 )
 
 func RegisterRoutes(r *mux.Router) {
-	r.Use(middleware.Logging())
+	r.Use(middleware.Logging(), middleware.AccessLogging)
 
 	indexRouter := r.PathPrefix("/index").Subrouter()
 	indexRouter.HandleFunc("/", handler.HelloHandler).Methods("GET")
