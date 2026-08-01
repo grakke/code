@@ -19,7 +19,7 @@ importers:
         version: 3.7.4
       mongoose:
         specifier: ^8.9.5
-        version: 8.22.1(@aws-sdk/credential-providers@3.699.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0)))(socks@2.8.3)
+        version: 8.24.1(@aws-sdk/credential-providers@3.699.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0)))(socks@2.8.3)
       morgan:
         specifier: ^1.10.0
         version: 1.10.1
@@ -139,8 +139,8 @@ packages:
     resolution: {integrity: sha512-T5s0IlBVX+gkb9g/I6CLt4yAZVzMSiGnbUqWihWsHvQR1WOoIcndQy/Oz/IJXT9T2ipoy7a80gzV6a5mglrioA==}
     engines: {node: '>=16.0.0'}
 
-  '@aws-sdk/util-locate-window@3.965.5':
-    resolution: {integrity: sha512-WhlJNNINQB+9qtLtZJcpQdgZw3SCDCpXdUJP7cToGwHbCWCnRckGlc6Bx/OhWwIYFNAn+FIydY8SZ0QmVu3xTQ==}
+  '@aws-sdk/util-locate-window@3.965.8':
+    resolution: {integrity: sha512-uUbMs1cBZPafD0ohUj6EwNf0fPZ534NvBxHox4hjX+0Rxq5paSYUem7+hi833pYrzrcnBATKIYpR02MDXT5M9g==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/util-user-agent-browser@3.696.0':
@@ -155,8 +155,8 @@ packages:
       aws-crt:
         optional: true
 
-  '@mongodb-js/saslprep@1.4.11':
-    resolution: {integrity: sha512-o9rAHc0IpIjuPSxRutWpE1F62x7n+4mVS4rCNHkzhIUMQcc18bb6xEq5wd2NdN0WjepIyXIppRshYI2kQDOZVA==}
+  '@mongodb-js/saslprep@1.4.13':
+    resolution: {integrity: sha512-E3Sv4eCYAlKYUTx8S3ioQcDUscOif+8zZ5OnW1IzJ+Tt+EO+ke8mn+Y3FX6N1H79picwbdOavVOb1jPi2EOyrg==}
 
   '@smithy/abort-controller@3.1.9':
     resolution: {integrity: sha512-yiW0WI30zj8ZKoSYNx90no7ugVn3khlyH/z5W8qtKBtVE6awRALbhSG+2SAHA1r6bO/6M9utxYKVZ3PCJ1rWxw==}
@@ -671,8 +671,8 @@ packages:
       socks:
         optional: true
 
-  mongoose@8.22.1:
-    resolution: {integrity: sha512-c0bzt7ElI1CwWiyFSgg9bfhlFcblAoPwr+gmDcLCryClyKaeixWhP9KDGnr13kRPE8KPAuUN3ZZ3jSDxSPvoTg==}
+  mongoose@8.24.1:
+    resolution: {integrity: sha512-UpHBA0l5kHyKJQFjmBaFYQFo5sgz1DK0TRqDkOyBLYbqiIbKKhIvBpHWBXqeo0rgW4kGI1UhhAw+kTQZoj1BdA==}
     engines: {node: '>=16.20.1'}
 
   morgan@1.10.1:
@@ -933,7 +933,7 @@ snapshots:
       '@aws-crypto/supports-web-crypto': 5.2.0
       '@aws-crypto/util': 5.2.0
       '@aws-sdk/types': 3.696.0
-      '@aws-sdk/util-locate-window': 3.965.5
+      '@aws-sdk/util-locate-window': 3.965.8
       '@smithy/util-utf8': 2.3.0
       tslib: 2.8.1
     optional: true
@@ -1356,7 +1356,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@aws-sdk/util-locate-window@3.965.5':
+  '@aws-sdk/util-locate-window@3.965.8':
     dependencies:
       tslib: 2.8.1
     optional: true
@@ -1378,7 +1378,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@mongodb-js/saslprep@1.4.11':
+  '@mongodb-js/saslprep@1.4.13':
     dependencies:
       sparse-bitfield: 3.0.3
 
@@ -2007,14 +2007,14 @@ snapshots:
 
   mongodb@6.20.0(@aws-sdk/credential-providers@3.699.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0)))(socks@2.8.3):
     dependencies:
-      '@mongodb-js/saslprep': 1.4.11
+      '@mongodb-js/saslprep': 1.4.13
       bson: 6.10.4
       mongodb-connection-string-url: 3.0.2
     optionalDependencies:
       '@aws-sdk/credential-providers': 3.699.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0))
       socks: 2.8.3
 
-  mongoose@8.22.1(@aws-sdk/credential-providers@3.699.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0)))(socks@2.8.3):
+  mongoose@8.24.1(@aws-sdk/credential-providers@3.699.0(@aws-sdk/client-sso-oidc@3.699.0(@aws-sdk/client-sts@3.699.0)))(socks@2.8.3):
     dependencies:
       bson: 6.10.4
       kareem: 2.6.3
