@@ -168,7 +168,7 @@ seaborn==0.13.2
 segtok==1.5.11
 semver==3.0.4
 Send2Trash==1.8.3
-sentencepiece==0.2.1
+sentencepiece==0.2.2
 setuptools @ file:///private/tmp/python-setuptools-20231224-4618-w53zis/setuptools-69.0.3
 sip @ file:///private/tmp/sip-20231213-5374-tj2va6/sip-6.8.1
 six==1.16.0
