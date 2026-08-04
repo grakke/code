@@ -62,7 +62,7 @@
 	<properties>
 		<!-- util -->
 		<commons-lang3.version>3.4</commons-lang3.version>
-		<commons-io.version>2.4</commons-io.version>
+		<commons-io.version>2.22.0</commons-io.version>
 
 		<!-- testing -->
 		<rest-assured.version>2.9.0</rest-assured.version>
