@@ -40,7 +40,7 @@ dependencies {
     implementation('io.jsonwebtoken:jjwt:0.9.1')
     implementation("org.flywaydb:flyway-core")
     implementation('com.google.guava:guava:27.0.1-jre')
-    implementation('commons-io:commons-io:2.6')
+    implementation('commons-io:commons-io:2.22.0')
     implementation('org.apache.commons:commons-lang3')
     implementation('org.apache.commons:commons-collections4:4.2')
     implementation('io.springfox:springfox-swagger2:2.9.2')
