@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.24.1
 
 require (
-	github.com/go-kratos/kratos/v2 v2.4.1
+	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/google/wire v0.5.0
 	go.uber.org/automaxprocs v1.5.1
 	google.golang.org/genproto/googleapis/api a57be14db171
