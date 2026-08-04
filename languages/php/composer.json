@@ -24,7 +24,7 @@
     "slim/psr7": "^1.6",
     "willdurand/geocoder": "^4.6",
     "league/csv": "^9.9",
-    "apache/thrift": "^0.18.1",
+    "apache/thrift": "^0.24.0",
     "symfony/service-contracts": "3.2",
     "ext-intl": "*",
     "ext-json": "*",
