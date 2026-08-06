@@ -2,16 +2,7 @@
 set -xue
 
 # QEMU 文件路径
-QEMU=qemu-system-riscv32
-
-# clang 路径和编译器标志
-CC=/usr/local/opt/llvm/bin/clang
-CFLAGS="-std=c11 -O2 -g3 -Wall -Wextra --target=riscv32-unknown-elf -fuse-ld=lld -fno-stack-protector -ffreestanding -nostdlib"
-
-# 构建内核
-$CC $CFLAGS -Wl,-Tkernel.ld -Wl,-Map=kernel.map -o kernel.elf \
-    kernel.c
+QEMU=/usr/local/bin/qemu-system-riscv32
 
 # 启动 QEMU
-$QEMU -machine virt -bios default -nographic -serial mon:stdio --no-reboot \
-    -kernel kernel.elf
+$QEMU -machine virt -bios default -nographic -serial mon:stdio --no-reboot -monitor telnet::45454,server,nowait
