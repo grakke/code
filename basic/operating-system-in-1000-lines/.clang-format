@@ -1,0 +1,34 @@
+# 基于 Google 风格进行定制
+BasedOnStyle: Google
+
+# 缩进宽度
+IndentWidth: 4
+# 是否使用 Tab 键 (Never: 不使用)
+UseTab: Never
+
+# 大括号换行风格 (Custom: 自定义)
+BreakBeforeBraces: Custom
+BraceWrapping:
+  # 控制语句 (if, for等) 后换行
+  AfterControlStatement: true
+  # 函数定义后换行
+  AfterFunction: true
+  # 类/结构体定义后换行
+  AfterClass: true
+  # else 前换行
+  BeforeElse: true
+
+# 每行字符数限制 (0 表示无限制)
+ColumnLimit: 80
+
+# 指针/引用的对齐方式 (Left, Right, Middle)
+PointerAlignment: Right
+
+# 是否允许简短的 if 语句放在一行
+AllowShortIfStatementsOnASingleLine: false
+
+# 连续赋值时，对齐等号
+AlignConsecutiveAssignments: true
+
+# 是否排序 include 头文件
+SortIncludes: false
