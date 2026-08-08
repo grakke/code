@@ -34,7 +34,7 @@ import (
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/examples/data"
-	pb "google.golang.org/grpc/examples/route_guide/routeguide"
+	pb grpc/examples/route_guide/routeguide"
 )
 
 var (

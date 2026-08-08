@@ -12,9 +12,12 @@ go run greeter_server/main.go
 go run greeter_client/main.go
 
 # Update the gRPC service
+# add SayHelloAgain fucntion
 protoc --go_out=. --go_opt=paths=source_relative \
     --go-grpc_out=. --go-grpc_opt=paths=source_relative \
     helloworld/helloworld.proto
+
+# Update the server/client
 ```
 
 ##`routeguide` - a more complicated example showing different types of streaming RPCs

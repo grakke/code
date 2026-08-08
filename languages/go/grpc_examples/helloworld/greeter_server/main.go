@@ -27,7 +27,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	pb "google.golang.org/grpc/examples/helloworld/helloworld"
+	pb "grpc/examples/helloworld/helloworld"
 )
 
 var (
@@ -44,7 +44,9 @@ func (s *server) SayHello(_ context.Context, in *pb.HelloRequest) (*pb.HelloRepl
 	log.Printf("Received: %v", in.GetName())
 	return &pb.HelloReply{Message: "Hello " + in.GetName()}, nil
 }
-
+func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
+	return &pb.HelloReply{Message: "Hello again " + in.GetName()}, nil
+}
 func main() {
 	flag.Parse()
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))

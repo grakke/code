@@ -40,7 +40,7 @@ import (
 	"google.golang.org/grpc/examples/data"
 	"google.golang.org/protobuf/proto"
 
-	pb "google.golang.org/grpc/examples/route_guide/routeguide"
+	pb "grpc/examples/route_guide/routeguide"
 )
 
 var (
