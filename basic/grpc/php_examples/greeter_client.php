@@ -22,7 +22,7 @@
 //   --plugin=protoc-gen-grpc=../../bins/opt/grpc_php_plugin
 //   ../protos/helloworld.proto
 
-require dirname(__FILE__).'/vendor/autoload.php';
+require dirname(__FILE__) . '/vendor/autoload.php';
 
 function greet($hostname, $name)
 {
@@ -36,6 +36,7 @@ function greet($hostname, $name)
         echo "ERROR: " . $status->code . ", " . $status->details . PHP_EOL;
         exit(1);
     }
+    list($reply, $status) = $client->SayHelloAgain($request)->wait();
     echo $response->getMessage() . PHP_EOL;
 }
 

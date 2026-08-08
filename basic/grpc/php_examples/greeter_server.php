@@ -31,6 +31,17 @@ class Greeter extends Helloworld\GreeterStub
         $response->setMessage("Hello " . $name);
         return $response;
     }
+
+        public function SayHelloAgain(
+        \Helloworld\HelloRequest $request,
+        \Grpc\ServerContext $serverContext
+    ): ?\Helloworld\HelloReply {
+        $name = $request->getName();
+        echo 'Received request: ' . $name . PHP_EOL;
+        $response = new \Helloworld\HelloReply();
+        $response->setMessage("Hello again" . $name);
+        return $response;
+    }
 }
 
 $port = 50051;
