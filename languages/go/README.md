@@ -91,7 +91,7 @@ go run ./webserver/main.go
 
 ## [22 讲通关 Go 语言](./22_courses_through_golang/)
 
-## [gRpc](https://grpc.io/docs/languages/go/quickstart/)
+## [gRPC-examples](https://grpc.io/docs/languages/go/quickstart/)
 
 ```sh
 git clone -b v1.81.1 --depth 1 https://github.com/grpc/grpc-go
