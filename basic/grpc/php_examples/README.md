@@ -28,6 +28,7 @@ bazel build src/compiler:grpc_php_plugin_binary
 ## 试验
 
 - 修改定义文件后，没有 grpc_php_plugin_binary 无法更新生成文件
+  - grpc 更新后，grpc_php_plugin 可以更新生成代码
 
 ```sh
 php -f greeter_server.php

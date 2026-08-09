@@ -37,11 +37,25 @@ class GreeterClient extends \Grpc\BaseStub {
      * @param \Helloworld\HelloRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Helloworld\HelloReply>
      */
     public function SayHello(\Helloworld\HelloRequest $argument,
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/helloworld.Greeter/SayHello',
+        $argument,
+        ['\Helloworld\HelloReply', 'decode'],
+        $metadata, $options);
+    }
+
+    /**
+     * @param \Helloworld\HelloRequest $argument input argument
+     * @param array $metadata metadata
+     * @param array $options call options
+     * @return \Grpc\UnaryCall<\Helloworld\HelloReply>
+     */
+    public function SayHelloAgain(\Helloworld\HelloRequest $argument,
+      $metadata = [], $options = []) {
+        return $this->_simpleRequest('/helloworld.Greeter/SayHelloAgain',
         $argument,
         ['\Helloworld\HelloReply', 'decode'],
         $metadata, $options);

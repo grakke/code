@@ -15,16 +15,16 @@
 
 set -e
 
-cd $(dirname $0)/../..
+cd $(dirname $0)/..
 
 # protoc and grpc_*_plugin binaries can be obtained by running
 # $ bazel build @com_google_protobuf//:protoc //src/compiler:all
 # PROTOC=bazel-bin/external/protobuf+/protoc
 # PLUGIN=protoc-gen-grpc=bazel-bin/src/compiler/grpc_php_plugin_binary
 PROTOC=$(which protoc)
-PLUGIN=protoc-gen-grpc=~/bin/grpc_php_plugin_binary
+PLUGIN=protoc-gen-grpc=`which grpc_php_plugin`
 
-$PROTOC --proto_path=examples/protos \
-       --php_out=examples/php \
-       --grpc_out=generate_server:examples/php \
+$PROTOC --proto_path=protos \
+       --php_out=php_examples \
+       --grpc_out=generate_server:php_examples \
        --plugin=$PLUGIN protos/helloworld.proto
