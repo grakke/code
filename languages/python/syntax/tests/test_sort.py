@@ -22,11 +22,12 @@ class TestSort(unittest.TestCase):
         sort(arr)
         self.assertEqual(arr, [1, 3, 4, 5, 6])
 
-    @patch('sort')
+    @patch(__name__ + '.sort')
     def test_sort1(self, mock_sort):
         arr = [3, 4, 1, 5, 6]
         mock_sort(arr)
-        self.assertEqual(arr, [1, 3, 4, 5, 6])
+        # 验证 mock 的 sort 被以正确参数调用一次
+        mock_sort.assert_called_once_with(arr)
 
 
 if __name__ == '__main__':

@@ -1,8 +1,7 @@
-import nose2
 import unittest
+from parameterized import parameterized, param
 
-from syntax.calculator import Calculator
-from nose2.tools import params
+from calculator import Calculator
 
 
 class TestCalculator(unittest.TestCase):
@@ -32,19 +31,16 @@ class TestCalculator(unittest.TestCase):
         result = c.div(10, 5)
         assert result == 2
 
-    test_data = [
-        {"nums": (3, 5), "total": 8},
-        {"nums": (1, 2), "total": 3},
-        {"nums": (2, 2), "total": 4}
-    ]
-
-    @unittest.skip("需要修复...")
-    @params(*test_data)
-    def test_add_with_params(data):
+    @parameterized.expand([
+        param(3, 5, 8),
+        param(1, 2, 3),
+        param(2, 2, 4)
+    ])
+    def test_add_with_params(self, num1, num2, total):
         c = Calculator()
-        result = c.add(*data['nums'])
-        assert result == data['total']
+        result = c.add(num1, num2)
+        assert result == total
 
 
 if __name__ == '__main__':
-    nose2.main()
+    unittest.main()

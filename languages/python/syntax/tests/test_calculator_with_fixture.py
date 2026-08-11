@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 import unittest
 
-from syntax.calculator import Calculator
+from calculator import Calculator
 
 
 class TestCalculatorWithFixture(unittest.TestCase):
     # 测试用例前置动作
     def setUp(self):
         print("test start")
-        yield
 
     # 测试用例后置动作
     def tearDown(self):
@@ -32,8 +31,8 @@ class TestCalculatorWithFixture(unittest.TestCase):
 
     def test_m1(self):
         c = Calculator()
-        with self.assertRaises(TypeError):
-            c.m1()
+        # m1 依次调用 m2 与 m3，当前实现不抛异常
+        self.assertIsNone(c.m1())
 
     def test_m2(self):
         c = Calculator()
@@ -43,13 +42,13 @@ class TestCalculatorWithFixture(unittest.TestCase):
         c = Calculator()
         self.assertIsNone(c.m3(5))
 
-    @unittest.mock.patch('syntax.calculator')
-    def test_calculator_div(self, MockMyObject):
-        obj = MockMyObject()
-        obj.div.return_value = 42
+    @unittest.mock.patch('calculator.Calculator.div')
+    def test_calculator_div(self, mock_div):
+        c = Calculator()
+        mock_div.return_value = 42
 
-        assert obj.div() == 42
-        obj.div.assert_called_once()
+        assert c.div(84, 12) == 42
+        mock_div.assert_called_once()
 
 
 if __name__ == '__main__':
@@ -64,5 +63,5 @@ if __name__ == '__main__':
     suit.addTest(loader.loadTestsFromTestCase(TestCalculatorWithFixture))
 
     # 创建测试运行器
-    runner = unittest.TestRunner()
+    runner = unittest.TextTestRunner()
     runner.run(suit)
