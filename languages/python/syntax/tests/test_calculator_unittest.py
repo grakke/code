@@ -5,7 +5,7 @@ from unittest import mock
 from ddt import data, unpack, ddt
 from parameterized import parameterized, param
 
-from syntax.calculator import Calculator
+from calculator import Calculator
 
 
 def multiple(a, b):
@@ -56,7 +56,7 @@ class TestCalculator(unittest.TestCase):
         c = Calculator()
         self.assertEqual(c.div(84, 12), 7)
 
-    @mock.patch('test_calculator_unittest.multiple')
+    @mock.patch(__name__ + '.multiple')
     def test_function_multiple(self, mock_multiple):
         mock_return = 1
         mock_multiple.return_value = mock_return
@@ -87,7 +87,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(result1, mock_return[0])
         self.assertEqual(result2, mock_return[1])
 
-    @mock.patch('test_calculator_unittest.multiple')
+    @mock.patch(__name__ + '.multiple')
     def test_function_multiple_exception(self, mock_multiple):
         mock_multiple.side_effect = Exception
 
@@ -96,7 +96,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(result, -1)
 
     @mock.patch.object(Calculator, 'add')
-    @mock.patch('test_calculator_unittest.multiple')
+    @mock.patch(__name__ + '.multiple')
     def test_both(self, mock_multiple, mock_add):
         c = Calculator()
         mock_add.return_value = 1
@@ -107,24 +107,24 @@ class TestCalculator(unittest.TestCase):
 
     def test_magic_mock(self):
         a = Calculator()
-        a.m2 = mock(return_value="custom_val")
-        a.m3 = mock()
+        a.m2 = mock.Mock(return_value="custom_val")
+        a.m3 = mock.Mock()
         a.m1()
         self.assertTrue(a.m2.called)  # 验证m2被call过
         a.m3.assert_called_with("custom_val")  # 验证m3被指定参数call过
 
+    @staticmethod
     def side_effect(arg):
         if arg < 0:
             return 1
         else:
             return 2
 
-    @unittest.skip("需要修复...")
     def test_magic_mock_side_effect(self):
-        mock = self.mock()
-        mock.side_effect = self.side_effect
-        self.assertEqual(mock(-1), 1)
-        self.assertEqual(mock(1), 2)
+        m = mock.Mock()
+        m.side_effect = self.side_effect
+        self.assertEqual(m(-1), 1)
+        self.assertEqual(m(1), 2)
 
 
 if __name__ == '__main__':

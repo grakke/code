@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# __author__ = 'henry'
 import unittest
 
 from syntax.calculator import Calculator
