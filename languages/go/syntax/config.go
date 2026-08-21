@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 
 	"github.com/BurntSushi/toml"
-	"github.com/go-ini/ini"
 	"gopkg.in/ini.v1"
 	"gopkg.in/yaml.v2"
 )
