@@ -9,7 +9,7 @@
     - 包做了内外的区分 项目里 internal 目录下的Go包只可以被本项目内部的包导入，项目外部无法导入这个internal目录下面的包
   - package 功能结构
 
-# 语法
+## [语法](./syntax)
 
 ## [Practical Go Lessons](https://www.practical-go-lessons.com/)
 

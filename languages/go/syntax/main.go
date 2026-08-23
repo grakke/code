@@ -20,6 +20,7 @@ func main() {
 	fmt.Print("hello world", " i am ready to go :)\n")
 	fmt.Println("hello world", " 世界 :)")
 	fmt.Println(os.Args)
+	PrintConst()
 
 	// 获取环境变量
 	fmt.Println(os.Getenv("type"), os.Getenv("name"), os.Getenv("GOROOT"))

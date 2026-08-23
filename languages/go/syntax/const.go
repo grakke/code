@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 常量:只可以是值类型,包括整型、 浮点型、复数类型、布尔类型、字符串类型等标量类型
+// 常量:只可以是值类型,包括整型、浮点型、复数类型、布尔类型、字符串类型等标量类型
 // 常量赋值是一个编译期行为，右值不能出现任何需要运行期才能得出结果的表达式
 // 作用域: 以大写字母开头的常量在包外可见,以小写字母开头的常量只能在包内访问
 const Pi float64 = 3.14159265358979323846
@@ -34,7 +34,7 @@ const (
 const x = iota
 const y = iota
 
-// 枚举:包含了一系列相关常量
+// 枚举:包含一系列相关常量
 const (
 	Sunday = iota
 	Monday
@@ -59,14 +59,14 @@ const (
 )
 
 const (
-    _ = iota // 0
-    Pin1
-    Pin2
-    Pin3
-    _
-    Pin5    // 5
+	_ = iota // 0
+	Pin1
+	Pin2
+	Pin3
+	_
+	Pin5 // 5
 )
 
-func main() {
+func PrintConst() {
 	fmt.Println(x, y, c0, c1, c2, u1, v1, w)
 }
