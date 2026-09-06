@@ -84,7 +84,7 @@ libclang==18.1.1
 libxml2-python==2.12.6
 lxml @ file:///private/tmp/python-lxml-20240108-4944-6xtqq3/lxml-5.1.0
 mackup @ file:///private/tmp/mackup-20231124-5783-44bt4/mackup-0.8.40
-Markdown==3.6
+Markdown==3.8.1
 markdown-it-py==3.0.0
 MarkupSafe @ file:///private/tmp/python-markupsafe-20231211-22430-ukijih/MarkupSafe-2.1.3
 matplotlib==3.8.3
