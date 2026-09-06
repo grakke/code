@@ -7,7 +7,7 @@ require (
 	github.com/goravel/framework v1.15.8
 	github.com/goravel/gin v1.3.3
 	github.com/stretchr/testify v1.11.1
-	google.golang.org/grpc v1.83.0
+	google.golang.org/grpc v1.83.1
 )
 
 require (
