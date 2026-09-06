@@ -90,7 +90,7 @@ MarkupSafe @ file:///private/tmp/python-markupsafe-20231211-22430-ukijih/MarkupS
 matplotlib==3.8.3
 matplotlib-inline==0.1.6
 mdurl==0.1.2
-mistune==3.0.2
+mistune==3.3.0
 ml-dtypes==0.3.2
 mlxtend==0.23.1
 more-itertools==10.2.0
