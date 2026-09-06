@@ -174,7 +174,7 @@ sip @ file:///private/tmp/sip-20231213-5374-tj2va6/sip-6.8.1
 six==1.16.0
 smart-open==7.0.4
 sniffio==1.3.1
-soupsieve==2.5
+soupsieve==2.8.4
 sqlitedict==2.1.0
 stack-data==0.6.3
 statsmodels==0.14.6
