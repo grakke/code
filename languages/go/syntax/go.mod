@@ -9,7 +9,7 @@ require (
 	github.com/redis/go-redis/v9 v9.5.5
 	github.com/spaolacci/murmur3 v1.1.0
 	go.uber.org/atomic v1.11.0
-	golang.org/x/exp v0.0.0-20260218203240-3dfff04db8fa
+	golang.org/x/exp v0.0.0-20260908205506-85c1c2202aba
 	gopkg.in/ini.v1 v1.67.3
 	gopkg.in/yaml.v2 v2.4.0
 	rsc.io/quote v1.5.2
