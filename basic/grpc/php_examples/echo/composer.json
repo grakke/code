@@ -2,7 +2,7 @@
   "name": "grpc-php/echo-example",
   "require": {
     "grpc/grpc": "^v1.30.0",
-    "google/protobuf": "^3.12.2"
+    "google/protobuf": "^5.0.0"
   },
   "autoload": {
     "psr-4": {
