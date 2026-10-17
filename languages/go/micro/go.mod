@@ -14,7 +14,7 @@ require (
 	github.com/micro/go-micro v1.16.0
 	github.com/micro/go-plugins v1.5.1
 	github.com/miekg/dns v1.1.27 // indirect
-	github.com/nats-io/nats-server/v2 v2.1.6 // indirect
+	github.com/nats-io/nats-server/v2 v2.11.15 // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/tmc/grpc-websocket-proxy v0.0.0-20200122045848-3419fae592fc // indirect
