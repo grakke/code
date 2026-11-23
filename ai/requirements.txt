@@ -105,7 +105,7 @@ networkx==3.2.1
 nltk==3.9.4
 notebook_shim==0.2.4
 numpy==1.26.4
-onnx==1.21.0
+onnx==1.22.0
 opt-einsum==3.3.0
 optree==0.11.0
 overrides==7.7.0
